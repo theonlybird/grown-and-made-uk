@@ -3312,6 +3312,48 @@ const Landing = (function(){
 // The intro is interactive from the moment the script runs — never gated on data.
 Landing.arm();
 
+/* ==========================================================================
+   DEEP LINK — ?b=<id> opens one listing
+   The outreach emails send a business to their own pin rather than to 474 of
+   them, so a recognised id skips the intro and opens that popup as soon as the
+   markers are on the map. Everything here fails soft: an id we do not know, or
+   a marker the filters have hidden, simply leaves the ordinary map on screen.
+   ========================================================================== */
+(function(){
+  let id = '';
+  try { id = (new URLSearchParams(location.search).get('b') || '').trim(); }
+  catch(e){ return; }
+  if (!id) return;
+
+  Diag.log('deep link requested: ' + id);
+  Landing.abort();                  // they came for one listing, not the front door
+
+  /* renderMapList() clears and re-adds every layer, and boot() runs it a second
+     time ~150ms later to settle the clusters — a popup opened before that lands
+     in the layer thrown away. So wait until the marker is actually in the
+     cluster, leave the settle pass room, and re-assert once if it closed us. */
+  let tries = 0;
+  const attempt = () => {
+    const b = BUSINESSES.find(x => x.id === id);
+    if (!b) {
+      if (DataLoader.isLoaded()) { Diag.log('deep link: no listing with id ' + id); return; }
+    } else {
+      const m = markers[id];
+      if (m && cluster.hasLayer(m)) {
+        focus(id);
+        setTimeout(() => {
+          const mm = markers[id];
+          if (mm && !mm.isPopupOpen()) focus(id);
+        }, 700);
+        return;
+      }
+    }
+    if (++tries > 24) { Diag.log('deep link: gave up waiting for ' + id); return; }
+    setTimeout(attempt, 250);
+  };
+  DataLoader.whenLoaded(() => setTimeout(attempt, 300), 8000);
+})();
+
 /* Belt and braces: never leave the app stranded behind the intro.
 
    This used to be an unconditional 12s timer from page load, which quietly

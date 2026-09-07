@@ -3079,7 +3079,9 @@
     ],
     "nation": "England",
     "county": "Berkshire",
-    "email": "emma@emmaalington.co.uk"
+    "email": "emma@emmaalington.co.uk",
+    "public_note": "Everything is made in the UK — in your Berkshire studio, working with craftsmen in Stoke. What we couldn't establish is where your black stoneware clay is dug or prepared. Gold needs the clay body itself to be British.",
+    "tier_question": "Where is your black stoneware clay dug or prepared?"
   },
   {
     "id": "feldspar",
