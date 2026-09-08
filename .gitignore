@@ -16,6 +16,10 @@ FOOD-SEARCH-PLAN.md
 data/business-contacts.*
 data/contact-harvest-report.md
 
+# submission exports downloaded from /admin — these carry private pin postcodes
+# and the submitter's name and email. The repo is public; never commit one.
+approved-submissions*.json
+
 # one-off cleanup script — hardcodes 15 harvested addresses as manual overrides
 scripts/clean-and-finalize-contacts.js
 
