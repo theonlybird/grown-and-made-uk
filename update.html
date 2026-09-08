@@ -8,6 +8,7 @@
 <meta name="theme-color" content="#FAF7F0" />
 <title>Update your listing — Grown and Made UK</title>
 <link rel="stylesheet" href="assets/theme.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
   /* Palette and type live in assets/theme.css */
   *{box-sizing:border-box}
@@ -176,6 +177,17 @@
   .appeal-q{margin:0 0 14px;font-size:15px;font-weight:700;color:#7D5F22}
   #appeal .lab{color:#7D5F22}
   #appeal input,#appeal textarea{background:#fff}
+  .pinmap{height:260px;margin-top:8px;border:1px solid var(--line-strong);border-radius:9px;
+       overflow:hidden;position:relative;background:var(--bg)}
+  .pinmap .leaflet-container{height:100%;width:100%;font:inherit}
+  /* Touch only: a one-finger pan on the map would otherwise eat the page
+     scroll, which on a phone reads as the form being stuck. */
+  .pinmap-tap{position:absolute;inset:0;z-index:800;display:flex;align-items:center;
+       justify-content:center;background:rgba(250,247,240,.55);font-size:14px;font-weight:700;
+       color:var(--racing-green);cursor:pointer}
+  .pinrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:7px}
+  .pinrow .help{margin-top:0}
+  .pin-moved{color:#7D5F22;font-weight:700}
   .confirm{margin:0 0 14px;font-weight:600}
   .submit-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:4px}
   .btn{font:700 15px var(--font-body);background:var(--racing-green);color:#fff;border:0;
@@ -257,11 +269,15 @@
         <span class="help">This is public — it's the line beside the pin on your listing. Give only as much as you're happy to publish.</span>
       </label>
 
-      <label class="fld">
-        <span class="lab">Postcode for your pin <em>— not shown publicly</em></span>
-        <input type="text" name="pin_postcode" placeholder="e.g. RG8 8QT" autocomplete="postal-code" />
-        <span class="help">We use this only to put your pin in the right place, and never publish it. Useful if you work from home: give us the postcode here and keep the line above as vague as you like.</span>
-      </label>
+      <div class="fld">
+        <span class="lab">Where your pin sits on the map</span>
+        <span class="help">Drag the pin to exactly where you'd like it. It is public, so if you work from home you may prefer to put it on your village or your nearest town rather than on your door.</span>
+        <div id="pinmap" class="pinmap"><div class="pinmap-tap" id="pinmap-tap" hidden>Tap to move your pin</div></div>
+        <div class="pinrow">
+          <span class="help" id="pin-state">This is where we have you now.</span>
+          <button type="button" class="btn-ghost" id="pin-reset" hidden>Put it back</button>
+        </div>
+      </div>
 
       <label class="fld">
         <span class="lab">Town, city or county shown on your listing</span>
@@ -408,6 +424,7 @@ document.addEventListener('click', e => {
 });
 </script>
 <script src="assets/sketch-bg.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 /* update.html — a business updating its own listing.
  *
@@ -428,6 +445,82 @@ document.addEventListener('click', e => {
 
   var FIELDS = ['name', 'website', 'instagram', 'address', 'town', 'description'];
   var record = null, original = {};
+
+  /* ------------------------------------------------------------------
+     The pin. They drag it; we send the coordinates as a suggestion like
+     any other, and Theo approves it. Nothing here writes to the map.
+     Full zoom is deliberate — a shop needs its door findable — with the
+     warning above the map doing the work for home studios.
+     ------------------------------------------------------------------ */
+  var Pin = (function () {
+    var map = null, marker = null, home = null, moved = false;
+
+    var round = function (n) { return Math.round(n * 1e5) / 1e5; };
+
+    function metres(a, b) {                       // haversine, for the label
+      var R = 6371000, t = Math.PI / 180;
+      var dLat = (b.lat - a.lat) * t, dLng = (b.lng - a.lng) * t;
+      var s = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+        + Math.cos(a.lat * t) * Math.cos(b.lat * t) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+      return Math.round(2 * R * Math.asin(Math.sqrt(s)));
+    }
+
+    function say() {
+      var el = $('pin-state');
+      if (!moved) {
+        el.textContent = 'This is where we have you now.';
+        el.classList.remove('pin-moved');
+        $('pin-reset').hidden = true;
+        return;
+      }
+      var d = metres(home, marker.getLatLng());
+      el.textContent = 'Moved ' + (d < 1000 ? d + 'm' : (d / 1000).toFixed(1) + 'km')
+        + ' — we will check it before it goes live.';
+      el.classList.add('pin-moved');
+      $('pin-reset').hidden = false;
+    }
+
+    return {
+      init: function (r) {
+        if (typeof L === 'undefined' || !r.lat || !r.lng) return;   // fails soft
+        home = { lat: r.lat, lng: r.lng };
+        map = L.map('pinmap', {
+          center: [r.lat, r.lng], zoom: 13, scrollWheelZoom: false, zoomControl: true
+        });
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_2gha_1_16726e30fc6eb0702a131d13', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd', maxZoom: 19, noWrap: true
+        }).addTo(map);
+        marker = L.marker([r.lat, r.lng], {
+          draggable: true, autoPan: true,
+          icon: L.divIcon({ className: '', iconSize: [24, 24], iconAnchor: [12, 12],
+            html: '<div class="pin tier-' + r.tier + '" style="--cat:var(--' + r.category + ')"></div>' })
+        }).addTo(map);
+        marker.on('dragend', function () { moved = true; say(); paint(); });
+
+        if (L.Browser.mobile) {
+          var tap = $('pinmap-tap');
+          tap.hidden = false;
+          map.dragging.disable();
+          tap.addEventListener('click', function () { tap.hidden = true; map.dragging.enable(); });
+        }
+        // The card is hidden while the form loads, so Leaflet measures 0x0.
+        setTimeout(function () { map.invalidateSize(); }, 60);
+      },
+      reset: function () {
+        if (!marker) return;
+        marker.setLatLng([home.lat, home.lng]);
+        map.setView([home.lat, home.lng], 13);
+        moved = false; say(); paint();
+      },
+      moved: function () { return moved; },
+      value: function () {
+        if (!moved || !marker) return null;
+        var p = marker.getLatLng();
+        return { lat: round(p.lat), lng: round(p.lng) };
+      }
+    };
+  })();
 
   var $ = function (id) { return document.getElementById(id); };
   function show(which) {
@@ -476,7 +569,7 @@ document.addEventListener('click', e => {
     if (n) bits.push(n + (n === 1 ? ' change' : ' changes'));
     if (appealing) bits.push('a tier review');
     if (removing) bits.push('a removal request');
-    if ((el('pin_postcode').value || '').trim()) bits.push('your pin postcode');
+    if (Pin.moved()) bits.push('your pin');
 
     /* Most of the 474 have nothing to correct, so "no changes" is the commonest
        GOOD outcome, not an error. The tick is the affirmative act that makes an
@@ -564,6 +657,7 @@ document.addEventListener('click', e => {
       || 'What have we got wrong, and what can we check?';
 
     show('state-form');
+    Pin.init(r);            // after show(): Leaflet cannot measure a hidden div
     paint();
   }
 
@@ -571,6 +665,7 @@ document.addEventListener('click', e => {
     $('appeal').hidden = !this.checked; paint();
   });
   $('confirm-toggle').addEventListener('change', paint);
+  $('pin-reset').addEventListener('click', function () { Pin.reset(); });
   $('remove-toggle').addEventListener('change', function () {
     $('remove-help').hidden = !this.checked; paint();
   });
@@ -591,9 +686,7 @@ document.addEventListener('click', e => {
     var removal = $('remove-toggle').checked;
     var notes = (el('notes').value || '').trim();
     var confirmed = $('confirm-toggle').checked;
-    /* Private: never rendered on the site, never applied to businesses.json by
-       script. It reaches the admin queue for Theo to place the pin by hand. */
-    var pinPostcode = (el('pin_postcode').value || '').trim();
+    var pin = Pin.value();
 
     // The button is disabled without it, but Enter in a text field submits too.
     if (!confirmed) return;
@@ -612,8 +705,7 @@ document.addEventListener('click', e => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         id: ID, token: TOKEN, changes: changes, appeal: appeal,
-        removal: removal, notes: notes, confirmed: confirmed,
-        pin_postcode: pinPostcode,
+        removal: removal, notes: notes, confirmed: confirmed, pin: pin,
         from_name: (el('from_name').value || '').trim(),
         from_email: (el('from_email').value || '').trim()
       })
@@ -629,7 +721,7 @@ document.addEventListener('click', e => {
       if (appeal) bits.push('your tier evidence');
       if (removal) bits.push('your removal request');
       if (notes && !n) bits.push('your note');
-      if (pinPostcode) bits.push('your pin postcode');
+      if (pin) bits.push('your new pin position');
       $('sent-summary').textContent = bits.length
         ? 'We have ' + bits.join(' and ') + '.'
         : 'We have your confirmation that everything on your listing is correct.';

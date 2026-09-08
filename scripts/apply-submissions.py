@@ -12,6 +12,9 @@ value the business was shown. If someone edited that field in between, the
 change is reported as a conflict and skipped rather than silently overwriting
 newer work.
 
+A dragged pin IS applied on approval -- the business chose where it goes, you
+approved it, and lat/lng are checked server-side for being real UK coordinates.
+
 Tier appeals are never applied automatically -- they are listed for you to
 judge against the rulebook, which is the whole point of keeping Gold
 non-discretionary. Removals are listed too, since deleting a record is not
@@ -35,6 +38,7 @@ def main():
     by_id = {r['id']: r for r in data}
 
     applied, conflicts, appeals, removals, missing = 0, [], [], [], []
+    pins = 0
 
     for s in subs:
         r = by_id.get(s['business_id'])
@@ -45,6 +49,22 @@ def main():
             appeals.append(s)
         if s.get('removal'):
             removals.append(s)
+        # A dragged pin, approved. Same conflict rule as the text fields: if the
+        # coordinates moved since the business was shown them, someone has
+        # repositioned this listing in the meantime and their drag is stale.
+        pin = s.get('pin')
+        if pin:
+            shown = (round(float(pin['from']['lat']), 5), round(float(pin['from']['lng']), 5))
+            now = (round(float(r.get('lat')), 5), round(float(r.get('lng')), 5))
+            if shown != now:
+                conflicts.append((s['business_name'], 'pin', '%s, %s' % shown, '%s, %s' % now))
+            else:
+                if not args.dry_run:
+                    r['lat'], r['lng'] = pin['to']['lat'], pin['to']['lng']
+                pins += 1
+                print('  %-28s %-12s -> %s, %s (%sm)' % (s['business_name'][:28], 'pin',
+                      pin['to']['lat'], pin['to']['lng'], pin.get('metres', '?')))
+
         for field, ch in (s.get('changes') or {}).items():
             if field not in APPLY:
                 continue
@@ -59,6 +79,8 @@ def main():
             print('  %-28s %-12s -> %s' % (s['business_name'][:28], field, ch['to']))
 
     print('\n%d field%s applied' % (applied, '' if applied == 1 else 's'))
+    if pins:
+        print('%d pin%s moved' % (pins, '' if pins == 1 else 's'))
 
     if conflicts:
         print('\n%d CONFLICT%s — the record changed since they were shown it, skipped:'
@@ -91,7 +113,7 @@ def main():
     if args.dry_run:
         print('\n(dry run — nothing written)')
         return
-    if applied:
+    if applied or pins:
         with open(DATA, 'w') as fh:
             json.dump(data, fh, indent=2, ensure_ascii=False)
             fh.write('\n')

@@ -47,6 +47,31 @@ function tokenOk(id, given, secret) {
   return want.length === got.length && crypto.timingSafeEqual(want, got);
 }
 
+/* Great Britain and Ireland, generously. Anything outside is a bug or a joke,
+   and either way is not worth putting in front of a human. */
+const UK = { minLat: 49.5, maxLat: 61.2, minLng: -8.8, maxLng: 2.1 };
+const round5 = (n) => Math.round(n * 1e5) / 1e5;
+
+function pinFrom(raw, record) {
+  if (!raw || typeof raw !== 'object') return null;
+  const lat = Number(raw.lat), lng = Number(raw.lng);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  if (lat < UK.minLat || lat > UK.maxLat || lng < UK.minLng || lng > UK.maxLng) return null;
+  const to = { lat: round5(lat), lng: round5(lng) };
+  const from = { lat: round5(Number(record.lat)), lng: round5(Number(record.lng)) };
+  // Same spot to five decimals (about a metre) is not a change.
+  if (to.lat === from.lat && to.lng === from.lng) return null;
+  return { from, to, metres: metresBetween(from, to) };
+}
+
+function metresBetween(a, b) {
+  const R = 6371000, t = Math.PI / 180;
+  const dLat = (b.lat - a.lat) * t, dLng = (b.lng - a.lng) * t;
+  const s = Math.sin(dLat / 2) ** 2
+    + Math.cos(a.lat * t) * Math.cos(b.lat * t) * Math.sin(dLng / 2) ** 2;
+  return Math.round(2 * R * Math.asin(Math.sqrt(s)));
+}
+
 const clean = (v, max) =>
   String(v == null ? '' : v).replace(/\s+/g, ' ').trim().slice(0, max);
 
@@ -114,12 +139,13 @@ module.exports = async function handler(req, res) {
      submission worth storing: for most of the 474 the useful answer is "yes,
      all correct", and that has to be recordable, not rejected as nothing. */
   const confirmed = body.confirmed === true;
-  /* Private, and deliberately NOT in EDITABLE: it is never written to
-     businesses.json and never rendered. A home studio can give us a precise
-     postcode for the pin while publishing nothing tighter than a county. */
-  const pinPostcode = clean(body.pin_postcode, 20);
+  /* The dragged pin. Deliberately NOT in EDITABLE — that allow-list guards
+     the text fields, and coordinates need their own check: a number, inside
+     the UK, and actually different from where the record already sits. Like
+     everything else here it is a suggestion in a queue, not a write. */
+  const pin = pinFrom(body.pin, record);
 
-  if (!Object.keys(changes).length && !appeal && !notes && !removal && !confirmed && !pinPostcode) {
+  if (!Object.keys(changes).length && !appeal && !notes && !removal && !confirmed && !pin) {
     return res.status(400).json({ error: 'Nothing was changed' });
   }
 
@@ -140,11 +166,11 @@ module.exports = async function handler(req, res) {
     removal,
     notes,
     confirmed,
-    pin_postcode: pinPostcode,
+    pin,
     /* Split on arrival so the two never have to be told apart later: a
        correction is a batch job, a tier appeal is a judgement call. */
     kind: appeal ? 'tier-appeal' : removal ? 'removal'
-      : (Object.keys(changes).length || notes || pinPostcode) ? 'correction' : 'confirmation',
+      : (Object.keys(changes).length || notes || pin) ? 'correction' : 'confirmation',
     status: 'new',
     reviewed_at: null,
     review_note: '',
