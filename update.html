@@ -167,7 +167,8 @@
        color:var(--muted-2);margin:14px 0 4px}
   .why{margin:0;font-size:14.5px;line-height:1.6;color:#39434e;padding:12px 14px;
        background:var(--bg);border-left:3px solid var(--line-strong);border-radius:0 8px 8px 0}
-  .rules{font-size:13px;color:var(--muted-2);margin:14px 0 16px}
+  .rules{font-size:13px;color:var(--muted-2);margin:14px 0 12px}
+  .tier-line{font-size:14.5px;line-height:1.6;color:var(--ink);margin:0 0 16px}
   .check{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;cursor:pointer;
        padding:12px 14px;border:1px dashed var(--line-strong);border-radius:9px;background:var(--bg)}
   .check input{margin:2px 0 0;flex:none;width:16px;height:16px;accent-color:var(--racing-green)}
@@ -225,7 +226,7 @@
   <form id="state-form" hidden autocomplete="off">
     <div class="card intro">
       <h1 id="biz-name"></h1>
-      <p class="lede">This is how you currently appear on the map. Change anything that's wrong and send it back — nothing goes live until we've checked it.</p>
+      <p class="lede">Congratulations for making it onto the Grown and Made UK map! Please review all the details we have for you below and let us know if anything needs changing.</p>
       <p class="see-pin"><a id="pin-link" href="./" target="_blank" rel="noopener">See your pin on the map &rarr;</a></p>
       <p class="ask" id="primary-ask" hidden></p>
     </div>
@@ -281,21 +282,22 @@
     <div class="card" id="tier-card">
       <h2>Your tier</h2>
       <p><span class="tag" id="tier-tag"></span></p>
+      <p class="rules">All businesses have to meet strict criteria to reach the Silver and Gold tiers, which are set out in our <a href="gold-and-silver.html" target="_blank">published standard</a>.</p>
+      <p class="tier-line" id="tier-line"></p>
       <div id="tier-why" hidden>
         <p class="why-lab">Why</p>
         <p class="why" id="tier-why-text"></p>
       </div>
-      <p class="rules">Every listing is graded against the same <a href="gold-and-silver.html" target="_blank">published standard</a>. No business can pay to move tier — only evidence does.</p>
 
       <label class="check">
         <input type="checkbox" id="appeal-toggle" />
-        <span>I think this is wrong, and I can evidence it</span>
+        <span id="appeal-label"></span>
       </label>
 
       <div id="appeal" hidden>
         <p class="appeal-q" id="appeal-question"></p>
         <label class="fld">
-          <span class="lab">Your answer — please name the business, mill or supplier</span>
+          <span class="lab" id="appeal-answer-lab"></span>
           <textarea name="appeal_answer" rows="2"></textarea>
         </label>
         <label class="fld">
@@ -488,7 +490,6 @@ document.addEventListener('click', e => {
     var ask = '';
     if (!hasLogo) ask = "We don't have your logo — that's the one thing we'd most like from you.";
     else if (physical && !hasPostcode) ask = 'Could you give us your full address including postcode? It puts your pin in the right place.';
-    else if (r.tier === 'silver' && r.tier_question) ask = 'One question would let us look at your tier again — it’s at the bottom of this page.';
     else if (!r.instagram) ask = "We don't have an Instagram for you, if you'd like it on your listing.";
     if (ask) { $('primary-ask').textContent = ask; $('primary-ask').hidden = false; }
     if (!physical) $('addr-hint').textContent = '— or the town you work from';
@@ -524,12 +525,21 @@ document.addEventListener('click', e => {
       $('tier-why-text').textContent = r.public_note;
       $('tier-why').hidden = false;
     }
-    if (r.tier === 'gold') {
-      $('appeal-toggle').closest('.check').hidden = true;
-    } else {
-      $('appeal-question').textContent = r.tier_question
-        || 'What have we got wrong, and what can we check?';
-    }
+    /* Both tiers can now ask for a review. Gold's checkbox drops "and I can
+       evidence it" — a Gold listing being wrong is usually us, not them — but
+       the submission is still classified tier-appeal either way. */
+    var gold = r.tier === 'gold';
+    $('tier-line').textContent = gold
+      ? 'You are currently Gold tier based on the evidence we could find. If you think this is a mistake or we are missing some information, please tell us why and we can review it.'
+      : 'You are currently Silver tier based on the evidence we could find. If you think you should be Gold or we are missing some information, please tell us why and we can review it.';
+    $('appeal-label').textContent = gold
+      ? 'I think this is wrong'
+      : 'I think this is wrong, and I can evidence it';
+    $('appeal-answer-lab').textContent = gold
+      ? 'Your answer'
+      : 'Your answer — please name the business, mill or supplier';
+    $('appeal-question').textContent = r.tier_question
+      || 'What have we got wrong, and what can we check?';
 
     show('state-form');
     paint();
