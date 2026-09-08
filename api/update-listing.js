@@ -110,8 +110,12 @@ module.exports = async function handler(req, res) {
 
   const notes = clean(body.notes, 2000);
   const removal = body.removal === true;
+  /* The portal will not submit without this ticked. It is what makes an empty
+     submission worth storing: for most of the 474 the useful answer is "yes,
+     all correct", and that has to be recordable, not rejected as nothing. */
+  const confirmed = body.confirmed === true;
 
-  if (!Object.keys(changes).length && !appeal && !notes && !removal) {
+  if (!Object.keys(changes).length && !appeal && !notes && !removal && !confirmed) {
     return res.status(400).json({ error: 'Nothing was changed' });
   }
 
@@ -131,9 +135,11 @@ module.exports = async function handler(req, res) {
     appeal,
     removal,
     notes,
+    confirmed,
     /* Split on arrival so the two never have to be told apart later: a
        correction is a batch job, a tier appeal is a judgement call. */
-    kind: appeal ? 'tier-appeal' : removal ? 'removal' : 'correction',
+    kind: appeal ? 'tier-appeal' : removal ? 'removal'
+      : (Object.keys(changes).length || notes) ? 'correction' : 'confirmation',
     status: 'new',
     reviewed_at: null,
     review_note: '',

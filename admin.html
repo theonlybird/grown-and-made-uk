@@ -39,6 +39,7 @@
   .k-correction{background:#E4EDE7;color:#004225}
   .k-tier-appeal{background:#F4EBD4;color:#7D5F22}
   .k-removal{background:#F7E7E9;color:#8C1D2C}
+  .k-confirmation{background:#E7EDF3;color:#2F4A63}
   .s-new{background:#eef1f4;color:#39434e}
   .s-approved{background:#E4EDE7;color:#004225}
   .s-rejected{background:#F7E7E9;color:#8C1D2C}
@@ -84,6 +85,7 @@
     <h1>Review queue</h1>
     <span class="counts" id="counts"></span>
     <button data-f="new" class="on">New</button>
+    <button data-f="confirmation">Confirmations</button>
     <button data-f="tier-appeal">Tier appeals</button>
     <button data-f="removal">Removals</button>
     <button data-f="all">All</button>
@@ -151,6 +153,10 @@
             + '<span class="now">' + esc(r.changes[f].to) + '</span></span></div>';
         }).join('') + '</div>';
       }
+      if (r.kind === 'confirmation') {
+        html += '<div class="block"><div class="bl">Confirmed as correct</div>'
+          + '<p style="margin:0">They reviewed their listing and told us nothing needs changing.</p></div>';
+      }
       if (r.appeal) {
         html += '<div class="block appeal"><div class="bl">Tier appeal — currently ' + esc(r.tier) + '</div>'
           + '<p style="margin:0 0 6px"><em>' + esc(r.appeal.question) + '</em></p>'
@@ -189,14 +195,15 @@
       list.appendChild(card);
     });
 
-    var by = { neu: 0, appeal: 0, removal: 0 };
+    var by = { neu: 0, appeal: 0, removal: 0, confirmed: 0 };
     ROWS.forEach(function (r) {
       if (r.status === 'new') by.neu++;
       if (r.kind === 'tier-appeal' && r.status === 'new') by.appeal++;
       if (r.kind === 'removal' && r.status === 'new') by.removal++;
+      if (r.kind === 'confirmation' && r.status === 'new') by.confirmed++;
     });
     $('counts').textContent = by.neu + ' new of ' + ROWS.length + ' · '
-      + by.appeal + ' tier appeals · ' + by.removal + ' removals';
+      + by.confirmed + ' confirmations · ' + by.appeal + ' tier appeals · ' + by.removal + ' removals';
   }
 
   function showErr(m) { $('err').textContent = m; $('err').hidden = false; }

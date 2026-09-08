@@ -176,6 +176,7 @@
   .appeal-q{margin:0 0 14px;font-size:15px;font-weight:700;color:#7D5F22}
   #appeal .lab{color:#7D5F22}
   #appeal input,#appeal textarea{background:#fff}
+  .confirm{margin:0 0 14px;font-weight:600}
   .submit-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:4px}
   .btn{font:700 15px var(--font-body);background:var(--racing-green);color:#fff;border:0;
        border-radius:9px;padding:13px 28px;cursor:pointer}
@@ -337,9 +338,14 @@
       <input type="text" name="_hp" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
     </div>
 
+    <label class="check confirm">
+      <input type="checkbox" id="confirm-toggle" />
+      <span>I am happy that all the information above is correct</span>
+    </label>
+
     <div class="submit-row">
-      <button type="submit" class="btn" id="submit-btn">Send these changes</button>
-      <p class="changed-note" id="changed-note">No changes yet</p>
+      <button type="submit" class="btn" id="submit-btn" disabled>Submit</button>
+      <p class="changed-note" id="changed-note">Tick the box above to send</p>
     </div>
     <p class="err" id="form-err" hidden></p>
   </form>
@@ -458,13 +464,22 @@ document.addEventListener('click', e => {
     var n = Object.keys(changed).length;
     var appealing = $('appeal-toggle').checked;
     var removing = $('remove-toggle').checked;
+    var confirmed = $('confirm-toggle').checked;
     var note = $('changed-note');
     var bits = [];
     if (n) bits.push(n + (n === 1 ? ' change' : ' changes'));
     if (appealing) bits.push('a tier review');
     if (removing) bits.push('a removal request');
-    note.textContent = bits.length ? 'Sending ' + bits.join(' and ') : 'No changes yet';
-    note.classList.toggle('live', bits.length > 0);
+
+    /* Most of the 474 have nothing to correct, so "no changes" is the commonest
+       GOOD outcome, not an error. The tick is the affirmative act that makes an
+       otherwise empty submission meaningful — and it is what enables the button,
+       so the note beside it always says why the button is grey. */
+    $('submit-btn').disabled = !confirmed;
+    note.textContent = !confirmed ? 'Tick the box above to send'
+      : bits.length ? 'Sending ' + bits.join(' and ')
+      : 'Confirming your details are correct';
+    note.classList.toggle('live', confirmed);
   }
 
   function render(r) {
@@ -548,6 +563,7 @@ document.addEventListener('click', e => {
   $('appeal-toggle').addEventListener('change', function () {
     $('appeal').hidden = !this.checked; paint();
   });
+  $('confirm-toggle').addEventListener('change', paint);
   $('remove-toggle').addEventListener('change', function () {
     $('remove-help').hidden = !this.checked; paint();
   });
@@ -567,12 +583,10 @@ document.addEventListener('click', e => {
     } : null;
     var removal = $('remove-toggle').checked;
     var notes = (el('notes').value || '').trim();
+    var confirmed = $('confirm-toggle').checked;
 
-    if (!Object.keys(changes).length && !appeal && !removal && !notes) {
-      $('form-err').textContent = "Nothing has changed yet — edit a field, or tell us what's wrong in the last box.";
-      $('form-err').hidden = false;
-      return;
-    }
+    // The button is disabled without it, but Enter in a text field submits too.
+    if (!confirmed) return;
     if (appeal && !appeal.answer && !appeal.link) {
       $('form-err').textContent = 'To look at your tier again we need something we can check — a supplier name, or a link.';
       $('form-err').hidden = false;
@@ -588,7 +602,7 @@ document.addEventListener('click', e => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         id: ID, token: TOKEN, changes: changes, appeal: appeal,
-        removal: removal, notes: notes,
+        removal: removal, notes: notes, confirmed: confirmed,
         from_name: (el('from_name').value || '').trim(),
         from_email: (el('from_email').value || '').trim()
       })
@@ -604,11 +618,13 @@ document.addEventListener('click', e => {
       if (appeal) bits.push('your tier evidence');
       if (removal) bits.push('your removal request');
       if (notes && !n) bits.push('your note');
-      $('sent-summary').textContent = 'We have ' + (bits.join(' and ') || 'your message') + '.';
+      $('sent-summary').textContent = bits.length
+        ? 'We have ' + bits.join(' and ') + '.'
+        : 'We have your confirmation that everything on your listing is correct.';
       show('state-sent');
       window.scrollTo(0, 0);
     }).catch(function (err) {
-      btn.disabled = false; btn.textContent = 'Send these changes';
+      btn.disabled = false; btn.textContent = 'Submit';
       $('form-err').textContent = err.message
         + ' — if it keeps happening, email hello@grownandmade.uk and we’ll do it by hand.';
       $('form-err').hidden = false;
