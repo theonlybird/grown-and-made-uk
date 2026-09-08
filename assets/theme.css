@@ -172,6 +172,28 @@
   margin:0;font-size:13.5px;line-height:1.65;color:var(--muted-2);max-width:34ch;
 }
 
+/* Social buttons. Cream on green: the one solid element in an otherwise flat
+   footer, so the follow points read before the link columns do. Rendered as
+   inert <span class="is-soon"> until the accounts exist — swapping each for an
+   <a href> and dropping the class is the only change needed, and an inline
+   <svg> icon can sit inside the button alongside or instead of the label. */
+.site-footer .foot-social{
+  list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;
+}
+.site-footer .foot-social-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--green);color:var(--paper);
+  font-family:var(--font-body);font-size:10.5px;font-weight:600;line-height:1;
+  text-transform:uppercase;letter-spacing:.1em;
+  padding:8px 14px;border-radius:999px;
+  text-decoration:none;border-bottom:none;
+  transition:background-color .15s ease;
+}
+.site-footer .foot-social-btn svg{width:13px;height:13px;fill:currentColor;flex:0 0 auto}
+.site-footer a.foot-social-btn:hover{background:var(--green-dark);color:var(--paper);border-bottom:none}
+/* Not yet a link: dimmed and non-interactive so it never looks broken. */
+.site-footer .foot-social-btn.is-soon{opacity:.68;cursor:default}
+
 .site-footer .foot-col h2{
   font-family:var(--font-body);font-size:11px;font-weight:600;
   text-transform:uppercase;letter-spacing:.11em;color:var(--green);
@@ -198,6 +220,10 @@
   margin:0;font-size:11.5px;line-height:1.7;color:var(--muted-2);
 }
 .site-footer .foot-reg strong{font-weight:600;color:var(--muted)}
+/* The mailto in the legal strip stays quiet — it is a disclosure, not a call
+   to action; contact.html is the route the columns above point at. */
+.site-footer .foot-reg a{color:var(--muted);border-bottom:1px solid var(--line-strong)}
+.site-footer .foot-reg a:hover{color:var(--green);border-bottom-color:var(--brass)}
 
 @media (max-width:767px){
   .site-footer{margin-top:44px}
@@ -210,6 +236,9 @@
   .site-footer .foot-brand{grid-column:1 / -1}
   .site-footer .foot-strap{max-width:none}
   .site-footer .foot-col a{padding:8px 0;font-size:14px}
+  /* Bigger tap targets once these become links. */
+  .site-footer .foot-social{margin-top:14px}
+  .site-footer .foot-social-btn{padding:10px 16px;font-size:11px}
 }
 
 /* Keep the footer at the foot of the window on short pages (contact, say, on a

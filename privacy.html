@@ -150,7 +150,7 @@
     <p class="note">Last updated 24 August 2026.</p>
 
     <h3>Who we are</h3>
-    <p>Grown and Made UK CIC is the data controller for this website. We&rsquo;re a community interest company limited by guarantee, registered in England and Wales, company number 17415545. You can reach us at <a href="mailto:hello@grownandmade.uk">hello@grownandmade.uk</a>.</p>
+    <p>Grown and Made UK CIC is the data controller for this website. We&rsquo;re a community interest company limited by guarantee, registered in England and Wales, company number 17415545, registered office Unit A, 82 James Carter Road, Mildenhall, Bury St&nbsp;Edmunds IP28&nbsp;7DE. You can reach us at <a href="mailto:hello@grownandmade.uk">hello@grownandmade.uk</a>.</p>
 
     <h3>What we collect, and why</h3>
     <p><strong>When you suggest a business.</strong> The <a href="submit.html">suggestion form</a> asks for details about the business and, optionally, your name, email address and your relationship to it. We use this to check the business against our standard and to come back to you if we need to ask a question. The form is delivered by Formspree, which passes the submission to us by email.</p>
@@ -196,6 +196,16 @@
         <img class="foot-seal" src="assets/brand/gm-seal.png" alt="" width="74" height="69" loading="lazy" />
         <p class="foot-name">Grown and Made UK</p>
         <p class="foot-strap">An independent, non-profit map of the businesses that genuinely make and grow what they sell in Britain.</p>
+        <!-- Social. Inert until the accounts exist: swap each <span> for
+             <a href="https://www.linkedin.com/company/..."> / <a href="https://www.instagram.com/...">
+             and drop the is-soon class. Nothing else changes. To use the
+             platforms' own icons, put their official SVG inside the button
+             before the text (or in place of it, keeping the aria-label) —
+             the styling already handles an inline svg. -->
+        <ul class="foot-social" role="list">
+          <li><span class="foot-social-btn is-soon" role="img" aria-label="LinkedIn &mdash; coming soon">LinkedIn</span></li>
+          <li><span class="foot-social-btn is-soon" role="img" aria-label="Instagram &mdash; coming soon">Instagram</span></li>
+        </ul>
       </div>
       <nav class="foot-col" aria-label="Explore the site">
         <h2>Explore</h2>
@@ -214,10 +224,7 @@
     </div>
     <div class="foot-legal">
       <p class="foot-pledge">No business can pay to be listed, promoted or upgraded. Only evidence moves a tier.</p>
-      <p class="foot-reg">&copy; 2026 Grown and Made UK CIC. A community interest company limited by guarantee, registered in England and Wales, company number <strong>17415545</strong>.
-      <!-- Registered office address goes here when you're ready to publish it:
-           add " Registered office: <address>." to the sentence above. The
-           trading disclosure regulations expect it on the website. --></p>
+      <p class="foot-reg">&copy; 2026 Grown and Made UK CIC. A community interest company limited by guarantee, registered in England and Wales, company number <strong>17415545</strong>. Registered office: Unit A, 82 James Carter Road, Mildenhall, Bury St&nbsp;Edmunds IP28&nbsp;7DE &mdash; a postal address for legal and official correspondence, not a public office. Enquiries: <a href="mailto:hello@grownandmade.uk">hello@grownandmade.uk</a>.</p>
     </div>
   </div>
 </footer>
