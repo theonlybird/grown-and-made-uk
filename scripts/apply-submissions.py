@@ -39,6 +39,7 @@ def main():
 
     applied, conflicts, appeals, removals, missing = 0, [], [], [], []
     pins = 0
+    regions, unresolved = 0, []
 
     for s in subs:
         r = by_id.get(s['business_id'])
@@ -65,6 +66,21 @@ def main():
                 print('  %-28s %-12s -> %s, %s (%sm)' % (s['business_name'][:28], 'pin',
                       pin['to']['lat'], pin['to']['lng'], pin.get('metres', '?')))
 
+        # County and country, but only where the pin and their own text agreed.
+        # A disagreement is listed for a human -- see api/_lib/geo.js.
+        loc = s.get('location')
+        if loc:
+            if loc.get('agrees') and loc.get('county'):
+                if not args.dry_run:
+                    r['county'] = loc['county']
+                    if loc.get('nation'):
+                        r['nation'] = loc['nation']
+                regions += 1
+                print('  %-28s %-12s -> %s, %s' % (s['business_name'][:28], 'county',
+                      loc['county'], loc.get('nation', '')))
+            else:
+                unresolved.append((s['business_name'], loc.get('why') or loc.get('error') or 'no reading'))
+
         for field, ch in (s.get('changes') or {}).items():
             if field not in APPLY:
                 continue
@@ -81,6 +97,13 @@ def main():
     print('\n%d field%s applied' % (applied, '' if applied == 1 else 's'))
     if pins:
         print('%d pin%s moved' % (pins, '' if pins == 1 else 's'))
+    if regions:
+        print('%d county/nation stamp%s applied' % (regions, '' if regions == 1 else 's'))
+    if unresolved:
+        print('\n%d LOCATION%s not settled -- set the county by hand:'
+              % (len(unresolved), '' if len(unresolved) == 1 else 'S'))
+        for name, why in unresolved:
+            print('  %s -- %s' % (name, why))
 
     if conflicts:
         print('\n%d CONFLICT%s — the record changed since they were shown it, skipped:'
@@ -113,7 +136,7 @@ def main():
     if args.dry_run:
         print('\n(dry run — nothing written)')
         return
-    if applied or pins:
+    if applied or pins or regions:
         with open(DATA, 'w') as fh:
             json.dump(data, fh, indent=2, ensure_ascii=False)
             fh.write('\n')

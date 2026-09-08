@@ -177,6 +177,8 @@
   .appeal-q{margin:0 0 14px;font-size:15px;font-weight:700;color:#7D5F22}
   #appeal .lab{color:#7D5F22}
   #appeal input,#appeal textarea{background:#fff}
+  .field-err{display:block;font-size:13px;font-weight:700;color:#8C1D2C;margin-top:5px}
+  .fld input.invalid{border-color:#C0808C;background:#FDF6F7}
   .pinmap{height:260px;margin-top:8px;border:1px solid var(--line-strong);border-radius:9px;
        overflow:hidden;position:relative;background:var(--bg)}
   .pinmap .leaflet-container{height:100%;width:100%;font:inherit}
@@ -267,6 +269,7 @@
         <span class="lab">Address shown on your listing <em id="addr-hint">— including postcode, please</em></span>
         <input type="text" name="address" />
         <span class="help">This is public — it's the line beside the pin on your listing. Give only as much as you're happy to publish.</span>
+        <span class="field-err" id="addr-err" hidden>Please provide at minimum a county.</span>
       </label>
 
       <div class="fld">
@@ -279,10 +282,6 @@
         </div>
       </div>
 
-      <label class="fld">
-        <span class="lab">Town, city or county shown on your listing</span>
-        <input type="text" name="town" />
-      </label>
 
       <label class="fld">
         <span class="lab">How we describe you</span>
@@ -443,7 +442,9 @@ document.addEventListener('click', e => {
   var ID = qs.get('b') || '';
   var TOKEN = qs.get('k') || '';
 
-  var FIELDS = ['name', 'website', 'instagram', 'address', 'town', 'description'];
+  /* No 'town': it is a search key the visitor never sees, kept in step with the
+     address by hand from the queue's location block. See api/_lib/geo.js. */
+  var FIELDS = ['name', 'website', 'instagram', 'address', 'description'];
   var record = null, original = {};
 
   /* ------------------------------------------------------------------
@@ -664,7 +665,27 @@ document.addEventListener('click', e => {
   $('appeal-toggle').addEventListener('change', function () {
     $('appeal').hidden = !this.checked; paint();
   });
-  $('confirm-toggle').addEventListener('change', paint);
+  /* The address is the only field we insist on: an empty one leaves the
+     listing with no location line at all. Checked at the moment they confirm,
+     because that is the point at which they are asserting it is all correct. */
+  function addressOk() {
+    var ok = !!(el('address').value || '').trim();
+    $('addr-err').hidden = ok;
+    el('address').classList.toggle('invalid', !ok);
+    return ok;
+  }
+
+  $('confirm-toggle').addEventListener('change', function () {
+    if (this.checked && !addressOk()) {
+      this.checked = false;                 // refuse the tick, say why, go there
+      el('address').scrollIntoView({ block: 'center', behavior: 'smooth' });
+      el('address').focus({ preventScroll: true });
+    }
+    paint();
+  });
+  el('address').addEventListener('input', function () {
+    if ((this.value || '').trim()) { $('addr-err').hidden = true; this.classList.remove('invalid'); }
+  });
   $('pin-reset').addEventListener('click', function () { Pin.reset(); });
   $('remove-toggle').addEventListener('change', function () {
     $('remove-help').hidden = !this.checked; paint();

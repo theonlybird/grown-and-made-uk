@@ -1286,6 +1286,13 @@ function byAudience(list, wanted) {
   return yes.concat(unknown);
 }
 
+/* `town` is a SEARCH KEY, not a label (8 Sep 2026). Every visible location line
+   — the sidebar row, the autocomplete row, the grid card and the pin popup — now
+   shows `address`, which is the one line the business itself chose and can edit.
+   town, county and nation are what the query is matched against, and none of
+   them is printed anywhere. Keep it that way: it is what lets a maker publish
+   "Studio in Berkshire" and still be found by someone searching Ashampstead. */
+
 // Does this business sit in the place the user named?
 function matchesPlace(b, placeTerms){
   if (!placeTerms || !placeTerms.length) return false;
@@ -1386,7 +1393,7 @@ function renderMapList(){
       ${logoHtml(b,'logo')}
       <div class="meta">
         <div class="nm">${b.name}</div>
-        <div class="sub">${b.town}</div>
+        <div class="sub">${b.address}</div>
         <span class="tag ${b.tier}">${b.tier}</span>
         <span class="tag cat ${b.category}">${CAT[b.category].label}</span>
         ${reasonText}
@@ -1438,7 +1445,6 @@ function renderGrid(){
           ${logoHtml(b, 'g-logo')}
           <div style="flex:1;min-width:0">
             <div class="g-title">${b.name}</div>
-            <div class="g-sub">${b.town}</div>
           </div>
         </div>
         <div class="g-badges">
@@ -1505,7 +1511,7 @@ searchInput.addEventListener('input', e => {
         ${logoHtml(b, 'ac-logo')}
         <div class="ac-meta">
           <div class="ac-name">${b.name}</div>
-          <div class="ac-sub">${b.town} · ${CAT[b.category].label}</div>
+          <div class="ac-sub">${b.address} · ${CAT[b.category].label}</div>
         </div>
       </div>`).join('');
     autocompleteDropdown.style.display = 'block';

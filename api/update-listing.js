@@ -12,10 +12,13 @@
  */
 const crypto = require('crypto');
 const store = require('./_lib/store');
+const geo = require('./_lib/geo');
 
+/* No 'town'. It is a search key the visitor never sees and the form no longer
+   offers, so accepting one could only ever come from a forged payload. */
 const EDITABLE = {
   name: 120, website: 300, instagram: 200,
-  address: 300, town: 120, description: 600,
+  address: 300, description: 600,
 };
 const MAX_BODY = 24 * 1024;
 
@@ -149,6 +152,24 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Nothing was changed' });
   }
 
+  /* Where they are, for search. Only worth working out when something that
+     decides it has actually moved — and never at the cost of the submission:
+     a slow or unreachable lookup leaves `location` null and the row still
+     lands in the queue. */
+  const movedOrRenamed = pin || changes.address;
+  let location = null;
+  if (movedOrRenamed) {
+    try {
+      location = await geo.locate(
+        pin ? pin.to : { lat: Number(record.lat), lng: Number(record.lng) },
+        { town: record.town,
+          address: (changes.address && changes.address.to) || record.address }
+      );
+    } catch (e) {
+      console.error('location lookup failed:', e.message);
+    }
+  }
+
   const now = new Date();
   const submission = {
     submission_id: now.toISOString().replace(/[:.]/g, '-') + '-' + id,
@@ -167,6 +188,7 @@ module.exports = async function handler(req, res) {
     notes,
     confirmed,
     pin,
+    location,
     /* Split on arrival so the two never have to be told apart later: a
        correction is a batch job, a tier appeal is a judgement call. */
     kind: appeal ? 'tier-appeal' : removal ? 'removal'

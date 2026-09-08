@@ -167,6 +167,19 @@
           + '&mlon=' + r.pin.to.lng + '#map=17/' + r.pin.to.lat + '/' + r.pin.to.lng
           + '" target="_blank" rel="noopener">See where they put it</a> — check it is not their front door before approving.</p></div>';
       }
+      if (r.location) {
+        var g = r.location, agree = g.agrees === true;
+        html += '<div class="block' + (agree ? '' : ' appeal') + '">'
+          + '<div class="bl">County &amp; country &mdash; ' + (agree ? 'agreed' : 'CHECK THIS') + '</div>';
+        if (g.pin)  html += '<p style="margin:0 0 4px">pin says: <strong>' + esc(g.pin.county || '?')
+          + '</strong>, ' + esc(g.pin.country || '?') + (g.pin.parish ? ' (' + esc(g.pin.parish) + ')' : '') + '</p>';
+        if (g.text) html += '<p style="margin:0 0 4px">their text says: <strong>' + esc(g.text.county || 'no county named')
+          + '</strong>, ' + esc(g.text.nation || '?') + '</p>';
+        html += '<p style="margin:0">' + (agree
+          ? 'Applying <strong>' + esc(g.county) + ', ' + esc(g.nation) + '</strong>' + (g.why ? ' &mdash; ' + esc(g.why) : '')
+          : 'Not applied &mdash; ' + esc(g.why || g.error || 'the two readings disagree') + '. Set it by hand.')
+          + '</p></div>';
+      }
       if (r.appeal) {
         html += '<div class="block appeal"><div class="bl">Tier appeal — currently ' + esc(r.tier) + '</div>'
           + '<p style="margin:0 0 6px"><em>' + esc(r.appeal.question) + '</em></p>'
