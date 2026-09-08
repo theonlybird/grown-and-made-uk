@@ -114,8 +114,12 @@ module.exports = async function handler(req, res) {
      submission worth storing: for most of the 474 the useful answer is "yes,
      all correct", and that has to be recordable, not rejected as nothing. */
   const confirmed = body.confirmed === true;
+  /* Private, and deliberately NOT in EDITABLE: it is never written to
+     businesses.json and never rendered. A home studio can give us a precise
+     postcode for the pin while publishing nothing tighter than a county. */
+  const pinPostcode = clean(body.pin_postcode, 20);
 
-  if (!Object.keys(changes).length && !appeal && !notes && !removal && !confirmed) {
+  if (!Object.keys(changes).length && !appeal && !notes && !removal && !confirmed && !pinPostcode) {
     return res.status(400).json({ error: 'Nothing was changed' });
   }
 
@@ -136,10 +140,11 @@ module.exports = async function handler(req, res) {
     removal,
     notes,
     confirmed,
+    pin_postcode: pinPostcode,
     /* Split on arrival so the two never have to be told apart later: a
        correction is a batch job, a tier appeal is a judgement call. */
     kind: appeal ? 'tier-appeal' : removal ? 'removal'
-      : (Object.keys(changes).length || notes) ? 'correction' : 'confirmation',
+      : (Object.keys(changes).length || notes || pinPostcode) ? 'correction' : 'confirmation',
     status: 'new',
     reviewed_at: null,
     review_note: '',

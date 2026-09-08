@@ -157,6 +157,10 @@
         html += '<div class="block"><div class="bl">Confirmed as correct</div>'
           + '<p style="margin:0">They reviewed their listing and told us nothing needs changing.</p></div>';
       }
+      if (r.pin_postcode) {
+        html += '<div class="block"><div class="bl">Pin postcode — private, do not publish</div>'
+          + '<p style="margin:0">' + esc(r.pin_postcode) + ' — place the pin by hand; this is not written to businesses.json.</p></div>';
+      }
       if (r.appeal) {
         html += '<div class="block appeal"><div class="bl">Tier appeal — currently ' + esc(r.tier) + '</div>'
           + '<p style="margin:0 0 6px"><em>' + esc(r.appeal.question) + '</em></p>'

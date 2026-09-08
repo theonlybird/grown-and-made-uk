@@ -252,13 +252,19 @@
       </div>
 
       <label class="fld">
-        <span class="lab">Address <em id="addr-hint">— including postcode, please</em></span>
+        <span class="lab">Address shown on your listing <em id="addr-hint">— including postcode, please</em></span>
         <input type="text" name="address" />
-        <span class="help">This sets where your pin sits on the map. If you're online-only with no address you'd like published, leave it as it is and say so below.</span>
+        <span class="help">This is public — it's the line beside the pin on your listing. Give only as much as you're happy to publish.</span>
       </label>
 
       <label class="fld">
-        <span class="lab">Town or area shown on your listing</span>
+        <span class="lab">Postcode for your pin <em>— not shown publicly</em></span>
+        <input type="text" name="pin_postcode" placeholder="e.g. RG8 8QT" autocomplete="postal-code" />
+        <span class="help">We use this only to put your pin in the right place, and never publish it. Useful if you work from home: give us the postcode here and keep the line above as vague as you like.</span>
+      </label>
+
+      <label class="fld">
+        <span class="lab">Town, city or county shown on your listing</span>
         <input type="text" name="town" />
       </label>
 
@@ -470,6 +476,7 @@ document.addEventListener('click', e => {
     if (n) bits.push(n + (n === 1 ? ' change' : ' changes'));
     if (appealing) bits.push('a tier review');
     if (removing) bits.push('a removal request');
+    if ((el('pin_postcode').value || '').trim()) bits.push('your pin postcode');
 
     /* Most of the 474 have nothing to correct, so "no changes" is the commonest
        GOOD outcome, not an error. The tick is the affirmative act that makes an
@@ -507,7 +514,7 @@ document.addEventListener('click', e => {
     else if (physical && !hasPostcode) ask = 'Could you give us your full address including postcode? It puts your pin in the right place.';
     else if (!r.instagram) ask = "We don't have an Instagram for you, if you'd like it on your listing.";
     if (ask) { $('primary-ask').textContent = ask; $('primary-ask').hidden = false; }
-    if (!physical) $('addr-hint').textContent = '— or the town you work from';
+    if (!physical) $('addr-hint').textContent = '— as much or as little as you would like published';
 
     /* Logo: show what we hold, and make emailing a new one land already labelled. */
     var box = $('logo-box');
@@ -584,6 +591,9 @@ document.addEventListener('click', e => {
     var removal = $('remove-toggle').checked;
     var notes = (el('notes').value || '').trim();
     var confirmed = $('confirm-toggle').checked;
+    /* Private: never rendered on the site, never applied to businesses.json by
+       script. It reaches the admin queue for Theo to place the pin by hand. */
+    var pinPostcode = (el('pin_postcode').value || '').trim();
 
     // The button is disabled without it, but Enter in a text field submits too.
     if (!confirmed) return;
@@ -603,6 +613,7 @@ document.addEventListener('click', e => {
       body: JSON.stringify({
         id: ID, token: TOKEN, changes: changes, appeal: appeal,
         removal: removal, notes: notes, confirmed: confirmed,
+        pin_postcode: pinPostcode,
         from_name: (el('from_name').value || '').trim(),
         from_email: (el('from_email').value || '').trim()
       })
@@ -618,6 +629,7 @@ document.addEventListener('click', e => {
       if (appeal) bits.push('your tier evidence');
       if (removal) bits.push('your removal request');
       if (notes && !n) bits.push('your note');
+      if (pinPostcode) bits.push('your pin postcode');
       $('sent-summary').textContent = bits.length
         ? 'We have ' + bits.join(' and ') + '.'
         : 'We have your confirmation that everything on your listing is correct.';
