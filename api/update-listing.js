@@ -199,7 +199,7 @@ module.exports = async function handler(req, res) {
   };
 
   try {
-    await store.put(store.keyFor(submission), submission);
+    await store.put(store.keyFor(store.SUBMISSIONS, submission.submission_id), submission);
   } catch (e) {
     console.error('store failed:', e.message);
     return res.status(503).json({ error: 'We could not save that just now' });

@@ -179,11 +179,9 @@
       Products merely designed, branded, printed or packed in the UK don't qualify.
     </div>
 
-    <div class="notice" id="notActive">
-      <b>Form not yet activated.</b> The site owner needs to add a Formspree form ID before submissions will send.
-    </div>
+    <div class="notice" id="sendErr" role="alert"></div>
 
-    <form id="f" action="https://formspree.io/f/mzdlljzo" method="POST">
+    <form id="f" novalidate>
       <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
 
       <label>Business name</label>
@@ -318,28 +316,55 @@ document.addEventListener('click', e => {
   if (!burgerMenu.hasAttribute('hidden') && !burgerMenu.contains(e.target)) burgerMenu.setAttribute('hidden','');
 });
 
+/* Suggestions go to our own endpoint and land in the review queue at /admin.
+   They used to be emailed by Formspree, which gave a suggestion nowhere to
+   live and no state: no way to see what had already been judged. */
 const form = document.getElementById('f');
-const FORM_ID_PLACEHOLDER = 'YOUR_FORM' + '_ID'; // split so this check doesn't match itself
-if (form.action.includes(FORM_ID_PLACEHOLDER)) {
-  document.getElementById('notActive').style.display = 'block';
-  document.getElementById('sendBtn').disabled = true;
+const errBox = document.getElementById('sendErr');
+
+function showErr(msg) {
+  errBox.innerHTML = msg;
+  errBox.style.display = 'block';
+  errBox.scrollIntoView({ block: 'center', behavior: 'smooth' });
 }
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  errBox.style.display = 'none';
+
+  /* novalidate on the form so we can show one message in the page rather than
+     a browser bubble on whichever control it reaches first. */
+  if (!form.checkValidity()) {
+    const first = form.querySelector(':invalid');
+    showErr('<b>Some answers are missing.</b> Please fill in every field that is not marked optional.');
+    if (first) first.focus();
+    return;
+  }
+
   const btn = document.getElementById('sendBtn');
   btn.disabled = true; btn.textContent = 'Sending…';
+
+  const payload = {};
+  new FormData(form).forEach((v, k) => { payload[k] = v; });
+
   try {
-    const res = await fetch(form.action, {
+    const res = await fetch('/api/suggest', {
       method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
-    if (!res.ok) throw new Error(res.status);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Sending failed');
     form.style.display = 'none';
+    errBox.style.display = 'none';
     document.getElementById('okMsg').style.display = 'block';
+    document.getElementById('okMsg').scrollIntoView({ block: 'center', behavior: 'smooth' });
   } catch (err) {
     btn.disabled = false; btn.textContent = 'Submit for review';
-    alert('Sorry — sending failed. Please try again in a moment.');
+    /* Say what went wrong and give them a way through it. A suggestion someone
+       took ten minutes over should never vanish into a failed request. */
+    showErr('<b>' + err.message + '</b><br>Please try again in a moment — or email '
+      + '<a href="mailto:hello@grownandmade.uk">hello@grownandmade.uk</a> and we will add it by hand.');
   }
 });
 </script>
