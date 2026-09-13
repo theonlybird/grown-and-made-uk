@@ -608,7 +608,7 @@ document.addEventListener('click', e => {
     var physical = r.listing_type === 'shop' || r.listing_type === 'both';
     var ask = '';
     if (!hasLogo) ask = "We don't have your logo — that's the one thing we'd most like from you.";
-    else if (physical && !hasPostcode) ask = 'Could you give us your full address including postcode? It puts your pin in the right place.';
+    else if (physical && !hasPostcode) ask = "Could you give us your full address including postcode? It's the line on your listing that tells customers where to find you.";
     else if (!r.instagram) ask = "We don't have an Instagram for you, if you'd like it on your listing.";
     if (ask) { $('primary-ask').textContent = ask; $('primary-ask').hidden = false; }
     if (!physical) $('addr-hint').textContent = '— as much or as little as you would like published';
