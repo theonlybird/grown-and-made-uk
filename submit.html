@@ -7,6 +7,10 @@
 <meta name="theme-color" content="#FAF7F0" />
 <title>Suggest a Business — Grown and Made UK</title>
 <link rel="stylesheet" href="assets/theme.css" />
+<!-- Analytics and cookie consent. Loads nothing from Google until the
+     visitor opts in; see assets/analytics.js. Must stay unminified and
+     non-deferred so window.gm exists before the page scripts run. -->
+<script src="assets/analytics.js"></script>
 <style>
   /* Palette and type live in assets/theme.css */
   *{box-sizing:border-box}
@@ -322,6 +326,20 @@ document.addEventListener('click', e => {
 const form = document.getElementById('f');
 const errBox = document.getElementById('sendErr');
 
+const gmTrack = (name, params) => {
+  try { if (window.gm && window.gm.track) window.gm.track(name, params); } catch(e){}
+};
+
+/* Fired once, on the first keystroke or choice anywhere in the form. Paired
+   with suggestion_submitted it gives the completion rate — which is the only
+   way to tell a form nobody finds from a form nobody can finish. */
+let started = false;
+form.addEventListener('input', () => {
+  if (started) return;
+  started = true;
+  gmTrack('suggestion_started');
+}, { once: false });
+
 function showErr(msg) {
   errBox.innerHTML = msg;
   errBox.style.display = 'block';
@@ -337,6 +355,9 @@ form.addEventListener('submit', async (e) => {
   if (!form.checkValidity()) {
     const first = form.querySelector(':invalid');
     showErr('<b>Some answers are missing.</b> Please fill in every field that is not marked optional.');
+    /* Which field people get stuck on. If one name dominates this report, the
+       question is badly worded rather than the visitor being careless. */
+    gmTrack('suggestion_invalid', { field_name: first ? (first.name || first.id || 'unknown') : 'unknown' });
     if (first) first.focus();
     return;
   }
@@ -355,12 +376,22 @@ form.addEventListener('submit', async (e) => {
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.error || 'Sending failed');
+    /* The business itself is never sent to Analytics — no name, no website,
+       and above all none of the submitter's own details. Only the shape of
+       the suggestion, which is all the reporting needs. */
+    gmTrack('suggestion_submitted', {
+      suggestion_category: payload.category || '',
+      suggestion_listing_type: payload.listing_type || '',
+      suggestion_relationship: payload.relationship || '',
+      has_evidence: payload.evidence_links ? 'yes' : 'no'
+    });
     form.style.display = 'none';
     errBox.style.display = 'none';
     document.getElementById('okMsg').style.display = 'block';
     document.getElementById('okMsg').scrollIntoView({ block: 'center', behavior: 'smooth' });
   } catch (err) {
     btn.disabled = false; btn.textContent = 'Submit for review';
+    gmTrack('suggestion_failed', { error_message: String(err && err.message || err) });
     /* Say what went wrong and give them a way through it. A suggestion someone
        took ten minutes over should never vanish into a failed request. */
     showErr('<b>' + err.message + '</b><br>Please try again in a moment — or email '

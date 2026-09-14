@@ -7,6 +7,10 @@
 <meta name="theme-color" content="#ffffff" />
 <title>Grown and Made UK</title>
 <link rel="stylesheet" href="assets/theme.css" />
+<!-- Analytics and cookie consent. Loads nothing from Google until the
+     visitor opts in; see assets/analytics.js. Must stay unminified and
+     non-deferred so window.gm exists before the page scripts run. -->
+<script src="assets/analytics.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
@@ -818,6 +822,20 @@
    own; this makes them screenshottable. Costs nothing when not enabled.
    ========================================================================== */
 const BUILD = '2026-08-05a';   // bump when deploying; confirms which build is live
+
+/* ==========================================================================
+   ANALYTICS SHIMS
+   assets/analytics.js defines window.gm, but it is a separate file and a
+   blocked request or an ad blocker must not take the map down with it. Every
+   call site below goes through these two, which are no-ops if it is missing
+   and no-ops again if the visitor declined cookies.
+   ========================================================================== */
+const gmTrack = (name, params) => {
+  try { if (window.gm && window.gm.track) window.gm.track(name, params); } catch(e){}
+};
+const gmTrackBiz = (name, b, extra) => {
+  try { if (window.gm && window.gm.trackBusiness) window.gm.trackBusiness(name, b, extra); } catch(e){}
+};
 const Diag = (function(){
   const on = /[?&]debug\b/.test(location.search);
   const lines = [];
@@ -1017,12 +1035,13 @@ function buildMarkers(){
     });
     const m = L.marker([b.lat,b.lng],{icon});
     m.bindPopup(popupHtml(b),{closeButton:true});
+    m._gmBiz = b.id;              // so popupopen can say which listing was opened
     markers[b.id]=m;
   });
 }
 
 function popupHtml(b){
-  const igRow = b.instagram ? `<a class="ig" href="${b.instagram}" target="_blank" rel="noopener">Instagram</a>` : '';
+  const igRow = b.instagram ? `<a class="ig" data-biz="${b.id}" data-link="instagram" href="${b.instagram}" target="_blank" rel="noopener">Instagram</a>` : '';
   return `<div class="pop">
     <div class="head">${logoHtml(b,'plogo')}
       <div style="flex:1;min-width:0"><h3>${b.name}</h3>
@@ -1035,7 +1054,7 @@ function popupHtml(b){
     <div class="desc">${b.description}</div>
     <div class="addr">📍 <span>${b.address}</span></div>
     <div class="links">
-      <a class="web" href="${b.website}" target="_blank" rel="noopener">Website</a>
+      <a class="web" data-biz="${b.id}" data-link="website" href="${b.website}" target="_blank" rel="noopener">Website</a>
       ${igRow}
     </div>
   </div>`;
@@ -1174,7 +1193,11 @@ const searchInput = document.getElementById('search');
 const autocompleteDropdown = document.getElementById('autocompleteDropdown');
 
 viewToggleBtn.addEventListener('click', () => {
-  toggleView(state.currentView === 'map' ? 'grid' : 'map');
+  const next = state.currentView === 'map' ? 'grid' : 'map';
+  /* Only the button is tracked, not toggleView() itself — a search switches
+     the view programmatically and that is not a visitor choosing a view. */
+  gmTrack('view_change', { view_mode: next, search_active: state.aiActive ? 'yes' : 'no' });
+  toggleView(next);
 });
 
 function setViewToggleLabel(icon, label, title) {
@@ -1407,7 +1430,7 @@ function renderMapList(){
   }).join('') || '<div style="padding:24px 16px;color:var(--muted);font-size:13px">No matches found.</div>';
 
   listEl.querySelectorAll('.item').forEach(el=>{
-    el.addEventListener('click',()=>focus(el.dataset.id));
+    el.addEventListener('click',()=>focus(el.dataset.id, 'map_list'));
   });
 }
 
@@ -1442,7 +1465,7 @@ function renderGrid(){
     const brk = idx === seam
       ? `<div class="afield-break">Results from further afield</div>` : '';
     const aiReason = '';
-    const igRow = b.instagram ? `<a class="ig" href="${b.instagram}" target="_blank" rel="noopener">Instagram</a>` : '';
+    const igRow = b.instagram ? `<a class="ig" data-biz="${b.id}" data-link="instagram" href="${b.instagram}" target="_blank" rel="noopener">Instagram</a>` : '';
 
     return `${brk}<div class="grid-card">
       <div>
@@ -1463,7 +1486,7 @@ function renderGrid(){
       <div>
         <div class="g-addr">📍 ${b.address}</div>
         <div class="g-links">
-          <a class="web" href="${b.website}" target="_blank" rel="noopener">Website</a>
+          <a class="web" data-biz="${b.id}" data-link="website" href="${b.website}" target="_blank" rel="noopener">Website</a>
           ${igRow}
           <a class="map-link" href="#" onclick="selectBusinessOnMap('${b.id}'); return false;">Map Pin</a>
         </div>
@@ -1474,8 +1497,9 @@ function renderGrid(){
   animateGrid();
 }
 
-function focus(id){
+function focus(id, surface){
   const b = BUSINESSES.find(x=>x.id===id); if(!b) return;
+  gmTrackBiz('business_focus', b, { surface: surface || 'unknown' });
   toggleView('map');
   const m = markers[id];
   if (!m) return;
@@ -1488,7 +1512,7 @@ function focus(id){
 }
 
 function selectBusinessOnMap(id) {
-  focus(id);
+  focus(id, 'grid_map_link');
 }
 
 // --- Autocomplete & Hybrid Search Engine ---
@@ -1526,10 +1550,11 @@ searchInput.addEventListener('input', e => {
         const id = item.dataset.id;
         const b = BUSINESSES.find(x => x.id === id);
         if (b) {
+          gmTrackBiz('search_suggestion_select', b, { search_term: val });
           searchInput.value = b.name;
           autocompleteDropdown.style.display = 'none';
           searchInput.blur();
-          focus(id);
+          focus(id, 'autocomplete');
         }
       });
     });
@@ -1552,7 +1577,9 @@ searchInput.addEventListener('keydown', e => {
     // Check if query matches an exact business name directly
     const exactMatch = BUSINESSES.find(b => b.name.toLowerCase() === val.toLowerCase());
     if (exactMatch) {
-      focus(exactMatch.id);
+      gmTrack('search', { search_term: val.toLowerCase(), search_engine: 'exact_name', search_results: 1 });
+      gmTrackBiz('search_suggestion_select', exactMatch, { search_term: val });
+      focus(exactMatch.id, 'search_exact_name');
       return;
     }
 
@@ -2487,6 +2514,15 @@ ${catalogStr}`;
         });
       }
 
+      gmTrack('search', {
+        search_term: query.toLowerCase(),
+        search_engine: 'ai',
+        search_results: state.aiMatches.size,
+        search_place: (state.placeTerms || []).join(', '),
+        search_audience: (state.audience || []).join(', '),
+        search_rescued: rescued
+      });
+
       // Switch view to Grid Results View
       toggleView('grid');
       return;
@@ -2516,6 +2552,14 @@ ${catalogStr}`;
       state.aiHeadline = result
         ? buildHeadline(Object.assign({}, result, { matchQuality: 'wider', matches: local.matches }))
         : buildHeadline(localHeadlineData(local));
+      gmTrack('search', {
+        search_term: query.toLowerCase(),
+        search_engine: 'local',
+        search_results: local.matches.length,
+        search_place: (local.place || []).join(', '),
+        search_audience: (local.audience || []).join(', '),
+        search_terms_used: (local.terms || []).join(', ')
+      });
       toggleView('grid');
       return;
     }
@@ -2527,6 +2571,11 @@ ${catalogStr}`;
     state.q = '';
     if (searchInput) searchInput.value = '';
     state.notice = `No results for &ldquo;${escapeHtml(query)}&rdquo;. Showing all British makers and producers instead.`;
+    /* The single most useful event on the site: someone wanted something the
+       map does not have. Every one of these is a candidate for the next round
+       of listings research. */
+    gmTrack('search', { search_term: query.toLowerCase(), search_engine: 'none', search_results: 0 });
+    gmTrack('search_no_results', { search_term: query.toLowerCase() });
     toggleView('grid');
   } catch (err) {
     // Never interrupt the user. Worst case they get the full catalogue.
@@ -2534,6 +2583,7 @@ ${catalogStr}`;
     state.aiActive = false;
     state.aiMatches.clear();
     state.notice = 'Search is having a moment &mdash; showing all British makers and producers instead.';
+    gmTrack('search_error', { search_term: query.toLowerCase(), error_message: String(err && err.message || err) });
     toggleView('grid');
   } finally {
     loader.style.display = 'none';
@@ -2610,6 +2660,12 @@ function bindChipEvents() {
     c.addEventListener('click', () => {
       if (c.classList.contains('disabled')) return;
       chipClick(state.cats, ALL_CATS, c.dataset.cat);
+      gmTrack('filter_change', {
+        filter_group: 'cat',
+        filter_value: c.dataset.cat,
+        filter_selection: Array.from(state.cats).sort().join(','),
+        search_active: state.aiActive ? 'yes' : 'no'
+      });
       syncChips();
       renderMapList();
       renderGrid();
@@ -2620,6 +2676,12 @@ function bindChipEvents() {
     c.addEventListener('click', () => {
       if (c.classList.contains('disabled')) return;
       chipClick(state.tiers, ALL_TIERS, c.dataset.tier);
+      gmTrack('filter_change', {
+        filter_group: 'tier',
+        filter_value: c.dataset.tier,
+        filter_selection: Array.from(state.tiers).sort().join(','),
+        search_active: state.aiActive ? 'yes' : 'no'
+      });
       syncChips();
       renderMapList();
       renderGrid();
@@ -2630,6 +2692,12 @@ function bindChipEvents() {
     c.addEventListener('click', () => {
       if (c.classList.contains('disabled')) return;
       chipClick(state.avail, ALL_AVAIL, c.dataset.avail);
+      gmTrack('filter_change', {
+        filter_group: 'avail',
+        filter_value: c.dataset.avail,
+        filter_selection: Array.from(state.avail).sort().join(','),
+        search_active: state.aiActive ? 'yes' : 'no'
+      });
       syncChips();
       renderMapList();
       renderGrid();
@@ -3224,6 +3292,7 @@ const Landing = (function(){
   }
 
   function finish(){
+    gmTrack('intro_complete', { intro_ms: Math.round(performance.now()) });
     fx.style.display = 'none';
     document.body.classList.remove('intro');
     try { sessionStorage.setItem(SEEN,'1'); } catch(e){}
@@ -3235,6 +3304,7 @@ const Landing = (function(){
     // wipe the whole sequence out. Give it a beat before it can be cancelled.
     if (performance.now() - startedAt < 600) { Diag.log('skip ignored (too early): ' + why); return; }
     Diag.log('sketch skipped by: ' + why);
+    gmTrack('intro_skipped', { skip_reason: String(why) });
     timers.forEach(clearTimeout); timers = [];
     finish();
   }
@@ -3337,6 +3407,7 @@ Landing.arm();
   if (!id) return;
 
   Diag.log('deep link requested: ' + id);
+  gmTrack('deep_link_open', { business_id: id, referrer: document.referrer || '(none)' });
   Landing.abort();                  // they came for one listing, not the front door
 
   /* renderMapList() clears and re-adds every layer, and boot() runs it a second
@@ -3351,10 +3422,10 @@ Landing.arm();
     } else {
       const m = markers[id];
       if (m && cluster.hasLayer(m)) {
-        focus(id);
+        focus(id, 'deep_link');
         setTimeout(() => {
           const mm = markers[id];
-          if (mm && !mm.isPopupOpen()) focus(id);
+          if (mm && !mm.isPopupOpen()) focus(id, 'deep_link');
         }, 700);
         return;
       }
@@ -3388,6 +3459,46 @@ setTimeout(()=>{
     document.body.classList.remove('intro');
   }
 }, 12000);
+
+/* ==========================================================================
+   CLICK-THROUGHS
+
+   The question this map exists to answer for us is which makers people
+   actually go and look at. Every outbound link — in a map popup, on a grid
+   card — carries data-biz and data-link, so one delegated listener covers all
+   of them, including the popups Leaflet builds on demand long after this runs.
+
+   Delegation also survives renderGrid() rebuilding its innerHTML, which a
+   per-element listener would not.
+   ========================================================================== */
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('a[data-biz][data-link]');
+  if (!a) return;
+  const b = BUSINESSES.find(x => x.id === a.dataset.biz);
+  if (!b) return;
+  gmTrackBiz('business_click', b, {
+    link_type: a.dataset.link,                      // website | instagram
+    link_url: a.href,
+    surface: a.closest('.pop') ? 'map_popup' : 'grid_card',
+    view_mode: state.currentView,
+    search_active: state.aiActive ? 'yes' : 'no',
+    search_term: state.aiActive ? (searchInput.value || '').trim().toLowerCase() : ''
+  });
+}, true);
+
+/* Which pins get opened, as distinct from which get clicked through. A high
+   ratio of opens to click-throughs means the popup is answering the question
+   and the visitor never needs the website; a low one means the opposite. */
+map.on('popupopen', e => {
+  const id = e.popup && e.popup._source && e.popup._source._gmBiz;
+  if (!id) return;
+  const b = BUSINESSES.find(x => x.id === id);
+  if (b) gmTrackBiz('map_pin_open', b, { view_mode: state.currentView });
+});
+
+/* Engagement floor. Without this, a visitor who lands, browses the map for
+   four minutes and leaves without clicking a link reads as a bounce. */
+setTimeout(() => gmTrack('engaged_30s'), 30000);
 
 fetch('data/uk-coast.json').then(r=>r.json()).then(c=>{ window.__COAST__ = c; }).catch(()=>{});
 </script>

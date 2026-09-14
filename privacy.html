@@ -7,6 +7,10 @@
 <meta name="theme-color" content="#FAF7F0" />
 <title>Privacy Policy — Grown and Made UK</title>
 <link rel="stylesheet" href="assets/theme.css" />
+<!-- Analytics and cookie consent. Loads nothing from Google until the
+     visitor opts in; see assets/analytics.js. Must stay unminified and
+     non-deferred so window.gm exists before the page scripts run. -->
+<script src="assets/analytics.js"></script>
 <style>
   /* Palette and type live in assets/theme.css */
   *{box-sizing:border-box}
@@ -146,8 +150,8 @@
 <div class="wrap">
   <div class="card">
     <h2>Privacy policy</h2>
-    <p class="lede">We collect as little as we can, we don&rsquo;t track you, and we don&rsquo;t sell anything to anyone. This page says exactly what happens to the small amount of information the site does handle.</p>
-    <p class="note">Last updated 13 September 2026.</p>
+    <p class="lede">We collect as little as we can, we never sell anything to anyone, and the one thing that does count visits is off until you switch it on. This page says exactly what happens to the small amount of information the site does handle.</p>
+    <p class="note">Last updated 14 September 2026.</p>
 
     <h3>Who we are</h3>
     <p>Grown and Made UK CIC is the data controller for this website. We&rsquo;re a community interest company limited by guarantee, registered in England and Wales, company number 17415545, registered office Unit A, 82 James Carter Road, Mildenhall, Bury St&nbsp;Edmunds IP28&nbsp;7DE. You can reach us at <a href="mailto:hello@grownandmade.uk">hello@grownandmade.uk</a>.</p>
@@ -164,15 +168,24 @@
     <p><strong>When you use search.</strong> Search runs partly through Google&rsquo;s Gemini API, which interprets what you typed so we can match it to listings. Your search text is sent to Google for that purpose. It isn&rsquo;t stored against you or linked to an account &mdash; but please don&rsquo;t type anything personal into a search box, here or anywhere else.</p>
     <p><strong>When you simply visit.</strong> Our host keeps standard server logs &mdash; IP address, browser type, the page requested, the time &mdash; for security and reliability. We don&rsquo;t use them to build a picture of you.</p>
 
+    <h3>Cookies and measurement</h3>
+    <p>We use Google Analytics to count visits and see which parts of the map people use &mdash; what gets searched for, which listings get opened, and which makers get clicked through to. We use it for one reason: to know which businesses to research and add next, and to find the searches that come back empty.</p>
+
+    <p><strong>It is off until you say otherwise.</strong> Nothing is loaded from Google and no cookie is set until you press Accept on the banner. If you press &ldquo;No thanks&rdquo;, or simply ignore it, Google Analytics never runs and we see nothing beyond the server logs described above. Every part of this site works the same either way, and we will not ask you again on every page.</p>
+
+    <p><strong>If you accept.</strong> Google sets cookies on your device to recognise your browser across pages and on a return visit. We have configured it to shorten your IP address before it is stored, and we have switched off the advertising features entirely &mdash; no Google Signals, no ad personalisation, no remarketing. We do not send Google your name, your email address, or anything you type into a form.</p>
+
+    <p><strong>Changing your mind.</strong> There is a <a href="#" data-consent-settings>cookie settings</a> link in the footer of every page &mdash; and in the menu on the map &mdash; which brings the banner back. Clearing your browser&rsquo;s cookies for this site has the same effect.</p>
+
     <h3>What we don&rsquo;t do</h3>
-    <p>No advertising. No analytics or tracking pixels. No cookies set by us. No profiling, no selling or sharing of data with anyone for marketing, and no mailing list you didn&rsquo;t ask to join.</p>
-    <p>The map does store a couple of things in your own browser&rsquo;s storage &mdash; whether you&rsquo;ve already seen the introduction, and an API key if you have chosen to enter one. That stays on your device and never reaches us.</p>
+    <p>No advertising. No ad pixels and no remarketing tags. No profiling, no selling or sharing of data with anyone for marketing, and no mailing list you didn&rsquo;t ask to join. We do not attempt to identify you, and we never combine analytics with anything you have sent us through a form.</p>
+    <p>The map also stores a couple of things in your own browser&rsquo;s storage &mdash; whether you&rsquo;ve already seen the introduction, your answer to the cookie banner, and an API key if you have chosen to enter one. That stays on your device and never reaches us.</p>
 
     <h3>Who else handles it</h3>
     <p>Running a website means other companies see some data on our behalf, mostly because your browser talks to them directly:</p>
     <ul>
       <li><strong>Vercel</strong> &mdash; hosting, server logs, and the private store our two review queues sit in.</li>
-      <li><strong>Google</strong> &mdash; the Gemini API that interprets search queries, and Google Fonts, which your browser fetches to render the type on every page.</li>
+      <li><strong>Google</strong> &mdash; the Gemini API that interprets search queries; Google Fonts, which your browser fetches to render the type on every page; and, only if you have accepted cookies, Google Analytics.</li>
       <li><strong>postcodes.io</strong> &mdash; when a business moves its map pin we send those coordinates, and nothing else, to work out which county the listing belongs in.</li>
       <li><strong>CARTO</strong> and <strong>unpkg</strong> &mdash; the map&rsquo;s background tiles and mapping library, on the main map and on the pin map in the update page. Requesting them reveals your IP address to those services, as it would on any site.</li>
     </ul>
@@ -182,6 +195,7 @@
     <h3>Our legal basis</h3>
     <p>For running and securing the site, and for researching and publishing listings, our basis is legitimate interests &mdash; there is a public interest in an independent, unpaid record of what is actually made and grown here. The same basis covers holding a business&rsquo;s published contact address so we can write to it once about its own listing. You can object to that at any time, and we will stop.</p>
     <p>Where you volunteer your own contact details &mdash; in the suggestion form, or on your listing&rsquo;s update page &mdash; we rely on your consent, and you can withdraw it at any time.</p>
+    <p>For analytics cookies our basis is your consent, given through the banner and withdrawable at any point from the cookie settings link. Nothing is measured before you give it.</p>
 
     <h3>How long we keep it</h3>
     <p>Suggestions, listing updates and correspondence are kept while they remain part of the evidence trail behind a listing, so we can show why a business is tiered the way it is and what it told us itself. A suggestion we decide not to list is kept as a short note of the decision, so the same business arriving again does not have to be researched twice.</p>

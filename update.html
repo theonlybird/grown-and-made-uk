@@ -8,6 +8,10 @@
 <meta name="theme-color" content="#FAF7F0" />
 <title>Update your listing — Grown and Made UK</title>
 <link rel="stylesheet" href="assets/theme.css" />
+<!-- Analytics and cookie consent. Loads nothing from Google until the
+     visitor opts in; see assets/analytics.js. Must stay unminified and
+     non-deferred so window.gm exists before the page scripts run. -->
+<script src="assets/analytics.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
   /* Palette and type live in assets/theme.css */
@@ -450,6 +454,13 @@ document.addEventListener('click', e => {
   var FIELDS = ['name', 'website', 'instagram', 'address', 'description'];
   var record = null, original = {};
 
+  /* The token in the URL is a credential. It must never reach Analytics, so
+     nothing below ever passes TOKEN or the whole query string — only the
+     listing id, which is public and appears on the map anyway. */
+  var gmTrack = function (name, params) {
+    try { if (window.gm && window.gm.track) window.gm.track(name, params); } catch (e) {}
+  };
+
   /* ------------------------------------------------------------------
      The pin. They drag it; we send the coordinates as a suggestion like
      any other, and Theo approves it. Nothing here writes to the map.
@@ -661,11 +672,17 @@ document.addEventListener('click', e => {
       || 'What have we got wrong, and what can we check?';
 
     show('state-form');
+    gmTrack('listing_update_opened', {
+      business_id: r.id,
+      business_tier: r.tier,
+      business_category: r.category
+    });
     Pin.init(r);            // after show(): Leaflet cannot measure a hidden div
     paint();
   }
 
   $('appeal-toggle').addEventListener('change', function () {
+    if (this.checked) gmTrack('tier_appeal_opened', { business_id: ID, business_tier: record && record.tier });
     $('appeal').hidden = !this.checked; paint();
   });
   /* The address is the only field we insist on: an empty one leaves the
@@ -691,6 +708,7 @@ document.addEventListener('click', e => {
   });
   $('pin-reset').addEventListener('click', function () { Pin.reset(); });
   $('remove-toggle').addEventListener('change', function () {
+    if (this.checked) gmTrack('removal_requested', { business_id: ID });
     $('remove-help').hidden = !this.checked; paint();
   });
   document.addEventListener('input', function (e) {
@@ -749,22 +767,32 @@ document.addEventListener('click', e => {
       $('sent-summary').textContent = bits.length
         ? 'We have ' + bits.join(' and ') + '.'
         : 'We have your confirmation that everything on your listing is correct.';
+      gmTrack('listing_update_submitted', {
+        business_id: ID,
+        business_tier: record && record.tier,
+        fields_changed: n,
+        changed_field_names: Object.keys(changes).sort().join(','),
+        has_appeal: appeal ? 'yes' : 'no',
+        has_removal: removal ? 'yes' : 'no',
+        pin_moved: pin ? 'yes' : 'no'
+      });
       show('state-sent');
       window.scrollTo(0, 0);
     }).catch(function (err) {
       btn.disabled = false; btn.textContent = 'Submit';
+      gmTrack('listing_update_failed', { business_id: ID, error_message: String(err && err.message || err) });
       $('form-err').textContent = err.message
         + ' — if it keeps happening, email hello@grownandmade.uk and we’ll do it by hand.';
       $('form-err').hidden = false;
     });
   });
 
-  if (!ID) { show('state-error'); return; }
+  if (!ID) { gmTrack('listing_update_error', { error_reason: 'no_id' }); show('state-error'); return; }
   fetch('data/businesses.json')
     .then(function (r) { return r.json(); })
     .then(function (all) {
       record = all.filter(function (x) { return x.id === ID; })[0];
-      if (!record) { show('state-error'); return; }
+      if (!record) { gmTrack('listing_update_error', { error_reason: 'unknown_id' }); show('state-error'); return; }
       render(record);
     })
     .catch(function () { show('state-error'); });
