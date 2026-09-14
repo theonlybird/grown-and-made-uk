@@ -11950,23 +11950,23 @@
     "subcategory": "Watches",
     "tier": "silver",
     "listing_type": "online_only",
-    "town": "Perth",
-    "address": "Perth",
-    "lat": 56.39778,
-    "lng": -3.43176,
+    "town": "Sonning Common, Oxfordshire",
+    "address": "Blounts Farm, Blount Court Road, Sonning Common, RG4 9PA",
+    "lat": 51.51967,
+    "lng": -0.96962,
     "website": "https://www.marloewatchcompany.com",
     "instagram": "https://www.instagram.com/marloewatchco/",
-    "description": "British independent watch design company engineering hand-wound watches.",
-    "evidence_note": "Designed and tested in Perthshire; movements imported — Silver default.",
+    "description": "Marloe Watch Company, established in 2015, is an independent designer, producer and assembler of mechanical watches, based in Oxfordshire.",
+    "evidence_note": "Designed, produced and assembled in Oxfordshire; movements imported — Silver under the watch rule. Address, location and description confirmed by the business by email, 14 Sep 2026; they accepted the Silver tier in the same reply.",
     "tier_confidence": "high",
     "logo": "assets/logos/marloe-watch-company.png",
-    "source": "unrecorded — verify before relying on",
+    "source": "business-confirmed-2026-09",
     "product_tags": [
       "watches",
       "jewellery"
     ],
-    "nation": "Scotland",
-    "county": "Perth"
+    "nation": "England",
+    "county": "Oxfordshire"
   },
   {
     "id": "mari-thomas-jewellery",

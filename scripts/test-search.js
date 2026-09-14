@@ -379,7 +379,7 @@ console.log('');
 const borderCases = [
   ['big-fox-apparel', 'England'], ['barbour', 'England'], ['ivy-and-rigg', 'England'],
   ['chapman-bags', 'England'], ['jim-malone', 'England'], ['errington-reay', 'England'],
-  ['william-lockie', 'Scotland'], ['begg-x-co', 'Scotland'], ['marloe-watch-company', 'Scotland'],
+  ['william-lockie', 'Scotland'], ['begg-x-co', 'Scotland'], ['lochcarron', 'Scotland'],
   ['hiut-denim', 'Wales'], ['broughgammon-farm', 'Northern Ireland'],
 ];
 for (const [id, want] of borderCases) {
