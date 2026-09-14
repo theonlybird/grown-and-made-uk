@@ -283,7 +283,7 @@
     "description": "Derbyshire knitwear made at Lea Mills since 1784 — fine-gauge merino and Sea Island cotton knitted in England.",
     "evidence_note": "Knitted in England since 1784. (Raw fibre imported, as all UK knitwear; knitted/finished in UK.)",
     "tier_confidence": "medium",
-    "logo": "assets/logos/john-smedley.svg",
+    "logo": "assets/logos/john-smedley.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
       "knitwear",
@@ -6558,7 +6558,7 @@
     "description": "The world's oldest hat shop, blocking and finishing hats in St James's since 1676.",
     "evidence_note": "Hats prepared and finished in the London shop, but the firm states it works with hat manufacturers in Spain, Belgium and the UK, so felt body manufacture is not confirmed UK.",
     "tier_confidence": "medium",
-    "logo": "assets/logos/lock-and-co-hatters.svg",
+    "logo": "assets/logos/lock-and-co-hatters.png",
     "source": "unrecorded — verify before relying on",
     "product_tags": [
       "hats & caps"
