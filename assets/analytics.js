@@ -26,7 +26,7 @@
 (function () {
   'use strict';
 
-  var MEASUREMENT_ID = null;   // e.g. 'G-ABC1234XYZ'
+  var MEASUREMENT_ID = 'G-4T8SNKBWD1';   // GA4: Grown and Made UK / grownandmade.uk
 
   /* Bump this when the policy changes materially enough to need re-asking.
      Everyone's stored choice is discarded and the banner returns. */
@@ -66,6 +66,37 @@
   var loaded = false;
   var granted = false;
 
+  /* ---------------------------------------------------------------------
+     Redacting the update-link token.
+
+     update.html is reached on ?b=<id>&k=<token>, and that token is a
+     credential — anyone holding it can edit that listing. Google Analytics
+     records the full URL of every page view in page_location, query string
+     and all, so left alone it would post the credential to Google on every
+     visit a business makes to its own update page.
+
+     So page_location and page_referrer are both overridden with a version
+     that has the token replaced. The listing id is kept: it is public, it is
+     on the map, and the reporting wants it.
+     --------------------------------------------------------------------- */
+  var SECRET_PARAMS = ['k', 'token', 'key', 'secret'];
+
+  function redactUrl(href) {
+    if (!href) return href;
+    try {
+      var u = new URL(href, location.href);
+      var touched = false;
+      SECRET_PARAMS.forEach(function (p) {
+        if (u.searchParams.has(p)) { u.searchParams.set(p, 'redacted'); touched = true; }
+      });
+      return touched ? u.toString() : href;
+    } catch (e) {
+      /* If it cannot be parsed it cannot be safely redacted. Send the path
+         alone rather than risk passing the query string through intact. */
+      return String(href).split('?')[0];
+    }
+  }
+
   function loadGa() {
     if (loaded || !MEASUREMENT_ID) return;
     loaded = true;
@@ -77,6 +108,9 @@
 
     gtag('js', new Date());
     gtag('config', MEASUREMENT_ID, {
+      /* Never let the update-link token reach Google. See redactUrl above. */
+      page_location: redactUrl(location.href),
+      page_referrer: redactUrl(document.referrer),
       /* Truncate the visitor's IP before it is stored. */
       anonymize_ip: true,
       /* Don't let Google write its own advertising identifiers. Nothing here
@@ -117,7 +151,12 @@
 
   function track(name, params) {
     if (!granted || !MEASUREMENT_ID) return;
-    try { gtag('event', name, clean(params)); } catch (e) { /* never break the page */ }
+    var p = clean(params);
+    /* Belt and braces: every event carries page_location implicitly, and any
+       caller passing a URL of its own gets the same treatment. */
+    p.page_location = redactUrl(location.href);
+    if (p.link_url) p.link_url = redactUrl(p.link_url);
+    try { gtag('event', name, p); } catch (e) { /* never break the page */ }
   }
 
   /* Business events all want the same shape. Building it in one place means

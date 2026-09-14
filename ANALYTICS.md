@@ -95,6 +95,15 @@ of the submitter's own details leave the page.
 Only `business_id`, which is public. Pin coordinates are never sent either —
 only the fact that a pin moved.
 
+This needs more than just not passing it: GA4 records the full URL of every
+page view in `page_location`, query string and all, so left alone it would
+post the token to Google on every visit a business makes to its own update
+page. `redactUrl()` in analytics.js rewrites `k`, `token`, `key` and `secret`
+to `redacted` in `page_location`, `page_referrer` and any `link_url`, on the
+config call and on every event. The listing id survives; the credential does
+not. **If another tokenised URL is ever added, put its parameter name in
+`SECRET_PARAMS`.**
+
 ## What is deliberately not tracked
 
 - `admin.html`. It carries no analytics script at all.
@@ -103,24 +112,80 @@ only the fact that a pin moved.
 - The `k=` token from update links.
 - Any advertising or cross-site identifier.
 
+## Enhanced measurement
+
+Leave it on. On this site it behaves as follows:
+
+- **Page views**, **Scrolls** — as expected, though scroll never fires on the
+  map: `body` there is `overflow:hidden` with a fixed-height flex layout.
+- **Outbound clicks** — fires a generic `click` event alongside our richer
+  `business_click`. Not a duplicate (different event names), and it usefully
+  catches outbound links we have not instrumented, such as the footer.
+- **Site search** — will record nothing, ever. GA4 detects site search from a
+  URL query parameter, and our search is entirely client-side; the query never
+  enters the URL. The custom `search` event does this job instead.
+- **Video engagement**, **File downloads** — nothing on the site to measure.
+  Harmless.
+- **Form interactions** — `form_start` / `form_submit`. Captures form and
+  button names, never field values.
+
 ## Setting it up in GA4
 
-Custom parameters are invisible in reports until they are registered.
-**Admin → Custom definitions → Create custom dimension**, scope Event, for each:
+Custom parameters are invisible in reports until they are registered, and
+**GA4 does not backfill** — a dimension registered in March shows nothing for
+February. Register them early. Limits are 50 event-scoped dimensions and 50
+metrics; the lists below come to 31 and 4, so there is room.
 
+The "Event parameter" dropdown only suggests parameters GA4 has already
+received, but it accepts typed values it has never seen. Spelling must match
+the code exactly.
+
+**Admin → Data display → Custom definitions → Custom dimensions**, scope Event:
+
+Core — the click-through reporting:
 ```
-business_id        business_name      business_tier     business_category
-business_county    business_nation    link_type         surface
-search_engine      search_place       search_audience   view_mode
-search_active      filter_group       filter_value      field_name
-suggestion_relationship                suggestion_category
+business_name   business_id     business_tier   business_category
+business_county business_nation link_type       surface
+```
+Search:
+```
+search_term     search_engine   search_place    search_audience
+```
+Context and filters:
+```
+view_mode       search_active   filter_group    filter_value   filter_selection
+```
+Forms:
+```
+field_name      suggestion_category   suggestion_listing_type
+suggestion_relationship               has_evidence
+```
+Update page:
+```
+changed_field_names   has_appeal   has_removal   pin_moved   error_reason
+```
+Diagnostics (optional):
+```
+error_message   skip_reason   referrer   search_terms_used
 ```
 
-`search_term` and `search_results` are recognised by GA4 already.
+**Custom metrics** (same page, second tab) — these four are numbers and must
+be metrics, not dimensions, or they cannot be averaged or summed:
 
-There is a limit of 50 event-scoped custom dimensions, so there is room. Add
-them before you need the reports — GA4 does not backfill, so a dimension
-registered in March shows nothing for February.
+| Parameter | Unit |
+|---|---|
+| `search_results` | Standard |
+| `fields_changed` | Standard |
+| `search_rescued` | Standard |
+| `intro_ms` | Milliseconds |
+
+`search_results` as a metric is what makes the key report work: rows of
+`search_term`, column of average `search_results`, sorted ascending.
+
+On the high-cardinality warning GA4 shows: `business_name` and `business_id`
+have 475 values each, which is comfortably fine. `search_term` is unbounded
+free text and is the one the warning is really about — register it anyway, it
+is the most valuable field on the site.
 
 Then **Admin → Events → mark as key event**: `business_click`,
 `suggestion_submitted`, `listing_update_submitted`.
