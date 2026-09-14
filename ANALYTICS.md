@@ -104,6 +104,26 @@ config call and on every event. The listing id survives; the credential does
 not. **If another tokenised URL is ever added, put its parameter name in
 `SECRET_PARAMS`.**
 
+## Excluding your own visits
+
+Whoever runs the site visits it far more than any real visitor, and clicks
+through to listings to check they work — straight into the report the site
+exists to produce.
+
+**Visit any page once with `?noga` on the end of the URL.** That browser is
+then excluded permanently, on any network: no Google, no banner, no events.
+`?noga=off` undoes it. Do it once per device and per browser (it is stored in
+`localStorage` under `gm_noga`, so it does not survive clearing site data).
+
+This is deliberately belt-and-braces with GA4's own internal traffic filter,
+which matches on IP address — fine on a fixed office line, useless on home
+broadband that rotates its address and on a phone using mobile data.
+
+If GA4's IP filter is used as well, remember it has two halves: defining the
+internal traffic rule on the data stream, AND switching the matching data
+filter from "Testing" to "Active" under Data collection and modification →
+Data filters. A filter left on Testing does nothing.
+
 ## What is deliberately not tracked
 
 - `admin.html`. It carries no analytics script at all.

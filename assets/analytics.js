@@ -67,6 +67,44 @@
   var granted = false;
 
   /* ---------------------------------------------------------------------
+     Excluding ourselves.
+
+     Whoever runs this site visits it far more than any real visitor does,
+     and clicks through to listings to check they work — which lands in
+     exactly the report the site exists to produce. GA4's own internal
+     traffic filter works off IP address, which a home broadband connection
+     changes without warning and a phone on mobile data never matches at all.
+
+     So: visit the site once with ?noga on the end of the URL and this
+     browser is excluded permanently, on any network. ?noga=off undoes it.
+     Do it once per device and per browser. It is checked before anything
+     else, so an excluded browser never loads Google at all and never sees
+     the banner.
+     --------------------------------------------------------------------- */
+  var OPTOUT_KEY = 'gm_noga';
+
+  function optedOut() {
+    try {
+      var q = location.search;
+      if (/[?&]noga=off\b/.test(q)) {
+        localStorage.removeItem(OPTOUT_KEY);
+        console.info('[gm] analytics opt-out REMOVED for this browser.');
+        return false;
+      }
+      if (/[?&]noga\b/.test(q)) {
+        localStorage.setItem(OPTOUT_KEY, '1');
+        console.info('[gm] analytics opt-out SET for this browser. Add ?noga=off to undo.');
+        return true;
+      }
+      return localStorage.getItem(OPTOUT_KEY) === '1';
+    } catch (e) {
+      return false;   // private mode, no storage: behave as a normal visitor
+    }
+  }
+
+  var excluded = optedOut();
+
+  /* ---------------------------------------------------------------------
      Redacting the update-link token.
 
      update.html is reached on ?b=<id>&k=<token>, and that token is a
@@ -121,6 +159,7 @@
   }
 
   function grant() {
+    if (excluded) return;
     granted = true;
     gtag('consent', 'update', {
       analytics_storage: 'granted'
@@ -303,6 +342,9 @@
      --------------------------------------------------------------------- */
   function boot() {
     addSettingsLinks();
+
+    /* An excluded browser gets no banner and no Google, ever. */
+    if (excluded) return;
 
     var choice = readChoice();
     if (choice === 'granted') {
