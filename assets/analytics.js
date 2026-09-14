@@ -238,10 +238,11 @@
       '<div class="gm-consent-inner">' +
         '<div class="gm-consent-copy">' +
           '<h2>A quiet word about cookies</h2>' +
-          '<p>We would like to count visits and see which makers people click through to, ' +
-          'so we know what is worth adding next. It is Google Analytics, it sets cookies, ' +
-          'and it is entirely up to you. Say no and the map works exactly the same. ' +
-          'More in our <a href="privacy.html">privacy policy</a>.</p>' +
+          '<p>We would like to track which growers and makers are the most popular on this ' +
+          'website using cookies. This data then helps us decide what to add next to the map ' +
+          'and will be used in our reporting back to listed businesses. You can of course say ' +
+          'no and the website functions as normal. More in our ' +
+          '<a href="privacy.html">privacy policy</a>.</p>' +
         '</div>' +
         '<div class="gm-consent-actions">' +
           '<button type="button" class="gm-decline">No thanks</button>' +
