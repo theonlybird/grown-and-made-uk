@@ -1448,5 +1448,10 @@
     "id": "loch-arthur",
     "public_note": "Your own organic farm, creamery, bakery and butchery are exactly what we look for. The shop, though, also stocks fairly traded food and drink alongside them. Gold needs effectively everything on the shelves to be British.",
     "tier_question": "Are the fairly traded lines something you'd consider replacing with British ones, or are they a fixed part of the shop?"
+  },
+  {
+    "id": "repeat-repeat",
+    "public_note": "Your bone china is slip-cast by hand, fired and decorated in your own Stoke factory. What we couldn't establish is where your bone china body is prepared. Gold needs the clay body itself prepared in the UK.",
+    "tier_question": "Who supplies your bone china body, and are any pieces, such as plates, made outside your factory?"
   }
 ]

@@ -12614,5 +12614,31 @@
       "women"
     ],
     "audience_confidence": "strong"
+  },
+  {
+    "id": "repeat-repeat",
+    "name": "Repeat Repeat",
+    "subcategory": "Bone china",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Stoke-on-Trent (Fenton)",
+    "address": "The Old Co-op, Smithpool Road, Fenton, Stoke-on-Trent",
+    "lat": 52.9958,
+    "lng": -2.17258,
+    "website": "https://www.repeatrepeat.co.uk",
+    "description": "Contemporary bone china mugs and tableware, slip-cast by hand and decorated in the designers' own factory, a former Co-op building in Fenton, Stoke-on-Trent.",
+    "evidence_note": "Own factory and design studio in the Old Co-op, Fenton (Companies House 04693277, SIC 23410; designers Gillian Naylor and Mark Faulkner, working together since 1984). 'Most' bone china slip-cast by hand, around 20 hand processes and three firings; tableware 'designed, hand-decorated and made in Stoke-on-Trent' (own site). Bone china body source not stated, and which pieces are not cast in-house (plates?) is unknown — Silver pending confirmation. Pin on published factory postcode ST4 4PW. Suggested to Theo 15 Sep 2026.",
+    "tier_confidence": "medium",
+    "category": "ceramics",
+    "instagram": "https://www.instagram.com/repeatrepeat.co.uk/",
+    "logo": "assets/logos/repeat-repeat.png",
+    "source": "user-suggestion-verified-2026-09",
+    "product_tags": [
+      "pottery",
+      "mugs",
+      "tableware",
+      "plates"
+    ],
+    "nation": "England"
   }
 ]

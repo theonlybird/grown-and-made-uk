@@ -26735,5 +26735,15 @@
   "checked": "2026-09-01",
   "rescored": false,
   "alreadyGated": true
+ },
+ "repeat-repeat": {
+  "id": "repeat-repeat",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-15",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
  }
 }
