@@ -18,7 +18,7 @@ const geo = require('./_lib/geo');
    offers, so accepting one could only ever come from a forged payload. */
 const EDITABLE = {
   name: 120, website: 300, instagram: 200,
-  address: 300, description: 600,
+  address: 300, description: 200,   // 200 ~= five lines on a listing card, which is the only place it shows
 };
 const MAX_BODY = 24 * 1024;
 

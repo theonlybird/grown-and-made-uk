@@ -292,8 +292,8 @@
 
       <label class="fld">
         <span class="lab">How we describe you</span>
-        <textarea name="description" rows="3"></textarea>
-        <span class="help">One or two lines, in plain English. We may trim it to fit.</span>
+        <textarea name="description" rows="3" id="desc" maxlength="200"></textarea>
+        <span class="help">One or two lines, in plain English. <span id="desc-count"></span></span>
       </label>
     </div>
 
@@ -623,6 +623,20 @@ document.addEventListener('click', e => {
     else if (!r.instagram) ask = "We don't have an Instagram for you, if you'd like it on your listing.";
     if (ask) { $('primary-ask').textContent = ask; $('primary-ask').hidden = false; }
     if (!physical) $('addr-hint').textContent = '— as much or as little as you would like published';
+
+    /* 200 characters is about five lines on a listing card, and the card is the
+       only place this text is ever shown. Saying so beats silently trimming
+       something a business took trouble over. */
+    var desc = $('desc'), dcount = $('desc-count');
+    function countDesc() {
+      var left = 200 - desc.value.length;
+      dcount.textContent = left > 40 ? 'Up to 200 characters.'
+        : left >= 0 ? left + ' characters left.'
+        : 'That is over the 200-character limit.';
+      dcount.style.color = left > 20 ? '' : 'var(--gold-mark)';
+    }
+    desc.addEventListener('input', countDesc);
+    countDesc();
 
     /* Logo: show what we hold, and make emailing a new one land already labelled. */
     var box = $('logo-box');

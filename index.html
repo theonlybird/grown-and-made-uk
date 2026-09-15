@@ -496,7 +496,12 @@
   .grid-card .g-title{font-family:var(--font-heading);font-size:21px;font-weight:600;
     color:var(--green);line-height:1.1}
   .grid-card .g-sub{color:var(--muted-2)}
-  .grid-card .g-desc{color:var(--muted);font-size:13.5px;line-height:1.55}
+  /* Cards sit in a CSS grid with align-items:stretch, so one long description
+     stretches every other card in its row. Clamp at four lines: the median
+     description is ~85 characters (about two lines), so this only bites on
+     the long tail, and card heights stay predictable whatever the data says. */
+  .grid-card .g-desc{color:var(--muted);font-size:13.5px;line-height:1.55;
+    display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
   .grid-card .g-addr{color:var(--muted-2)}
   .grid-card .g-links a{border-radius:4px;font-family:var(--font-body);font-weight:500}
   .grid-card .g-links a.web{background:var(--green);color:var(--paper)}
