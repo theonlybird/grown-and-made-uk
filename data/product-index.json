@@ -3981,13 +3981,6 @@
   ],
   "checked": "2026-08-01"
  },
- "hollis-mead": {
-  "id": "hollis-mead",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31"
- },
  "loch-arthur": {
   "id": "loch-arthur",
   "shopify": false,
@@ -5453,13 +5446,6 @@
    "Tornado - Orange White Blue"
   ],
   "checked": "2026-08-01"
- },
- "gonalston": {
-  "id": "gonalston",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31"
  },
  "denstone-hall": {
   "id": "denstone-hall",

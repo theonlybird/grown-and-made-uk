@@ -498,7 +498,7 @@
     "name": "Eversfield Organic",
     "category": "farm",
     "subcategory": "Meat & Mixed",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Tavistock, Devon",
     "address": "Tavistock & Totnes",
@@ -507,10 +507,10 @@
     "website": "https://www.eversfieldorganic.co.uk",
     "instagram": "https://www.instagram.com/eversfield_organic/",
     "description": "Devon organic farm with shops in Tavistock and Totnes, supplying ethically reared British meat and produce. Now incorporates Coombe Farm Organic (acquired 2023).",
-    "evidence_note": "Own organic Devon farm; consolidated with Coombe Farm Organic (Crewkerne, Somerset) in 2023.",
+    "evidence_note": "Own organic Devon farm; consolidated with Coombe Farm Organic (Crewkerne, Somerset) in 2023. Capped at Silver by the wine range: organic wines include Spanish and New Zealand bottles (confirmed by Theo, 15 Sep 2026); the Marlborough shop blog describes 'an organic wine cave' and larder lines including oils and chocolate.",
     "tier_confidence": "high",
     "logo": "assets/logos/eversfield-organic.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fresh meat",
       "fruit & veg",
@@ -524,7 +524,9 @@
     "products_checked": "2026-08-01",
     "nation": "England",
     "county": "Devon",
-    "logo_bg": "dark"
+    "logo_bg": "dark",
+    "public_note": "Your own organic Devon farm and the charcuterie handmade there are exactly what we look for. The organic wine range, though, includes Spanish and New Zealand wines. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider a British-only organic wine range, or are the imported organic wines a fixed part of the offer?"
   },
   {
     "id": "iow-tomatoes",
@@ -968,7 +970,7 @@
     "name": "Chatsworth Farm Shop",
     "category": "farm",
     "subcategory": "Mixed farm shop",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Pilsley, Derbyshire",
     "address": "Pilsley, Bakewell",
@@ -977,15 +979,17 @@
     "website": "https://www.chatsworth.org",
     "instagram": "https://www.instagram.com/chatsworthofficial/",
     "description": "Estate farm shop in the Peak District selling Chatsworth estate produce and Derbyshire suppliers, most within a 30-mile radius.",
-    "evidence_note": "Estate + Derbyshire suppliers (mostly <30 miles).",
+    "evidence_note": "Estate + Derbyshire suppliers (mostly <30 miles). Capped at Silver by the wine range: Chatsworth own-label wines include French wines (Claret from Bordeaux, Touraine Sauvignon Blanc, Pays d'Oc, Côtes de Gascogne) and a Chatsworth Port, sold in the Estate Farm Shop collection of the Chatsworth online shop; only the English sparkling is British (checked 15 Sep 2026).",
     "tier_confidence": "high",
     "logo": "assets/logos/chatsworth-farm-shop.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fruit & veg"
     ],
     "nation": "England",
-    "county": "Derbyshire"
+    "county": "Derbyshire",
+    "public_note": "Estate produce and Derbyshire suppliers, most from within 30 miles, are the heart of the shop. The Chatsworth wine range, though, includes French wines and a port alongside the English sparkling. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider a British-only wine range, or are the Chatsworth French wines a fixed part of the offer?"
   },
   {
     "id": "ludlow-food-centre",
@@ -1018,7 +1022,7 @@
     "name": "Balgove Larder",
     "category": "farm",
     "subcategory": "Meat & Mixed",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "St Andrews, Fife",
     "address": "Strathtyrum Estate, St Andrews",
@@ -1027,10 +1031,10 @@
     "website": "https://www.balgove.com",
     "instagram": "https://www.instagram.com/balgove/",
     "description": "Farm shop, butchery and café on the Strathtyrum Estate just outside St Andrews, championing Fife and Scottish produce.",
-    "evidence_note": "Own/local Scottish produce; butchery on site.",
+    "evidence_note": "Own/local Scottish produce; butchery on site. Capped at Silver by the drink range: hampers include French wines (Mâcon-Uchizy, Côtes du Rhône, Haut-Médoc, Pouilly-Fumé, Champagne) and Italian pasta (checked 15 Sep 2026). Evidence is the online hamper range, not a shelf list.",
     "tier_confidence": "high",
     "logo": "assets/logos/balgove-larder.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fresh meat",
       "fruit & veg",
@@ -1044,7 +1048,9 @@
     ],
     "products_checked": "2026-08-01",
     "nation": "Scotland",
-    "county": "Fife"
+    "county": "Fife",
+    "public_note": "Your own and local Scottish produce, with a butchery on site, is exactly what we look for. Your hampers, though, include French wines such as white Burgundy and Côtes du Rhône. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider British-only wine in the shop and hampers, or is the French wine a fixed part of the range?"
   },
   {
     "id": "fodder",
@@ -1531,36 +1537,11 @@
     "county": "West Yorkshire"
   },
   {
-    "id": "hollis-mead",
-    "name": "Hollis Mead Organic",
-    "category": "farm",
-    "subcategory": "Mixed farm shop",
-    "tier": "gold",
-    "listing_type": "both",
-    "town": "Corscombe, Dorset",
-    "address": "Corscombe",
-    "lat": 50.86,
-    "lng": -2.66,
-    "website": "https://hollismead.com",
-    "instagram": null,
-    "description": "Organic Dorset dairy farm selling its own milk and dairy plus local produce.",
-    "evidence_note": "Own organic dairy produce.",
-    "tier_confidence": "high",
-    "logo": "assets/logos/placeholder.png",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "dairy & cheese",
-      "fruit & veg"
-    ],
-    "nation": "England",
-    "county": "Dorset"
-  },
-  {
     "id": "loch-arthur",
     "name": "Loch Arthur Creamery & Farm Shop",
     "category": "farm",
     "subcategory": "Meat & Mixed",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Beeswing, Dumfries",
     "address": "Camphill Community, Beeswing, Dumfries",
@@ -1569,17 +1550,19 @@
     "website": "https://www.locharthurshop.co.uk",
     "instagram": null,
     "description": "Organic Camphill community farm near Dumfries rearing its own animals and making artisan cheese, dairy and bakery.",
-    "evidence_note": "Own organic farm; creamery, bakery, butchery.",
+    "evidence_note": "Own organic farm; creamery, bakery, butchery. Capped at Silver by the grocery range: DG Food and Drink listing describes the shop as 'specialising in organic, local & fairly traded food and drink'; fair trade lines are imported by definition (checked 15 Sep 2026).",
     "tier_confidence": "high",
     "logo": "assets/logos/loch-arthur.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fresh meat",
       "dairy & cheese",
       "bread & bakery"
     ],
     "nation": "Scotland",
-    "county": "Dumfries"
+    "county": "Dumfries",
+    "public_note": "Your own organic farm, creamery, bakery and butchery are exactly what we look for. The shop, though, also stocks fairly traded food and drink alongside them. Gold needs effectively everything on the shelves to be British.",
+    "tier_question": "Are the fairly traded lines something you'd consider replacing with British ones, or are they a fixed part of the shop?"
   },
   {
     "id": "macknade",
@@ -1857,7 +1840,7 @@
     "name": "Trevaskis Farm",
     "category": "farm",
     "subcategory": "Mixed farm shop",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Hayle, Cornwall",
     "address": "Gwinear, near Hayle",
@@ -1866,16 +1849,18 @@
     "website": "https://www.trevaskisfarm.co.uk",
     "instagram": "https://www.instagram.com/trevaskisfarm/",
     "description": "Family Cornwall farm with shop, butchery, pick-your-own fields and restaurant, selling its own and local produce.",
-    "evidence_note": "Own farm produce + PYO + butchery.",
+    "evidence_note": "Own farm produce + PYO + butchery. Capped at Silver by the wine and spirits range: Italian, Spanish and French wines, Prosecco, port and limoncello in the online shop, alongside a large Cornish drinks range (checked 15 Sep 2026).",
     "tier_confidence": "high",
     "logo": "assets/logos/trevaskis-farm.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fresh meat",
       "fruit & veg"
     ],
     "nation": "England",
-    "county": "Cornwall"
+    "county": "Cornwall",
+    "public_note": "Your own farm produce, pick-your-own and butchery, with a big range of Cornish drinks, are exactly what we look for. The wine range, though, includes Italian, Spanish and French bottles, Prosecco and port. Gold needs any wine or beer to be British too.",
+    "tier_question": "Could the wine range be British-only, or are the imported wines part of what customers come for?"
   },
   {
     "id": "lobbs-farm-shop",
@@ -2200,36 +2185,11 @@
     "audience_confidence": "strong"
   },
   {
-    "id": "gonalston",
-    "name": "Gonalston Farm Shop",
-    "category": "farm",
-    "subcategory": "Mixed farm shop",
-    "tier": "gold",
-    "listing_type": "both",
-    "town": "Gonalston, Nottinghamshire",
-    "address": "Gonalston",
-    "lat": 53.02,
-    "lng": -1.02,
-    "website": "https://www.gonalstonfarmshop.co.uk",
-    "instagram": null,
-    "description": "Nottinghamshire farm shop selling fresh produce and meat direct from the farm.",
-    "evidence_note": "Fresh/local produce, meat direct from farm.",
-    "tier_confidence": "medium",
-    "logo": "assets/logos/placeholder.png",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "fresh meat",
-      "fruit & veg"
-    ],
-    "nation": "England",
-    "county": "Nottinghamshire"
-  },
-  {
     "id": "denstone-hall",
     "name": "Denstone Hall Farm Shop",
     "category": "farm",
     "subcategory": "Mixed farm shop",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Denstone, Staffordshire",
     "address": "Denstone, near Uttoxeter",
@@ -2238,23 +2198,25 @@
     "website": "https://www.denstonehall.co.uk",
     "instagram": "https://www.instagram.com/denstonehallfarmshop/",
     "description": "Family farm shop and café on the Staffordshire/Derbyshire border championing local produce.",
-    "evidence_note": "Family-run farm shop; local produce focus.",
-    "tier_confidence": "medium",
+    "evidence_note": "Family-run farm shop; local produce focus. Capped at Silver by the wine range: the shop's own drinks page lists a 'hand selected range of Champagnes and Prosecco options' alongside English wine and local beers (checked 15 Sep 2026).",
+    "tier_confidence": "high",
     "logo": "assets/logos/denstone-hall.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fruit & veg"
     ],
     "nation": "England",
     "county": "Staffordshire",
-    "logo_bg": "dark"
+    "logo_bg": "dark",
+    "public_note": "Your local produce, English wines and local beers are exactly what we look for. The drinks range, though, includes Champagne and Prosecco. Gold needs any wine or beer to be British too.",
+    "tier_question": "Could the sparkling range be English-only, or are Champagne and Prosecco a fixed part of the offer?"
   },
   {
     "id": "loch-levens-larder",
     "name": "Loch Leven's Larder",
     "category": "farm",
     "subcategory": "Mixed farm shop",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Kinross",
     "address": "Channel Farm, Kinross",
@@ -2263,15 +2225,17 @@
     "website": "https://www.lochlevenslarder.com",
     "instagram": "https://www.instagram.com/loch_levens_larder/",
     "description": "Farm shop and café at Channel Farm with views over Loch Leven, selling own and Scottish produce.",
-    "evidence_note": "On working farm; Scottish produce focus.",
-    "tier_confidence": "medium",
+    "evidence_note": "On working farm; Scottish produce focus. Capped at Silver by the cheese counter: own food-hall page lists 'English and continental favourites' alongside Scottish cheeses. Also 'a wide range of fine wines and spirits', origin not published (checked 15 Sep 2026).",
+    "tier_confidence": "high",
     "logo": "assets/logos/loch-levens-larder.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fruit & veg"
     ],
     "nation": "Scotland",
-    "county": "Kinross"
+    "county": "Kinross",
+    "public_note": "A shop on a working farm with Scottish produce, gins and beers is exactly what we look for. The cheese counter, though, includes continental cheeses alongside the Scottish ones. Gold needs effectively everything on the shelves to be British.",
+    "tier_question": "Could the cheese counter and wine range be British-only, or are the continental lines part of the offer?"
   },
   {
     "id": "cowdray-farm-shop",
@@ -2364,7 +2328,7 @@
     "name": "Emmett's of Peasenhall",
     "category": "farm",
     "subcategory": "Meat & Mixed",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Peasenhall, Suffolk",
     "address": "Peasenhall, Saxmundham",
@@ -2373,10 +2337,10 @@
     "website": "https://www.emmettsham.co.uk",
     "instagram": "https://www.instagram.com/emmetts_store/",
     "description": "The UK's oldest artisan ham and bacon producer (est. 1820), still curing on its original Suffolk premises, with a shop and café.",
-    "evidence_note": "Own-cured British ham/bacon since 1820.",
+    "evidence_note": "Own-cured British ham/bacon since 1820. Capped at Silver by the wine and deli range: the online wine collection is Spanish throughout (own-label Rioja, Gran Reserva, Cavas), and Speciality Food Magazine reports Spanish products 'continue to top the shop's list of greatest hits' (checked 15 Sep 2026).",
     "tier_confidence": "high",
     "logo": "assets/logos/emmetts-peasenhall.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "pork & bacon",
       "fresh meat",
@@ -2388,7 +2352,9 @@
     "products_checked": "2026-08-01",
     "nation": "England",
     "county": "Suffolk",
-    "logo_bg": "dark"
+    "logo_bg": "dark",
+    "public_note": "Your Suffolk ham and bacon, cured here since 1820, are exactly what we look for. The wine range, though, is Spanish, including your house Rioja and Cavas, alongside Spanish deli lines. Gold needs effectively everything on the shelves to be British, drink included.",
+    "tier_question": "Is the Spanish range something you'd consider replacing with British lines, or is it central to the shop?"
   },
   {
     "id": "maple-farm-kelsale",
@@ -2577,7 +2543,7 @@
     "name": "Knitsley Farm Shop",
     "category": "farm",
     "subcategory": "Meat & Mixed",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Consett, County Durham",
     "address": "East Knitsley Grange Farm, Knitsley, Consett",
@@ -2586,23 +2552,25 @@
     "website": "https://www.knitsleyfarmshop.co.uk",
     "instagram": "https://www.instagram.com/knitsleyfarmshop/",
     "description": "Family-run County Durham farm shop with butchery, deli and bakery selling locally sourced meats and homemade goods.",
-    "evidence_note": "Own farm + locally sourced; butchery/deli/bakery.",
-    "tier_confidence": "medium",
+    "evidence_note": "Own farm + locally sourced; butchery/deli/bakery. Capped at Silver by the drinks range: FARMA listing says 'a selection of the best wines from around the world'; Theo confirmed several foreign wines and Peroni in the range (15 Sep 2026). The wines settle it on their own; check where Peroni is brewed before citing it publicly.",
+    "tier_confidence": "high",
     "logo": "assets/logos/placeholder.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "fresh meat",
       "bread & bakery"
     ],
     "nation": "England",
-    "county": "Durham"
+    "county": "Durham",
+    "public_note": "Your own farm produce, butchery, deli and bakery, with beer from local breweries, are exactly what we look for. The wine range, though, draws on wines from around the world. Gold needs any wine or beer to be British too.",
+    "tier_question": "Could the wine range be British-only, or is the world wine selection part of what customers come for?"
   },
   {
     "id": "tablehurst-farm",
     "name": "Tablehurst Farm",
     "category": "farm",
     "subcategory": "Meat & Mixed",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Forest Row, East Sussex",
     "address": "London Road, Forest Row",
@@ -2611,10 +2579,10 @@
     "website": "https://www.tablehurstfarm.org.uk",
     "instagram": "https://www.instagram.com/tablehurst.farm/",
     "description": "Biodynamic and organic community farm producing its own meat, poultry, veg, grain and raw milk; BBC Best Food Producer 2022.",
-    "evidence_note": "Own biodynamic/organic produce.",
+    "evidence_note": "Own biodynamic/organic produce. Capped at Silver by the grocery and drink range: own shop page lists 'a select range of biodynamic and organic wines, spirits and beers' and 'essential dry goods'; Theo confirmed plenty of wines and olive oil on the shelves (15 Sep 2026).",
     "tier_confidence": "high",
     "logo": "assets/logos/tablehurst-farm.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "poultry",
       "fresh meat",
@@ -2622,7 +2590,9 @@
       "fruit & veg"
     ],
     "nation": "England",
-    "county": "East Sussex"
+    "county": "East Sussex",
+    "public_note": "Your own biodynamic and organic produce, with bread baked on the farm, is exactly what we look for. The shop, though, also stocks olive oil and a wine range that isn't British-only. Gold needs effectively everything on the shelves to be British, drink included.",
+    "tier_question": "Is the wine and dry-goods range something that could be British-only, or is it a settled part of the shop?"
   },
   {
     "id": "plumgarths",
@@ -4278,7 +4248,7 @@
     "name": "Ballylagan Organic Farm",
     "category": "farm",
     "subcategory": "Organic farm shop",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "shop",
     "town": "Straid, Co. Antrim",
     "address": "12 Ballylagan Road, Straid, Ballyclare",
@@ -4286,18 +4256,20 @@
     "lng": -5.92228,
     "website": "https://www.ballylagan.com",
     "description": "Northern Ireland's first organic farm shop — the sole outlet for the 120-acre farm's own beef, pork, bacon, eggs, fruit and veg.",
-    "evidence_note": "Shop is the sole outlet for all home-grown produce (company pages); some grocery lines stocked alongside.",
-    "tier_confidence": "medium",
+    "evidence_note": "Shop is the sole outlet for all home-grown produce (company pages); some grocery lines stocked alongside. Capped at Silver by the grocery range: own shop page lists 'premium quality chocolate, pasta and rice to tinned soup' and organic fruit and veg bought in weekly from a wholesaler (checked 15 Sep 2026).",
+    "tier_confidence": "high",
     "instagram": "https://www.instagram.com/ballylaganorganicfarm/",
     "logo": "assets/logos/ballylagan-organic.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-09",
     "product_tags": [
       "beef",
       "pork & bacon",
       "fruit & veg"
     ],
     "nation": "Northern Ireland",
-    "county": "Co. Antrim"
+    "county": "Co. Antrim",
+    "public_note": "Your shop is the only outlet for everything you grow, which is exactly what we look for. It also stocks grocery lines such as pasta, rice and chocolate. Gold needs effectively everything on the shelves to be British.",
+    "tier_question": "Is the grocery range something you'd consider limiting to British lines, or is it part of offering a full organic shop?"
   },
   {
     "id": "eden-pottery",
@@ -11396,7 +11368,7 @@
     "website": "https://www.lowerclopton.co.uk",
     "instagram": "https://www.instagram.com/lowercloptonfarmshop/",
     "description": "FRA Small Farm Shop of the Year 2026 selling own Aberdeen Angus beef, lamb, free-range pork and eggs.",
-    "evidence_note": "Own beef, lamb and veg from surrounding fields, deli of British cheeses and self-made pies; states 99% of produce is British.",
+    "evidence_note": "Own beef, lamb and veg from surrounding fields, deli of British cheeses and self-made pies; states 99% of produce is British. Drink range checked 15 Sep 2026: nothing on the shop's own site shows imported wine. A Broadway Wine Company page titled 'Lower Clopton Farm Shop' lists imported wines, but no connection to the shop was found; Gold holds.",
     "tier_confidence": "high",
     "logo": "assets/logos/lower-clopton-farm-shop.png",
     "source": "unrecorded — verify before relying on",

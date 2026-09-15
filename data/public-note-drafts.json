@@ -1393,5 +1393,60 @@
     "id": "rhug-estate",
     "public_note": "Your own organic estate produce is the heart of what you sell. The wine range, though, is not British-only. Gold needs any wine or beer to be British as well as the food.",
     "tier_question": "Is the wine range something that could be British-only, or is it a settled part of the offer?"
+  },
+  {
+    "id": "chatsworth-farm-shop",
+    "public_note": "Estate produce and Derbyshire suppliers, most from within 30 miles, are the heart of the shop. The Chatsworth wine range, though, includes French wines and a port alongside the English sparkling. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider a British-only wine range, or are the Chatsworth French wines a fixed part of the offer?"
+  },
+  {
+    "id": "trevaskis-farm",
+    "public_note": "Your own farm produce, pick-your-own and butchery, with a big range of Cornish drinks, are exactly what we look for. The wine range, though, includes Italian, Spanish and French bottles, Prosecco and port. Gold needs any wine or beer to be British too.",
+    "tier_question": "Could the wine range be British-only, or are the imported wines part of what customers come for?"
+  },
+  {
+    "id": "emmetts-peasenhall",
+    "public_note": "Your Suffolk ham and bacon, cured here since 1820, are exactly what we look for. The wine range, though, is Spanish, including your house Rioja and Cavas, alongside Spanish deli lines. Gold needs effectively everything on the shelves to be British, drink included.",
+    "tier_question": "Is the Spanish range something you'd consider replacing with British lines, or is it central to the shop?"
+  },
+  {
+    "id": "balgove-larder",
+    "public_note": "Your own and local Scottish produce, with a butchery on site, is exactly what we look for. Your hampers, though, include French wines such as white Burgundy and Côtes du Rhône. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider British-only wine in the shop and hampers, or is the French wine a fixed part of the range?"
+  },
+  {
+    "id": "denstone-hall",
+    "public_note": "Your local produce, English wines and local beers are exactly what we look for. The drinks range, though, includes Champagne and Prosecco. Gold needs any wine or beer to be British too.",
+    "tier_question": "Could the sparkling range be English-only, or are Champagne and Prosecco a fixed part of the offer?"
+  },
+  {
+    "id": "loch-levens-larder",
+    "public_note": "A shop on a working farm with Scottish produce, gins and beers is exactly what we look for. The cheese counter, though, includes continental cheeses alongside the Scottish ones. Gold needs effectively everything on the shelves to be British.",
+    "tier_question": "Could the cheese counter and wine range be British-only, or are the continental lines part of the offer?"
+  },
+  {
+    "id": "knitsley",
+    "public_note": "Your own farm produce, butchery, deli and bakery, with beer from local breweries, are exactly what we look for. The wine range, though, draws on wines from around the world. Gold needs any wine or beer to be British too.",
+    "tier_question": "Could the wine range be British-only, or is the world wine selection part of what customers come for?"
+  },
+  {
+    "id": "eversfield-organic",
+    "public_note": "Your own organic Devon farm and the charcuterie handmade there are exactly what we look for. The organic wine range, though, includes Spanish and New Zealand wines. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider a British-only organic wine range, or are the imported organic wines a fixed part of the offer?"
+  },
+  {
+    "id": "tablehurst-farm",
+    "public_note": "Your own biodynamic and organic produce, with bread baked on the farm, is exactly what we look for. The shop, though, also stocks olive oil and a wine range that isn't British-only. Gold needs effectively everything on the shelves to be British, drink included.",
+    "tier_question": "Is the wine and dry-goods range something that could be British-only, or is it a settled part of the shop?"
+  },
+  {
+    "id": "ballylagan-organic",
+    "public_note": "Your shop is the only outlet for everything you grow, which is exactly what we look for. It also stocks grocery lines such as pasta, rice and chocolate. Gold needs effectively everything on the shelves to be British.",
+    "tier_question": "Is the grocery range something you'd consider limiting to British lines, or is it part of offering a full organic shop?"
+  },
+  {
+    "id": "loch-arthur",
+    "public_note": "Your own organic farm, creamery, bakery and butchery are exactly what we look for. The shop, though, also stocks fairly traded food and drink alongside them. Gold needs effectively everything on the shelves to be British.",
+    "tier_question": "Are the fairly traded lines something you'd consider replacing with British ones, or are they a fixed part of the shop?"
   }
 ]

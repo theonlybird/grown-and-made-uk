@@ -4124,16 +4124,6 @@
   "rescored": false,
   "alreadyGated": true
  },
- "hollis-mead": {
-  "id": "hollis-mead",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
- },
  "loch-arthur": {
   "id": "loch-arthur",
   "shopify": false,
@@ -5648,16 +5638,6 @@
   ],
   "checked": "2026-08-01",
   "previousTags": [],
-  "rescored": true
- },
- "gonalston": {
-  "id": "gonalston",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31",
-  "tags": [],
-  "tagConfidence": {},
   "rescored": true
  },
  "denstone-hall": {
