@@ -1378,5 +1378,20 @@
     "id": "moma-hilo",
     "public_note": "Everything you make is sewn in London by MAES London and Fashion Studio 85, and your buttons and trims are UK-made too — that's more of your supply chain named publicly than most brands your size manage. What we couldn't establish is where your deadstock cloth was originally woven, since Last Yarn, The Materialist and Woolcrest Textiles all supply surplus of mixed origin. Gold needs the main fabric itself milled, woven or knitted in the UK.",
     "tier_question": "Do you know which mills your deadstock fabrics originally came from, and are any of them UK mills?"
+  },
+  {
+    "id": "gazegill-organics",
+    "public_note": "Your own organic farm, butchery and dairy are the heart of the shop. The deli, though, carries coffee and coconut lines alongside them. Gold needs effectively everything on the shelves to be British, drink included.",
+    "tier_question": "Is the deli and drinks range something you'd consider British-only, or is it a fixed part of the offer?"
+  },
+  {
+    "id": "plumgarths",
+    "public_note": "Your Cumbrian produce and traditional butchery are exactly what we look for. The wine list, though, includes New Zealand and Chilean bottles. Gold needs any wine or beer to be British too.",
+    "tier_question": "Would you consider a British-only wine list, or is the imported range part of what customers come for?"
+  },
+  {
+    "id": "rhug-estate",
+    "public_note": "Your own organic estate produce is the heart of what you sell. The wine range, though, is not British-only. Gold needs any wine or beer to be British as well as the food.",
+    "tier_question": "Is the wine range something that could be British-only, or is it a settled part of the offer?"
   }
 ]
