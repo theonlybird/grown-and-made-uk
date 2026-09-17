@@ -1453,5 +1453,30 @@
     "id": "repeat-repeat",
     "public_note": "Your bone china is slip-cast by hand, fired and decorated in your own Stoke factory. What we couldn't establish is where your bone china body is prepared. Gold needs the clay body itself prepared in the UK.",
     "tier_question": "Who supplies your bone china body, and are any pieces, such as plates, made outside your factory?"
+  },
+  {
+    "id": "emily-mitchell-studio",
+    "public_note": "Your ceramics are hand-built, thrown and painted in your Norfolk studio. Where your clay comes from isn't something we could confirm publicly. Gold needs the clay body itself dug or prepared in the UK.",
+    "tier_question": "Which clay do you use, and where is it dug or prepared?"
+  },
+  {
+    "id": "emma-lacey",
+    "public_note": "Your stoneware is thrown in your North London studio, with some pieces made in small Stoke-on-Trent factories. Where the stoneware body is sourced isn't something we could confirm publicly. Gold needs the clay body itself dug or prepared in the UK.",
+    "tier_question": "Which stoneware clay do you use, and where is it dug or prepared?"
+  },
+  {
+    "id": "maison-s-sommet",
+    "public_note": "Your ceramics are handmade and your studio is in Peckham. We couldn't confirm publicly that all pieces are made there, or where your clay comes from. Gold needs pieces formed and fired in the UK from a clay body dug or prepared in the UK.",
+    "tier_question": "Are all your pieces made in your Peckham studio, and which clay do you use and where is it from?"
+  },
+  {
+    "id": "frankie-roberts-jewellery",
+    "public_note": "Your jewellery is hand made to order in your Scottish workshop. We couldn't confirm publicly how the metal becomes each piece — whether you cast or fabricate it yourself, or use a casting house, and where. Gold needs the principal part of the piece made in the UK from metal.",
+    "tier_question": "Are your pieces cast or fabricated from metal in your workshop, or cast for you by a casting house — and if so, where?"
+  },
+  {
+    "id": "the-garlic-farm",
+    "public_note": "You grow garlic on your Isle of Wight farm, and your own story says you also source varieties from growers in Europe and the USA. Gold for farm shops needs effectively everything sold to be British, with no imported food lines.",
+    "tier_question": "Is all the garlic and every garlic product you sell now grown in the UK?"
   }
 ]

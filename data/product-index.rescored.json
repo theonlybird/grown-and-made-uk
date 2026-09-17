@@ -26745,5 +26745,374 @@
   "tags": [],
   "tagConfidence": {},
   "rescored": true
+ },
+ "john-julian": {
+  "id": "john-julian",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 6,
+  "productCount": 249,
+  "tags": [
+   "bowls",
+   "candles & holders",
+   "mugs",
+   "plates",
+   "pottery",
+   "tableware",
+   "vases"
+  ],
+  "tagConfidence": {
+   "bowls": "strong",
+   "candles & holders": "weak",
+   "mugs": "strong",
+   "plates": "strong",
+   "pottery": "weak",
+   "tableware": "strong",
+   "vases": "strong"
+  },
+  "tagCounts": {
+   "mugs": 72,
+   "pottery": 198,
+   "tableware": 157,
+   "plates": 160,
+   "bowls": 111,
+   "vases": 10,
+   "candles & holders": 1
+  },
+  "tagEvidence": {
+   "mugs": "Beakers",
+   "pottery": "Tankard Classical - Mum Beaker Classical Plain Porcelain Gift Mug Mugs",
+   "tableware": "Classical Porcelain Jug",
+   "plates": "Plates",
+   "bowls": "Porcelain Lowered Simple Bowl, Forest Green Line Bowls New to Range",
+   "vases": "Exclusive Hand Painted John Julian x Makoto Kagoshima Classical Vase -",
+   "candles & holders": "Archive - Black Granite Candlesticks archive"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Accessories",
+   "Beaker",
+   "Beakers",
+   "Bowls",
+   "Cream Jug",
+   "Cup & Saucer",
+   "Deep Bowl",
+   "Dinnerware",
+   "Gift",
+   "Gift Cards",
+   "Jugs",
+   "Kitchenware",
+   "Mugs",
+   "Pestle & Morter",
+   "Pinch Pots",
+   "Plates",
+   "Serveware",
+   "Side Plate",
+   "Side Plates",
+   "Tableware",
+   "Vases",
+   "shallow bowl"
+  ],
+  "sample": [
+   "Tankard Classical - Mum",
+   "Tankard Classical",
+   "Classical Porcelain Jug",
+   "Porcelain Simple Mug with Oak Leaf",
+   "Classical Porcelain Side Plate with a Brown Line and Oak Leaf",
+   "Porcelain Match Pot",
+   "Porcelain Lowered Simple Bowl, Forest Green Line",
+   "Exclusive Hand Painted John Julian x Makoto Kagoshima Classical Vase -"
+  ],
+  "checked": "2026-09-17",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "charlotte-berry-jewellery": {
+  "id": "charlotte-berry-jewellery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-17",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "anuka-jewellery": {
+  "id": "anuka-jewellery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 6,
+  "productCount": 139,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 210,
+   "plates": 1,
+   "womenswear": 4,
+   "cufflinks & signets": 8,
+   "cutlery & knives": 4
+  },
+  "tagEvidence": {
+   "jewellery": "NECKLACE",
+   "plates": "ANUKA Re-plating non-gift item re-plate",
+   "womenswear": "Women’s Round Signet Ring",
+   "cufflinks & signets": "Women’s Round Signet Ring",
+   "cutlery & knives": "Large Knife edge Cufflinks"
+  },
+  "gatedOut": [
+   "cutlery & knives",
+   "plates",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "BANGLE",
+   "EARRINGS",
+   "NECKLACE",
+   "PENDANT",
+   "RING",
+   "non gift"
+  ],
+  "sample": [
+   "AMATI Gold Large Disc Necklace",
+   "ANUKA Repairs",
+   "ANUKA Re-plating",
+   "Silver T-Bar Pearl Necklace",
+   "Small Petal Silver Ring",
+   "Small Petal Drop Silver Earrings",
+   "Small Daisy Silver Pendant",
+   "Petal Silver Hoops"
+  ],
+  "checked": "2026-09-17",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "nicola-bannister-jewellery": {
+  "id": "nicola-bannister-jewellery",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 6,
+  "productCount": 85,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "weak",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 77,
+   "cushions & throws": 1,
+   "silverware": 3,
+   "tweed & woven goods": 3,
+   "cufflinks & signets": 1
+  },
+  "tagEvidence": {
+   "jewellery": "Digital Jewellery Gift Card Gift cards jewellery",
+   "cushions & throws": "Teal, Cushion Cut Sapphire Studs sapphire studs sapphire earri sapphir",
+   "silverware": "Stria Hoops, Sterling Silver hoop earrings stria hoop drops silver",
+   "tweed & woven goods": "Lilac Sapphire Woven Stacker Ring Ring morganite Stria",
+   "cufflinks & signets": "9ct Yellow Gold Signet Ring ring signet ring gold ring"
+  },
+  "gatedOut": [
+   "cushions & throws",
+   "tweed & woven goods"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Digital Jewellery Gift Card",
+   "Digital Workshop Gift Card",
+   "Classic Hoops, solid gold",
+   "Pearl Drops",
+   "Pearl Drops",
+   "Diamond Dot Hoop Drops",
+   "Ripple Diamond Drop Necklace",
+   "Classic Little Hoops, solid gold"
+  ],
+  "checked": "2026-09-17",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "emily-mitchell-studio": {
+  "id": "emily-mitchell-studio",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 6,
+  "productCount": 27,
+  "tags": [
+   "candles & holders",
+   "plates",
+   "pottery",
+   "vases"
+  ],
+  "tagConfidence": {
+   "candles & holders": "strong",
+   "plates": "strong",
+   "pottery": "weak",
+   "vases": "strong"
+  },
+  "tagCounts": {
+   "vases": 9,
+   "plates": 10,
+   "candles & holders": 14,
+   "pottery": 1
+  },
+  "tagEvidence": {
+   "vases": "Vase",
+   "plates": "Plate",
+   "candles & holders": "Candlestick",
+   "pottery": "Pink Ceramic Coral Wunderkammer"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Candlestick",
+   "Cup",
+   "Friendship Cup",
+   "Plate",
+   "Tile",
+   "Vase",
+   "Wunderkammer"
+  ],
+  "sample": [
+   "White Grottoware Vase",
+   "Small Delft Swan Plate 2",
+   "Small Delft Goose Plate",
+   "Delftware Cup 1",
+   "Small Delft Swan Plate",
+   "Small Delft Bird Plate",
+   "Delft Bud Vase 4",
+   "Delft Bud Vase 2"
+  ],
+  "checked": "2026-09-17",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "emma-lacey": {
+  "id": "emma-lacey",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 6,
+  "productCount": 79,
+  "tags": [
+   "bowls",
+   "mugs",
+   "pottery",
+   "tableware"
+  ],
+  "tagConfidence": {
+   "bowls": "weak",
+   "mugs": "weak",
+   "pottery": "weak",
+   "tableware": "weak"
+  },
+  "tagCounts": {
+   "mugs": 26,
+   "pottery": 2,
+   "bowls": 16,
+   "tableware": 3
+  },
+  "tagEvidence": {
+   "mugs": "'Love Birds' Set of Two Tacit Mugs with Cj O'Neill - Two single swallo",
+   "pottery": "'Love Birds' Set of Two Tacit Mugs with Cj O'Neill - Two single swallo",
+   "bowls": "Everyday Breakfast Bowl Sand Breakfast Bowls",
+   "tableware": "Everyday Small Milk Jug White"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "'Love Birds' Set of Two Tacit Mugs with Cj O'Neill - Two single swallo",
+   "Tacit Mug with Cj O'Neill - Swallows",
+   "test",
+   "Tacit Mug with Cj O'Neill - Orange",
+   "Tacit Mug with Cj O'Neill - Gold",
+   "Everyday Espresso Cup Spring Green",
+   "Everyday Short Cup Spring Green",
+   "Everyday Mug Spring Green"
+  ],
+  "checked": "2026-09-17",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "maison-s-sommet": {
+  "id": "maison-s-sommet",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-17",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "the-garlic-farm": {
+  "id": "the-garlic-farm",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 6,
+  "productCount": 132,
+  "tags": [
+   "dairy & cheese",
+   "drinks & spirits",
+   "fruit & veg",
+   "pork & bacon",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "dairy & cheese": "weak",
+   "drinks & spirits": "weak",
+   "fruit & veg": "weak",
+   "pork & bacon": "weak",
+   "preserves & honey": "weak"
+  },
+  "tagCounts": {
+   "dairy & cheese": 8,
+   "preserves & honey": 12,
+   "drinks & spirits": 3,
+   "shirts": 3,
+   "womenswear": 1,
+   "pork & bacon": 2,
+   "fruit & veg": 1
+  },
+  "tagEvidence": {
+   "dairy & cheese": "Luxury Cold Pressed Rapeseed Oil with Truffle & Garlic Butters & Oils ",
+   "preserves & honey": "Red Onion & Jalapeno Relish Chutneys & Condiments Gluten Free Vegan Ve",
+   "drinks & spirits": "Bloody Mary Kit Alcohol Beer and Vodka Black Garlic Gifts & Hampers Is",
+   "shirts": "Kid's Organic Cotton T-Shirts Books Gadgets & Clothing Vegan",
+   "womenswear": "Women's Organic Cotton T-Shirts Books Gadgets & Clothing Vegan",
+   "pork & bacon": "Pork Scratchings with Garlic and Chilli Snacks & Antipasti With Chilli",
+   "fruit & veg": "Fig, Apple and Garlic Chutney Chutneys & Condiments Gluten Free Vegan "
+  },
+  "gatedOut": [
+   "shirts",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Ambient",
+   "Event",
+   "Fresh",
+   "Garlic",
+   "Seed",
+   "iziGift"
+  ],
+  "sample": [
+   "Organic New Season Garlic 3 Bulbs",
+   "Django on the Island 5",
+   "Sourdough Workshop with Josephine 14th July",
+   "Fermentation Workshop",
+   "Rose Wight ® Seed",
+   "Organic Maddock Wight ® Seed - 4 Bulb Pack",
+   "Wooden Garden Measuring Dibber",
+   "Black Garlic Salami 55g"
+  ],
+  "checked": "2026-09-17",
+  "rescored": false,
+  "alreadyGated": true
  }
 }

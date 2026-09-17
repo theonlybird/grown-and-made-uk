@@ -1,14 +1,14 @@
 # Product index — rescore report
 
-*Generated 2026-09-15 by `scripts/rescore-product-index.js`. Offline pass over the existing harvest — no sites were re-fetched.*
+*Generated 2026-09-17 by `scripts/rescore-product-index.js`. Offline pass over the existing harvest — no sites were re-fetched.*
 
 ```
 Rescore summary
 ---------------
-index entries              470
-  of which harvested       336
-tags before                2232
-tags after                 2230  (100% retained)
+index entries              478
+  of which harvested       342
+tags before                2257
+tags after                 2255  (100% retained)
 
 dropped: category-gated    7
 dropped: modifier/head-noun   0
