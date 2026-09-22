@@ -162,7 +162,23 @@
     });
   }
 
-  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+  /* Escapes for text AND attribute values. The old version round-tripped
+     through textContent/innerHTML, which leaves quotes alone -- so a value
+     like  x" onmouseover="...  broke out of an href. Anything shown here
+     can come from the public suggestion form, so treat all of it as hostile. */
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  /* A link only if it is plainly http(s). Anything else -- javascript:, data:,
+     a bare word -- is shown as text you can read but not click. */
+  function link(url) {
+    var u = String(url == null ? '' : url).trim();
+    if (!/^https?:\/\//i.test(u)) return esc(u);
+    return '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(u) + '</a>';
+  }
 
   function visible() {
     return ROWS.filter(function (r) {
@@ -227,7 +243,7 @@
         html += '<div class="block appeal"><div class="bl">Tier appeal — currently ' + esc(r.tier) + '</div>'
           + '<p style="margin:0 0 6px"><em>' + esc(r.appeal.question) + '</em></p>'
           + '<p style="margin:0">' + esc(r.appeal.answer || '(no answer given)') + '</p>'
-          + (r.appeal.link ? '<p style="margin:6px 0 0"><a href="' + esc(r.appeal.link) + '" target="_blank" rel="noopener">' + esc(r.appeal.link) + '</a></p>' : '')
+          + (r.appeal.link ? '<p style="margin:6px 0 0">' + link(r.appeal.link) + '</p>' : '')
           + '</div>';
       }
       if (r.removal) {
@@ -317,10 +333,8 @@
       }
 
       html += '<div class="diff">'
-        + '<div><span class="fname">Website</span><span class="now"><a href="' + esc(b.website)
-        + '" target="_blank" rel="noopener">' + esc(b.website) + '</a></span></div>'
-        + (b.instagram ? '<div><span class="fname">Instagram</span><span class="now"><a href="' + esc(b.instagram)
-            + '" target="_blank" rel="noopener">' + esc(b.instagram) + '</a></span></div>' : '')
+        + '<div><span class="fname">Website</span><span class="now">' + link(b.website) + '</span></div>'
+        + (b.instagram ? '<div><span class="fname">Instagram</span><span class="now">' + link(b.instagram) + '</span></div>' : '')
         + '<div><span class="fname">Address</span><span class="now">' + esc(b.address) + '</span></div>'
         + '</div>';
 

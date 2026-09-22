@@ -13,6 +13,7 @@
  * plus the per-field caps keep that cheap.
  */
 const store = require('./_lib/store');
+const { normaliseWebsite, normaliseInstagram } = require('./_lib/urls');
 
 const MAX_BODY = 24 * 1024;
 
@@ -131,9 +132,19 @@ module.exports = async function handler(req, res) {
   if (!looksLikeEmail(fields.email)) {
     return res.status(400).json({ error: 'That email address does not look right' });
   }
-  if (!domainOf(fields.website)) {
+  /* Stored in the parser's own form: plainly http(s), quotes and spaces
+     percent-encoded. These are shown as links on /admin, and a value from a
+     public form must never be able to break out of the href. */
+  const website = normaliseWebsite(fields.website);
+  if (!website) {
     return res.status(400).json({ error: 'That website address does not look right' });
   }
+  fields.website = website;
+  const instagram = normaliseInstagram(fields.instagram);
+  if (instagram === null) {
+    return res.status(400).json({ error: 'That Instagram does not look right — a link to the profile, or "@name"' });
+  }
+  fields.instagram = instagram;
   /* Unknown option values mean a payload that did not come from the form.
      Stored anyway would mean a queue you cannot filter, so reject instead. */
   if (!CATEGORIES.includes(fields.category)) {

@@ -907,12 +907,19 @@ function domain(url){ try{ return new URL(url).hostname.replace(/^www\./,''); }c
 function initials(name){ return name.replace(/[^A-Za-z ]/g,'').split(' ').filter(Boolean).slice(0,2).map(s=>s[0]).join('').toUpperCase(); }
 function logoHtml(b, cls){
   const logoPath = b.logo || `assets/logos/${b.id}.png`;
-  const fallback = `this.onerror=null;this.remove();`;
+  // No logo yet (17 records point at a placeholder.png that has never existed):
+  // show the business's initials rather than request a file we know is missing.
+  if (/(^|\/)placeholder\.[a-z]+$/i.test(logoPath)) {
+    return `<div class="${cls}" style="background:var(--paper-2);color:var(--green);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:var(--font-heading);font-weight:600;letter-spacing:.02em;" aria-hidden="true">${esc(initials(b.name || '') || '·')}</div>`;
+  }
   // Some brands only publish a white-on-transparent mark. On the default white
   // tile those render as an empty box, so those records carry logo_bg:"dark"
   // (set by scripts/apply-logo-choices.py, audited by scripts/audit-logos.py).
   const bg = b.logo_bg === 'dark' ? 'var(--ink)' : '#ffffff';
-  return `<div class="${cls}" style="background:${bg};border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="${logoPath}" alt="" style="width:100%;height:100%;object-fit:contain;background:${bg};" onerror="${fallback}"></div>`;
+  // loading="lazy": the sidebar draws every listing at once, and without it
+  // the first visit fetched all ~480 logos before the visitor had scrolled.
+  // The browser now fetches only the rows (and grid cards) actually in view.
+  return `<div class="${cls}" style="background:${bg};border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="${esc(logoPath)}" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;background:${bg};" onerror="this.onerror=null;this.remove();"></div>`;
 }
 
 // --- Map Setup ---
@@ -946,7 +953,7 @@ map.addLayer(cluster);
 // popup and the grid card. The old hexagonal G/S hallmark was removed (3 Aug
 // 2026) — two devices for one piece of information read as two facts.
 function tierTagHtml(tier){
-  return `<span class="tag ${tier}">${tier}</span>`;
+  return `<span class="tag ${esc(tier)}">${esc(tier)}</span>`;
 }
 
 // Availability. Three labels on the pill, but only two things a shopper wants
@@ -1045,22 +1052,28 @@ function buildMarkers(){
   });
 }
 
+// The two outbound links, shared by the popup and the grid card. data-biz and
+// data-link feed the delegated click-through listener near the end of the file.
+function linkRowHtml(b){
+  const web = safeUrl(b.website), ig = safeUrl(b.instagram);
+  return (web ? `<a class="web" data-biz="${esc(b.id)}" data-link="website" href="${web}" target="_blank" rel="noopener">Website</a>` : '')
+       + (ig  ? `<a class="ig" data-biz="${esc(b.id)}" data-link="instagram" href="${ig}" target="_blank" rel="noopener">Instagram</a>` : '');
+}
+
 function popupHtml(b){
-  const igRow = b.instagram ? `<a class="ig" data-biz="${b.id}" data-link="instagram" href="${b.instagram}" target="_blank" rel="noopener">Instagram</a>` : '';
   return `<div class="pop">
     <div class="head">${logoHtml(b,'plogo')}
-      <div style="flex:1;min-width:0"><h3>${b.name}</h3>
-        <div class="pmeta">${CAT[b.category].label} · ${b.subcategory||''}</div></div>
+      <div style="flex:1;min-width:0"><h3>${esc(b.name)}</h3>
+        <div class="pmeta">${CAT[b.category].label} · ${esc(b.subcategory||'')}</div></div>
     </div>
     <div class="badges">
       ${tierTagHtml(b.tier)}
       <span class="tag avail">${availLabel(b)}</span>
     </div>
-    <div class="desc">${b.description}</div>
-    <div class="addr">📍 <span>${b.address}</span></div>
+    <div class="desc">${esc(b.description)}</div>
+    <div class="addr">📍 <span>${esc(b.address)}</span></div>
     <div class="links">
-      <a class="web" data-biz="${b.id}" data-link="website" href="${b.website}" target="_blank" rel="noopener">Website</a>
-      ${igRow}
+      ${linkRowHtml(b)}
     </div>
   </div>`;
 }
@@ -1082,8 +1095,18 @@ const state = {
   audience: []          // men / women / children asked for, drives the audience filter
 };
 
+/* Every business field goes through esc() before it reaches innerHTML, and
+   every link through safeUrl(). The text is reviewed before it is listed, but
+   it starts life in a public form, and the map is not the place to find out
+   that a review missed something. */
 function escapeHtml(t) {
-  return String(t).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+  return String(t == null ? '' : t).replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
+}
+const esc = escapeHtml;
+// An href only if it is plainly http(s); anything else gets no link at all.
+function safeUrl(u) {
+  const v = String(u == null ? '' : u).trim();
+  return /^https?:\/\//i.test(v) ? escapeHtml(v) : '';
 }
 
 const UK_COUNTIES = new Set([
@@ -1407,7 +1430,9 @@ function renderMapList(){
     vis.sort((a,b)=> state.sortAsc ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
   }
   cluster.clearLayers();
-  vis.forEach(b=>cluster.addLayer(markers[b.id]));
+  // One bulk call rather than ~480 single ones: markercluster re-clusters on
+  // every addLayer, and this runs three times while the map boots.
+  cluster.addLayers(vis.map(b => markers[b.id]).filter(Boolean));
   syncChips();
   updateCounts(vis.length);
 
@@ -1420,19 +1445,15 @@ function renderMapList(){
     }
   }
 
-  listEl.innerHTML = vis.map(b => {
-    const reasonText = '';
-    return `<div class="item" data-id="${b.id}">
+  listEl.innerHTML = vis.map(b => `<div class="item" data-id="${esc(b.id)}">
       ${logoHtml(b,'logo')}
       <div class="meta">
-        <div class="nm">${b.name}</div>
-        <div class="sub">${b.address}</div>
-        <span class="tag ${b.tier}">${b.tier}</span>
-        <span class="tag cat ${b.category}">${CAT[b.category].label}</span>
-        ${reasonText}
+        <div class="nm">${esc(b.name)}</div>
+        <div class="sub">${esc(b.address)}</div>
+        ${tierTagHtml(b.tier)}
+        <span class="tag cat ${esc(b.category)}">${CAT[b.category].label}</span>
       </div>
-    </div>`;
-  }).join('') || '<div style="padding:24px 16px;color:var(--muted);font-size:13px">No matches found.</div>';
+    </div>`).join('') || '<div style="padding:24px 16px;color:var(--muted);font-size:13px">No matches found.</div>';
 
   listEl.querySelectorAll('.item').forEach(el=>{
     el.addEventListener('click',()=>focus(el.dataset.id, 'map_list'));
@@ -1469,31 +1490,26 @@ function renderGrid(){
   gridCards.innerHTML = vis.map((b, idx) => {
     const brk = idx === seam
       ? `<div class="afield-break">Results from further afield</div>` : '';
-    const aiReason = '';
-    const igRow = b.instagram ? `<a class="ig" data-biz="${b.id}" data-link="instagram" href="${b.instagram}" target="_blank" rel="noopener">Instagram</a>` : '';
-
     return `${brk}<div class="grid-card">
       <div>
         <div class="g-head">
           ${logoHtml(b, 'g-logo')}
           <div style="flex:1;min-width:0">
-            <div class="g-title">${b.name}</div>
+            <div class="g-title">${esc(b.name)}</div>
           </div>
         </div>
         <div class="g-badges">
           ${tierTagHtml(b.tier)}
-          <span class="tag cat ${b.category}">${CAT[b.category].label}</span>
+          <span class="tag cat ${esc(b.category)}">${CAT[b.category].label}</span>
           <span class="tag avail">${availLabel(b)}</span>
         </div>
-        ${aiReason}
-        <div class="g-desc">${b.description}</div>
+        <div class="g-desc">${esc(b.description)}</div>
       </div>
       <div>
-        <div class="g-addr">📍 ${b.address}</div>
+        <div class="g-addr">📍 ${esc(b.address)}</div>
         <div class="g-links">
-          <a class="web" data-biz="${b.id}" data-link="website" href="${b.website}" target="_blank" rel="noopener">Website</a>
-          ${igRow}
-          <a class="map-link" href="#" onclick="selectBusinessOnMap('${b.id}'); return false;">Map Pin</a>
+          ${linkRowHtml(b)}
+          <a class="map-link" href="#" data-map-pin="${esc(b.id)}">Map Pin</a>
         </div>
       </div>
     </div>`;
@@ -1516,9 +1532,15 @@ function focus(id, surface){
   });
 }
 
-function selectBusinessOnMap(id) {
-  focus(id, 'grid_map_link');
-}
+// "Map Pin" on a grid card. Delegated, like the click-through tracking, because
+// renderGrid() rebuilds the cards; the old inline onclick put an id into a
+// JavaScript string, which escaping for HTML does not make safe.
+gridCards.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('a[data-map-pin]');
+  if (!a) return;
+  e.preventDefault();
+  focus(a.dataset.mapPin, 'grid_map_link');
+});
 
 // --- Autocomplete & Hybrid Search Engine ---
 searchInput.addEventListener('input', e => {
@@ -1541,11 +1563,11 @@ searchInput.addEventListener('input', e => {
 
   if (directMatches.length > 0) {
     autocompleteDropdown.innerHTML = directMatches.map(b => `
-      <div class="ac-item" data-id="${b.id}">
+      <div class="ac-item" data-id="${esc(b.id)}">
         ${logoHtml(b, 'ac-logo')}
         <div class="ac-meta">
-          <div class="ac-name">${b.name}</div>
-          <div class="ac-sub">${b.address} · ${CAT[b.category].label}</div>
+          <div class="ac-name">${esc(b.name)}</div>
+          <div class="ac-sub">${esc(b.address)} · ${CAT[b.category].label}</div>
         </div>
       </div>`).join('');
     autocompleteDropdown.style.display = 'block';
@@ -3123,6 +3145,9 @@ const Landing = (function(){
 
   // 24 slots for trade engravings. Available illustrations load directly;
   // missing subjects display subtle label placeholders.
+  // WebP at 800px wide (22 Sep 2026). The 1408px PNGs they were made from are
+  // still in assets/illustration/, but at ~1.3MB each they made the intro a
+  // 31MB download, on phones as well; the WebP set is 0.8MB in total.
   const SUBJECTS = [
     'Leather satchel', 'Teacup and saucer', 'Apple tree', 'Flat cap', 'Chisel on wood', 'Pint of beer',
     'Ring on a mandrel', 'Kiln door', 'Tape measure', 'Pig at trough', 'Chelsea boot', 'Tomatoes on the vine',
@@ -3131,30 +3156,30 @@ const Landing = (function(){
   ];
 
   const SKETCH_MAP = {
-    'Leather satchel': 'trade-clothing-satchel-bag.png',
-    'Teacup and saucer': 'trade-ceramics-cup.png',
-    'Apple tree': 'trade-farm-apple-tree.png',
-    'Flat cap': 'trade-clothing-flat-cap.png',
-    'Chisel on wood': 'trade-tools-chisel.png',
-    'Pint of beer': 'trade-drink-beer.png',
-    'Ring on a mandrel': 'trade-jewellery-ring.png',
-    'Kiln door': 'trade-ceramics-kiln.png',
-    'Tape measure': 'trade-clothing-tailor.png',
-    'Pig at trough': 'trade-farm-pigs.png',
-    'Chelsea boot': 'trade-clothing-chelsea-boot.png',
-    'Tomatoes on the vine': 'trade-farm-tomatoes.png',
-    'Wheel mid-throw': 'trade-ceramics-potters-wheel.png',
-    'Folded t-shirts': 'trade-clothing-t-shirts.png',
-    'Pub sign': 'trade-ornament-pub-sign.png',
-    'Watch and strap': 'trade-jewellery-watch.png',
-    'Chickens': 'trade-farm-chickens.png',
-    'Shuttle and loom': 'trade-clothing-loom.png',
-    'Cheese wheel': 'trade-farm-cheese-wheel.png',
-    'Shirt and tie': 'trade-clothing-shirt-and-tie.png',
-    'Blade on a grinder': 'trade-tools-grinder.png',
-    'Spinning wheel': 'trade-clothing-spinning-wheel.png',
-    'Milk churn': 'trade-farm-milk-churn.png',
-    'Stoneware dog bowl': 'trade-ceramics-dog-bowl.png'
+    'Leather satchel': 'trade-clothing-satchel-bag.webp',
+    'Teacup and saucer': 'trade-ceramics-cup.webp',
+    'Apple tree': 'trade-farm-apple-tree.webp',
+    'Flat cap': 'trade-clothing-flat-cap.webp',
+    'Chisel on wood': 'trade-tools-chisel.webp',
+    'Pint of beer': 'trade-drink-beer.webp',
+    'Ring on a mandrel': 'trade-jewellery-ring.webp',
+    'Kiln door': 'trade-ceramics-kiln.webp',
+    'Tape measure': 'trade-clothing-tailor.webp',
+    'Pig at trough': 'trade-farm-pigs.webp',
+    'Chelsea boot': 'trade-clothing-chelsea-boot.webp',
+    'Tomatoes on the vine': 'trade-farm-tomatoes.webp',
+    'Wheel mid-throw': 'trade-ceramics-potters-wheel.webp',
+    'Folded t-shirts': 'trade-clothing-t-shirts.webp',
+    'Pub sign': 'trade-ornament-pub-sign.webp',
+    'Watch and strap': 'trade-jewellery-watch.webp',
+    'Chickens': 'trade-farm-chickens.webp',
+    'Shuttle and loom': 'trade-clothing-loom.webp',
+    'Cheese wheel': 'trade-farm-cheese-wheel.webp',
+    'Shirt and tie': 'trade-clothing-shirt-and-tie.webp',
+    'Blade on a grinder': 'trade-tools-grinder.webp',
+    'Spinning wheel': 'trade-clothing-spinning-wheel.webp',
+    'Milk churn': 'trade-farm-milk-churn.webp',
+    'Stoneware dog bowl': 'trade-ceramics-dog-bowl.webp'
   };
 
   function buildSlots(){
@@ -3169,7 +3194,7 @@ const Landing = (function(){
       if (imgName) {
         return `<div class="slot has-image" style="left:${(c*w+w*0.05).toFixed(2)}%;top:${(r*h+h*0.05).toFixed(2)}%;` +
                `width:${(w*0.90).toFixed(2)}%;height:${(h*0.90).toFixed(2)}%;transform:rotate(${rot}deg);border:none;background:transparent;box-shadow:none;">` +
-               `<img src="assets/illustration/${imgName}" alt="${s}" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;opacity:0.88;">` +
+               `<img src="assets/illustration/${imgName}" alt="" decoding="async" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;opacity:0.88;">` +
                `</div>`;
       }
       return `<div class="slot" style="left:${(c*w+w*0.13).toFixed(2)}%;top:${(r*h+h*0.13).toFixed(2)}%;` +

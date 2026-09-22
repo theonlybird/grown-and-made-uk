@@ -1,0 +1,29 @@
+# Files that live in the repo but are not part of the website.
+#
+# Vercel serves every deployed file at its own URL, so without this list
+# anyone could download /scripts/harvest-emails.js or the note-review drafts
+# straight off grownandmade.uk. Being public on GitHub is one thing; being
+# served from the site as if it were part of it is another.
+#
+# Keep in mind before adding a line: the functions in api/ need
+# scripts/lib/ (geo.js requires uk-regions.js) and data/businesses.json
+# (ai-search.js reads it at start-up), and the pages need data/uk-coast.json.
+# The patterns below only match files directly inside scripts/ and data/.
+
+# Tooling
+/scripts/*.js
+/scripts/*.py
+/scripts/templates
+
+# Pipeline intermediates and internal reports
+/data/*.md
+/data/product-index*.json
+/data/audience-index.json
+/data/public-note-drafts.json
+
+# Notes, snippets and the old landing prototype
+/*.md
+/_footer.html
+/landing-prototype.html
+/data/prototype-data.js
+/exports

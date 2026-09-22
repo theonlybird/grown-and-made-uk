@@ -20,18 +20,18 @@
 
   // Same 24 engravings as the landing sketch, same filenames.
   var SKETCHES = [
-    'trade-clothing-satchel-bag.png',   'trade-ceramics-cup.png',
-    'trade-farm-apple-tree.png',        'trade-clothing-flat-cap.png',
-    'trade-tools-chisel.png',           'trade-drink-beer.png',
-    'trade-jewellery-ring.png',         'trade-ceramics-kiln.png',
-    'trade-clothing-tailor.png',        'trade-farm-pigs.png',
-    'trade-clothing-chelsea-boot.png',  'trade-farm-tomatoes.png',
-    'trade-ceramics-potters-wheel.png', 'trade-clothing-t-shirts.png',
-    'trade-ornament-pub-sign.png',      'trade-jewellery-watch.png',
-    'trade-farm-chickens.png',          'trade-clothing-loom.png',
-    'trade-farm-cheese-wheel.png',      'trade-clothing-shirt-and-tie.png',
-    'trade-tools-grinder.png',          'trade-clothing-spinning-wheel.png',
-    'trade-farm-milk-churn.png',        'trade-ceramics-dog-bowl.png'
+    'trade-clothing-satchel-bag.webp',   'trade-ceramics-cup.webp',
+    'trade-farm-apple-tree.webp',        'trade-clothing-flat-cap.webp',
+    'trade-tools-chisel.webp',           'trade-drink-beer.webp',
+    'trade-jewellery-ring.webp',         'trade-ceramics-kiln.webp',
+    'trade-clothing-tailor.webp',        'trade-farm-pigs.webp',
+    'trade-clothing-chelsea-boot.webp',  'trade-farm-tomatoes.webp',
+    'trade-ceramics-potters-wheel.webp', 'trade-clothing-t-shirts.webp',
+    'trade-ornament-pub-sign.webp',      'trade-jewellery-watch.webp',
+    'trade-farm-chickens.webp',          'trade-clothing-loom.webp',
+    'trade-farm-cheese-wheel.webp',      'trade-clothing-shirt-and-tie.webp',
+    'trade-tools-grinder.webp',          'trade-clothing-spinning-wheel.webp',
+    'trade-farm-milk-churn.webp',        'trade-ceramics-dog-bowl.webp'
   ];
 
   /* Seed from the page filename. Two pages never share a layout; one page is

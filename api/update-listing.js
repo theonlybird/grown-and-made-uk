@@ -13,6 +13,7 @@
 const crypto = require('crypto');
 const store = require('./_lib/store');
 const geo = require('./_lib/geo');
+const { normaliseWebsite, normaliseInstagram } = require('./_lib/urls');
 
 /* No 'town'. It is a search key the visitor never sees and the form no longer
    offers, so accepting one could only ever come from a forged payload. */
@@ -122,7 +123,19 @@ module.exports = async function handler(req, res) {
   const submitted = body.changes && typeof body.changes === 'object' ? body.changes : {};
   for (const field of Object.keys(EDITABLE)) {
     if (!Object.prototype.hasOwnProperty.call(submitted, field)) continue;
-    const to = clean(submitted[field], EDITABLE[field]);
+    let to = clean(submitted[field], EDITABLE[field]);
+    /* Links are printed as hrefs on the map once approved, so they must be
+       plain http(s) addresses. Instagram arrives as "@name" from the form and
+       is stored as the full URL, the same shape every listing already uses. */
+    if (field === 'website' || field === 'instagram') {
+      const url = field === 'website' ? normaliseWebsite(to) : normaliseInstagram(to);
+      if (url === null) {
+        return res.status(400).json({ error: field === 'website'
+          ? 'That website address does not look right'
+          : 'That Instagram does not look right — "@yourname" is fine' });
+      }
+      to = url;
+    }
     const from = clean(record[field], EDITABLE[field]);
     if (to !== from) changes[field] = { from: record[field] || '', to };
   }
@@ -130,7 +143,8 @@ module.exports = async function handler(req, res) {
   const appeal = body.appeal && typeof body.appeal === 'object' ? {
     question: clean(body.appeal.question, 300),
     answer: clean(body.appeal.answer, 1000),
-    link: clean(body.appeal.link, 300),
+    // Shown as a link on /admin, so it has to be a real http(s) address.
+    link: normaliseWebsite(clean(body.appeal.link, 300)) || '',
   } : null;
   if (appeal && !appeal.answer && !appeal.link) {
     return res.status(400).json({ error: 'A tier review needs something we can check' });
