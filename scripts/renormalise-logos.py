@@ -3,7 +3,7 @@
 
     python3 scripts/renormalise-logos.py [--min-kb 100] [--dry-run] [--deadline 0]
 
-apply-logo-choices.py normalises every logo it adopts (trim, long edge <=512px,
+apply-logo-choices.py normalises every logo it adopts (trim, long edge <=256px,
 optimised PNG). Files that predate that step -- or were dropped into
 assets/logos/ by hand -- never went through it, so assets/logos/ carries several
 megabyte-scale PNGs that render at 46 pixels. This pass applies the same

@@ -5,7 +5,7 @@
 
 choices.json maps a business id to the harvested candidate file to adopt.
 Each winner is normalised the way the map wants it: whitespace trimmed,
-long edge capped at 512px, saved as a real PNG (SVG is kept as SVG, since
+long edge capped at 256px, saved as a real PNG (SVG is kept as SVG, since
 vector stays crisp in the 48px tile). White-on-transparent artwork keeps
 its transparency and gets logo_bg:"dark" so index.html gives it a dark
 tile instead of hiding it on a white one.
@@ -20,7 +20,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from logo_lib import measure
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MAXDIM = 512
+# Logos are drawn at 40-48px. 256px is over five times that, enough for a 3x
+# phone screen and any larger use to come; 512px was costing four times the
+# bytes for pixels nobody sees (lowered 22 Sep 2026, when the sidebar was still
+# downloading 17MB of logos on the first visit).
+MAXDIM = 256
 
 
 def trim(im, tol=8, pad=2):
