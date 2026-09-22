@@ -482,6 +482,10 @@ async function listUsableModels(apiKey) {
 // try. Once a model has refused us, stop paying a round trip to ask it again.
 const deadModels = new Set();
 
+// Models that refuse thinkingConfig: { thinkingBudget: 0 } with a 400. Sent
+// without it from then on, for as long as this instance is warm.
+const thinkingRejected = new Set();
+
 // Build the ordered list of models to try, from what the key can actually use.
 async function resolveCandidates(apiKey) {
   const now = Date.now();
@@ -617,7 +621,7 @@ CRITICAL INSTRUCTIONS:
 CANDIDATE CATALOG:
 ${catalogStr}`;
 
-  function buildPayload(model) {
+  function buildPayload(model, withThinkingOff) {
     // The answer is a dozen ids and three short fields -- a few hundred
     // tokens. The cap only matters if something (a prompt injection in the
     // query, say) talks the model into writing an essay on our bill.
@@ -628,7 +632,7 @@ ${catalogStr}`;
     // NB: matching on model names missed 'gemini-flash-latest', which left
     // thinking ON for the default model. Invert the test instead: only the
     // older families lack the parameter.
-    if (!/^gemini-(1\.5|2\.0)/.test(model)) generationConfig.thinkingConfig = { thinkingBudget: 0 };
+    if (withThinkingOff && !/^gemini-(1\.5|2\.0)/.test(model)) generationConfig.thinkingConfig = { thinkingBudget: 0 };
     return JSON.stringify({
       contents: [{ parts: [{ text: systemInstruction }, { text: `User Search Query: "${query}"` }] }],
       generationConfig
@@ -643,12 +647,25 @@ ${catalogStr}`;
     // Out of time: stop working down the list and let the page search locally.
     if (Date.now() - startedAt > SEARCH_DEADLINE_MS) break;
     triedModels.push(model);
+    const call = (thinkingOff) => httpsJson(
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+      'POST', buildPayload(model, thinkingOff)
+    );
     let apiRes;
     try {
-      apiRes = await httpsJson(
-        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
-        'POST', buildPayload(model)
-      );
+      apiRes = await call(!thinkingRejected.has(model));
+      const keyProblem = r => /api key/i.test(String(r.body));
+      /* 400 INVALID_ARGUMENT with thinking switched off: the model behind an
+         alias has changed to one that will not take thinkingBudget: 0 (found
+         23 Sep 2026, when every live search was failing this way and the page
+         was quietly falling back to local search). Ask again without it, and
+         remember not to send it to this model again. */
+      if (apiRes.statusCode === 400 && !keyProblem(apiRes) && !thinkingRejected.has(model)
+          && Date.now() - startedAt < SEARCH_DEADLINE_MS) {
+        const retry = await call(false);
+        if (retry.statusCode === 200) thinkingRejected.add(model);
+        apiRes = retry;
+      }
     } catch (err) {
       return res.status(502).json({ error: 'Could not reach the Gemini API.', details: err.message });
     }
@@ -664,6 +681,9 @@ ${catalogStr}`;
     // wasting a round trip on it. 429 is temporary, so don't blacklist it.
     if (apiRes.statusCode === 404) { deadModels.add(model); continue; }
     if (apiRes.statusCode === 429) continue;
+    // A request this model will not accept may suit the next one on the list
+    // -- unless the problem is the key, which no model will fix.
+    if (apiRes.statusCode === 400 && !/api key/i.test(String(apiRes.body))) continue;
     if (apiRes.statusCode !== 200) break;
 
     try {

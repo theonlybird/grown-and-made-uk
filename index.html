@@ -1314,25 +1314,14 @@ function renderMapList(){
   if (!state.aiActive && !state.nearMe) {
     vis.sort((a,b)=> state.sortAsc ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
   }
-  cluster.clearLayers();
-  // One bulk call rather than ~480 single ones: markercluster re-clusters on
-  // every addLayer, and this runs three times while the map boots.
-  cluster.addLayers(vis.map(b => markers[b.id]).filter(Boolean));
+  // The list and the counts first, always. They used to come last, after the
+  // map had flown to the results, and Leaflet throws when asked to fly a map
+  // that is hidden (the grid is showing, so it measures 0x0). Every chip
+  // click in the grid view hit that, the throw stopped this function half
+  // way, and the map view was left showing an older list and older pins:
+  // "scottish cheese" read 6 in the grid and 3 on the map (23 Sep 2026).
   syncChips();
   updateCounts(vis.length);
-
-  if (state.aiActive && vis.length > 0 && nearMeSorting()) {
-    // Searching near the visitor: centre on them, not on the whole country.
-    map.flyTo([state.nearMe.lat, state.nearMe.lng], 9, { duration: 0.8 });
-  } else if (state.aiActive && vis.length > 0) {
-    const coords = vis.map(b => [b.lat, b.lng]);
-    if (coords.length > 1) {
-      map.flyToBounds(L.latLngBounds(coords), { padding: [40, 40], maxZoom: 13, duration: 0.8 });
-    } else if (coords.length === 1) {
-      map.flyTo(coords[0], 11, { duration: 0.8 });
-    }
-  }
-
   listEl.innerHTML = vis.map(b => `<div class="item" data-id="${esc(b.id)}">
       ${logoHtml(b,'logo')}
       <div class="meta">
@@ -1342,10 +1331,36 @@ function renderMapList(){
         <span class="tag cat ${esc(b.category)}">${CAT[b.category].label}</span>
       </div>
     </div>`).join('') || '<div style="padding:24px 16px;color:var(--muted);font-size:13px">No matches found.</div>';
-
   listEl.querySelectorAll('.item').forEach(el=>{
     el.addEventListener('click',()=>focus(el.dataset.id, 'map_list'));
   });
+
+  // The pins. markercluster buckets against the map's size, so while the map
+  // is hidden there is nothing sensible to do: toggleView('map') calls this
+  // again once it is on screen and measured.
+  const mapShown = state.currentView === 'map' && map.getContainer().offsetWidth > 0;
+  if (!mapShown) return;
+  cluster.clearLayers();
+  // One bulk call rather than ~480 single ones: markercluster re-clusters on
+  // every addLayer, and this runs three times while the map boots.
+  cluster.addLayers(vis.map(b => markers[b.id]).filter(Boolean));
+
+  // Framing the results is a nicety; it must never cost the visitor the list.
+  try {
+    if (state.aiActive && vis.length > 0 && nearMeSorting()) {
+      // Searching near the visitor: centre on them, not on the whole country.
+      map.flyTo([state.nearMe.lat, state.nearMe.lng], 9, { duration: 0.8 });
+    } else if (state.aiActive && vis.length > 0) {
+      const coords = vis.map(b => [b.lat, b.lng]);
+      if (coords.length > 1) {
+        map.flyToBounds(L.latLngBounds(coords), { padding: [40, 40], maxZoom: 13, duration: 0.8 });
+      } else if (coords.length === 1) {
+        map.flyTo(coords[0], 11, { duration: 0.8 });
+      }
+    }
+  } catch (e) {
+    console.warn('[map] could not frame the results:', e && e.message);
+  }
 }
 
 function renderGrid(opts){
