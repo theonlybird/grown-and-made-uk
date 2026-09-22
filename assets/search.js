@@ -1102,21 +1102,49 @@ function localSearch(query) {
   };
 }
 
+/* "British made cheese", "Scottish grown tomatoes", "Welsh reared lamb".
+   Worked out from the product words themselves, not from which trade the
+   results happen to be in: cheese and jam come from farm shops but are made,
+   not grown (22 Sep 2026). Only fresh produce is grown and only livestock is
+   reared; eggs, milk and farm shops read best with no verb at all. Anything
+   else, or a mixture that includes something made, is made. */
+const GROWN_WORDS = new Set(('fruit fruits veg vegetable vegetables produce potato potatoes spuds apple apples ' +
+  'pear pears plum plums cherry cherries berry berries strawberry strawberries raspberry raspberries ' +
+  'blueberry blueberries blackberries gooseberries currants tomato tomatoes salad salads leaves herb herbs ' +
+  'flower flowers plant plants tree trees pumpkin pumpkins squash asparagus carrot carrots onion onions ' +
+  'leek leeks garlic mushroom mushrooms grain grains wheat oats barley hops lavender cabbage cabbages kale ' +
+  'greens rhubarb sprouts beetroot peas beans sweetcorn corn').split(' '));
+const REARED_WORDS = new Set(('beef lamb mutton hogget pork venison veal goat chicken chickens turkey turkeys ' +
+  'duck ducks goose geese game meat meats steak steaks joint joints poultry wagyu rabbit pheasant').split(' '));
+const PLAIN_WORDS = new Set('egg eggs milk dairy farm farms shop shops'.split(' '));
+const VERB_NEUTRAL = new Set(('organic free range fresh local seasonal and or of the handmade traditional ' +
+  'heritage wild grass fed small batch british').split(' '));
+
+function verbFor(productTerm) {
+  const words = normalisePlace(productTerm).split(' ').filter(w => w && !VERB_NEUTRAL.has(w) && !AUDIENCE_WORDS[w]);
+  if (!words.length) return 'made';
+  const kinds = new Set(words.map(w => GROWN_WORDS.has(w) ? 'grown' : REARED_WORDS.has(w) ? 'reared'
+    : PLAIN_WORDS.has(w) ? '' : 'made'));
+  if (kinds.has('made')) return 'made';
+  return kinds.size === 1 ? [...kinds][0] : '';
+}
+
+const NATION_ADJECTIVE = { England: 'English', Scotland: 'Scottish', Wales: 'Welsh', 'Northern Ireland': 'Northern Irish' };
+
 // Translate a local result into what buildHeadline expects, so both engines
 // word their results the same way.
 function localHeadlineData(local) {
-  const grownWords = /\b(farm|food|produce|veg|fruit|meat|beef|lamb|pork|dairy|cheese|milk|egg|honey|flour|grain|bread)\b/i;
-  const looksGrown = local.matches.length
-    ? local.matches.filter(b => b.category === 'farm').length > local.matches.length / 2
-    : grownWords.test(local.product.join(' '));
   const prodWords = local.productDisplay && local.productDisplay.length ? local.productDisplay : local.product;
-  const labels = (local.places || []).map(p => p.label);
+  const places = local.places || [];
+  const labels = places.filter(p => !p.strict).map(p => p.label);
   return {
     productTerm: prodWords.length ? prodWords.join(' ') : null,
     // The places as we understood them ("Cornwall" for "cornish"), never a
     // widened synonym: if they did not type a place, there is no place.
+    // Nations are carried separately: they become the adjective, "Scottish
+    // made cheese", rather than a place the results are "in".
     locationTerm: labels.length ? labels.join(' and ') : null,
-    madeOrGrown: looksGrown ? 'grown' : 'made',
+    nations: places.filter(p => p.strict).map(p => p.label),
     matchQuality: headlineQuality(local.places, local.inPlace, local.matches.length),
     inPlace: local.inPlace,
     nearest: local.nearest,
@@ -1144,15 +1172,19 @@ function headlineQuality(places, inPlace, total) {
 function buildHeadline(result) {
   const esc = t => String(t).replace(/[<>&"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
   const quality = (result && result.matchQuality) || 'exact';
-  const verb = (result && result.madeOrGrown === 'grown') ? 'grown' : 'made';
   const product = result && result.productTerm ? esc(result.productTerm) : '';
+  const verb = product ? verbFor(result.productTerm) : '';
+  // Where it is from: British, or the nation they asked for.
+  const nations = (result && result.nations) || [];
+  const origin = nations.length ? nations.map(n => NATION_ADJECTIVE[n] || n).join(' or ') : 'British';
   // Labels come already cased ("the Lake District", "Stoke on Trent").
   const place = result && result.locationTerm ? esc(result.locationTerm) : '';
   const none = !result || !result.matches || result.matches.length === 0;
   const nearest = !!(result && result.nearest);
   const gift = !!(result && result.gift) && !product;
-  const what = product ? `British ${verb} ${product}` : gift ? 'gift ideas' : 'British makers and growers';
-  const What = product ? what : gift ? 'Gift ideas from British makers' : 'British makers and growers';
+  const what = product ? [origin, verb, product].filter(Boolean).join(' ')
+    : gift ? `gift ideas from ${origin} makers` : `${origin} makers and growers`;
+  const count = n => `${n} match${n === 1 ? '' : 'es'}`;
 
   // Declared, not applied quietly: Darlington and Dartington are one letter
   // and 350 miles apart.
@@ -1171,24 +1203,31 @@ function buildHeadline(result) {
   }
 
   if (none) {
-    if (product && place) return `We couldn&rsquo;t find any British ${verb} ${product} in ${place} just yet.`;
-    if (product) return `We couldn&rsquo;t find any British ${verb} ${product} just yet.`;
+    if (product && place) return `We couldn&rsquo;t find any ${what} in ${place} just yet.`;
+    if (product) return `We couldn&rsquo;t find any ${what} just yet.`;
     if (place) return `We don&rsquo;t have anyone in ${place} just yet.`;
+    if (nations.length) return `We don&rsquo;t have any ${what} for that just yet.`;
     return 'We couldn&rsquo;t find a good match for that just yet.';
   }
-  if (place && quality === 'exact') return prefix + `${What} in ${place}`;
+  const shown = result.matches.length;
+  if (place && quality === 'exact') return prefix + `${count(shown)} for ${what} in ${place} below`;
   if (place && quality === 'partial') {
-    const n = result.inPlace || 0;
     const then = nearest ? 'then the nearest others.' : 'then others further afield.';
-    return prefix + `${n} match${n === 1 ? '' : 'es'} for ${what} in ${place} below, ${then}`;
+    return prefix + `${count(result.inPlace || 0)} for ${what} in ${place} below, ${then}`;
   }
   if (place) {
     return prefix + (nearest
       ? `Nothing in ${place} yet for ${what}, so here are the nearest.`
       : `We couldn&rsquo;t find ${what} in ${place}, but think you&rsquo;ll love these a bit further afield.`);
   }
+  // A nation named, and nothing smaller: every result is in it, so there is
+  // no "further afield" to mention. "6 matches for Scottish made cheese below".
+  if (nations.length) {
+    if (gift) return prefix + `Gift ideas from ${origin} makers`;
+    return prefix + `${count(shown)} for ${what} below`;
+  }
   if (quality === 'loose' && product) {
-    return prefix + `We couldn&rsquo;t find an exact match for British ${verb} ${product}, but think you&rsquo;ll love these.`;
+    return prefix + `We couldn&rsquo;t find an exact match for ${what}, but think you&rsquo;ll love these.`;
   }
   if (gift) return prefix + 'Gift ideas from British makers';
   return prefix + 'Here are some UK businesses we think you&rsquo;ll love';

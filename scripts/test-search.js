@@ -334,7 +334,8 @@ const businesses = JSON.parse(
   if (!allScots) failures++;
   line(allScots, `"scottish pork" — all ${result.matches.length} results are in Scotland`);
 
-  const exact = headline.matchQuality === 'exact' && /in Scotland/.test(banner) && !/further afield|nearest/.test(banner);
+  const exact = headline.matchQuality === 'exact'
+    && banner === `${result.matches.length} matches for Scottish reared pork below`;
   if (!exact) failures++;
   line(exact, `"scottish pork" — banner reads "${banner}"`);
 
@@ -348,12 +349,24 @@ const businesses = JSON.parse(
   line(ok, `"welsh cheese" — ${result.inPlace} in Wales, all first (${headline.matchQuality})`);
 }
 
-// The adjective must resolve to the nation's name, not be echoed raw.
-for (const [q, want] of [['scottish pork', 'Scotland'], ['welsh cheese', 'Wales'], ['northern irish beef', 'Northern Ireland']]) {
+// A nation reads as where the thing is from, with the right verb: cheese and
+// jam are made, tomatoes grown, lamb reared (22 Sep 2026).
+for (const [q, want] of [['scottish pork', /^\d+ match(es)? for Scottish reared pork below$/],
+                         ['welsh cheese', /^\d+ match(es)? for Welsh made cheese below$/],
+                         ['scottish cheese', /^\d+ match(es)? for Scottish made cheese below$/],
+                         ['northern irish cheese', /^\d+ match(es)? for Northern Irish made cheese below$/],
+                         ['northern irish beef', /^\d+ match(es)? for Northern Irish reared beef below$/],
+                         ['northern irish jam', /Northern Irish made jam/],
+                         ['english tomatoes', /English grown tomatoes/],
+                         ['english eggs', /^\d+ match(es)? for English eggs below$/],
+                         ['jam in cornwall', /British made jam in Cornwall/],
+                         ['honey devon', /British made honey in Devon/],
+                         ['vegetables devon', /British grown vegetables in Devon/],
+                         ['lamb wales', /Welsh reared lamb/]]) {
   const b = local(q).banner;
-  const ok = b.includes(`in ${want}`) && !/Northern Northern/.test(b);
+  const ok = want.test(b) && !/Northern Northern|grown cheese|grown jam/.test(b);
   if (!ok) failures++;
-  line(ok, `"${q}"`.padEnd(28) + `reads "in ${want}"` + (ok ? '' : ` — got: ${b}`));
+  line(ok, `"${q}"`.padEnd(28) + b.replace(/&rsquo;/g, '’').slice(0, 70) + (ok ? '' : ` — wanted ${want}`));
 }
 
 // The border is where a latitude rule fails. Newcastle sits at 54.97 and

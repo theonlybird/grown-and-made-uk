@@ -1592,7 +1592,7 @@ ${catalogStr}`;
         state.aiHeadline = buildHeadline({
           productTerm: localHead.gift ? null : (localHead.productTerm || result.productTerm || null),
           locationTerm: localHead.locationTerm,
-          madeOrGrown: localHead.matches.length ? localHead.madeOrGrown : (result.madeOrGrown || localHead.madeOrGrown),
+          nations: localHead.nations,
           matchQuality: places.length ? headlineQuality(places, arr.near.length, total) : (result.matchQuality || 'exact'),
           inPlace: arr.near.length,
           nearest: arr.nearest,
