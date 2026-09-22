@@ -1470,11 +1470,6 @@
     "tier_question": "Are all your pieces made in your Peckham studio, and which clay do you use and where is it from?"
   },
   {
-    "id": "frankie-roberts-jewellery",
-    "public_note": "Your jewellery is hand made to order in your Scottish workshop. We couldn't confirm publicly how the metal becomes each piece — whether you cast or fabricate it yourself, or use a casting house, and where. Gold needs the principal part of the piece made in the UK from metal.",
-    "tier_question": "Are your pieces cast or fabricated from metal in your workshop, or cast for you by a casting house — and if so, where?"
-  },
-  {
     "id": "the-garlic-farm",
     "public_note": "You grow garlic on your Isle of Wight farm, and your own story says you also source varieties from growers in Europe and the USA. Gold for farm shops needs effectively everything sold to be British, with no imported food lines.",
     "tier_question": "Is all the garlic and every garlic product you sell now grown in the UK?"
