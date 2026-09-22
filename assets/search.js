@@ -380,7 +380,12 @@ const STOP_WORDS = new Set(['the','a','an','and','or','for','in','on','at','to',
   'made','grown','produced','manufactured','crafted','sourced','based','company','companies',
   // Prepositions that introduce a place. Read for their position before this
   // list is applied, so "jumper in Cardigan" is still told from "cardigans".
-  'near','nearby','around','close','by','from','nr']);
+  'near','nearby','around','close','by','from','nr','here','closest','nearest']);
+
+// "near me", "nearby", "closest": not a place and not a product, but a request
+// to sort by distance from the visitor. The page asks the browser where they
+// are; the position never leaves it.
+const NEAR_ME = /\b(?:near|close to|around|by|near to|local to) me\b|\bnear(?:by| here)\b|\bclose by\b|\bclosest\b|\bnearest\b/;
 // "shop" is a stop word only where it adds nothing; "farm shop" is caught as
 // a phrase below, before this list is applied.
 const KEEP_PHRASES = new Set(['farm shop', 'farm shops']);
@@ -723,6 +728,7 @@ function normaliseQuery(query) {
   const vocab = buildVocab();
   const fixVocab = buildCorrectionVocab();
   const raw = normalisePlace(query).split(' ').filter(Boolean);
+  const nearMe = NEAR_ME.test(raw.join(' '));
   const terms = [];         // what we score against (widened)
   const display = [];       // what the visitor meant, for the banner
   const typed = new Set();  // only these may name a place
@@ -840,7 +846,7 @@ function normaliseQuery(query) {
   if (tags.length) understood++;
 
   return { terms, understood, display, tags, typed, placePreferred, corrections, audience,
-           audienceDisplay, unknown, gift, boost };
+           audienceDisplay, unknown, gift, boost, nearMe };
 }
 
 // Product or place? A word that names a product wins even if a town shares
@@ -1017,7 +1023,8 @@ function localSearch(query) {
   const places = resolvePlaces(place);
   const empty = { matches: [], terms: q.terms, understood: q.understood, product: [], place: [], places: [],
                   inPlace: 0, nearest: false, strict: false, productDisplay: [], placeDisplay: [],
-                  corrections: q.corrections, audience: q.audience, unknown: q.unknown, gift: q.gift };
+                  corrections: q.corrections, audience: q.audience, unknown: q.unknown, gift: q.gift,
+                  nearMe: q.nearMe, nearMeOnly: q.nearMe && !q.terms.length && !q.audience.length && !q.gift };
   if ((!q.terms.length || !q.understood) && !queryTags.length && !q.audience.length && !q.gift) return empty;
 
   const qualifiers = product.filter(t => QUALIFIER_WORDS.has(t));
@@ -1099,6 +1106,7 @@ function localSearch(query) {
     placeDisplay: shown.place,
     inPlace: Math.min(near.length, matches.length),
     nearest: arranged.nearest, strict: arranged.strict,
+    nearMe: q.nearMe, nearMeOnly: false,
   };
 }
 
@@ -1210,6 +1218,13 @@ function buildHeadline(result) {
     return 'We couldn&rsquo;t find a good match for that just yet.';
   }
   const shown = result.matches.length;
+  // Sorted by distance from the visitor ("Near me"). Only when no place was
+  // named: a place they typed always decides the order.
+  if (result.nearYou && !place) {
+    if (gift) return prefix + `Gift ideas from ${origin} makers, nearest to you first`;
+    if (product) return prefix + `${count(shown)} for ${what}, nearest to you first`;
+    return prefix + `${what.charAt(0).toUpperCase() + what.slice(1)}, nearest to you first`;
+  }
   if (place && quality === 'exact') return prefix + `${count(shown)} for ${what} in ${place} below`;
   if (place && quality === 'partial') {
     const then = nearest ? 'then the nearest others.' : 'then others further afield.';

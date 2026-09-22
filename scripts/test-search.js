@@ -703,6 +703,23 @@ console.log('\nplace first — the gazetteer, nations as filters, nearest first\
     check(`"${q}"`.padEnd(26) + `${result.matches.length} results`, result.matches.length > 0 && result.places.length === 1, banner);
   }
 
+  // "near me" is a request to sort by distance, not a place or a product.
+  {
+    const r1 = local('cheese near me').result;
+    check(`"cheese near me"`.padEnd(26) + 'asks for distance, searches cheese, names no place',
+      r1.nearMe && !r1.nearMeOnly && r1.places.length === 0 && r1.product.includes('cheese') && r1.matches.length > 0);
+    const r2 = local('near me').result;
+    check(`"near me"`.padEnd(26) + 'is a sort on its own, not a search', r2.nearMe && r2.nearMeOnly);
+    const r3 = local('nearest farm shop').result;
+    check(`"nearest farm shop"`.padEnd(26) + 'asks for distance', r3.nearMe && r3.matches.length > 0);
+    const h = ctx.localHeadlineData(local('scottish cheese').result);
+    const b = ctx.buildHeadline(Object.assign({}, h, { nearYou: true }));
+    check(`"scottish cheese" + near`.padEnd(26) + b, /^\d+ matches for Scottish made cheese, nearest to you first$/.test(b));
+    const hw = ctx.localHeadlineData(local('wakefield cheese').result);
+    const bw = ctx.buildHeadline(Object.assign({}, hw, { nearYou: true }));
+    check(`"wakefield cheese" + near`.padEnd(26) + 'the place still leads', /in Wakefield/.test(bw) && !/nearest to you/.test(bw), bw);
+  }
+
   // A word we could not read is admitted.
   {
     const { banner } = local('wool zzqxv');

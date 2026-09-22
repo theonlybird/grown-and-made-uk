@@ -58,9 +58,10 @@ consent has not been given. Call sites never need to check.
 | `business_click` | Website or Instagram link clicked | `link_type`, `surface` (`map_popup`/`grid_card`), `search_active`, `search_term` |
 | `map_pin_open` | A pin's popup opened | `view_mode` |
 | `business_focus` | A listing brought into view | `surface` (`map_list`, `autocomplete`, `grid_map_link`, `deep_link`, `search_exact_name`) |
-| `search` | Any search resolved | `search_term`, `search_engine` (`ai`/`local`/`none`/`exact_name`), `search_results`, `search_place`, `search_audience` |
+| `search` | Any search resolved — once, when it settles (the AI answered, gave up after 6s, or the visitor moved on while it was thinking; the last counts as `local`) | `search_term`, `search_engine` (`ai`/`local`/`none`/`exact_name`/`near_me`), `search_results`, `search_place`, `search_audience` |
 | `search_no_results` | Search found nothing at all | `search_term` |
 | `search_error` | Search threw | `error_message` |
+| `near_me` | "Near me" pressed, or asked for in a search | `near_me_result` (`on`/`off`/`denied`/`error`/`outside_uk`) — never the position itself |
 | `search_suggestion_select` | Autocomplete result chosen | `search_term` |
 | `filter_change` | A chip toggled | `filter_group`, `filter_value`, `filter_selection` |
 | `view_change` | Map/grid button pressed | `view_mode` |
@@ -129,6 +130,7 @@ Data filters. A filter left on Testing does nothing.
 - `admin.html`. It carries no analytics script at all.
 - Anything a visitor types into a form field.
 - Map pin coordinates from the update page.
+- The visitor's own location from "Near me". It sorts the page and goes nowhere else.
 - The `k=` token from update links.
 - Any advertising or cross-site identifier.
 
@@ -169,7 +171,7 @@ business_county business_nation link_type       surface
 ```
 Search:
 ```
-search_term     search_engine   search_place    search_audience
+search_term     search_engine   search_place    search_audience   near_me_result
 ```
 Context and filters:
 ```

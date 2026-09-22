@@ -6,6 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#ffffff" />
 <title>Grown and Made UK</title>
+<!-- Search and link previews (WhatsApp, LinkedIn, Facebook, iMessage, Slack, X).
+     Every page shares assets/brand/og-image.png; the description is per page. -->
+<meta name="description" content="A map of UK businesses that genuinely make or grow what they sell, from farm shops to potters and tailors, each checked against a published standard." />
+<link rel="canonical" href="https://www.grownandmade.uk/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Grown and Made UK" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:title" content="Grown and Made UK — British makers and growers on one map" />
+<meta property="og:description" content="A map of UK businesses that genuinely make or grow what they sell, from farm shops to potters and tailors, each checked against a published standard." />
+<meta property="og:url" content="https://www.grownandmade.uk/" />
+<meta property="og:image" content="https://www.grownandmade.uk/assets/brand/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Grown and Made UK seal beside the words: Find the businesses that genuinely make and grow what they sell in the UK." />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="stylesheet" href="assets/theme.css" />
 <!-- Analytics and cookie consent. Loads nothing from Google until the
      visitor opts in; see assets/analytics.js. Must stay unminified and
@@ -166,11 +181,46 @@
   .grid-card .g-links a.ig{background:#f0f2f5;color:var(--ink)}
   .grid-card .g-links a.map-link{background:#f1f5f9;color:var(--navy)}
 
-  /* Loader */
-  .loader-overlay{position:fixed;inset:0;background:rgba(255,255,255,0.85);z-index:3000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
-  .spinner{width:40px;height:40px;border:4px solid #e2e8f0;border-top-color:var(--navy);border-radius:50%;animation:spin 0.8s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .loader-text{font-size:15px;font-weight:600;color:var(--navy)}
+
+  /* "Checking for more matches…" — the AI's answer is on its way, but the
+     local one is already on screen, so this is a whisper, not an overlay. */
+  .refining{display:inline-block;margin-left:8px;font-size:12.5px;font-weight:500;color:var(--muted-2)}
+  .refining::before{content:'';display:inline-block;width:9px;height:9px;margin-right:6px;vertical-align:-1px;
+    border:2px solid var(--line-strong);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite}
+
+  /* Near me */
+  #nearBtn{order:2;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:0 0 auto;
+    height:40px;padding:0 13px;margin-right:12px;border:1px solid var(--line);border-radius:6px;
+    background:var(--surface);color:var(--green);font-family:var(--font-body);font-size:13px;font-weight:600;
+    cursor:pointer;white-space:nowrap}
+  #nearBtn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  #nearBtn:hover{border-color:var(--green)}
+  #nearBtn.active{background:var(--green);border-color:var(--green);color:var(--paper)}
+  #nearBtn.is-waiting svg{animation:spin 1s linear infinite}
+  .item .sub .dist{color:var(--green);font-weight:600}
+
+  /* Short, non-blocking messages (location refused and the like) */
+  .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom, 0px));z-index:4000;
+    transform:translate(-50%,12px);width:max-content;max-width:min(460px,calc(100vw - 32px));padding:11px 16px;border-radius:8px;
+    background:var(--ink);color:var(--paper);font:500 13.5px/1.45 var(--font-body);
+    box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .2s,transform .2s}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  @media (prefers-reduced-motion: reduce){ .refining::before,#nearBtn.is-waiting svg{animation:none} }
+  /* Keep the button beside the search box rather than adrift in the header's
+     spare space: the two share it, centred between the brand and the menu. */
+  @media (min-width:1100px){
+    #topbar .search-wrapper{margin-left:auto;margin-right:10px}
+    #nearBtn{margin-right:auto}
+  }
+  @media (max-width:1099px){
+    #nearBtn{width:44px;height:44px;padding:0;margin-right:8px}
+    #nearBtn .nlabel{display:none}
+  }
+  @media (max-width:767px){
+    #nearBtn{width:46px;height:46px;margin:0}
+    .toast{bottom:calc(170px + env(safe-area-inset-bottom, 0px))}   /* clear of the results sheet */
+  }
 
   .search-input-box { position: relative; display: flex; align-items: center; }
   #search { width: 100%; padding: 11px 90px 11px 38px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; outline: none; background: #fcfdfe; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: .2s; }
@@ -354,7 +404,6 @@
 
     /* ---- Comfortable touch targets everywhere ---- */
     .chip{padding:9px 14px;font-size:13.5px}
-    .loader-text{font-size:14px;padding:0 24px;text-align:center}
   }
 
   /* Very narrow phones — keep the brand from crowding out the buttons */
@@ -538,9 +587,6 @@
   .ac-name{font-family:var(--font-heading);font-size:16px;font-weight:600;color:var(--green)}
   .ac-sub{color:var(--muted-2)}
 
-  .loader-overlay{background:rgba(250,247,240,.9)}
-  .spinner{border-color:var(--line);border-top-color:var(--green)}
-  .loader-text{color:var(--green);font-family:var(--font-body)}
 
   .drawer-panel{background:var(--surface)}
   .drawer-foot button{font-family:var(--font-body);border-radius:6px}
@@ -651,11 +697,17 @@
     <div class="search-wrapper">
       <div class="search-input-box">
         <svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <input id="search" type="search" enterkeyhint="search" placeholder="Search makers, towns or whatever you're after (e.g. 'woolen jumper from Scotland')..." autocomplete="off" autocapitalize="off" autocorrect="off" />
+        <input id="search" type="search" enterkeyhint="search" placeholder="Search makers, towns or whatever you're after (e.g. 'woollen jumper from Scotland')..." autocomplete="off" autocapitalize="off" autocorrect="off" />
         <button id="resetBtn" type="button" class="btn-reset" title="Reset search &amp; filters" aria-label="Reset search and filters"><span aria-hidden="true">✕</span><span class="rlabel">Reset</span></button>
       </div>
       <div id="autocompleteDropdown"></div>
     </div>
+    <!-- Sorts everything by distance from the visitor. The browser asks first;
+         the position stays in the page (see privacy.html). -->
+    <button id="nearBtn" type="button" aria-pressed="false" aria-label="Near me" title="Sort by distance from you">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+      <span class="nlabel">Near me</span>
+    </button>
     <button id="filterBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="filterDrawer">
       <svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
       <span class="flabel">Filters</span><span class="fcount" id="filterCount">0</span>
@@ -809,11 +861,8 @@
   </div>
 </div>
 
-<!-- Loading Overlay -->
-<div id="loader" class="loader-overlay" style="display:none">
-  <div class="spinner"></div>
-  <div class="loader-text">Finding the best match across UK growers and makers&hellip;</div>
-</div>
+<!-- Short messages that should not interrupt: location refused, and so on. -->
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -1091,7 +1140,9 @@ const state = {
   sortAsc: true,
   currentView: 'map', // 'map' or 'grid'
   aiActive: false,
-  aiHeadline: '',
+  headData: null,        // what buildHeadline() is given; the banner is built at render time
+  refining: false,       // local results are up, the AI's answer is still coming
+  nearMe: null,          // {lat, lng} once the visitor has asked for "Near me"; never leaves the page
   notice: '',            // shown above the full grid when a search found nothing
   aiMatches: new Map(), // id -> 1-sentence rationale
   aiOrder: [],          // ids in rank order — visible() sorts by this
@@ -1143,7 +1194,6 @@ const listEl = document.getElementById('list');
 const countEl = document.getElementById('count');
 const gridAiBanner = document.getElementById('gridAiBanner');
 const gridCards = document.getElementById('gridCards');
-const loader = document.getElementById('loader');
 
 const searchInput = document.getElementById('search');
 const autocompleteDropdown = document.getElementById('autocompleteDropdown');
@@ -1210,12 +1260,38 @@ function visible(){
     // its divider and the banner its count, so the two cannot disagree.
     const { near, afield, nearest } = arrangeByPlace(hits, state.places);
     const rankBy = state.audienceRank === false ? [] : state.audience;
-    return byAudience(near, rankBy).concat(nearest ? afield : byAudience(afield, rankBy));
+    const ranked = byAudience(near, rankBy).concat(nearest ? afield : byAudience(afield, rankBy));
+    return nearMeSorting() ? byDistanceFromYou(ranked) : ranked;
   }
   // Typing, before Enter: a quick literal filter so the list follows the
   // keyboard. Enter runs the full search.
   const q = state.q;
-  return BUSINESSES.filter(b => passesChips(b) && (q === '' || typedMatch(b, q)));
+  const list = BUSINESSES.filter(b => passesChips(b) && (q === '' || typedMatch(b, q)));
+  return state.nearMe ? byDistanceFromYou(list) : list;
+}
+
+/* --- Near me: distance from the visitor ----------------------------------
+   Only ever computed here, in the browser. The position is not sent to the
+   search API, to Analytics or anywhere else, and it is not stored. */
+function milesFromYou(b){
+  if (!state.nearMe || typeof b.lat !== 'number') return null;
+  return kmBetween(b.lat, b.lng, state.nearMe.lat, state.nearMe.lng) / 1.609;
+}
+function byDistanceFromYou(list){
+  const d = new Map(list.map(b => [b.id, milesFromYou(b)]));
+  return list.slice().sort((x, y) => (d.get(x.id) ?? 1e9) - (d.get(y.id) ?? 1e9));
+}
+// A place the visitor typed always decides the order; "Near me" sorts
+// everything else. A nation still filters either way.
+function nearMeSorting(){
+  if (!state.nearMe) return false;
+  return !(state.aiActive && (state.places || []).some(p => !p.strict));
+}
+function milesText(m, short){
+  if (m == null) return '';
+  const n = Math.round(m);
+  if (short) return m < 1 ? '<1 mi' : `${n} mi`;
+  return m < 1 ? 'under a mile' : `about ${n} mile${n === 1 ? '' : 's'}`;
 }
 
 // Every count on the page, from one number. Lifted out of renderMapList
@@ -1235,7 +1311,7 @@ function updateCounts(n){
 
 function renderMapList(){
   const vis = visible();
-  if (!state.aiActive) {
+  if (!state.aiActive && !state.nearMe) {
     vis.sort((a,b)=> state.sortAsc ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
   }
   cluster.clearLayers();
@@ -1245,7 +1321,10 @@ function renderMapList(){
   syncChips();
   updateCounts(vis.length);
 
-  if (state.aiActive && vis.length > 0) {
+  if (state.aiActive && vis.length > 0 && nearMeSorting()) {
+    // Searching near the visitor: centre on them, not on the whole country.
+    map.flyTo([state.nearMe.lat, state.nearMe.lng], 9, { duration: 0.8 });
+  } else if (state.aiActive && vis.length > 0) {
     const coords = vis.map(b => [b.lat, b.lng]);
     if (coords.length > 1) {
       map.flyToBounds(L.latLngBounds(coords), { padding: [40, 40], maxZoom: 13, duration: 0.8 });
@@ -1258,7 +1337,7 @@ function renderMapList(){
       ${logoHtml(b,'logo')}
       <div class="meta">
         <div class="nm">${esc(b.name)}</div>
-        <div class="sub">${esc(b.address)}</div>
+        <div class="sub">${state.nearMe ? `<span class="dist">${milesText(milesFromYou(b), true)}</span> · ` : ''}${esc(b.address)}</div>
         ${tierTagHtml(b.tier)}
         <span class="tag cat ${esc(b.category)}">${CAT[b.category].label}</span>
       </div>
@@ -1269,9 +1348,9 @@ function renderMapList(){
   });
 }
 
-function renderGrid(){
+function renderGrid(opts){
   const vis = visible();
-  if (!state.aiActive) {
+  if (!state.aiActive && !state.nearMe) {
     vis.sort((a,b)=> state.sortAsc ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
   }
   // The grid is reached without ever passing through renderMapList — the
@@ -1284,16 +1363,20 @@ function renderGrid(){
     // that, rather than leaving "here are some businesses" over nothing.
     gridAiBanner.innerHTML = 'Nothing matches your search with those filters &mdash; try widening them.';
   } else if (state.aiActive) {
-    gridAiBanner.innerHTML = state.aiHeadline || 'Here are some UK businesses we think you&rsquo;ll love';
+    // Built at render time, so switching "Near me" on or off rewords it.
+    gridAiBanner.innerHTML = (state.headData
+      ? buildHeadline(Object.assign({}, state.headData, { nearYou: nearMeSorting() }))
+      : 'Here are some UK businesses we think you&rsquo;ll love')
+      + (state.refining ? ' <span class="refining" role="status">Checking for more matches&hellip;</span>' : '');
   } else if (state.notice) {
     gridAiBanner.innerHTML = state.notice;
   } else {
-    gridAiBanner.innerHTML = `Showing <b>${vis.length}</b> British makers & producers`;
+    gridAiBanner.innerHTML = `Showing <b>${vis.length}</b> British makers &amp; producers${state.nearMe ? ', nearest to you first' : ''}`;
   }
 
   // visible() already returns near-then-afield; we only need to know where the
   // seam falls so the break can be dropped in at the right point.
-  const split = state.aiActive ? arrangeByPlace(vis, state.places) : { near: vis, afield: [], nearest: false };
+  const split = state.aiActive && !nearMeSorting() ? arrangeByPlace(vis, state.places) : { near: vis, afield: [], nearest: false };
   const seam = split.afield.length ? split.near.length : -1;
   const placeName = (state.places || []).filter(p => !p.strict).map(p => p.label).join(' and ');
 
@@ -1301,8 +1384,13 @@ function renderGrid(){
     const brk = idx === seam
       ? `<div class="afield-break">${split.nearest ? `Further afield, nearest to ${esc(placeName)} first` : 'Results from further afield'}</div>` : '';
     // How far outside the place they asked for, so "nearest" can be judged.
-    const miles = state.aiActive && idx >= seam && seam !== -1 ? milesFrom(b, state.places) : null;
-    const away = miles == null ? '' : ` <span class="g-away">· ${miles < 1 ? 'under a mile' : `about ${Math.round(miles)} mile${Math.round(miles) === 1 ? '' : 's'}`} from ${esc(placeName)}</span>`;
+    let away = '';
+    if (nearMeSorting()) {
+      away = ` <span class="g-away">· ${milesText(milesFromYou(b))} away</span>`;
+    } else if (state.aiActive && idx >= seam && seam !== -1) {
+      const miles = milesFrom(b, state.places);
+      if (miles != null) away = ` <span class="g-away">· ${milesText(miles)} from ${esc(placeName)}</span>`;
+    }
     return `${brk}<div class="grid-card">
       <div>
         <div class="g-head">
@@ -1328,7 +1416,13 @@ function renderGrid(){
     </div>`;
   }).join('') || '<div style="padding:40px;color:var(--muted);font-size:15px;grid-column:1/-1;text-align:center">No businesses found matching your request.</div>';
 
-  animateGrid();
+  // A refinement arriving under the visitor's eyes should not replay the
+  // entrance animation; the cards simply update.
+  if (opts && opts.animate === false) {
+    if (gridObserver) { gridObserver.disconnect(); gridObserver = null; }
+  } else {
+    animateGrid();
+  }
 }
 
 function focus(id, surface){
@@ -1362,11 +1456,9 @@ gridCards.addEventListener('click', e => {
 // one, so the old results give way to the live filter straight away.
 let typingTimer = null;
 function applyTyped(val){
+  // Typing over a search (finished or still waiting on the AI) starts afresh.
+  if (state.aiActive || state.refining || state.notice) { cancelSearch(); clearSearchState(); }
   state.q = val.length >= 2 ? val : '';
-  if (state.aiActive) {
-    state.aiActive = false; state.notice = ''; state.aiMatches.clear();
-    state.aiOrder = []; state.places = []; state.audience = [];
-  }
   renderMapList();
   if (state.currentView === 'grid') renderGrid();
 }
@@ -1454,49 +1546,65 @@ function clearAiSearch() {
   if (state.currentView === 'grid') renderGrid();
 }
 
-async function executeAiSearch(query) {
-  loader.style.display = 'flex';
-  const placesReady = Promise.race([Gazetteer.load(), new Promise(r => setTimeout(r, 2500))]);
+/* ==========================================================================
+   SEARCH — the local answer at once, the AI's a moment later.
 
+   The page used to put up a full-screen "Finding the best match…" overlay and
+   wait for the AI, with no limit on how long. Now:
+     1. The in-browser engine (assets/search.js) answers straight away and
+        its results go on screen, with a quiet "Checking for more matches".
+     2. The AI is asked in the background and given AI_TIMEOUT_MS. If it
+        answers, its picks are merged in and the cards update in place. If it
+        is slow, fails or finds nothing, the local answer simply stands.
+   Every search takes a number; an answer for an older search, or one the
+   visitor has since typed over or reset, is thrown away.
+   ========================================================================== */
+const AI_TIMEOUT_MS = 6000;
+let searchSeq = 0;
+let settlePending = null;   // records the analytics for a search that gets superseded
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// Stop whatever search is in flight. Its late answer will be ignored, and it
+// is recorded in Analytics as what the visitor actually saw.
+function cancelSearch(){
+  searchSeq++;
+  if (settlePending) { const s = settlePending; settlePending = null; s(); }
+  state.refining = false;
+}
+
+async function fetchAiAnswer(query, signal) {
+  let lastApiError = '';
+  // 1. Primary: the serverless endpoint /api/ai-search
   try {
-    let result = null;
-    let lastApiError = '';
-    // 1. Primary: Serverless API endpoint /api/ai-search
-    try {
-      const res = await fetch('/api/ai-search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query })
-      });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok) {
-        result = data;
-      } else {
-        // Surface the real diagnosis rather than a generic "check your key".
-        lastApiError = data.error || `HTTP ${res.status}`;
-        if (data.googleMessage) lastApiError += ` — Google says: ${data.googleMessage}`;
-        if (data.fix) lastApiError += ` — Fix: ${data.fix}`;
-        console.error('AI search failed:', data);
-      }
-    } catch (e) {
-      lastApiError = e.message;
-    }
+    const res = await fetch('/api/ai-search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query }),
+      signal
+    });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok) return data;
+    // Surface the real diagnosis rather than a generic "check your key".
+    lastApiError = data.error || `HTTP ${res.status}`;
+    if (data.googleMessage) lastApiError += ` — Google says: ${data.googleMessage}`;
+    if (data.fix) lastApiError += ` — Fix: ${data.fix}`;
+    console.error('AI search failed:', data);
+  } catch (e) {
+    lastApiError = e && e.name === 'AbortError' ? `no answer within ${AI_TIMEOUT_MS / 1000}s` : (e && e.message);
+  }
 
-    // 2. Fallback: Direct Gemini API call if local key stored
-    if (!result) {
-      const storedKey = localStorage.getItem('GEMINI_API_KEY') || '';
-      // No key for the direct-call path is normal for real visitors; it is not
-      // an error worth interrupting them over. Fall through to local search.
-      if (!storedKey) {
-        if (lastApiError) console.warn('AI search unavailable:', lastApiError);
-      } else {
-
-      const compact = BUSINESSES.map(b => ({
-        i: b.id, n: b.name, c: b.category, s: b.subcategory || '', t: b.town, d: b.description, tr: b.tier
-      }));
-      const catalogStr = JSON.stringify(compact);
-      
-      const systemInstruction = `You are the Grown and Made AI Search Assistant.
+  // 2. Fallback: a direct Gemini call, only for someone who has stored their
+  // own key in this browser. No real visitor has one; it stays quiet for them.
+  let storedKey = '';
+  try { storedKey = localStorage.getItem('GEMINI_API_KEY') || ''; } catch (e) {}
+  if (!storedKey || signal.aborted) {
+    if (lastApiError) console.warn('AI search unavailable:', lastApiError);
+    return null;
+  }
+  const compact = BUSINESSES.map(b => ({
+    i: b.id, n: b.name, c: b.category, s: b.subcategory || '', t: b.town, d: b.description, tr: b.tier
+  }));
+  const systemInstruction = `You are the Grown and Made AI Search Assistant.
 Analyze the user's natural language request and find the best matching British makers from the provided catalog.
 
 CRITICAL INSTRUCTIONS:
@@ -1504,92 +1612,164 @@ CRITICAL INSTRUCTIONS:
 2. Match materials, craft techniques, and product synonyms (e.g. kitchen knife = forged cutlery/blades; jumper = knitwear/cashmere/wool; cookware = cast iron/spun iron/copper pans).
 3. Return ONLY a valid JSON object matching this exact structure:
 {
-  "query": "${query.replace(/"/g, '\\"')}",
-  "reasoning": "1-2 sentence explanation of what the user is looking for and the regional/material context.",
-  "matches": [
-    {
-      "id": "exact-business-id-from-catalog",
-      "reason": "1-sentence specific rationale explaining why this business matches the query."
-    }
-  ]
+  "query": ${JSON.stringify(query)},
+  "matches": [ { "id": "exact-business-id-from-catalog" } ]
 }
 4. Limit matches to the top 1-12 most relevant businesses.
 
 BUSINESS CATALOG:
-${catalogStr}`;
-
-      const payload = {
+${JSON.stringify(compact)}`;
+  try {
+    const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${storedKey}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
         contents: [{ parts: [{ text: systemInstruction }, { text: `User Search Query: "${query}"` }] }],
         generationConfig: { temperature: 0.2, maxOutputTokens: 2000 }
-      };
+      }),
+      signal
+    });
+    if (!geminiRes.ok) return null;
+    const gData = await geminiRes.json();
+    const rawText = gData.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    return JSON.parse(rawText.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '').trim());
+  } catch (e) {
+    return null;
+  }
+}
 
-      // gemini-flash-latest is an alias Google keeps pointing at a current
-      // model, so this path doesn't break every time one is retired.
-      const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${storedKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+// Put a result set on the page's state. `ids` are in rank order.
+function applyResults(ids, local, headData, refining) {
+  state.aiActive = true;
+  state.notice = '';
+  state.q = '';
+  state.places = local.places || [];
+  state.audience = local.audience || [];
+  state.audienceRank = local.audienceRank !== false;
+  state.aiMatches.clear();
+  state.aiOrder = ids.slice();
+  ids.forEach(id => state.aiMatches.set(id, true));
+  state.headData = headData;
+  state.refining = !!refining;
+}
 
-      if (geminiRes.ok) {
-        const gData = await geminiRes.json();
-        const rawText = gData.candidates?.[0]?.content?.parts?.[0]?.text || '';
-        const cleanJson = rawText.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '').trim();
-        try { result = JSON.parse(cleanJson); } catch (e) { result = null; }
-      }
-      }
+// Nothing to show yet: say so, over the full catalogue, until the AI answers.
+function showSearching(query) {
+  state.aiActive = false;
+  state.aiMatches.clear();
+  state.aiOrder = [];
+  state.places = [];
+  state.audience = [];
+  state.headData = null;
+  state.q = '';
+  state.refining = true;
+  state.notice = `Searching for &ldquo;${escapeHtml(query)}&rdquo;&hellip;`;
+  toggleView('grid');
+}
+
+function rerenderResults() {
+  if (state.currentView === 'grid') renderGrid({ animate: false });
+  else renderMapList();
+}
+
+async function executeAiSearch(query) {
+  cancelSearch();
+  const seq = searchSeq;
+  const current = () => seq === searchSeq;
+
+  // The AI is asked straight away, in parallel with everything below.
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), AI_TIMEOUT_MS);
+  const aiAnswer = fetchAiAnswer(query, ctrl.signal).catch(() => null).finally(() => clearTimeout(timer));
+
+  try {
+    // The place list normally arrived a second after the listings. A search
+    // made before it did waits for it, briefly and visibly.
+    if (!Gazetteer.ready()) {
+      showSearching(query);
+      await Promise.race([Gazetteer.load(), sleep(1200)]);
+      if (!current()) return;
     }
 
-    // The place gazetteer loads in the background after the listings; a
-    // search made before it lands waits for it, briefly.
-    await placesReady;
-    // The local engine runs on every search. It reads the places, the
-    // audience and any misspelling, and its recall is exhaustive where the
-    // model's is patchy.
-    const alsoLocal = localSearch(query);
-    const localHead = localHeadlineData(alsoLocal);
+    const local = localSearch(query);
+
+    // "cheese near me": ask where they are before ordering anything.
+    if (local.nearMe && !state.nearMe) {
+      await requestNearMe();
+      if (!current()) return;
+    }
+
+    // "near me" and nothing else is not a search but a sort: everything,
+    // nearest first.
+    if (local.nearMeOnly) {
+      ctrl.abort();
+      clearSearchState();
+      state.notice = state.nearMe ? '' : 'We couldn&rsquo;t get your location, so these are in the usual order.';
+      toggleView('grid');
+      gmTrack('search', { search_term: query.toLowerCase(), search_engine: 'near_me', search_results: visible().length });
+      return;
+    }
+
+    const localHead = localHeadlineData(local);
+    const localExtra = {
+      search_place: (local.places || []).map(p => p.label).join(', '),
+      search_audience: (local.audience || []).join(', '),
+      search_terms_used: (local.terms || []).join(', ')
+    };
+
+    // One "search" event per search, sent when it settles: the AI answered,
+    // it gave up, or the visitor moved on to something else first.
+    let settled = false;
+    const settle = (engine, n, extra) => {
+      if (settled) return;
+      settled = true;
+      if (settlePending === settleAsShown) settlePending = null;
+      gmTrack('search', Object.assign({ search_term: query.toLowerCase(), search_engine: engine, search_results: n }, extra || {}));
+      /* The single most useful event on the site: someone wanted something
+         the map does not have. Every one is a candidate for the next round
+         of listings research. */
+      if (engine === 'none') gmTrack('search_no_results', { search_term: query.toLowerCase() });
+    };
+    const settleAsShown = () => settle(local.matches.length ? 'local' : 'none', local.matches.length, localExtra);
+    settlePending = settleAsShown;
+
+    // 1. The local answer, now.
+    if (local.matches.length) {
+      applyResults(local.matches.map(b => b.id), local, localHead, true);
+      toggleView('grid');
+    } else {
+      showSearching(query);
+    }
+
+    // 2. The AI's, when (if) it comes.
+    const result = await aiAnswer;
+    if (!current()) return;
 
     if (result && result.matches && result.matches.length > 0) {
-      // Both engines word their results identically, so log which answered.
       console.info('[search] AI answered via', result._model || 'unknown model');
       const ids = [];
       const add = id => { if (id && !ids.includes(id)) ids.push(id); };
       result.matches.forEach(m => add(m && m.id));
-      // The place comes first. When one was named, the local search's whole
-      // answer joins the model's: everything it found in the place, and the
-      // nearest others after it. The model's shortlist is not place-aware, so
-      // on its own it can miss the cheese maker ten miles away and offer one
-      // a hundred miles off. Ordering by place and distance happens below.
+      // The place comes first. When one was named, the local answer joins
+      // the model's whole: everything in the place, and the nearest others.
+      // The model's shortlist is not place-aware; ordering happens in visible().
+      // Without a place, the model's picks lead and the local answer follows
+      // them, so the list the visitor is already looking at never shrinks
+      // when the AI arrives.
       let rescued = 0;
-      if ((alsoLocal.places || []).length) {
-        alsoLocal.matches.forEach(b => { if (!ids.includes(b.id)) { add(b.id); rescued++; } });
-      } else if (ids.length < 8) {
-        // A thin answer is usually the model reading the query literally; top
-        // it up from the local engine, which has already widened the terms.
-        alsoLocal.matches.forEach(b => { if (ids.length < 12) add(b.id); });
-      }
+      local.matches.forEach(b => { if (!ids.includes(b.id)) { add(b.id); rescued++; } });
 
-      // What will actually be shown: a nation filters out anything outside
-      // it, whatever the model picked.
-      const places = alsoLocal.places || [];
-      const audience = alsoLocal.audience || [];
+      // What will actually be shown: a nation filters out anything outside it.
+      const places = local.places || [];
+      const audience = local.audience || [];
       const pool = BUSINESSES.filter(b => ids.includes(b.id) && audienceVerdict(b, audience) !== 'no');
       const arr = arrangeByPlace(pool, places);
       const total = arr.near.length + arr.afield.length;
 
       if (total) {
-        state.aiActive = true;
-        state.notice = '';
-        state.q = '';
-        state.places = places;
-        state.audience = audience;
-        state.audienceRank = alsoLocal.audienceRank !== false;
-        state.aiMatches.clear();
-        state.aiOrder = ids.slice();
-        ids.forEach(id => state.aiMatches.set(id, true));
-        // The banner is worked out from the list we are about to show, not
-        // taken from the model's own claim about how well it matched.
-        state.aiHeadline = buildHeadline({
+        // The banner is worked out from the list we show, not from the
+        // model's own claim about how well it matched.
+        applyResults(ids, local, {
           productTerm: localHead.gift ? null : (localHead.productTerm || result.productTerm || null),
           locationTerm: localHead.locationTerm,
           nations: localHead.nations,
@@ -1597,86 +1777,147 @@ ${catalogStr}`;
           inPlace: arr.near.length,
           nearest: arr.nearest,
           gift: localHead.gift,
-          corrections: alsoLocal.corrections || [],
+          corrections: local.corrections || [],
           unknown: [],
           matches: arr.near.concat(arr.afield)
-        });
-        gmTrack('search', {
-          search_term: query.toLowerCase(),
-          search_engine: 'ai',
-          search_results: total,
+        }, false);
+        if (local.matches.length) rerenderResults(); else toggleView('grid');
+        settle('ai', total, {
           search_place: places.map(p => p.label).join(', '),
           search_audience: audience.join(', '),
           search_rescued: rescued
         });
-        toggleView('grid');
         return;
       }
     }
 
-    // The AI failed, found nothing, or found nothing in the nation asked for.
-    // The local engine's answer stands on its own: an outage is a slightly
-    // worse search, not a broken one.
-    const local = alsoLocal;
-    console.info('[search] local search used —',
-      'product:', local.product, 'places:', (local.places || []).map(p => p.label), 'matches:', local.matches.length);
-
+    // The AI was slow, failed, or found nothing: the local answer stands.
     if (local.matches.length) {
-      state.aiActive = true;
-      state.notice = '';
-      state.q = '';
-      state.aiMatches.clear();
-      state.aiOrder = [];
-      state.places = local.places || [];
-      state.audience = local.audience || [];
-      state.audienceRank = local.audienceRank !== false;
-      local.matches.forEach(b => {
-        state.aiMatches.set(b.id, true);
-        state.aiOrder.push(b.id);
-      });
-      state.aiHeadline = buildHeadline(localHead);
-      gmTrack('search', {
-        search_term: query.toLowerCase(),
-        search_engine: 'local',
-        search_results: local.matches.length,
-        search_place: (local.places || []).map(p => p.label).join(', '),
-        search_audience: (local.audience || []).join(', '),
-        search_terms_used: (local.terms || []).join(', ')
-      });
-      toggleView('grid');
+      console.info('[search] local answer stands —',
+        'product:', local.product, 'places:', (local.places || []).map(p => p.label), 'matches:', local.matches.length);
+      state.refining = false;
+      rerenderResults();
+      settle('local', local.matches.length, localExtra);
       return;
     }
 
-    // Nothing understood and nothing found: say so plainly and show everything,
-    // so the user always has somewhere to go next.
-    state.aiActive = false;
-    state.aiMatches.clear();
-    state.q = '';
+    // Nothing understood and nothing found: say so plainly and show
+    // everything, so the visitor always has somewhere to go next.
+    clearSearchState();
     if (searchInput) searchInput.value = '';
-    state.places = [];
-    state.audience = [];
-    // "We couldn't find any British made knitwear in Northern Ireland just
-    // yet" says more than "no results" when we did understand the question.
-    const said = (localHead.productTerm || localHead.locationTerm) ? buildHeadline(localHead) + ' ' : `No results for &ldquo;${escapeHtml(query)}&rdquo;. `;
+    // "We couldn't find any Scottish made knitwear just yet" says more than
+    // "no results" when we did understand the question.
+    const said = (localHead.productTerm || localHead.locationTerm || (localHead.nations || []).length)
+      ? buildHeadline(localHead) + ' ' : `No results for &ldquo;${escapeHtml(query)}&rdquo;. `;
     state.notice = said + 'Showing all British makers and producers instead.';
-    /* The single most useful event on the site: someone wanted something the
-       map does not have. Every one of these is a candidate for the next round
-       of listings research. */
-    gmTrack('search', { search_term: query.toLowerCase(), search_engine: 'none', search_results: 0 });
-    gmTrack('search_no_results', { search_term: query.toLowerCase() });
     toggleView('grid');
+    settle('none', 0);
   } catch (err) {
-    // Never interrupt the user. Worst case they get the full catalogue.
-    console.error('AI Search Error:', err);
-    state.aiActive = false;
-    state.aiMatches.clear();
+    // Never interrupt the visitor. Worst case they get the full catalogue.
+    console.error('Search error:', err);
+    if (!current()) return;
+    clearSearchState();
     state.notice = 'Search is having a moment &mdash; showing all British makers and producers instead.';
     gmTrack('search_error', { search_term: query.toLowerCase(), error_message: String(err && err.message || err) });
     toggleView('grid');
-  } finally {
-    loader.style.display = 'none';
   }
 }
+
+function clearSearchState() {
+  state.aiActive = false;
+  state.aiMatches.clear();
+  state.aiOrder = [];
+  state.places = [];
+  state.audience = [];
+  state.headData = null;
+  state.refining = false;
+  state.q = '';
+  state.notice = '';
+}
+
+/* ==========================================================================
+   NEAR ME
+   The browser's own location prompt, used once per visit when asked for. The
+   position sorts the list and the map and is shown as "N miles away"; it is
+   never sent anywhere (not to the search API, not to Analytics) and never
+   stored. See privacy.html.
+   ========================================================================== */
+const nearBtn = document.getElementById('nearBtn');
+let youMarker = null;
+let toastTimer = null;
+
+function toast(msg) {
+  const el = document.getElementById('toast');
+  if (!el) return;
+  el.textContent = msg;
+  el.hidden = false;
+  requestAnimationFrame(() => el.classList.add('show'));
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    el.classList.remove('show');
+    setTimeout(() => { el.hidden = true; }, 250);
+  }, 6000);
+}
+
+function setSortLabels() {
+  document.querySelectorAll('#sortBtn, #gridSortBtn, .sortBtn, .btn-sort').forEach(b => {
+    b.textContent = state.nearMe ? 'Nearest' : (state.sortAsc ? 'A–Z ↓' : 'Z–A ↑');
+  });
+}
+
+function setNearMe(pos) {
+  state.nearMe = pos;
+  if (nearBtn) {
+    nearBtn.classList.toggle('active', !!pos);
+    nearBtn.setAttribute('aria-pressed', String(!!pos));
+    nearBtn.title = pos ? 'Sorted by distance from you — click to turn off' : 'Sort by distance from you';
+  }
+  if (youMarker) { map.removeLayer(youMarker); youMarker = null; }
+  if (pos) {
+    youMarker = L.circleMarker([pos.lat, pos.lng], {
+      radius: 8, color: '#ffffff', weight: 3, fillColor: getCss('--green') || '#004225', fillOpacity: 1
+    }).bindTooltip('You are here').addTo(map);
+    if (state.currentView === 'map' && nearMeSorting()) map.flyTo([pos.lat, pos.lng], 10, { duration: 0.8 });
+  }
+  setSortLabels();
+  updateFilterBadge();
+  renderMapList();
+  if (state.currentView === 'grid') renderGrid({ animate: false });
+}
+
+function requestNearMe() {
+  return new Promise(resolve => {
+    if (!('geolocation' in navigator)) {
+      toast('This browser can’t share its location, so we can’t sort by distance.');
+      return resolve(false);
+    }
+    if (nearBtn) nearBtn.classList.add('is-waiting');
+    navigator.geolocation.getCurrentPosition(pos => {
+      if (nearBtn) nearBtn.classList.remove('is-waiting');
+      const lat = pos.coords.latitude, lng = pos.coords.longitude;
+      if (!UK_BOUNDS.contains([lat, lng])) {
+        toast('Near me works within the UK, and your location looks to be outside it.');
+        gmTrack('near_me', { near_me_result: 'outside_uk' });
+        return resolve(false);
+      }
+      gmTrack('near_me', { near_me_result: 'on' });   // the result only, never the position
+      setNearMe({ lat, lng });
+      resolve(true);
+    }, err => {
+      if (nearBtn) nearBtn.classList.remove('is-waiting');
+      toast(err && err.code === 1
+        ? 'Location is blocked for this site, so we can’t sort by distance. You can allow it in your browser’s site settings.'
+        : 'We couldn’t get your location just now. Please try again.');
+      gmTrack('near_me', { near_me_result: err && err.code === 1 ? 'denied' : 'error' });
+      resolve(false);
+    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 5 * 60 * 1000 });
+  });
+}
+
+if (nearBtn) nearBtn.addEventListener('click', () => {
+  if (state.nearMe) { setNearMe(null); gmTrack('near_me', { near_me_result: 'off' }); }
+  else requestNearMe();
+});
 
 // Controls listeners
 
@@ -1937,7 +2178,7 @@ function updateFilterBadge(){
   // Keyed off the field's actual value, not state.q — a typed-but-not-yet-
   // submitted query still needs a way to be cleared on a phone.
   document.body.classList.toggle('is-filtered',
-    n > 0 || state.aiActive || Boolean(searchInput.value.trim()));
+    n > 0 || state.aiActive || !!state.nearMe || Boolean(searchInput.value.trim()));
 }
 searchInput.addEventListener('input', updateFilterBadge);
 
@@ -1973,10 +2214,16 @@ searchInput.addEventListener('keydown', e => {
 // Sort buttons sync
 document.querySelectorAll('#sortBtn, #gridSortBtn, .sortBtn, .btn-sort').forEach(btn => {
   btn.addEventListener('click', () => {
+    // While "Near me" is on, the sort button reads "Nearest"; pressing it goes
+    // back to alphabetical.
+    if (state.nearMe) {
+      state.sortAsc = true;
+      setNearMe(null);
+      gmTrack('near_me', { near_me_result: 'off' });
+      return;
+    }
     state.sortAsc = !state.sortAsc;
-    document.querySelectorAll('#sortBtn, #gridSortBtn, .sortBtn, .btn-sort').forEach(b => {
-      b.textContent = state.sortAsc ? 'A–Z ↓' : 'Z–A ↑';
-    });
+    setSortLabels();
     renderGrid();
     renderMapList();
   });
@@ -1990,16 +2237,11 @@ if (resetBtn) {
 
 function resetSearchAndShowGrid() {
   searchInput.value = '';
-  state.q = '';
-  state.aiActive = false;
-  state.aiMatches.clear();
-  state.aiOrder = [];
-  state.aiHeadline = '';
-  // Without these a Reset after a failed search kept "No results for …" on
-  // the grid, and a later search could inherit the last one's place.
-  state.notice = '';
-  state.places = [];
-  state.audience = [];
+  // Drop any search still waiting on the AI, and everything it set: without
+  // this a Reset after a failed search kept "No results for …" on the grid.
+  cancelSearch();
+  clearSearchState();
+  if (state.nearMe) setNearMe(null);
   clearTimeout(typingTimer);
   autocompleteDropdown.style.display = 'none';
   state.cats = new Set(ALL_CATS);
