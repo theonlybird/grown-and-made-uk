@@ -38,3 +38,6 @@ GOLD-FARM-DRINK-SWEEP.md
 
 # GeoNames download cache for scripts/build-places.py
 .geonames/
+
+# regional gap searches — internal candidate lists
+GAP-SEARCH-*.md
