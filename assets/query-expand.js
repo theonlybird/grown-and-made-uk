@@ -57,7 +57,9 @@
       'who', 'sell', 'sells', 'selling', 'sold', 'buy', 'buying', 'make', 'makes',
       'maker', 'makers', 'making', 'made', 'which', 'what', 'where', 'can', 'are',
       'is', 'do', 'does', 'find', 'looking', 'near', 'me', 'my',
-      'any', 'some', 'from', 'british', 'britain', 'uk', 'english', 'local',
+      // "english" is NOT here: it names a nation, and "english cheese" must
+      // only ever mean cheese from England (22 Sep 2026).
+      'any', 'some', 'from', 'british', 'britain', 'uk', 'local',
 
       // Judgement words. Scoring on these would mean the map deciding which
       // businesses are more sustainable, more ethical or nicer than the others,
@@ -97,11 +99,26 @@
     // Adjectival forms of the nations. Each business carries its nation in the
     // place field, so mapping the adjective onto the noun is all that is needed.
     const NATION_WORDS = {
-      scottish: 'scotland', scots: 'scotland',
-      welsh: 'wales', cymru: 'wales',
-      english: 'england',
+      scottish: 'scotland', scots: 'scotland', scotland: 'scotland',
+      welsh: 'wales', cymru: 'wales', wales: 'wales',
+      english: 'england', england: 'england',
       irish: 'northern ireland', ulster: 'northern ireland',
     };
+
+    // A nation named in the query is a filter, not a preference: the shortlist
+    // handed to the model only contains businesses in it. The page enforces the
+    // same rule on whatever comes back.
+    const NATION_PATTERNS = [
+      [/\b(english|england)\b/, 'England'],
+      [/\b(scottish|scots|scotland)\b/, 'Scotland'],
+      [/\b(welsh|wales|cymru)\b/, 'Wales'],
+      [/\b(northern ireland|northern irish|irish|ulster)\b/, 'Northern Ireland'],
+    ];
+    function nationsIn(qClean) {
+      // "north wales" and "scottish borders" are regions, not the whole nation
+      // -- but they are still inside it, so the filter holds for them too.
+      return NATION_PATTERNS.filter(([re]) => re.test(qClean)).map(([, n]) => n);
+    }
 
     /** Is the matched word modifying something else? "cake tin" is a tin. */
     function isModifier(text, matchIndex, matchLength) {
@@ -170,6 +187,11 @@
 
       const q = expandQuery(query);
       if (!q.qClean) return catalog.slice(0, limit);
+
+      const nations = nationsIn(q.qClean);
+      if (nations.length) {
+        catalog = catalog.filter(item => nations.some(n => (', ' + (item.t || '')).endsWith(', ' + n)));
+      }
 
       const queryTags = new Set(q.tags);
 

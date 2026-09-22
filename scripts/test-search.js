@@ -20,45 +20,30 @@ const vm = require('vm');
 const { stageOneFilter, expandQuery, BUSINESS_CATALOG } = require('../api/ai-search.js');
 
 // ---------------------------------------------------------------------------
-// The page's own local search, lifted out of index.html.
-//
-// This matters as much as the API: the local engine answers whenever the API
-// is slow, rate-limited or down, and both of the bugs found on 13 Aug lived
-// here rather than in the serverless function. Extracting the block by marker
-// keeps the test honest — it runs the code that ships, not a copy.
+// The page's own search engine: assets/search.js, the file index.html loads,
+// run against the real listings and the real place gazetteer. It answers
+// whenever the API is slow, rate-limited or down, and it decides places,
+// audience and the results banner even when the API answers.
 // ---------------------------------------------------------------------------
 function loadLocalSearch() {
   const root = path.join(__dirname, '..');
-  const lines = fs.readFileSync(path.join(root, 'index.html'), 'utf8').split('\n');
-  const from = lines.findIndex(l => l.includes('const STOP_WORDS = new Set'));
-  const to = lines.findIndex((l, i) => i > from && l.startsWith('async function executeAiSearch'));
-  if (from < 0 || to < 0) throw new Error('could not locate the search block in index.html');
-
-  // buildHeadline, its place-casing helpers and the region predicates sit
-  // higher up the file, in blocks that stop short of the first DOM reference.
-  const slice = (startsWith, endsWith) => {
-    const a = lines.findIndex(l => l.includes(startsWith));
-    const b = lines.findIndex((l, i) => i > a && l.includes(endsWith));
-    if (a < 0 || b < 0) throw new Error(`could not locate ${startsWith} in index.html`);
-    return lines.slice(a, b).join('\n');
-  };
-
   const ctx = {
     console,
     window: {},
     BUSINESSES: JSON.parse(fs.readFileSync(path.join(root, 'data/businesses.json'), 'utf8')),
-    state: { placeTerms: [], audience: [] },
   };
   vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(path.join(root, 'assets/query-expand.js'), 'utf8'), ctx);
-  vm.runInContext(slice('const PLACE_MINOR', 'const searchInput'), ctx);
-  vm.runInContext(slice('const inNation =', 'function renderGrid'), ctx);
-  vm.runInContext(lines.slice(from, to).join('\n'), ctx);
-  return q => ({
-    result: vm.runInContext(`localSearch(${JSON.stringify(q)})`, ctx),
-    headline: vm.runInContext(`localHeadlineData(localSearch(${JSON.stringify(q)}))`, ctx),
-    banner: vm.runInContext(`buildHeadline(localHeadlineData(localSearch(${JSON.stringify(q)})))`, ctx),
-  });
+  vm.runInContext(fs.readFileSync(path.join(root, 'assets/search.js'), 'utf8'), ctx);
+  ctx.__places = JSON.parse(fs.readFileSync(path.join(root, 'data/uk-places.json'), 'utf8'));
+  vm.runInContext('Gazetteer.set(__places)', ctx);
+  const run = q => {
+    const result = ctx.localSearch(q);
+    const headline = ctx.localHeadlineData(result);
+    return { result, headline, banner: ctx.buildHeadline(headline) };
+  };
+  run.ctx = ctx;
+  return run;
 }
 
 if (typeof stageOneFilter !== 'function') {
@@ -190,8 +175,8 @@ const placeCases = [
   // Typed place names must still work, including when the place shares its
   // name with a garment. "partial" rather than "wider": Hiut Denim really is
   // in Cardigan, so the honest answer is "the one match there, then others".
-  { q: 'jumper in cardigan',  expectPlace: 'cardigan', expectQuality: 'partial' },
-  { q: 'wool jumper cornwall', expectPlace: 'cornwall' },
+  { q: 'jumper in cardigan',  expectPlace: 'Cardigan', expectQuality: 'partial' },
+  { q: 'wool jumper cornwall', expectPlace: 'Cornwall' },
 ];
 
 for (const c of placeCases) {
@@ -269,7 +254,9 @@ console.log('\nqualifiers boost, but never make a business eligible\n');
 console.log('\nspelling corrections are declared, not silent\n');
 
 const correctionCases = [
-  { q: 'darlington',      expect: ['darlington', 'dartington'], banner: /No results for <b>Darlington<\/b>.*Dartington/ },
+  // Darlington used to be "corrected" to Dartington, 350 miles away. It is
+  // now simply a place we know (see the gazetteer block below).
+  { q: 'darlington',      expect: null },
   { q: 'sheffild knives', expect: ['sheffild', 'sheffield'],    banner: /No results for <b>Sheffild<\/b>.*Sheffield/ },
   // Not corrections: exact hits, and the stemmer's own doubled-letter repairs
   // ("cornwal" reaches Cornwall by collapsing "ll", so it is the same word).
@@ -340,26 +327,23 @@ const businesses = JSON.parse(
   const everyScottishFarm = businesses
     .filter(b => b.category === 'farm' && b.nation === 'Scotland').length;
 
+  // A nation is a filter (22 Sep 2026): "scottish pork" shows Scottish pork
+  // and nothing else, rather than Scottish first and English after.
   const { result, headline, banner } = local('scottish pork');
-  const lead = result.matches.slice(0, result.inPlace);
-  const allScots = lead.length > 0 && lead.every(b => b.nation === 'Scotland');
-  const noneAfter = result.matches.slice(result.inPlace).every(b => b.nation !== 'Scotland');
-
+  const allScots = result.matches.length > 0 && result.matches.every(b => b.nation === 'Scotland');
   if (!allScots) failures++;
-  if (!noneAfter) failures++;
-  line(allScots, `"scottish pork" — first ${lead.length} are all in Scotland`);
-  line(noneAfter, '"scottish pork" — no Scottish farm left below the seam');
+  line(allScots, `"scottish pork" — all ${result.matches.length} results are in Scotland`);
 
-  const partial = headline.matchQuality === 'partial' && /in Scotland below, then others further afield/.test(banner);
-  if (!partial) failures++;
-  line(partial, `"scottish pork" — banner declares the boundary (${headline.matchQuality})`);
+  const exact = headline.matchQuality === 'exact' && /in Scotland/.test(banner) && !/further afield|nearest/.test(banner);
+  if (!exact) failures++;
+  line(exact, `"scottish pork" — banner reads "${banner}"`);
 
   line(true, `   for reference: ${everyScottishFarm} Scottish farm shops on the map`);
 }
 
 {
   const { result, headline } = local('welsh cheese');
-  const ok = result.inPlace > 0 && result.matches.slice(0, result.inPlace).every(b => b.nation === 'Wales');
+  const ok = result.matches.length > 0 && result.matches.every(b => b.nation === 'Wales');
   if (!ok) failures++;
   line(ok, `"welsh cheese" — ${result.inPlace} in Wales, all first (${headline.matchQuality})`);
 }
@@ -367,7 +351,7 @@ const businesses = JSON.parse(
 // The adjective must resolve to the nation's name, not be echoed raw.
 for (const [q, want] of [['scottish pork', 'Scotland'], ['welsh cheese', 'Wales'], ['northern irish beef', 'Northern Ireland']]) {
   const b = local(q).banner;
-  const ok = b.includes(`in ${want} below`) && !/Northern Northern/.test(b);
+  const ok = b.includes(`in ${want}`) && !/Northern Northern/.test(b);
   if (!ok) failures++;
   line(ok, `"${q}"`.padEnd(28) + `reads "in ${want}"` + (ok ? '' : ` — got: ${b}`));
 }
@@ -604,6 +588,113 @@ for (const id of ['gushlow-cole', 'frimble', 'findra-clothing']) {
   const ok = result.matches.length > 0 && !result.matches.some(b => excludes(b, 'women'));
   if (!ok) failures++;
   line(ok, `"womenswear"`.padEnd(22) + `${result.matches.length} results, all of them dressing women`);
+}
+
+// ---------------------------------------------------------------------------
+// PLACE FIRST (22 Sep 2026)
+//
+// A word that names a place is a place. A nation filters; anything smaller
+// goes first and everything else follows nearest first. The banner's count
+// and the grid's divider come from the same function.
+// ---------------------------------------------------------------------------
+console.log('\nplace first — the gazetteer, nations as filters, nearest first\n');
+{
+  const { ctx } = local;
+  const check = (label, ok, extra) => { if (!ok) failures++; line(ok, label + (ok || !extra ? '' : ` — ${extra}`)); };
+  const nondecreasing = (list, places) => {
+    const d = list.map(b => Math.min(...places.filter(p => !p.strict && p.distance).map(p => p.distance(b))));
+    return d.every((x, i) => i === 0 || x >= d[i - 1] - 1e-9);
+  };
+
+  // The two that were reported.
+  for (const [q, want] of [['wakefield cheese', 'Wakefield'], ['chelmsford pottery', 'Chelmsford'],
+                           ['basingstoke knitwear', 'Basingstoke'], ['cheese in wakefield', 'Wakefield']]) {
+    const { result, banner } = local(q);
+    const afield = result.matches.slice(result.inPlace);
+    check(`"${q}"`.padEnd(26) + `names ${want}, nearest first, no correction`,
+      result.places.some(p => p.label === want) && !(result.corrections || []).length
+        && banner.includes(want) && result.matches.length > 0 && nondecreasing(afield, result.places),
+      banner);
+  }
+
+  // Nations filter.
+  for (const [q, n] of [['english cheese', 'England'], ['cheese from england', 'England'],
+                        ['scottish knitwear', 'Scotland'], ['welsh pottery', 'Wales'],
+                        ['northern irish beef', 'Northern Ireland'], ['english', 'England']]) {
+    const { result } = local(q);
+    const strays = result.matches.filter(b => b.nation !== n);
+    check(`"${q}"`.padEnd(26) + `${result.matches.length} results, all in ${n}`,
+      result.matches.length > 0 && strays.length === 0, strays.slice(0, 3).map(b => b.name).join(', '));
+  }
+
+  // Adjectives and regions.
+  for (const [q, want] of [['cornish cheese', 'Cornwall'], ['lake district', 'the Lake District'],
+                           ['highlands knitwear', 'the Highlands'], ['cotswolds knitwear', 'the Cotswolds'],
+                           ['north wales farm shop', 'North Wales'], ['kentish apples', 'Kent'],
+                           ['caithness pottery', 'Caithness'], ['peak district cheese', 'the Peak District']]) {
+    const { result, banner } = local(q);
+    check(`"${q}"`.padEnd(26) + `reads as ${want}`, result.places.some(p => p.label === want) && banner.includes(want), banner);
+  }
+  {
+    const { result } = local('lake district');
+    const inPlace = result.matches.slice(0, result.inPlace);
+    check(`"lake district"`.padEnd(26) + `${inPlace.length} in place, all in Cumbria`,
+      inPlace.length > 0 && inPlace.every(b => /cumbria/i.test([b.county, b.address, b.town].join(' '))),
+      inPlace.map(b => b.name).join(', '));
+  }
+
+  // The banner's count is the divider's position, always.
+  for (const q of ['highlands knitwear', 'midlands pottery', 'shetland jumper', 'yorkshire cheese',
+                   'cotswolds knitwear', 'north wales farm shop', 'wakefield cheese', 'jumper in cardigan',
+                   'london leather', 'pottery stoke on trent']) {
+    const { result } = local(q);
+    const seam = ctx.arrangeByPlace(result.matches, result.places).near.length;
+    check(`"${q}"`.padEnd(26) + `banner count ${result.inPlace} = divider ${seam}`, seam === result.inPlace);
+  }
+
+  // A place mentioned in a description is not where the business is.
+  {
+    const { result } = local('shetland jumper');
+    const inPlace = result.matches.slice(0, result.inPlace);
+    check(`"shetland jumper"`.padEnd(26) + 'Charl Knitwear (Norfolk) is not counted as in Shetland',
+      !inPlace.some(b => b.id === 'charl-knitwear') && inPlace.every(b => b.nation === 'Scotland'),
+      inPlace.map(b => b.name).join(', '));
+  }
+
+  // Product words stay products; everyday-word places need a preposition.
+  for (const [q, place] of [['cheddar', null], ['chelsea boots', null], ['wool jumper', null], ['beer', null],
+                            ['cardigans', null], ['sale', null], ['oxford shoes', null],
+                            ['cheese near sale', 'Sale'], ['jumper in cardigan', 'Cardigan'], ['oxford cheese', 'Oxford']]) {
+    const { result } = local(q);
+    const got = result.places.map(p => p.label).join(',') || null;
+    check(`"${q}"`.padEnd(26) + `place ${got || 'none'}`, got === place, `wanted ${place || 'none'}`);
+  }
+  {
+    const { result } = local('chelsea boots');
+    const footwear = result.matches.filter(b => /boot|shoe|footwear/i.test([b.subcategory, b.description, (b.product_tags || []).join(' ')].join(' ')));
+    check(`"chelsea boots"`.padEnd(26) + `${footwear.length} of ${result.matches.length} results make footwear`,
+      result.matches.length > 0 && footwear.length === result.matches.length);
+  }
+
+  // Gifts are an intent, not a misspelling of a hat maker.
+  for (const q of ['christmas', 'christmas gifts', 'presents', 'birthday present for dad', 'gifts in york']) {
+    const { result, banner } = local(q);
+    const cats = new Set(result.matches.map(b => b.category));
+    check(`"${q}"`.padEnd(26) + `${result.matches.length} results across ${cats.size} trades, no correction`,
+      result.matches.length > 0 && !(result.corrections || []).length && cats.size >= 3 && /Gift ideas/i.test(banner), banner);
+  }
+
+  // A place on its own is a real search.
+  for (const q of ['wakefield', 'darlington', 'scotland', 'isle of skye']) {
+    const { result, banner } = local(q);
+    check(`"${q}"`.padEnd(26) + `${result.matches.length} results`, result.matches.length > 0 && result.places.length === 1, banner);
+  }
+
+  // A word we could not read is admitted.
+  {
+    const { banner } = local('wool zzqxv');
+    check(`"wool zzqxv"`.padEnd(26) + 'admits the word it did not recognise', /didn&rsquo;t recognise &ldquo;zzqxv/.test(banner), banner);
+  }
 }
 
 console.log('');

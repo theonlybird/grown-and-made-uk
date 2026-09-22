@@ -35,3 +35,6 @@ __pycache__/
 .note-review/
 .outreach/
 GOLD-FARM-DRINK-SWEEP.md
+
+# GeoNames download cache for scripts/build-places.py
+.geonames/
