@@ -44,7 +44,15 @@
  * shop the distinction does not arise: stocking cheese is exactly what makes
  * it the right answer to "where can I buy cheese".
  *
- * Usage:  node scripts/merge-product-index.js [--dry-run] [--groups food,drink]
+ * SHARED FEEDS ARE SKIPPED. Four potters are listed with a page on the
+ * Contemporary Ceramics Centre as their website, so the harvester read the
+ * gallery's whole shop four times over: every one of them came back with the
+ * same hundred products and the same tags. Those tags describe the gallery's
+ * stock, not the potter's work. Any feed that two or more listings share is
+ * therefore left alone, whoever the listings are.
+ *
+ * Usage:  node scripts/merge-product-index.js [--dry-run] [--groups=food,drink]
+ *                                             [--skip=id,id]
  */
 
 const fs = require('fs');
@@ -69,9 +77,22 @@ const indexPath = fs.existsSync(path.join(root, 'data/product-index.rescored.jso
   : path.join(root, 'data/product-index.json');
 
 const dryRun = process.argv.includes('--dry-run');
+const skipArg = (process.argv.find(a => a.startsWith('--skip=')) || '').split('=')[1];
+const SKIP = new Set((skipArg || '').split(',').map(s => s.trim()).filter(Boolean));
 
 const businesses = JSON.parse(fs.readFileSync(businessesPath, 'utf8'));
 const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+
+// A feed shared by several listings is a shop's, not any one maker's.
+const feedKey = e => JSON.stringify([e.productCount, e.observedTypes || [], e.sample || []]);
+const feedOwners = new Map();
+for (const biz of businesses) {
+  const e = index[biz.id];
+  if (!e || !Array.isArray(e.tags) || !e.tags.length) continue;
+  const k = feedKey(e);
+  feedOwners.set(k, (feedOwners.get(k) || []).concat(biz.id));
+}
+const sharedFeed = [];
 
 let added = 0, weakRejected = 0, gated = 0, touched = 0, outOfScope = 0;
 const evidenceRejected = [];
@@ -111,6 +132,9 @@ for (const biz of businesses) {
   const before = new Set(existing);
 
   if (!entry || !Array.isArray(entry.tags) || !entry.tags.length) continue;
+  if (SKIP.has(biz.id)) continue;
+  const owners = feedOwners.get(feedKey(entry));
+  if (owners.length > 1) { sharedFeed.push(`${biz.id} (shares a feed with ${owners.filter(o => o !== biz.id).join(', ')})`); continue; }
 
   const confidence = entry.tagConfidence || {};
   const counts = entry.tagCounts || {};
@@ -163,10 +187,12 @@ console.log(`weak, evidence no longer supports it: ${evidenceRejected.length} re
 evidenceRejected.forEach(r => console.log('    ' + r));
 console.log(`category-gated     : ${gated} rejected`);
 console.log(`out of scope group : ${outOfScope} skipped`);
+console.log(`shared feed        : ${sharedFeed.length} listings skipped`);
+sharedFeed.forEach(r => console.log('    ' + r));
+if (SKIP.size) console.log(`skipped by hand    : ${[...SKIP].join(', ')}`);
 
-const farmTouched = report.filter(r => r.includes('(farm)'));
-console.log(`\nfarm shops updated : ${farmTouched.length}`);
-farmTouched.slice(0, 10).forEach(r => console.log('  ' + r));
+console.log(`\nupdated:`);
+report.forEach(r => console.log('  ' + r));
 
 if (dryRun) {
   console.log('\n--dry-run: nothing written.');

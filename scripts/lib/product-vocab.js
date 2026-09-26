@@ -44,17 +44,20 @@ const GROUPS = {
   GARDEN: 'garden',
   FOOD: 'food',
   DRINK: 'drink',
+  PET: 'pet',
 };
 
 // Which groups are plausible for each business category on the map.
 // Deliberately tight. A clothing brand that also stocks someone else's watches
 // is not a watchmaker, and the map's claim is about what a business MAKES.
 const CATEGORY_ALLOWS = {
-  clothing: [GROUPS.CLOTHING, GROUPS.TEXTILES, GROUPS.ACCESSORIES, GROUPS.FOOTWEAR, GROUPS.BAGS],
-  ceramics: [GROUPS.CERAMICS, GROUPS.HOMEWARE, GROUPS.GARDEN],
+  // PET: a tweed maker's dog collar, a potter's dog bowl, a farm's dog food.
+  // All three trades really do make them; a jeweller's "dog tag" is a pendant.
+  clothing: [GROUPS.CLOTHING, GROUPS.TEXTILES, GROUPS.ACCESSORIES, GROUPS.FOOTWEAR, GROUPS.BAGS, GROUPS.PET],
+  ceramics: [GROUPS.CERAMICS, GROUPS.HOMEWARE, GROUPS.GARDEN, GROUPS.PET],
   jewellery: [GROUPS.JEWELLERY, GROUPS.WATCHES, GROUPS.SILVERWARE],
   cutlery: [GROUPS.CUTLERY, GROUPS.COOKWARE, GROUPS.HOMEWARE],
-  farm: [GROUPS.FOOD, GROUPS.DRINK],
+  farm: [GROUPS.FOOD, GROUPS.DRINK, GROUPS.PET],
 };
 
 // ---------------------------------------------------------------------------
@@ -113,6 +116,12 @@ const VOCAB = [
   ['cutlery & knives',      /\b(knife|knive|cutlery|blade|cleaver|fork|spoon|flatware|canteen of cutlery)s?\b/i, GROUPS.CUTLERY],
   ['cookware',              /\b(pan|skillet|casserole|stockpot|frying ?pan|wok)s?\b/i,  GROUPS.COOKWARE],
   ['boards & blocks',       /\b(chopping ?board|serving ?board|knife ?block)s?\b/i,     GROUPS.COOKWARE],
+
+  // --- pets ---
+  // Only a pet word followed by the thing itself. "Shaggy Dog" jumpers, "Dog &
+  // Spots" socks and "It's a Dog's Life" scarves are prints, not dog goods, and
+  // none of them puts one of these nouns straight after the pet word.
+  ['pet accessories',       /\b(dog|puppy|pet|cat)s?'?s? ?(bowl|bed|collar|lead|leash|coat|jumper|rug|blanket|bandana|bow ?tie|toy|treat|food|accessor(y|ie))s?\b/i, GROUPS.PET],
 
   // --- food & drink (farm only) ---
   ['drinks & spirits',      /\b(gin|whisky|whiskey|beer|ale|cider|wine|rum|vodka|liqueur)s?\b/i, GROUPS.DRINK],
@@ -246,7 +255,8 @@ function isTagAllowed(tag, category) {
 // NB: only the TAGGING rules matter here. QUERY_EXTRA below never touches a
 // stored tag, so adding search words to it does not invalidate the harvest.
 // v6: forks, spoons and flatware added to the cutlery entry.
-const VOCAB_VERSION = 6;
+// v7: pet accessories (dog bowls, beds, collars, leads, coats).
+const VOCAB_VERSION = 7;
 
 // ---------------------------------------------------------------------------
 // Query-side vocabulary.
@@ -306,6 +316,9 @@ const QUERY_EXTRA = [
   ['bags & leather goods', /\b(leather ?goods|leatherwork|saddler|tote)s?\b/i,                                                                      GROUPS.BAGS],
   ['jewellery',         /\b(engagement|wedding band|goldsmith|silversmith|jeweller)s?\b/i,                                                          GROUPS.JEWELLERY],
   ['pottery',           /\b(potter|kiln|thrown|wheel ?thrown|studio pottery)s?\b/i,                                                                 GROUPS.CERAMICS],
+  // "dog bowl" used to read as an unknown word plus bowls. The bare pet word
+  // is enough in a search box; "dog tooth" is a tweed check, not a dog.
+  ['pet accessories',   /\b(dog(?! ?tooth)|dogs|puppy|puppies|pet|pets|kennel|dog ?walking)s?\b/i,                                                 GROUPS.PET],
 ];
 
 // Which map categories a tag group can plausibly live in. The inverse of

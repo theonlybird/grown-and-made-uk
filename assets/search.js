@@ -368,6 +368,13 @@ const PRODUCT_PHRASES = {
   'double gloucester': 'cheese', 'bakewell tart': 'bread', 'bakewell tarts': 'bread',
   'eccles cake': 'bread', 'eccles cakes': 'bread', 'windsor chair': 'chairs',
 };
+// Dog goods. On its own the second word is something else (a shirt collar,
+// lead crystal, a bed), so the pair is read as one pet product rather than
+// admitted as a word we did not recognise.
+['bed', 'beds', 'collar', 'collars', 'lead', 'leads', 'leash', 'leashes', 'harness', 'harnesses',
+ 'toy', 'toys', 'treat', 'treats', 'food', 'bandana', 'blanket', 'blankets'].forEach(w => {
+  ['dog', 'dogs', 'puppy', 'pet'].forEach(p => { PRODUCT_PHRASES[p + ' ' + w] = 'dog'; });
+});
 
 /* --------------------------------------------------------------------------
    Word lists

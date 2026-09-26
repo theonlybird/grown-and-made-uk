@@ -727,6 +727,35 @@ console.log('\nplace first — the gazetteer, nations as filters, nearest first\
   }
 }
 
+// ---------------------------------------------------------------------------
+// Pets. "dog bowl" used to read as an unknown word plus bowls. The pet word
+// is now a product; the words that follow it ("collar", "bed", "lead") are
+// read as part of it; and prints, pendants and tweed checks that merely
+// contain the word "dog" are not dog goods.
+// ---------------------------------------------------------------------------
+console.log('\npets — a dog is a product, a dog print is not\n');
+{
+  const { mapToVocab } = require('./lib/product-vocab');
+  const check = (label, ok, extra) => { if (!ok) failures++; line(ok, label + (ok || !extra ? '' : ` — ${extra}`)); };
+  const tagging = [
+    ['Pet Bowl', true], ['Dog Collar', true], ['Dog Lead', true], ['Daltons Luxury Sheepskin Dog Bed Rugs', true],
+    ['Dog Jumper', true], ['Crafting Pet Rugs', true],
+    ['Navy Kelso "Shaggy Dog" Brushed Shetland Jumper', false], ['Womens Socks Dog & Spots - Lime Green', false],
+    ["It's a Dog's Life Hunter Green Silk Scarf", false], ['Dog Tag', false],
+  ];
+  for (const [title, want] of tagging) {
+    const got = mapToVocab(title).includes('pet accessories');
+    check(`${JSON.stringify(title)}`.slice(0, 50).padEnd(52) + (want ? 'is pet goods' : 'is not'), got === want);
+  }
+  for (const q of ['dog', 'dog bowl', 'dog collar', 'dog bed', 'puppy toys', 'pet food']) {
+    const { result } = local(q);
+    check(`"${q}"`.padEnd(26) + 'understood as pet goods, no unknown words',
+      !(result.unknown || []).length && expandQuery(q).tags.includes('pet accessories'), (result.unknown || []).join(','));
+  }
+  check(`"dogtooth jacket"`.padEnd(26) + 'is not a dog', !expandQuery('dogtooth jacket').tags.includes('pet accessories'));
+  check(`"dog tooth tweed"`.padEnd(26) + 'is not a dog', !expandQuery('dog tooth tweed').tags.includes('pet accessories'));
+}
+
 console.log('');
 if (failures) {
   console.log(`${failures} failing assertion(s)\n`);
