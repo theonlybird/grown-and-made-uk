@@ -569,7 +569,7 @@
     "description": "Devon-based network of small British family farms supplying grass-fed, traditionally reared meat direct to your door. Traded as Pipers Farm until its 2026 rebrand to Edenmoor.",
     "evidence_note": "Network of small British farms; grass-fed, native-breed meat. Rebranded from Pipers Farm to Edenmoor 2026 — sourcing model unchanged, tier unaffected (checked 13 Sep 2026). Drink range checked 15 Sep 2026 and British; Gold holds.",
     "tier_confidence": "high",
-    "logo": "",
+    "logo": "assets/logos/pipers-farm.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
       "fresh meat",
