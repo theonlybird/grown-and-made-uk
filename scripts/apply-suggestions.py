@@ -19,7 +19,8 @@ a listing needs is filled in.
 What stays manual, deliberately:
   tier            the whole point of gold-and-silver.html is that it is judged
   lat / lng       see the pin-precision rule; never pin a home address
-  evidence_note   the reasoning, in your words
+  evidence_note   the reasoning, in your words (moved to the private
+                  data/evidence-notes.json on merge, never published)
   description     one or two lines, in plain English
   subcategory     picked from what the category already uses
   town/county/nation  search keys, and town is never published
@@ -29,6 +30,9 @@ Logos, Shopify product harvesting and the public note draft are separate steps
 """
 import argparse, json, os, re, sys
 from datetime import date
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import evidence_notes
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data', 'businesses.json')
@@ -204,9 +208,15 @@ def cmd_merge(args):
         print('\nNothing complete enough to merge yet.')
         return
 
+    # The evidence note is filled in on the draft like everything else, but it
+    # is internal: it goes to data/evidence-notes.json, never onto the public
+    # record.
+    notes = evidence_notes.load(required=False)
     for rec in ready:
         clean = {k: v for k, v in rec.items() if not k.startswith('_')}
+        notes[clean['id']] = clean.pop('evidence_note', '')
         data.append(clean)
+    evidence_notes.save(notes)
     write_json(DATA, data)
     write_json(PENDING, [r for r in pending if r not in ready])
     print('\n%d record%s added to data/businesses.json — check the diff before committing'

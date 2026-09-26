@@ -774,6 +774,16 @@ console.log('\npets — a dog is a product, a dog print is not\n');
     gallery.every(id => !(B.find(b => b.id === id).product_tags || []).includes('vases')));
 }
 
+// businesses.json is served to anyone at /data/businesses.json. Internal
+// tier reasoning lives in data/evidence-notes.json (gitignored) instead.
+{
+  const published = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/businesses.json'), 'utf8'));
+  const leaked = published.filter(b => 'evidence_note' in b).length;
+  const ok = leaked === 0;
+  if (!ok) failures++;
+  console.log(`\n  ${ok ? 'ok  ' : 'FAIL'}  no internal evidence notes in the published listings${ok ? '' : ` — ${leaked} found`}`);
+}
+
 console.log('');
 if (failures) {
   console.log(`${failures} failing assertion(s)\n`);

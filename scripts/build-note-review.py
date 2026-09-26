@@ -20,6 +20,7 @@ import json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from note_draft import draft
+from evidence_notes import attach
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, '.note-review')
@@ -33,7 +34,8 @@ if os.path.exists(_rw):
     REWRITTEN = {x['id']: x for x in json.load(open(_rw))}
 
 rows = []
-for r in json.load(open(os.path.join(ROOT, 'data', 'businesses.json'))):
+# evidence_note lives in data/evidence-notes.json, off the public site.
+for r in attach(json.load(open(os.path.join(ROOT, 'data', 'businesses.json')))):
     d = draft(r)
     rw = REWRITTEN.get(r['id'])
     if rw:

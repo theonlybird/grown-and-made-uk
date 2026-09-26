@@ -41,3 +41,20 @@ GOLD-FARM-DRINK-SWEEP.md
 
 # regional gap searches — internal candidate lists
 GAP-SEARCH-*.md
+
+# retired files, kept locally for reference — delete the folder when happy
+_archive/
+
+# regenerated reports from the harvest scripts — internal
+data/audience-report.md
+data/product-index-rescore-report.md
+
+# draft public notes about named businesses, before Theo's review — internal
+data/public-note-drafts.json
+
+# internal tier reasoning, one note per business id — never publish.
+# Moved out of businesses.json on 26 Sep 2026 (the site serves that file).
+data/evidence-notes.json
+
+# drafts from apply-suggestions.py carry evidence notes and unpublished pins
+data/pending-additions.json

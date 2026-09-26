@@ -19,7 +19,7 @@ submit.html           Public "suggest a business" form
 data/businesses.json  The dataset — one record per listing
 ```
 
-No framework, no build step. Every record in `businesses.json` includes an `evidence_note` and `tier_confidence` so the tiering can be audited.
+No framework, no build step. Every record in `businesses.json` carries a `tier_confidence`; the evidence behind each tier is recorded separately and not published.
 
 ## Running locally
 
@@ -45,4 +45,4 @@ The submission form posts to Formspree.
 
 ## Suggesting a business
 
-Use the [form](https://grownandmade.uk/submit.html) — or open a PR against `data/businesses.json` including an `evidence_note` with a public source for the made-in-UK claim.
+Use the [form](https://grownandmade.uk/submit.html) — or open a PR against `data/businesses.json` and give a public source for the made-in-UK claim in the PR description.
