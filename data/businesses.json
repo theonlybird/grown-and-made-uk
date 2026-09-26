@@ -186,7 +186,8 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tweed & woven goods",
-      "bags & leather goods"
+      "bags & leather goods",
+      "pet accessories"
     ],
     "nation": "England",
     "audience": [
@@ -582,7 +583,8 @@
       "lamb",
       "pork & bacon",
       "poultry",
-      "preserves & honey"
+      "preserves & honey",
+      "pet accessories"
     ],
     "products_checked": "2026-08-01",
     "nation": "England",
@@ -1289,7 +1291,8 @@
     "logo": "assets/logos/ettinger.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "bags & leather goods"
+      "bags & leather goods",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "London",
@@ -1660,7 +1663,8 @@
     "logo": "assets/logos/melin-tregwynt.svg",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "tweed & woven goods"
+      "tweed & woven goods",
+      "pet accessories"
     ],
     "nation": "Wales",
     "county": "Pembrokeshire",
@@ -2116,7 +2120,8 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "bags & leather goods",
-      "workwear & aprons"
+      "workwear & aprons",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Norfolk",
@@ -2701,9 +2706,15 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "vases",
+      "candles & holders"
     ],
-    "nation": "England"
+    "nation": "England",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "denby-pottery",
@@ -2724,10 +2735,16 @@
     "logo": "assets/logos/denby-pottery.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases"
     ],
     "nation": "England",
-    "county": "Derbyshire"
+    "county": "Derbyshire",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "burleigh-pottery",
@@ -2748,9 +2765,14 @@
     "logo": "assets/logos/burleigh-pottery.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware"
     ],
-    "nation": "England"
+    "nation": "England",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "moorcroft",
@@ -2843,10 +2865,16 @@
     "logo": "assets/logos/highland-stoneware.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases"
     ],
     "nation": "Scotland",
-    "county": "Sutherland"
+    "county": "Sutherland",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "royal-crown-derby",
@@ -2868,9 +2896,13 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates"
     ],
-    "nation": "England"
+    "nation": "England",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "1882-ltd",
@@ -2891,9 +2923,15 @@
     "logo": "assets/logos/1882-ltd.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases"
     ],
-    "nation": "England"
+    "nation": "England",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "portmeirion",
@@ -2941,12 +2979,17 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Berkshire",
     "public_note": "Everything is made in the UK — in your Berkshire studio, working with craftsmen in Stoke. What we couldn't establish is where your black stoneware clay is dug or prepared. Gold needs the clay body itself to be British.",
-    "tier_question": "Where is your black stoneware clay dug or prepared?"
+    "tier_question": "Where is your black stoneware clay dug or prepared?",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "feldspar",
@@ -2967,10 +3010,16 @@
     "logo": "assets/logos/feldspar.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases"
     ],
     "nation": "England",
-    "county": "Devon"
+    "county": "Devon",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "rye-pottery",
@@ -2991,10 +3040,14 @@
     "logo": "assets/logos/rye-pottery.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "vases"
     ],
     "nation": "England",
-    "county": "East Sussex"
+    "county": "East Sussex",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "dunoon-ceramics",
@@ -3041,10 +3094,15 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "vases"
     ],
     "nation": "England",
-    "county": "London"
+    "county": "London",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "sue-pryke",
@@ -3066,10 +3124,14 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates"
     ],
     "nation": "England",
-    "county": "Leicestershire"
+    "county": "Leicestershire",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "brickett-davda",
@@ -3140,10 +3202,16 @@
     "logo": "assets/logos/edinbane-pottery.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases"
     ],
     "nation": "Scotland",
-    "county": "Isle of Skye"
+    "county": "Isle of Skye",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "sytch-farm-studios",
@@ -3260,9 +3328,12 @@
     "logo": "assets/logos/matthew-blakely.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs"
     ],
-    "nation": "England"
+    "nation": "England",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "fitch-and-mcandrew",
@@ -3283,10 +3354,16 @@
     "logo": "assets/logos/fitch-and-mcandrew.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "plates",
+      "tableware",
+      "vases",
+      "candles & holders"
     ],
     "nation": "Scotland",
-    "county": "Dumfries & Galloway"
+    "county": "Dumfries & Galloway",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "bridge-pottery",
@@ -3378,10 +3455,14 @@
     "logo": "assets/logos/sasha-wardell.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "tableware",
+      "vases"
     ],
     "nation": "England",
-    "county": "Wiltshire"
+    "county": "Wiltshire",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "jane-hamlyn",
@@ -3500,10 +3581,16 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "flowerpots",
+      "mugs",
+      "plates",
+      "vases"
     ],
     "nation": "England",
-    "county": "Devon"
+    "county": "Devon",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "chris-keenan",
@@ -3600,11 +3687,16 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "vases"
     ],
     "nation": "Wales",
     "county": "Carmarthenshire",
-    "logo_bg": "dark"
+    "logo_bg": "dark",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "jack-doherty",
@@ -3674,10 +3766,15 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "vases"
     ],
     "nation": "England",
-    "county": "Devon"
+    "county": "Devon",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "katharina-klug",
@@ -3722,9 +3819,13 @@
     "source": "verified-batch-2026-07",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates"
     ],
-    "nation": "England"
+    "nation": "England",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "cornishware-tg-green",
@@ -3793,10 +3894,15 @@
     "logo": "assets/logos/errington-reay.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "flowerpots",
+      "plates",
+      "vases"
     ],
     "nation": "England",
-    "county": "Northumberland"
+    "county": "Northumberland",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "anta",
@@ -3819,10 +3925,16 @@
     "product_tags": [
       "tableware",
       "pottery",
-      "tweed & woven goods"
+      "tweed & woven goods",
+      "bowls",
+      "mugs",
+      "plates",
+      "vases",
+      "pet accessories"
     ],
     "nation": "Scotland",
-    "county": "Ross-shire"
+    "county": "Ross-shire",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "crail-pottery",
@@ -6385,7 +6497,8 @@
     "source": "unrecorded — verify before relying on",
     "product_tags": [
       "tweed & woven goods",
-      "suits & trousers"
+      "suits & trousers",
+      "pet accessories"
     ],
     "nation": "Scotland",
     "county": "Edinburgh"
@@ -6950,7 +7063,8 @@
     "logo": "assets/logos/john-partridge.png",
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
-      "coats & jackets"
+      "coats & jackets",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "West Midlands",
@@ -7345,7 +7459,8 @@
     "logo": "assets/logos/sheepland.png",
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
-      "footwear & boots"
+      "footwear & boots",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Somerset",
@@ -8218,7 +8333,8 @@
     "logo": "assets/logos/waring-brooke.png",
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
-      "knitwear"
+      "knitwear",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Nottinghamshire",
@@ -8796,7 +8912,8 @@
     "logo": "assets/logos/mackenzie-and-george.png",
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
-      "bags & leather goods"
+      "bags & leather goods",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Shropshire",
@@ -9270,7 +9387,8 @@
     "logo": "assets/logos/cara-and-the-sky.png",
     "source": "unrecorded — verify before relying on",
     "product_tags": [
-      "knitwear"
+      "knitwear",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "London",
@@ -9855,7 +9973,8 @@
     "logo": "assets/logos/orraman-leather.png",
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
-      "bags & leather goods"
+      "bags & leather goods",
+      "pet accessories"
     ],
     "nation": "Scotland",
     "county": "Argyll and Bute"
@@ -10197,7 +10316,8 @@
     "logo": "assets/logos/daltons-england.png",
     "source": "unrecorded — verify before relying on",
     "product_tags": [
-      "bags & leather goods"
+      "bags & leather goods",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Somerset",
@@ -10252,7 +10372,8 @@
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
       "vests & waistcoats",
-      "coats & jackets"
+      "coats & jackets",
+      "pet accessories"
     ],
     "nation": "England",
     "county": "Leicestershire",
@@ -11552,10 +11673,18 @@
     "logo": "assets/logos/wemyss-ware.png",
     "source": "unrecorded — verify before relying on",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "flowerpots",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases",
+      "candles & holders"
     ],
     "nation": "Scotland",
-    "county": "Fife"
+    "county": "Fife",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "tain-pottery",
@@ -11648,10 +11777,16 @@
     "logo": "assets/logos/glosters-pottery.png",
     "source": "unrecorded — verify before relying on",
     "product_tags": [
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates",
+      "tableware",
+      "vases"
     ],
     "nation": "Wales",
-    "county": "Gwynedd"
+    "county": "Gwynedd",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "winchcombe-pottery",
@@ -11697,10 +11832,14 @@
     "source": "unrecorded — verify before relying on",
     "product_tags": [
       "tableware",
-      "pottery"
+      "pottery",
+      "bowls",
+      "mugs",
+      "plates"
     ],
     "nation": "England",
-    "county": "Surrey"
+    "county": "Surrey",
+    "products_checked": "2026-08-01"
   },
   {
     "id": "pottery-west",
@@ -12452,7 +12591,8 @@
     "source": "unrecorded — verify before relying on",
     "product_tags": [
       "tableware",
-      "cutlery & knives"
+      "cutlery & knives",
+      "candles & holders"
     ],
     "nation": "Wales",
     "county": "Gwynedd"
@@ -12665,10 +12805,12 @@
       "tableware",
       "bowls",
       "plates",
-      "mugs"
+      "mugs",
+      "vases"
     ],
     "nation": "England",
-    "county": "Wiltshire"
+    "county": "Wiltshire",
+    "products_checked": "2026-09-17"
   },
   {
     "id": "charlotte-berry-jewellery",
@@ -12763,10 +12905,14 @@
     "product_tags": [
       "pottery",
       "tableware",
-      "mugs"
+      "mugs",
+      "plates",
+      "vases",
+      "candles & holders"
     ],
     "nation": "England",
-    "county": "Norfolk"
+    "county": "Norfolk",
+    "products_checked": "2026-09-17"
   },
   {
     "id": "emma-lacey",

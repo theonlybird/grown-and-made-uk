@@ -754,6 +754,24 @@ console.log('\npets — a dog is a product, a dog print is not\n');
   }
   check(`"dogtooth jacket"`.padEnd(26) + 'is not a dog', !expandQuery('dogtooth jacket').tags.includes('pet accessories'));
   check(`"dog tooth tweed"`.padEnd(26) + 'is not a dog', !expandQuery('dog tooth tweed').tags.includes('pet accessories'));
+
+  // The reviewed lists applied on 26 Sep 2026. Emma Alington makes the one
+  // actual dog bowl; resellers of other brands' pet goods were held back.
+  const ids = q => local(q).result.matches.map(b => b.id);
+  const dogBowl = ids('dog bowl');
+  check(`"dog bowl"`.padEnd(26) + 'Emma Alington in the top two', dogBowl.slice(0, 2).includes('emma-alington'), dogBowl.slice(0, 4).join(','));
+  const collar = ids('dog collar');
+  check(`"dog collar"`.padEnd(26) + `${collar.length} makers, no resellers`,
+    collar.includes('chapman-bags') && !collar.some(id => ['campbells-of-beauly', 'rhug-estate', 'palava'].includes(id)));
+  for (const [q, min] of [['bowls', 25], ['mugs', 25], ['vases', 15]]) {
+    const n = ids(q).length;
+    check(`"${q}"`.padEnd(26) + `${n} potteries (the shops' own categories)`, n >= min);
+  }
+  // A gallery's shop is not the potter's: shared feeds were not merged.
+  const B = local.ctx.BUSINESSES;
+  const gallery = ['jim-malone', 'jane-hamlyn', 'walter-keeler', 'brookhouse-pottery'];
+  check('gallery-linked potters'.padEnd(26) + 'kept their hand tags only',
+    gallery.every(id => !(B.find(b => b.id === id).product_tags || []).includes('vases')));
 }
 
 console.log('');
