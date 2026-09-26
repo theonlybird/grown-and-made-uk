@@ -82,6 +82,8 @@
   .header-actions{display:flex;align-items:center;gap:10px}
   .btn-view-toggle{background:var(--navy);color:#fff;border:none;padding:9px 14px;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s}
   .btn-view-toggle:hover{filter:brightness(1.1)}
+  .btn-view-toggle .icon{display:inline-flex}
+  .btn-view-toggle .icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
   #burger{width:42px;height:42px;border:1px solid var(--line);border-radius:9px;background:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
   #burger:hover{border-color:var(--navy)}
@@ -685,8 +687,9 @@
   <div class="bar-top">
     <a href="index.html" class="brand-logo">Grown and Made UK</a>
     <div class="header-actions">
-      <button id="viewToggleBtn" class="btn-view-toggle"><span class="icon">🗺️</span><span class="label">Show on Map</span></button>
-      <!-- ▦ / 🗺️ rather than ☰, so this never reads as a second burger menu -->
+      <button id="viewToggleBtn" class="btn-view-toggle"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M15.9 8.1l-2.3 5.5-5.5 2.3 2.3-5.5z"/><path d="M12 2.8v1.6M12 19.6v1.6M2.8 12h1.6M19.6 12h1.6"/></svg></span><span class="label">Show on Map</span></button>
+      <!-- Compass / grid rather than ☰, so this never reads as a second burger
+           menu. Both are line icons drawn in currentColor, so they match. -->
       <button id="burger" aria-label="Menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
@@ -1206,8 +1209,13 @@ viewToggleBtn.addEventListener('click', () => {
   toggleView(next);
 });
 
+// The view button's two icons: white line drawings in the button's own text
+// colour. (The map one used to be the 🗺️ emoji, which came in full colour
+// and never sat with the rest of the site.)
+const ICON_GRID = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17"/></svg>';
+const ICON_COMPASS = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M15.9 8.1l-2.3 5.5-5.5 2.3 2.3-5.5z"/><path d="M12 2.8v1.6M12 19.6v1.6M2.8 12h1.6M19.6 12h1.6"/></svg>';
 function setViewToggleLabel(icon, label, title) {
-  viewToggleBtn.querySelector('.icon').textContent = icon;
+  viewToggleBtn.querySelector('.icon').innerHTML = icon;
   viewToggleBtn.querySelector('.label').textContent = label;
   viewToggleBtn.setAttribute('aria-label', title);
   viewToggleBtn.title = title;
@@ -1218,12 +1226,12 @@ function toggleView(view) {
   if (view === 'grid') {
     splitView.style.display = 'none';
     gridView.style.display = 'block';
-    setViewToggleLabel('🗺️', 'Show on Map', 'Show on map');
+    setViewToggleLabel(ICON_COMPASS, 'Show on Map', 'Show on map');
     renderGrid();
   } else {
     gridView.style.display = 'none';
     splitView.style.display = isMobile() ? 'block' : 'flex';
-    setViewToggleLabel('▦', 'Grid View', 'Show as a list of cards');
+    setViewToggleLabel(ICON_GRID, 'Grid View', 'Show as a list of cards');
     // The map was display:none until a moment ago, so Leaflet's cached size is
     // stale. Re-measure after the browser has laid the pane out.
     map.invalidateSize();
@@ -1263,9 +1271,10 @@ function visible(){
     const ranked = byAudience(near, rankBy).concat(nearest ? afield : byAudience(afield, rankBy));
     return nearMeSorting() ? byDistanceFromYou(ranked) : ranked;
   }
-  // Typing, before Enter: a quick literal filter so the list follows the
-  // keyboard. Enter runs the full search.
-  const q = state.q;
+  // Typing, before Enter, in the GRID: a quick literal filter so the cards
+  // follow the keyboard. The map never filters as you type -- pins vanishing
+  // under the cursor was disconcerting (26 Sep 2026) -- it waits for Enter.
+  const q = typedQuery();
   const list = BUSINESSES.filter(b => passesChips(b) && (q === '' || typedMatch(b, q)));
   return state.nearMe ? byDistanceFromYou(list) : list;
 }
@@ -1273,6 +1282,9 @@ function visible(){
 /* --- Near me: distance from the visitor ----------------------------------
    Only ever computed here, in the browser. The position is not sent to the
    search API, to Analytics or anywhere else, and it is not stored. */
+// The as-you-type filter, which only the grid honours.
+function typedQuery(){ return state.currentView === 'grid' ? state.q : ''; }
+
 function milesFromYou(b){
   if (!state.nearMe || typeof b.lat !== 'number') return null;
   return kmBetween(b.lat, b.lng, state.nearMe.lat, state.nearMe.lng) / 1.609;
@@ -1471,11 +1483,19 @@ gridCards.addEventListener('click', e => {
 // one, so the old results give way to the live filter straight away.
 let typingTimer = null;
 function applyTyped(val){
-  // Typing over a search (finished or still waiting on the AI) starts afresh.
-  if (state.aiActive || state.refining || state.notice) { cancelSearch(); clearSearchState(); }
+  const searching = state.aiActive || state.refining || state.notice;
+  if (state.currentView !== 'grid') {
+    // The map: nothing moves while typing. Enter runs the search and opens
+    // the grid, as it always did. Emptying the box still clears a search.
+    state.q = '';
+    if (val.length < 2 && searching) { cancelSearch(); clearSearchState(); renderMapList(); }
+    return;
+  }
+  // The grid: typing over a search (finished or still waiting on the AI)
+  // starts afresh, and the cards follow the keyboard.
+  if (searching) { cancelSearch(); clearSearchState(); }
   state.q = val.length >= 2 ? val : '';
-  renderMapList();
-  if (state.currentView === 'grid') renderGrid();
+  renderGrid();
 }
 searchInput.addEventListener('input', e => {
   const val = e.target.value.trim().toLowerCase();
@@ -1952,13 +1972,13 @@ function syncChips(){
   let relevantTiers = null;
   let relevantAvail = null;
 
-  const searchIsActive = Boolean(state.q.trim() || state.aiActive);
+  const searchIsActive = Boolean(typedQuery().trim() || state.aiActive);
   if (searchIsActive) {
     let pool = [];
     if (state.aiActive) {
       pool = BUSINESSES.filter(b => state.aiMatches.has(b.id));
     } else {
-      pool = BUSINESSES.filter(b => typedMatch(b, state.q));
+      pool = BUSINESSES.filter(b => typedMatch(b, typedQuery()));
     }
     relevantCats = new Set(pool.map(b => b.category));
     relevantTiers = new Set(pool.map(b => b.tier));
