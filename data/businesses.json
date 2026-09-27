@@ -10640,16 +10640,16 @@
     "subcategory": "Farm shop & Butchery",
     "tier": "silver",
     "listing_type": "both",
-    "town": "Forfar, Angus",
-    "address": "Newton of Boysack, Inverkeilor, Arbroath",
-    "lat": 56.60376,
-    "lng": -2.6094,
+    "town": "Newton St Loe, Bath",
+    "address": "Newton Farm, Newton St Loe, Bath, BA2 9BT",
+    "lat": 51.38096,
+    "lng": -2.42669,
     "website": "https://newtonfarmfoods.co.uk",
     "instagram": "https://www.instagram.com/newtonfarmshopandcafe/",
-    "description": "Angus farm shop producing own home-reared beef, lamb and pork on their family farm.",
+    "description": "Farm shop, butchery and café at Newton St Loe near Bath, on the Duchy of Cornwall estate, selling beef, lamb, pork and free-range chicken reared on their own pasture.",
     "tier_confidence": "medium",
     "logo": "assets/logos/newton-farm-foods.png",
-    "source": "unrecorded — verify before relying on",
+    "source": "verified-2026-09",
     "product_tags": [
       "beef",
       "lamb",
@@ -10666,8 +10666,8 @@
       "preserves & honey"
     ],
     "products_checked": "2026-08-01",
-    "nation": "Scotland",
-    "county": "Angus"
+    "nation": "England",
+    "county": "Somerset"
   },
   {
     "id": "mains-of-glassaugh",
