@@ -4373,34 +4373,6 @@
     "audience_confidence": "medium"
   },
   {
-    "id": "troy-london",
-    "name": "Troy London",
-    "category": "clothing",
-    "subcategory": "Outerwear",
-    "tier": "gold",
-    "listing_type": "online_only",
-    "town": "Norfolk",
-    "address": "London",
-    "lat": 52.56947,
-    "lng": 0.66122,
-    "website": "https://www.troylondon.com",
-    "instagram": "https://www.instagram.com/troylondonuk/",
-    "description": "Wax jackets and country staples for town and field, made in the UK.",
-    "tier_confidence": "medium",
-    "logo": "assets/logos/troy-london.png",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "coats & jackets"
-    ],
-    "nation": "England",
-    "county": "London",
-    "audience": [
-      "men",
-      "women"
-    ],
-    "audience_confidence": "strong"
-  },
-  {
     "id": "mcnair-shirts",
     "name": "McNair Shirts",
     "category": "clothing",

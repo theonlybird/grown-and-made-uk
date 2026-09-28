@@ -2520,53 +2520,6 @@
    "children": 0
   }
  },
- "troy-london": {
-  "id": "troy-london",
-  "name": "Troy London",
-  "platform": "shopify",
-  "items": 8,
-  "checked": "2026-09-03",
-  "collections": 26,
-  "evidence": {
-   "men": {
-    "strong": 4,
-    "medium": 0,
-    "weak": 7,
-    "quotes": [
-     "Men's Collection mens-collection (mens)",
-     "Men's Gilets mens-gilets (mens)",
-     "Men's Jackets and Coats mens-jackets-and-coats (mens)",
-     "The Men's Wax Jackets new-mens-wax-jacket (mens)"
-    ]
-   },
-   "women": {
-    "strong": 1,
-    "medium": 1,
-    "weak": 0,
-    "quotes": [
-     "Shirts, Blouses & Jumpers shirts-blouses-jumpers (blouses)",
-     "The Women's Collection all-products (womens)"
-    ]
-   },
-   "children": {
-    "strong": 0,
-    "medium": 0,
-    "weak": 0,
-    "quotes": []
-   }
-  },
-  "audience": [
-   "men",
-   "women"
-  ],
-  "confidence": "strong",
-  "basis": "shop navigation or listing text",
-  "scores": {
-   "men": 31,
-   "women": 9,
-   "children": 0
-  }
- },
  "farfield-clothing": {
   "id": "farfield-clothing",
   "name": "Farfield Clothing",

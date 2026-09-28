@@ -9729,47 +9729,6 @@
   "rescored": false,
   "alreadyGated": true
  },
- "troy-london": {
-  "id": "troy-london",
-  "shopify": true,
-  "platform": "shopify",
-  "vocabVersion": 3,
-  "productCount": 8,
-  "tags": [
-   "coats & jackets",
-   "vests & waistcoats"
-  ],
-  "tagConfidence": {
-   "coats & jackets": "strong",
-   "vests & waistcoats": "strong"
-  },
-  "tagCounts": {
-   "coats & jackets": 10,
-   "vests & waistcoats": 6
-  },
-  "tagEvidence": {
-   "coats & jackets": "Jacket",
-   "vests & waistcoats": "Gilet"
-  },
-  "gatedOut": [],
-  "observedTypes": [
-   "Gilet",
-   "Jacket"
-  ],
-  "sample": [
-   "Men's Wax Jacket in Camo",
-   "Men's Suede Gilet in Chocolate",
-   "Men's Suede Gilet in Navy",
-   "Men's Suede Gilet in Tan",
-   "Men's Wax Jacket in Navy",
-   "Men's Wax Jacket in Khaki",
-   "Men's Wax Jacket in Military Green",
-   "Wax Parka in Camo"
-  ],
-  "checked": "2026-08-01",
-  "rescored": false,
-  "alreadyGated": true
- },
  "mcnair-shirts": {
   "id": "mcnair-shirts",
   "shopify": false,
