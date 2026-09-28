@@ -12527,10 +12527,14 @@
     "logo": "assets/logos/the-garlic-farm.png",
     "source": "user-suggestion-verified-2026-09",
     "product_tags": [
-      "fruit & veg"
+      "fruit & veg",
+      "dairy & cheese",
+      "drinks & spirits",
+      "preserves & honey"
     ],
     "nation": "England",
-    "county": "Isle of Wight"
+    "county": "Isle of Wight",
+    "products_checked": "2026-09-17"
   },
   {
     "id": "redhill-farm",
@@ -12614,10 +12618,16 @@
       "pork & bacon",
       "fruit & veg",
       "bread & bakery",
-      "farm shop & deli"
+      "farm shop & deli",
+      "beef",
+      "game & venison",
+      "lamb",
+      "poultry",
+      "preserves & honey"
     ],
     "nation": "England",
-    "county": "Lincolnshire"
+    "county": "Lincolnshire",
+    "products_checked": "2026-09-28"
   },
   {
     "id": "sunnyside-up",
@@ -12669,10 +12679,15 @@
       "lamb",
       "poultry",
       "dairy & cheese",
-      "bread & bakery"
+      "bread & bakery",
+      "drinks & spirits",
+      "fruit & veg",
+      "game & venison",
+      "preserves & honey"
     ],
     "nation": "England",
-    "county": "Lincolnshire"
+    "county": "Lincolnshire",
+    "products_checked": "2026-09-28"
   },
   {
     "id": "minting-park-farm",
@@ -12753,10 +12768,13 @@
       "pork & bacon",
       "dairy & cheese",
       "bread & bakery",
-      "drinks & spirits"
+      "drinks & spirits",
+      "poultry",
+      "preserves & honey"
     ],
     "nation": "England",
-    "county": "Leicestershire"
+    "county": "Leicestershire",
+    "products_checked": "2026-09-28"
   },
   {
     "id": "loom-and-yarn",
@@ -13024,10 +13042,12 @@
       "eggs",
       "fruit & veg",
       "bread & bakery",
-      "preserves & honey"
+      "preserves & honey",
+      "pork & bacon"
     ],
     "nation": "Northern Ireland",
-    "county": "Co. Londonderry"
+    "county": "Co. Londonderry",
+    "products_checked": "2026-09-28"
   },
   {
     "id": "the-croft-farm-shop",
@@ -13656,10 +13676,13 @@
       "lamb",
       "pork & bacon",
       "game & venison",
-      "poultry"
+      "poultry",
+      "fruit & veg",
+      "preserves & honey"
     ],
     "nation": "Scotland",
-    "county": "Moray"
+    "county": "Moray",
+    "products_checked": "2026-09-28"
   },
   {
     "id": "megan-falconer",
@@ -13684,5 +13707,269 @@
     ],
     "nation": "Scotland",
     "county": "Aberdeen"
+  },
+  {
+    "id": "wythenshawe-community-farm",
+    "name": "Wythenshawe Community Farm & Shop",
+    "category": "farm",
+    "subcategory": "Farm shop & Butchery",
+    "tier": "gold",
+    "listing_type": "shop",
+    "town": "Wythenshawe, Manchester",
+    "address": "Wythenshawe Park, Wythenshawe Road, Manchester M23 0AB",
+    "lat": 53.40393,
+    "lng": -2.28331,
+    "website": "https://wythenshawecommunityfarm.org.uk",
+    "instagram": "",
+    "logo": "",
+    "description": "Charity-run working farm in Wythenshawe Park, with a farm shop selling its own Hereford beef, lamb and pork alongside vegetables and produce from growers within 50 miles.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "fresh meat",
+      "beef",
+      "lamb",
+      "pork & bacon",
+      "eggs",
+      "fruit & veg",
+      "dairy & cheese",
+      "preserves & honey"
+    ],
+    "nation": "England",
+    "county": "Greater Manchester"
+  },
+  {
+    "id": "little-heath-farm",
+    "name": "Little Heath Farm Shop",
+    "category": "farm",
+    "subcategory": "Farm shop & Butchery",
+    "tier": "gold",
+    "listing_type": "shop",
+    "town": "Dunham Massey, Altrincham",
+    "address": "Cow Lane, Dunham Massey, Altrincham WA14 4SE",
+    "lat": 53.38863,
+    "lng": -2.39185,
+    "website": "https://www.littleheathfarmshop.co.uk",
+    "instagram": "",
+    "logo": "assets/logos/little-heath-farm.png",
+    "description": "Family farm at Dunham Massey selling its own grass-fed beef and lamb and free-range pork raised on home-grown barley, wheat and beans, all traceable back to the farm.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "fresh meat",
+      "beef",
+      "lamb",
+      "pork & bacon"
+    ],
+    "nation": "England",
+    "county": "Greater Manchester"
+  },
+  {
+    "id": "rawhide-custom",
+    "name": "Rawhide Custom",
+    "category": "clothing",
+    "subcategory": "Leather goods",
+    "tier": "gold",
+    "listing_type": "online_only",
+    "town": "Liverpool",
+    "address": "34 Regent Street, Liverpool L3 7BN",
+    "lat": 53.41814,
+    "lng": -2.99761,
+    "website": "https://www.rawhidecustom.co.uk",
+    "instagram": "https://www.instagram.com/rawhide_custom/",
+    "logo": "assets/logos/rawhide-custom.png",
+    "description": "One-man leather workshop in Liverpool’s North Docks hand-stitching wallets, belts, purses and card holders from British vegetable-tanned leather, with no sewing machines.",
+    "tier_confidence": "high",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "bags & leather goods",
+      "braces & belts"
+    ],
+    "nation": "England",
+    "county": "Merseyside"
+  },
+  {
+    "id": "falshaws-farm-shop",
+    "name": "Falshaw's Farm Shop",
+    "category": "farm",
+    "subcategory": "Farm shop & Butchery",
+    "tier": "silver",
+    "listing_type": "shop",
+    "town": "Bury, Greater Manchester",
+    "address": "Nabbs Farm, Rowlands Road, Bury BL9 5LJ",
+    "lat": 53.62602,
+    "lng": -2.29974,
+    "website": "https://www.falshawsfarmshop.co.uk",
+    "instagram": "",
+    "logo": "",
+    "description": "Five-generation family farm in Bury making ice cream from its own cows’ milk, with its own beef and lamb on the butcher’s counter and a café.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "fresh meat",
+      "beef",
+      "lamb",
+      "dairy & cheese",
+      "eggs",
+      "preserves & honey",
+      "fruit & veg"
+    ],
+    "nation": "England",
+    "county": "Greater Manchester"
+  },
+  {
+    "id": "wawwa",
+    "name": "WAWWA",
+    "category": "clothing",
+    "subcategory": "Everyday wear",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Ancoats, Manchester",
+    "address": "Phoenix Mill, 20 Piercy Street, Manchester M4 7HY",
+    "lat": 53.48354,
+    "lng": -2.21711,
+    "website": "https://wawwaclothing.com",
+    "instagram": "https://www.instagram.com/wawwaclothing/",
+    "logo": "assets/logos/wawwa.png",
+    "description": "Sustainable clothing made in their own factory in an old Ancoats cotton mill, from T-shirts and hoodies to shirts, outerwear and bags, by garment workers paid the real living wage.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "everyday wear",
+      "coats & jackets",
+      "shirts",
+      "bags & leather goods",
+      "hats & caps"
+    ],
+    "nation": "England",
+    "county": "Greater Manchester"
+  },
+  {
+    "id": "seven-limes-pottery",
+    "name": "Seven Limes Pottery",
+    "category": "ceramics",
+    "subcategory": "Studio pottery",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Manchester",
+    "address": "85 North Western Street, Manchester M12 6DY",
+    "lat": 53.4743,
+    "lng": -2.21938,
+    "website": "https://7limes.co.uk",
+    "instagram": "",
+    "logo": "assets/logos/seven-limes-pottery.png",
+    "description": "Manchester pottery wheel-throwing tableware for Michelin-starred restaurants, cafés and the public for over 25 years, with pottery classes alongside.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "pottery",
+      "tableware",
+      "plates",
+      "bowls",
+      "mugs"
+    ],
+    "nation": "England",
+    "county": "Greater Manchester"
+  },
+  {
+    "id": "rmo-studio",
+    "name": "RMo Studio",
+    "category": "ceramics",
+    "subcategory": "Studio pottery",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Wavertree, Liverpool",
+    "address": "Wavertree, Liverpool L15 4JH",
+    "lat": 53.39905,
+    "lng": -2.92557,
+    "website": "https://www.rmostudio.com",
+    "instagram": "",
+    "logo": "assets/logos/rmo-studio.png",
+    "description": "Robynne Morris’s small-batch stoneware, made by hand in her Wavertree studio and stocked by Tate Liverpool, with pottery lessons and courses too.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "pottery",
+      "mugs",
+      "bowls",
+      "tableware"
+    ],
+    "nation": "England",
+    "county": "Merseyside"
+  },
+  {
+    "id": "noctua-jewellery",
+    "name": "Noctua Jewellery & Workshops",
+    "category": "jewellery",
+    "subcategory": "Jewellery",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Liverpool",
+    "address": "Make Liverpool, 34 Regent Street, Liverpool L3 7BN",
+    "lat": 53.41814,
+    "lng": -2.99761,
+    "website": "https://noctua.co.uk",
+    "instagram": "",
+    "logo": "",
+    "description": "Silversmithing studio in Liverpool’s North Docks where Britt and Andrew make jewellery and teach it, from one-day ring workshops to wedding-ring days for couples and bench hire.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "jewellery"
+    ],
+    "nation": "England",
+    "county": "Merseyside"
+  },
+  {
+    "id": "lwsilver",
+    "name": "LWSilver",
+    "category": "jewellery",
+    "subcategory": "Jewellery",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Wirral",
+    "address": "Wirral, Merseyside",
+    "lat": 53.37,
+    "lng": -3.08,
+    "website": "https://lwsilver.com",
+    "instagram": "",
+    "logo": "assets/logos/lwsilver.png",
+    "description": "Lisa’s handcrafted silver jewellery, made in her Wirral workshop since 2005 to be worn, loved and last a lifetime.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "jewellery"
+    ],
+    "nation": "England",
+    "county": "Merseyside"
+  },
+  {
+    "id": "claremont-farm",
+    "name": "Claremont Farm",
+    "category": "farm",
+    "subcategory": "Farm shop & PYO",
+    "tier": "silver",
+    "listing_type": "shop",
+    "town": "Bebington, Wirral",
+    "address": "Old Clatterbridge Road, Bebington CH63 4JB",
+    "lat": 53.33735,
+    "lng": -3.01307,
+    "website": "https://claremontfarm.co.uk",
+    "instagram": "",
+    "logo": "assets/logos/claremont-farm.png",
+    "description": "Wirral farm famous for its homegrown asparagus and strawberries, with pick-your-own, a café, a cookery school and a farm shop stocked by more than 50 local suppliers.",
+    "tier_confidence": "high",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "fruit & veg",
+      "fresh meat",
+      "dairy & cheese",
+      "bread & bakery",
+      "preserves & honey",
+      "drinks & spirits",
+      "farm shop & deli"
+    ],
+    "nation": "England",
+    "county": "Merseyside"
   }
 ]

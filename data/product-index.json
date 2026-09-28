@@ -27738,5 +27738,254 @@
    "Pearl Drop Hoops (mini)"
   ],
   "checked": "2026-09-28"
+ },
+ "wythenshawe-community-farm": {
+  "id": "wythenshawe-community-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28"
+ },
+ "little-heath-farm": {
+  "id": "little-heath-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28"
+ },
+ "rawhide-custom": {
+  "id": "rawhide-custom",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28"
+ },
+ "falshaws-farm-shop": {
+  "id": "falshaws-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28"
+ },
+ "wawwa": {
+  "id": "wawwa",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 223,
+  "tags": [
+   "bags & leather goods",
+   "coats & jackets",
+   "glasses",
+   "hats & caps",
+   "knitwear",
+   "shirts",
+   "socks",
+   "vests & waistcoats",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "coats & jackets": "strong",
+   "glasses": "weak",
+   "hats & caps": "strong",
+   "knitwear": "weak",
+   "shirts": "strong",
+   "socks": "strong",
+   "vests & waistcoats": "weak",
+   "womenswear": "strong"
+  },
+  "tagCounts": {
+   "bags & leather goods": 107,
+   "shirts": 83,
+   "hats & caps": 17,
+   "coats & jackets": 20,
+   "womenswear": 14,
+   "vests & waistcoats": 2,
+   "glasses": 2,
+   "knitwear": 7,
+   "socks": 6
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Bag",
+   "shirts": "Short Sleeve T-Shirt",
+   "hats & caps": "Hat",
+   "coats & jackets": "Jacket",
+   "womenswear": "Skirt",
+   "vests & waistcoats": "Multi-Pocket Mill Vest - Stone flag:limited-sizes Part 2 state:ready-t",
+   "glasses": "Solaris Sunglasses - Coconut Cubitts Default Title-INSTOCK flag:full-s",
+   "knitwear": "Mill Cotton Beanie - Chocolate 1+1 AW24 b2b Default Title-INSTOCK flag",
+   "socks": "Socks"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Accessories",
+   "Bag",
+   "Gift Cards",
+   "Hat",
+   "Hoody",
+   "Jacket",
+   "Misc",
+   "Overshirt",
+   "Pants",
+   "Set",
+   "Sewing Pattern",
+   "Short Sleeve T-Shirt",
+   "Shorts",
+   "Skirt",
+   "Socks",
+   "Sweatshirt",
+   "T-Shirt Sale"
+  ],
+  "sample": [
+   "Water Resistant Bar Tack Tote - Petrol",
+   "Crescent Crossbody Sling Bag - Mineral Green",
+   "Water Resistant Zama Pants - Bracken",
+   "Grounded Logo T-Shirt - White",
+   "520 Two-Way Zip Hoody - Black",
+   "520 Two-Way Zip Hoody - Signal Red",
+   "Range Waffle Sweat - Chocolate Brown/Powder Blue",
+   "Water Resistant Messenger Bag - Blue Brick Camo"
+  ],
+  "checked": "2026-09-28"
+ },
+ "seven-limes-pottery": {
+  "id": "seven-limes-pottery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 33,
+  "tags": [
+   "mugs",
+   "pottery"
+  ],
+  "tagConfidence": {
+   "mugs": "strong",
+   "pottery": "strong"
+  },
+  "tagCounts": {
+   "pottery": 37,
+   "mugs": 6
+  },
+  "tagEvidence": {
+   "pottery": "Pottery Courses",
+   "mugs": "Make and Paint your own pottery mug Pottery Date Night Manchester Pott"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "2-Day Pottery Wheel Throwing Workshop Pottery Wheel Throwing Workshops Workshop",
+   "Make and Paint your own pottery mug Pottery Date Night Manchester Pottery Taster Classes Workshop",
+   "One-Off Classes",
+   "Pottery Courses",
+   "Pottery Courses Pottery Wheel Throwing Courses Manchester Pottery Wheel Throwing Workshops Workshop",
+   "Pottery Date Night Manchester Pottery Taster Classes Workshop",
+   "Pottery Date Night Manchester Pottery Wheel Throwing Workshops Pottery Taster Classes",
+   "Pottery Date Night Manchester Pottery Wheel Throwing Workshops Pottery Taster Classes Workshop",
+   "Pottery Experience Gift Vouchers",
+   "Pottery Taster Classes Pottery Experience Gift Vouchers",
+   "Pottery Wheel Throwing Workshops Pottery Experience Gift Vouchers",
+   "Pottery Wheel Throwing Workshops Pottery Taster Classes Pottery Experience Gift Vouchers"
+  ],
+  "sample": [
+   "Regular Class Payment",
+   "6 Week Beginner Course, Oct 19th, Mondays 5.30-7.30pm",
+   "6 Week Pottery Wheel Throwing Course, Nov 24th, Tuesdays 5.30-7.30pm",
+   "6 Week Pottery Wheel Throwing Course, Nov 10th, Tuesdays 7.45pm-10pm",
+   "Throwing Taster, Nov 8th, Sunday",
+   "Throwing Taster, Dec 19th, Saturday",
+   "Make a Mug, Nov 21st, Saturday 1pm-3pm",
+   "Throwing Taster, Nov 21st, Saturday"
+  ],
+  "checked": "2026-09-28"
+ },
+ "rmo-studio": {
+  "id": "rmo-studio",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28"
+ },
+ "noctua-jewellery": {
+  "id": "noctua-jewellery",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 4,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Balinese silversmithing shears",
+   "The “everything you need” silversmithing kit",
+   "Everything you need to know to get started",
+   "Bezel setting masterclass"
+  ],
+  "checked": "2026-09-28"
+ },
+ "lwsilver": {
+  "id": "lwsilver",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 201,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "weak",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 156,
+   "womenswear": 2,
+   "jeans & denim": 1,
+   "cufflinks & signets": 8,
+   "coats & jackets": 1,
+   "childrenswear": 1,
+   "silverware": 2,
+   "cutlery & knives": 1
+  },
+  "tagEvidence": {
+   "jewellery": "eiffel tower earrings",
+   "womenswear": "black white grid skirt",
+   "jeans & denim": "jean skirts",
+   "cufflinks & signets": "cufflinks",
+   "coats & jackets": "light jacket",
+   "childrenswear": "baby bangle",
+   "silverware": "sterling silver pig necklace",
+   "cutlery & knives": "meat cleaver necklace"
+  },
+  "gatedOut": [
+   "childrenswear",
+   "coats & jackets",
+   "cutlery & knives",
+   "jeans & denim",
+   "womenswear"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "shop",
+   "eiffel tower earrings",
+   "black white grid skirt",
+   "bead bracelet",
+   "ruby earrings",
+   "lord of the rings ring",
+   "nugget bracelet",
+   "bangles"
+  ],
+  "checked": "2026-09-28"
+ },
+ "claremont-farm": {
+  "id": "claremont-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28"
  }
 }
