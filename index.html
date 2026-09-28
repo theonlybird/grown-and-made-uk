@@ -993,12 +993,53 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>, places <a href="https://www.geonames.org/">GeoNames</a>', subdomains:'abcd', maxZoom:19, noWrap:true
 }).addTo(map);
 
-function clampMinZoom(){ map.setMinZoom(map.getBoundsZoom(MAX_BOUNDS, true)); }
+/* Minimum zoom = the zoom at which the map fills MAX_BOUNDS, so it depends on
+   the window size. On a wide screen that is HIGHER than the zoom fitBounds just
+   chose, so the map has to be pushed in. That push must NOT be animated
+   (setMinZoom on its own animates it). markercluster only builds cluster levels
+   from floor(minZoom) up, and an animated zoom-in that starts one level below
+   that makes it tidy away the very clusters it has just drawn. That was the
+   "numbers missing until I move the map" bug, and the stray "72" parked in the
+   Midlands was the same thing (28 Sep 2026). It only happened on screens where
+   the minimum works out to a whole number, e.g. 2560px wide -> exactly 7. */
+function clampMinZoom(){
+  // getBoundsZoom never answers below the CURRENT minimum, so lift it while
+  // measuring. Otherwise, after the window shrinks, the minimum would stay
+  // stuck at the old, higher value.
+  const prev = map.options.minZoom;
+  map.options.minZoom = 0;
+  const min = map.getBoundsZoom(MAX_BOUNDS, true);
+  map.options.minZoom = prev;
+  if (min === map.getMinZoom()) return false;
+  if (map.getZoom() < min) map.setView(map.getCenter(), min, { animate: false });
+  map.setMinZoom(min);
+  return true;
+}
 map.whenReady(clampMinZoom);
-map.on('resize', clampMinZoom);
 
 const cluster = L.markerClusterGroup({maxClusterRadius:40, spiderfyOnMaxZoom:true, showCoverageOnHover:false, zoomToBoundsOnClick:true});
 map.addLayer(cluster);
+
+/* Rebuild the clusters from scratch. markercluster finishes each zoom animation
+   with a callback about 300ms later, and that callback acts on whatever cluster
+   tree exists WHEN IT FIRES. If we clear and re-add in the meantime, it runs
+   against the new tree and removes clusters that should stay. So run any
+   pending callback first, on the tree it was meant for. _processQueue is
+   private but stable in the pinned 1.5.3 build; the guard covers an upgrade. */
+function recluster(layers){
+  if (typeof cluster._processQueue === 'function') cluster._processQueue();
+  cluster.clearLayers();
+  cluster.addLayers(layers);
+}
+
+// Window resized: the minimum zoom may have moved. markercluster built its
+// levels for the old minimum, so if the whole-number part changed, rebuild.
+map.on('resize', () => {
+  const before = Math.floor(map.getMinZoom());
+  if (clampMinZoom() && Math.floor(map.getMinZoom()) !== before && cluster.getLayers().length) {
+    recluster(cluster.getLayers());
+  }
+});
 
 // Legend — the same markup feeds the on-map control (desktop/tablet) and the
 // "Map key" block inside the mobile filter drawer, where the control is hidden.
@@ -1352,10 +1393,9 @@ function renderMapList(){
   // again once it is on screen and measured.
   const mapShown = state.currentView === 'map' && map.getContainer().offsetWidth > 0;
   if (!mapShown) return;
-  cluster.clearLayers();
   // One bulk call rather than ~480 single ones: markercluster re-clusters on
   // every addLayer, and this runs three times while the map boots.
-  cluster.addLayers(vis.map(b => markers[b.id]).filter(Boolean));
+  recluster(vis.map(b => markers[b.id]).filter(Boolean));
 
   // Framing the results is a nicety; it must never cost the visitor the list.
   try {
