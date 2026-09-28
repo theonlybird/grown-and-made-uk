@@ -3386,7 +3386,7 @@
   {
     "id": "sandy-brown",
     "name": "Sandy Brown",
-    "tier": "silver",
+    "tier": "gold",
     "listing_type": "both",
     "town": "Appledore, Devon",
     "address": "3 Marine Parade, Appledore",
@@ -3394,12 +3394,12 @@
     "lng": -4.19156,
     "website": "https://www.sandybrownarts.com",
     "description": "Exuberant, colourful tableware and large-scale ceramic art from a studio-gallery on the Appledore quayside.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "category": "ceramics",
     "subcategory": "Studio pottery",
     "instagram": "",
     "logo": "assets/logos/sandy-brown.png",
-    "source": "verified-batch-2026-07",
+    "source": "business-confirmed-2026-09",
     "product_tags": [
       "tableware",
       "pottery"
@@ -7692,22 +7692,22 @@
     "subcategory": "Everyday wear",
     "tier": "silver",
     "listing_type": "online_only",
-    "town": "Machynlleth, Powys",
+    "town": "Machynlleth",
     "address": "Machynlleth",
     "lat": 52.5102,
     "lng": -3.99633,
-    "website": "https://www.rolfskeldon.com",
+    "website": "https://www.rolfskeldon.com/",
     "instagram": "https://www.instagram.com/rolfskeldon/",
-    "description": "Organic cotton boxers, swim shorts and jersey basics made in Wales.",
+    "description": "Organic cotton sweatpants, joggers and boxers, and recycled swim shorts, all made in the UK. Plus handcrafted recycled glass bead bracelets, made in Wales.",
     "tier_confidence": "high",
     "logo": "assets/logos/rolf-skeldon.svg",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "business-confirmed-2026-09",
     "product_tags": [
       "underwear & nightwear",
       "everyday wear"
     ],
     "nation": "Wales",
-    "county": "Powys",
+    "county": "Ceredigion",
     "audience": [
       "men",
       "children"
