@@ -784,6 +784,17 @@ console.log('\npets — a dog is a product, a dog print is not\n');
   console.log(`\n  ${ok ? 'ok  ' : 'FAIL'}  no internal evidence notes in the published listings${ok ? '' : ` — ${leaked} found`}`);
 }
 
+// Business email addresses belong in data/business-contacts.json (gitignored),
+// never in the published file. Stripped 8 Sep 2026; a contacts script put them
+// back once, so guard it.
+{
+  const published = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/businesses.json'), 'utf8'));
+  const leaked = published.filter(b => 'email' in b).length;
+  const ok = leaked === 0;
+  if (!ok) failures++;
+  console.log(`  ${ok ? 'ok  ' : 'FAIL'}  no email addresses in the published listings${ok ? '' : ` — ${leaked} found`}`);
+}
+
 console.log('');
 if (failures) {
   console.log(`${failures} failing assertion(s)\n`);
