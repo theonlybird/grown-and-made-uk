@@ -13176,5 +13176,53 @@
     ],
     "nation": "Northern Ireland",
     "county": "Co. Londonderry"
+  },
+  {
+    "id": "baronscourt-estate",
+    "name": "Baronscourt Estate",
+    "category": "farm",
+    "subcategory": "Meat & Butchery",
+    "tier": "gold",
+    "listing_type": "online_only",
+    "town": "Newtownstewart, Co. Tyrone",
+    "address": "Baronscourt, Newtownstewart BT78 4EZ",
+    "lat": 54.68962,
+    "lng": -7.43703,
+    "website": "https://barons-court.com/facilities/baronscourt-food/",
+    "instagram": "",
+    "logo": "assets/logos/baronscourt-estate.png",
+    "description": "Historic Tyrone estate near Newtownstewart selling award-winning wild Sika venison from deer roaming its own land: loins, French racks, burgers and sausages, by order.",
+    "tier_confidence": "high",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "game & venison",
+      "fresh meat"
+    ],
+    "nation": "Northern Ireland",
+    "county": "Co. Tyrone"
+  },
+  {
+    "id": "kiltermon-pure-pasture",
+    "name": "Kiltermon Pure Pasture",
+    "category": "farm",
+    "subcategory": "Meat & Butchery",
+    "tier": "gold",
+    "listing_type": "online_only",
+    "town": "Fivemiletown, Co. Tyrone",
+    "address": "Ballagh Road, Fivemiletown BT75 0LE",
+    "lat": 54.38089,
+    "lng": -7.29145,
+    "website": "https://kiltermonpurepasture.com",
+    "instagram": "",
+    "logo": "assets/logos/kiltermon-pure-pasture.png",
+    "description": "Clogher Valley farm selling its own 100% pasture-fed beef in boxes, raised with regenerative grazing, silvopasture and plenty of room for pollinators.",
+    "tier_confidence": "high",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "beef",
+      "fresh meat"
+    ],
+    "nation": "Northern Ireland",
+    "county": "Co. Tyrone"
   }
 ]

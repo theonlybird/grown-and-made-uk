@@ -28081,5 +28081,55 @@
   "checked": "2026-09-28",
   "rescored": false,
   "alreadyGated": true
+ },
+ "baronscourt-estate": {
+  "id": "baronscourt-estate",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "kiltermon-pure-pasture": {
+  "id": "kiltermon-pure-pasture",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 16,
+  "tags": [
+   "beef",
+   "pork & bacon"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "pork & bacon": "weak"
+  },
+  "tagCounts": {
+   "beef": 20,
+   "pork & bacon": 1
+  },
+  "tagEvidence": {
+   "beef": "Beef",
+   "pork & bacon": "Sausages (1 pack)"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Beef"
+  ],
+  "sample": [
+   "Beef kofta",
+   "Marrow Bones",
+   "Natural beef burgers (1 pack)",
+   "Short ribs",
+   "Steak strips",
+   "Large steak roast (1)",
+   "Beef shin",
+   "Steak mince"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
  }
 }
