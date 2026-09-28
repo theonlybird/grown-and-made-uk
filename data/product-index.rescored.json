@@ -27771,5 +27771,315 @@
   "checked": "2026-09-28",
   "previousTags": [],
   "rescored": true
+ },
+ "glebe-farm": {
+  "id": "glebe-farm",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 24,
+  "tags": [
+   "beef",
+   "eggs",
+   "pork & bacon",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "eggs": "strong",
+   "pork & bacon": "strong",
+   "poultry": "weak"
+  },
+  "tagCounts": {
+   "pottery": 1,
+   "bags & leather goods": 2,
+   "beef": 11,
+   "pork & bacon": 3,
+   "poultry": 2,
+   "eggs": 2
+  },
+  "tagEvidence": {
+   "pottery": "POTTERY PAINTING: with Zara McLaughlin Studio Workshop",
+   "bags & leather goods": "Glebe Farm Sheep Tote Bag Merchandise",
+   "beef": "Native Breed Steak Pieces Beef Grass Fed Product Steak Pieces",
+   "pork & bacon": "Beef Sausages",
+   "poultry": "Local Whole Chicken Chicken",
+   "eggs": "Eggs"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "pottery"
+  ],
+  "observedTypes": [
+   "Beef Sausages",
+   "Eggs",
+   "Mince Beef",
+   "Steak Pieces",
+   "Workshop"
+  ],
+  "sample": [
+   "Autumn Soy Wax Melt Workshop",
+   "Festive Wreath Making Workshop Friday 27th November",
+   "Festive Wreath Making Workshop Thursday 26th November",
+   "Festive Wreath Making Workshop Thursday 3rd December",
+   "Festive Wreath Making Workshop Friday 4th December",
+   "SOLD OUT Autumn Wellness Session",
+   "Embody Yoga @ Glebe Farm Barn",
+   "SOLD OUT Phoebe Paints Galentines Workshop"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "the-croft-farm-shop": {
+  "id": "the-croft-farm-shop",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 35,
+  "tags": [
+   "fruit & veg"
+  ],
+  "tagConfidence": {
+   "fruit & veg": "weak"
+  },
+  "tagCounts": {
+   "fruit & veg": 1,
+   "bowls": 1,
+   "jewellery": 2,
+   "tableware": 1,
+   "candles & holders": 2
+  },
+  "tagEvidence": {
+   "fruit & veg": "Long Meadow Apple Juice",
+   "bowls": "Pasta Dish Colander Gift Set",
+   "jewellery": "Heart Stud Earrings - Cast&Clay",
+   "tableware": "Red Stump Teapot",
+   "candles & holders": "The Woodpile - Gingerbread Candle"
+  },
+  "gatedOut": [
+   "bowls",
+   "candles & holders",
+   "jewellery",
+   "tableware"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Grá Matcha",
+   "Green Fingers Family Energy Balls",
+   "Papa's Cordials",
+   "Long Meadow Apple Juice",
+   "Grana Padano DOP - 150g",
+   "Pasta Dish Colander Gift Set",
+   "The Woodpile - Winter Nights",
+   "Irish Shortbread Biscuits"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "kildoag-pottery": {
+  "id": "kildoag-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "rachel-leary-ceramics": {
+  "id": "rachel-leary-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "corranny-forest-pottery": {
+  "id": "corranny-forest-pottery",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 7,
+  "tags": [
+   "pottery"
+  ],
+  "tagConfidence": {
+   "pottery": "weak"
+  },
+  "tagCounts": {
+   "pottery": 1
+  },
+  "tagEvidence": {
+   "pottery": "a raku firing pottery workshop 10am 3pm date 10 october 2026"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "hen party per person",
+   "a raku firing pottery workshop 10am 3pm date 10 october 2026",
+   "private hand building session",
+   "private intro to the potters wheel workshop",
+   "private group hand building workshop one class per person",
+   "group hand building workshop week priced lb45 per person minimum 3 peo",
+   "date night price is per couple"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "fiona-kerr-jewellery": {
+  "id": "fiona-kerr-jewellery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 180,
+   "cufflinks & signets": 10,
+   "scarves & accessories": 6
+  },
+  "tagEvidence": {
+   "jewellery": "Cherry Blossom Earrings Earrings",
+   "cufflinks & signets": "Collections Limited Edition For Men Cufflinks",
+   "scarves & accessories": "Black &amp; Gold Tie Slides For Men Tie Slides"
+  },
+  "gatedOut": [
+   "scarves & accessories"
+  ],
+  "observedTypes": [
+   "Archive Collection Brooches Brooches",
+   "Archive Collection Rings Rings",
+   "Black &amp; Gold Brooches Brooches",
+   "Black &amp; Gold Cufflinks For Men Cufflinks",
+   "Black &amp; Gold Earrings Earrings",
+   "Black &amp; Gold Necklaces Necklaces",
+   "Black &amp; Gold Necklaces Pendants Necklaces Pendants",
+   "Black &amp; Gold Rings Rings",
+   "Black &amp; Gold Tie Slides For Men Tie Slides",
+   "Cherry Blossom Bracelets Bracelets",
+   "Cherry Blossom Bracelets Jewellery Bracelets",
+   "Cherry Blossom Brooches Brooches",
+   "Cherry Blossom Earrings Earrings",
+   "Cherry Blossom Necklaces Pendants Necklaces Pendants",
+   "Cherry Blossom Rings Jewellery Rings",
+   "Collections Limited Edition For Men Cufflinks",
+   "Confetti Silver &amp; Gold Confetti Bracelets Bracelets",
+   "Confetti Silver &amp; Gold Confetti Tie Slides For Men Tie Slides",
+   "Confetti Silver Confetti Bracelets Bracelets",
+   "Confetti Silver Confetti Cufflinks For Men Cufflinks",
+   "Confetti Silver Confetti Earrings Earrings",
+   "Confetti Silver Confetti Necklaces Pendants Necklaces Pendants",
+   "Confetti Silver Confetti Tie Slides For Men Tie Slides",
+   "Ebb &amp; Flow Earrings Earrings",
+   "Ebb &amp; Flow Necklaces Pendants Necklaces Pendants",
+   "Gift Card",
+   "Limited Edition Earrings",
+   "Limited Edition For Men Cufflinks",
+   "Limited Edition Rings",
+   "Swing Time Silver Earrings Earrings",
+   "Swing Time Silver Necklaces Pendants Necklaces Pendants",
+   "Swing Time Silver Pendants Necklaces Pendants"
+  ],
+  "sample": [
+   "Gift Voucher",
+   "Cherry Blossom Small Silver Stud Earrings &#8211; CB01",
+   "Cherry Blossom Small Silver Stud Earrings with Garnets &#8211; CB01G",
+   "Cherry Blossom Medium Silver Stud Earrings &#8211; CB02",
+   "Cherry Blossom Medium Silver Stud Earrings with Garnets &#8211; CB02G",
+   "Cherry Blossom Large Silver Stud Earrings &#8211; CB03",
+   "Cherry Blossom Large Silver Stud Earrings with Garnets &#8211; CB03G",
+   "Cherry Blossom Silver Drop Earrings &#8211; CB04"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "thomas-goldsmiths": {
+  "id": "thomas-goldsmiths",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 1000,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware",
+   "watches"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "strong",
+   "silverware": "weak",
+   "watches": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 1138,
+   "cutlery & knives": 1,
+   "silverware": 142,
+   "plates": 21,
+   "dresses": 4,
+   "cufflinks & signets": 11,
+   "knitwear": 1,
+   "cushions & throws": 2,
+   "womenswear": 1,
+   "childrenswear": 5,
+   "watches": 34
+  },
+  "tagEvidence": {
+   "jewellery": "Inline Wild Rose Necklace with a Bee & Ruby - 40 Years of Alex Monroe ",
+   "cutlery & knives": "R1310 - Silver and Gold Knife Edge Diamond Ring 22ct diamond gold Manu",
+   "silverware": "Silver Textured Wavy Drops drop earrings drops earrings silver sterlin",
+   "plates": "Gold Plated Angel Cross Pendant 18ct Gold cz gold gold plate gold verm",
+   "dresses": "Scapa Flow Enamel Dress Pendant in Sterling Silver Necklace pendant Sh",
+   "cufflinks & signets": "Silver Treble Clef Cufflinks cufflinks mens music silver",
+   "knitwear": "Tight-knit Rubover Necklace Necklace necklet silver sparkle Sparkle Co",
+   "cushions & throws": "Silver Cushion CZ Studs cz earrings silver sparkle Sparkle Collection ",
+   "womenswear": "18ct White Gold Plain Ladies Wedding Ring 18ct white gold plain band r",
+   "childrenswear": "Silver Childs Adjustable Bangle baby Bangle customisable engravable pe",
+   "watches": "Watch"
+  },
+  "gatedOut": [
+   "childrenswear",
+   "cushions & throws",
+   "cutlery & knives",
+   "dresses",
+   "knitwear",
+   "plates",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Jewellery",
+   "Jewelry",
+   "Pendant Necklace",
+   "Ring",
+   "Watch",
+   "jewellery",
+   "necklace"
+  ],
+  "sample": [
+   "Inline Wild Rose Necklace with a Bee & Ruby - 40 Years of Alex Monroe",
+   "Woodland Loop Stud Earrings",
+   "Clustered Mushroom Earrings",
+   "Gold Large Honey Bee Studs",
+   "Large Honey Bee Studs",
+   "Silver Band with 18ct Gold Detail and Diamond",
+   "Swirl Wiggle Pendant Silver",
+   "K1454 - Silver and Gold Diamond Pendant"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
  }
 }
