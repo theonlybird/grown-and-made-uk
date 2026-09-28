@@ -13660,5 +13660,29 @@
     ],
     "nation": "Scotland",
     "county": "Moray"
+  },
+  {
+    "id": "megan-falconer",
+    "name": "Megan Falconer Jewellery & Silverware",
+    "category": "jewellery",
+    "subcategory": "Silver & Gold Jewellery",
+    "tier": "gold",
+    "listing_type": "online_only",
+    "town": "Aberdeen",
+    "address": "Deemouth Artist Studios, South Esplanade East, Aberdeen AB11 9PB",
+    "lat": 57.138727,
+    "lng": -2.087973,
+    "website": "https://www.meganfalconer.com",
+    "instagram": "",
+    "logo": "assets/logos/megan-falconer.png",
+    "description": "Aberdeen jeweller and silversmith hand-raising silverware and making silver and gold jewellery at Deemouth Artist Studios, textured with hammers she casts from Scottish rocks. Also teaches small jewellery-making workshops.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-09",
+    "product_tags": [
+      "jewellery",
+      "silverware"
+    ],
+    "nation": "Scotland",
+    "county": "Aberdeen"
   }
 ]
