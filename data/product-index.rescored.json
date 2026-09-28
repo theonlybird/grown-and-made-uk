@@ -28131,5 +28131,746 @@
   "checked": "2026-09-28",
   "rescored": false,
   "alreadyGated": true
+ },
+ "skyeskyns": {
+  "id": "skyeskyns",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 257,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "cashmere & merino",
+   "childrenswear",
+   "coats & jackets",
+   "cushions & throws",
+   "footwear & boots",
+   "hats & caps",
+   "jeans & denim",
+   "knitwear",
+   "scarves & accessories",
+   "shirts",
+   "socks",
+   "tweed & woven goods",
+   "womenswear",
+   "workwear & aprons"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "cashmere & merino": "weak",
+   "childrenswear": "strong",
+   "coats & jackets": "weak",
+   "cushions & throws": "strong",
+   "footwear & boots": "strong",
+   "hats & caps": "weak",
+   "jeans & denim": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "weak",
+   "shirts": "weak",
+   "socks": "weak",
+   "tweed & woven goods": "strong",
+   "womenswear": "weak",
+   "workwear & aprons": "weak"
+  },
+  "tagCounts": {
+   "knitwear": 72,
+   "shirts": 1,
+   "womenswear": 90,
+   "scarves & accessories": 37,
+   "jeans & denim": 5,
+   "hats & caps": 20,
+   "bags & leather goods": 13,
+   "footwear & boots": 6,
+   "tweed & woven goods": 66,
+   "childrenswear": 19,
+   "cushions & throws": 26,
+   "cashmere & merino": 8,
+   "cutlery & knives": 1,
+   "mugs": 1,
+   "pottery": 1,
+   "workwear & aprons": 3,
+   "socks": 1,
+   "braces & belts": 1,
+   "coats & jackets": 1,
+   "fruit & veg": 1
+  },
+  "tagEvidence": {
+   "knitwear": "Corry T-Shirt Sweater in Billiard Eribé gift gifts green knitwear made",
+   "shirts": "Corry T-Shirt Sweater in Billiard Eribé gift gifts green knitwear made",
+   "womenswear": "Corry T-Shirt Sweater in Billiard Eribé gift gifts green knitwear made",
+   "scarves & accessories": "Alloa Scarf in Blue Bella Eribé Fairisle gift gifts knitwear large mad",
+   "jeans & denim": "Classic Beanie in Denim beanie blue gift gifts GREEN GROVE knitwear ma",
+   "hats & caps": "Classic Beanie in Denim beanie blue gift gifts GREEN GROVE knitwear ma",
+   "bags & leather goods": "Tide Bag Wine (W)",
+   "footwear & boots": "Slippers",
+   "tweed & woven goods": "Icelandic Spot Sheepskin Rug / Throw black gift gifts Icelandic sheeps",
+   "childrenswear": "Children's Aran Tunic baby gift gifts kids knitwear Scotland sweater w",
+   "cushions & throws": "Cushion",
+   "cashmere & merino": "Merino Super Sheepskin Rug / Throw 110x70cm bulky count 4 large sheeps",
+   "cutlery & knives": "Hand Thrown Spoon Rest black gift gifts Isle of Skye gifts Scotland sk",
+   "mugs": "Hand Thrown Skye Travel Mug (White or Coral Blue) pottery skye gifts t",
+   "pottery": "Hand Thrown Skye Travel Mug (White or Coral Blue) pottery skye gifts t",
+   "workwear & aprons": "DARK BROWN LEATHER APRON (NO POCKET) brown leather",
+   "socks": "Mohair Socks (choice of colours)",
+   "braces & belts": "Oak Tanned Leather Belt belt gift gifts men women",
+   "coats & jackets": "Dark Brown Leather Flying Jacket brown jacket leather men",
+   "fruit & veg": "LADIES SHEEPSKIN GLOVES IN APPLE gloves women"
+  },
+  "gatedOut": [
+   "cutlery & knives",
+   "fruit & veg",
+   "mugs",
+   "pottery"
+  ],
+  "observedTypes": [
+   "Accessories",
+   "Baby accessories",
+   "Baby booties",
+   "Beanbag",
+   "Bedspreads",
+   "Clothing",
+   "Cushion",
+   "Homeware & kitchenware",
+   "Insoles",
+   "Pouffe",
+   "Sheepskin care",
+   "Sheepskin hot water bottle",
+   "Sheepskin rugs",
+   "Sheepskin seat pad",
+   "Slippers",
+   "Wool throw"
+  ],
+  "sample": [
+   "GIFT CARDS / VOUCHERS (SELECT AN AMOUNT FROM FROM £10 TO £500)",
+   "Corry T-Shirt Sweater in Billiard",
+   "Alloa Scarf in Blue Bella",
+   "Alloa Glove in Blue Bella",
+   "Alloa Scarf in Dew",
+   "Alloa Glove in Dew",
+   "Classic Beanie in Denim",
+   "Classic Beanie in Beech"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "skye-weavers": {
+  "id": "skye-weavers",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "bags & leather goods",
+   "childrenswear",
+   "cushions & throws",
+   "hats & caps",
+   "knitwear",
+   "scarves & accessories",
+   "tweed & woven goods",
+   "vests & waistcoats",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "childrenswear": "strong",
+   "cushions & throws": "strong",
+   "hats & caps": "strong",
+   "knitwear": "strong",
+   "scarves & accessories": "strong",
+   "tweed & woven goods": "strong",
+   "vests & waistcoats": "weak",
+   "womenswear": "strong"
+  },
+  "tagCounts": {
+   "tweed & woven goods": 88,
+   "vests & waistcoats": 1,
+   "knitwear": 4,
+   "womenswear": 2,
+   "scarves & accessories": 74,
+   "childrenswear": 6,
+   "bags & leather goods": 18,
+   "cushions & throws": 2,
+   "hats & caps": 2
+  },
+  "tagEvidence": {
+   "tweed & woven goods": "Herringbone Throw Usnea",
+   "vests & waistcoats": "Men’s Gilet Green",
+   "knitwear": "Jumpers &amp; Sweaters Men Skye Wool Women",
+   "womenswear": "Jumpers &amp; Sweaters Men Skye Wool Women",
+   "scarves & accessories": "Scarves",
+   "childrenswear": "Baby Blankets Kids",
+   "bags & leather goods": "Bags &amp; Accessories Skye Wool",
+   "cushions & throws": "Cushions",
+   "hats & caps": "Men Tweed Caps"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Baby Blankets Kids",
+   "Bags &amp; Accessories",
+   "Bags &amp; Accessories Skye Wool",
+   "Coming Soon",
+   "Coming Soon Skye Wool Throws &amp; Blankets",
+   "Cushions",
+   "Jumpers &amp; Sweaters Men Skye Wool Women",
+   "Men",
+   "Men Scarves Shawls &amp; Wraps",
+   "Men Tweed Caps",
+   "Neck Warmers",
+   "Neck Warmers Skye Wool",
+   "Scarves",
+   "Scarves Shawls &amp; Wraps",
+   "Scarves Skye Wool",
+   "Shawls &amp; Wraps",
+   "Skye Wool",
+   "Skye Wool Throws &amp; Blankets",
+   "Skye Wool Tweed",
+   "Throws &amp; Blankets",
+   "Tweed"
+  ],
+  "sample": [
+   "Herringbone Throw Usnea",
+   "Men’s Gilet Green",
+   "Herringbone Throw Dark Blue",
+   "Herringbone Throw Purple",
+   "Mist and Thistle Throw",
+   "Deep Forest Throw",
+   "Skye Wool Booklet",
+   "Skye Jumper Natural Brown"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "duncan-house": {
+  "id": "duncan-house",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "patricia-shone-ceramics": {
+  "id": "patricia-shone-ceramics",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 57,
+  "tags": [
+   "bowls",
+   "pottery",
+   "tableware"
+  ],
+  "tagConfidence": {
+   "bowls": "weak",
+   "pottery": "strong",
+   "tableware": "strong"
+  },
+  "tagCounts": {
+   "tableware": 33,
+   "bowls": 36,
+   "pottery": 5
+  },
+  "tagEvidence": {
+   "tableware": "Bottles, Cups, Jugs Erosion Saggar Fired Work Available",
+   "bowls": "Erosion Bowl 6",
+   "pottery": "Bottles, Cups, Jugs Erosion Porcelain &amp; White Clay Work Available"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Bottles, Cups, Jugs Erosion Porcelain &amp; White Clay Work Available",
+   "Bottles, Cups, Jugs Erosion Saggar Fired Wood Fired Work Available",
+   "Bottles, Cups, Jugs Erosion Saggar Fired Work Available",
+   "Bottles, Cups, Jugs Erosion Wood Fired",
+   "Bottles, Cups, Jugs Erosion Wood Fired Work Available",
+   "Bottles, Cups, Jugs Erosion Work Available",
+   "Bottles, Cups, Jugs Forest Wood Fired Work Available",
+   "Bottles, Cups, Jugs raku fired Work Available",
+   "Erosion Porcelain &amp; White Clay",
+   "Erosion Saggar Fired Work Available",
+   "Erosion Wood Fired Work Available",
+   "Erosion Work Available",
+   "Forest Wood Fired",
+   "Forest Wood Fired Work Available",
+   "Forest Work Available",
+   "Porcelain &amp; White Clay",
+   "Publications &amp; Workshops",
+   "Saggar Fired Wood Fired Work Available",
+   "raku fired Strata Work Available",
+   "raku fired Work Available"
+  ],
+  "sample": [
+   "Masterclass 2026  &#8211;  Spaces available for October in Genova.",
+   "Erosion Bowl 6",
+   "Autumn Forest Bowl",
+   "Bleached Erosion Bowl",
+   "Erosion Bowl 2",
+   "Riven Flask",
+   "Small Heaved Ground Forest Floor Bowl",
+   "Small Riven Bowl"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "skio-pottery": {
+  "id": "skio-pottery",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 23,
+  "tags": [
+   "bowls",
+   "mugs",
+   "vases"
+  ],
+  "tagConfidence": {
+   "bowls": "weak",
+   "mugs": "weak",
+   "vases": "weak"
+  },
+  "tagCounts": {
+   "vases": 2,
+   "bowls": 1,
+   "mugs": 4,
+   "jewellery": 3,
+   "bags & leather goods": 1
+  },
+  "tagEvidence": {
+   "vases": "waternish sand bud vase",
+   "bowls": "waternish sand dip bowl",
+   "mugs": "meadowsweet mug",
+   "jewellery": "coral beach earrings",
+   "bags & leather goods": "tote bag"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "basalt tumbler",
+   "brutalist coffee tumbler black",
+   "brutalist espresso cup black",
+   "sand salt pig",
+   "waternish sand bud vase",
+   "waternish sand bud vase mini",
+   "waternish sand dip bowl",
+   "isle of skye sea salt"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "uig-pottery": {
+  "id": "uig-pottery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 312,
+  "tags": [
+   "bowls",
+   "candles & holders",
+   "mugs",
+   "plates",
+   "tableware",
+   "vases"
+  ],
+  "tagConfidence": {
+   "bowls": "strong",
+   "candles & holders": "weak",
+   "mugs": "strong",
+   "plates": "strong",
+   "tableware": "strong",
+   "vases": "strong"
+  },
+  "tagCounts": {
+   "vases": 85,
+   "bowls": 101,
+   "plates": 30,
+   "mugs": 30,
+   "tableware": 96,
+   "cutlery & knives": 12,
+   "candles & holders": 10,
+   "tweed & woven goods": 24
+  },
+  "tagEvidence": {
+   "vases": "Highland Cow Bottle Vase Small Blue Multi-coloured",
+   "bowls": "Dish",
+   "plates": "Highland Cow Slab Plate - Oval (small) Blue Multi-coloured",
+   "mugs": "Highland Cow Curvy Mug Small Blue Multi-coloured",
+   "tableware": "Highland Cow Straight Milk Jug Blue Multi-coloured",
+   "cutlery & knives": "Highland Cow Spoon Rest Blue Multi-coloured",
+   "candles & holders": "Highland Cow Candle Dish Blue Multi-coloured",
+   "tweed & woven goods": "Tartan Breakfast Cup and Saucer Blue Purple"
+  },
+  "gatedOut": [
+   "cutlery & knives",
+   "tweed & woven goods"
+  ],
+  "observedTypes": [
+   "Bowls",
+   "Dish",
+   "Jugs",
+   "Mugs",
+   "Plate",
+   "Quaich",
+   "Tea Cups & Saucers",
+   "Vases"
+  ],
+  "sample": [
+   "Highland Cow Garlic Pot",
+   "Highland Cow Bottle Vase Small",
+   "Highland Cow Slab Plate - Oval (small)",
+   "Highland Cow Slab Plate - Oval",
+   "Highland Cow Slab Plate - Square (small)",
+   "Highland Cow Curvy Lamp",
+   "Highland Cow Curvy Mug Small",
+   "Highland Cow Straight Mug Small"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "isle-of-skye-leather": {
+  "id": "isle-of-skye-leather",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "skye-knives": {
+  "id": "skye-knives",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 39,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "weak"
+  },
+  "tagCounts": {
+   "cutlery & knives": 11,
+   "vests & waistcoats": 1,
+   "braces & belts": 2
+  },
+  "tagEvidence": {
+   "cutlery & knives": "Baroque Desk Knife",
+   "vests & waistcoats": "Vest Bowie (SOLD) bowie vest-bowie bog-oak fileworked",
+   "braces & belts": "Dragons Kilt Belt (2.5\" wide, 56.5\" long)"
+  },
+  "gatedOut": [
+   "braces & belts",
+   "vests & waistcoats"
+  ],
+  "observedTypes": [
+   "Dirk",
+   "forged",
+   "seax",
+   "seax forged",
+   "sgian",
+   "sporran"
+  ],
+  "sample": [
+   "Late 18th C Dirk",
+   "Early 19th C. Dirk and Sgian",
+   "Irish Scian",
+   "Baroque Desk Knife",
+   "Narrow Seax",
+   "Hybrid Narrow Seax",
+   "Jacobite Dirk",
+   "Antler Gralloching Knife"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "invercannich-farm": {
+  "id": "invercannich-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "druid-temple-farm": {
+  "id": "druid-temple-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "kingcraig-fabrics": {
+  "id": "kingcraig-fabrics",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cashmere & merino",
+   "jeans & denim",
+   "scarves & accessories",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "cashmere & merino": "strong",
+   "jeans & denim": "weak",
+   "scarves & accessories": "strong",
+   "tweed & woven goods": "strong"
+  },
+  "tagCounts": {
+   "tweed & woven goods": 72,
+   "cashmere & merino": 38,
+   "fruit & veg": 2,
+   "jeans & denim": 1,
+   "scarves & accessories": 56
+  },
+  "tagEvidence": {
+   "tweed & woven goods": "Tartan Blanket/Throw/Rug",
+   "cashmere & merino": "Lambswool Herringbone throws",
+   "fruit & veg": "Crab Apple 4Ply weight yarn 100 gram ball",
+   "jeans & denim": "Denim 4Ply weight yarn 100 gram ball",
+   "scarves & accessories": "Wool Ties"
+  },
+  "gatedOut": [
+   "fruit & veg"
+  ],
+  "observedTypes": [
+   "4 - Ply Knitting Yarn",
+   "4 - Ply Natural/Cream/Ecru British Yarn",
+   "All Wool Bothy Throws",
+   "All Wool Rustic Weave Throws",
+   "Aran weight Knitting Yarn",
+   "Bargain Blankets",
+   "Blankets / Throws Wool Blankets/Throws",
+   "Bright Bothy Throws",
+   "Chunky Mohair",
+   "Chunky Mohair Knitting Yarn",
+   "Fabric",
+   "Knitting Yarn",
+   "Lambswool Herringbone throws",
+   "Lambswool-Angora scarves",
+   "Large 100% Cashmere Stoles",
+   "Scottish Finest Cashmere Scarves",
+   "Solid Shade Cashmere Scarves",
+   "Tartan Blanket/Throw/Rug",
+   "Wool Ties"
+  ],
+  "sample": [
+   "100% Wool Tartan Throw/Blanket/Classic Travel Rug  &#8211; Royal Stewa",
+   "White Aran weight yarn 100 gram ball",
+   "Truffle Aran weight yarn 100 gram ball a rich dark brown",
+   "100% New Wool Blanket/Throw “Shadow Check” Brown/Yellow",
+   "100% New Wool Blanket/Throw  &#8211; Grey with White check",
+   "Very Soft Top Quality 100% Wool, Herringbone Weave Throw &#8211; Grey ",
+   "Very Soft Top Quality 100% Wool, Herringbone Weave Throw &#8211; Grey ",
+   "Very Soft Top Quality 100% Wool, Herringbone Weave Throw &#8211; Grey "
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "rothiemurchus-farm-shop": {
+  "id": "rothiemurchus-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "loch-ness-leather": {
+  "id": "loch-ness-leather",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 32,
+  "tags": [
+   "braces & belts",
+   "hats & caps"
+  ],
+  "tagConfidence": {
+   "braces & belts": "strong",
+   "hats & caps": "strong"
+  },
+  "tagCounts": {
+   "braces & belts": 26,
+   "hats & caps": 8
+  },
+  "tagEvidence": {
+   "braces & belts": "Belt",
+   "hats & caps": "Hat"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Belt",
+   "Gift Cards",
+   "Handbag",
+   "Hat"
+  ],
+  "sample": [
+   "Celtic Guitar Strap - Tan",
+   "Celtic Guitar Strap - Mahogany",
+   "Celtic Guitar Strap - Black with Blue Stitching",
+   "Celtic Mahogony Wide",
+   "Green Suede - Highland Hat",
+   "Tayburry Leather - Highland Hat",
+   "Celtic Blue Wide",
+   "Leather Case and Cup Set"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "northshore-pottery": {
+  "id": "northshore-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "keith-sim-goldsmith": {
+  "id": "keith-sim-goldsmith",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "dalmore-farm": {
+  "id": "dalmore-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-28",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "macbeths": {
+  "id": "macbeths",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 276,
+  "tags": [
+   "beef",
+   "dairy & cheese",
+   "fruit & veg",
+   "game & venison",
+   "lamb",
+   "pork & bacon",
+   "poultry",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "dairy & cheese": "weak",
+   "fruit & veg": "weak",
+   "game & venison": "strong",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong",
+   "preserves & honey": "weak"
+  },
+  "tagCounts": {
+   "beef": 178,
+   "lamb": 57,
+   "preserves & honey": 6,
+   "poultry": 20,
+   "pork & bacon": 107,
+   "game & venison": 71,
+   "cookware": 21,
+   "plates": 1,
+   "fruit & veg": 4,
+   "coats & jackets": 1,
+   "dairy & cheese": 1,
+   "cutlery & knives": 1
+  },
+  "tagEvidence": {
+   "beef": "Beef Steaks",
+   "lamb": "Mutton",
+   "preserves & honey": "Tuckers - Seriously Hot Chilli Jam",
+   "poultry": "Chicken Olive - Black Pudding Chicken Poultry Scottish",
+   "pork & bacon": "Pork Mince & Stewing",
+   "game & venison": "Game Birds",
+   "cookware": "Pork & Tomato Sausage BBQ Grilling Pan Frying Pork Sausages Scottish",
+   "plates": "Plate Roast BBQ Beef Roasting Roasts Slow Cooking Sunday Roast",
+   "fruit & veg": "Vegetable Stock",
+   "coats & jackets": "Mac Daddy Burger Seasoning Seasonings",
+   "dairy & cheese": "Garlic Butter Seasoning Seasonings",
+   "cutlery & knives": "Feather Blade Beef Pan Frying Slow Cooking Steaks"
+  },
+  "gatedOut": [
+   "coats & jackets",
+   "cookware",
+   "cutlery & knives",
+   "plates"
+  ],
+  "observedTypes": [
+   "Bacon & Gammon",
+   "Beef Burgers",
+   "Beef Mince & Stewing",
+   "Beef Roasts",
+   "Beef Sausages",
+   "Beef Steaks",
+   "Game Birds",
+   "Game Burgers",
+   "Game Mince & Stewing",
+   "Game Roasts",
+   "Game Sausages",
+   "Game Steaks",
+   "Gift Vouchers",
+   "Lamb Bulk Boxes",
+   "Lamb Chops",
+   "Lamb Mince & Stewing",
+   "Lamb Roasts",
+   "Lamb Sausages",
+   "Lamb Steaks",
+   "Mutton",
+   "Oils & Fats",
+   "Pork Bulk Boxes",
+   "Pork Burgers",
+   "Pork Chops & Steaks",
+   "Pork Mince & Stewing",
+   "Pork Roasts",
+   "Pork Sausages",
+   "Poultry",
+   "Puddings & Haggis",
+   "Seasonings & Rubs"
+  ],
+  "sample": [
+   "Sriracha Seasoning",
+   "Teriyaki Japanese Grill Seasoning",
+   "Fools Gold Rub",
+   "Vindaloo",
+   "Gluten Free Black Pudding -NEW RECIPE!",
+   "Gluten Free Slicing Haggis - NEW RECIPE!",
+   "50 Day Dry Aged Tomahawk Steak",
+   "Orkney Boreray Taster Box"
+  ],
+  "checked": "2026-09-28",
+  "rescored": false,
+  "alreadyGated": true
  }
 }
