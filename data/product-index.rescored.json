@@ -29999,5 +29999,1280 @@
   "tags": [],
   "tagConfidence": {},
   "rescored": true
+ },
+ "court-farm-butchery": {
+  "id": "court-farm-butchery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "beef",
+   "dairy & cheese",
+   "drinks & spirits",
+   "eggs",
+   "flour & grain",
+   "fruit & veg",
+   "lamb",
+   "pork & bacon",
+   "poultry",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "dairy & cheese": "strong",
+   "drinks & spirits": "weak",
+   "eggs": "strong",
+   "flour & grain": "weak",
+   "fruit & veg": "strong",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong",
+   "preserves & honey": "strong"
+  },
+  "tagCounts": {
+   "poultry": 12,
+   "dairy & cheese": 3,
+   "fruit & veg": 8,
+   "lamb": 9,
+   "pork & bacon": 17,
+   "eggs": 4,
+   "bags & leather goods": 6,
+   "preserves & honey": 25,
+   "childrenswear": 1,
+   "beef": 11,
+   "womenswear": 1,
+   "flour & grain": 1,
+   "drinks & spirits": 3
+  },
+  "tagEvidence": {
+   "poultry": "Christmas deals Chicken and Turkey Christmas",
+   "dairy & cheese": "Cheese Christmas deals Christmas Deli",
+   "fruit & veg": "Christmas deals Vegetables Christmas",
+   "lamb": "Lamb Meal Deal Meat Boxes and Selection Packs",
+   "pork & bacon": "Gordan Rhodes Pig Easy Pulled Pork Gourmet Sauce Mix",
+   "eggs": "Eggs Deli",
+   "bags & leather goods": "Earl Grey Tea Bags",
+   "preserves & honey": "Country Larder Preserves Tracklements",
+   "childrenswear": "Mrs Darlington&#8217;s Pickled Baby Onions",
+   "beef": "Beef Pasture for Life",
+   "womenswear": "Beef Skirt Steak &#8211; 500g",
+   "flour & grain": "Shropshire Spice Co Cranberry, Orange &#038; Roast Chestnut Wholemeal ",
+   "drinks & spirits": "Tracklements British Beer Mustard"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "childrenswear",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "BBQ",
+   "BBQ Country Larder Tracklements",
+   "Beef Christmas Country Larder Tracklements",
+   "Beef Free range and farm assured Meat Boxes and Selection Packs",
+   "Beef Pasture for Life",
+   "Cheese Christmas deals Christmas Deli",
+   "Chicken and Turkey Christmas",
+   "Chicken and Turkey Free range and farm assured",
+   "Chicken and Turkey Free range and farm assured Meat Boxes and Selection Packs",
+   "Christmas Country Larder Mrs Darlington’s Pork",
+   "Christmas deals Chicken and Turkey Christmas",
+   "Christmas deals Vegetables Christmas",
+   "Christmas deals Vegetables Christmas Meal Deal",
+   "Christmas goose",
+   "Christmas meat Beef Christmas Pasture for Life",
+   "Christmas meat Christmas Deli Pork",
+   "Christmas meat Christmas Pork",
+   "Christmas meat Christmas Pork Sausages and Bacon",
+   "Country Larder Drinks Coffee &amp; Tea Coffee beans",
+   "Country Larder Drinks Coffee &amp; Tea Ground coffee",
+   "Country Larder Drinks Coffee &amp; Tea Tea",
+   "Country Larder Gordon Rhodes",
+   "Country Larder Lingham’s",
+   "Country Larder Mrs Darlington’s",
+   "Country Larder Mrs Darlington’s Preserves",
+   "Country Larder Preserves Tracklements",
+   "Country Larder Shropshire Spice Co",
+   "Country Larder Tracklements",
+   "Eggs Deli",
+   "Free range and farm assured Meat Boxes and Selection Packs",
+   "Free range and farm assured Meat Boxes and Selection Packs Pork",
+   "Free range and farm assured Pork",
+   "Home Made Pies",
+   "Honey",
+   "Lamb Meal Deal Meat Boxes and Selection Packs",
+   "Lamb Meat Boxes and Selection Packs Pasture for Life",
+   "Lamb Pasture for Life",
+   "Meat Boxes and Selection Packs",
+   "Pork",
+   "Tracklements"
+  ],
+  "sample": [
+   "BBQ SUMMER SIZZLER",
+   "£75 Christmas Dinner Meal Deal",
+   "Christmas Cheese Selection",
+   "Christmas Fruit Deal",
+   "Small Christmas Vegetable Deal",
+   "Medium Christmas Vegetable Deal",
+   "Easter Meal Deal",
+   "Gordan Rhodes Glorious Goulash Gourmet Sauce Mix"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "paley-farm-shop": {
+  "id": "paley-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "broadditch-farm-shop": {
+  "id": "broadditch-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "loddington-farm-shop": {
+  "id": "loddington-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "gibsons-farm-shop": {
+  "id": "gibsons-farm-shop",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 73,
+  "tags": [
+   "dairy & cheese",
+   "drinks & spirits"
+  ],
+  "tagConfidence": {
+   "dairy & cheese": "weak",
+   "drinks & spirits": "weak"
+  },
+  "tagCounts": {
+   "dairy & cheese": 4,
+   "womenswear": 2,
+   "drinks & spirits": 18
+  },
+  "tagEvidence": {
+   "dairy & cheese": "Cheese Lovers<br>Food Hamper<br>(Click &#038; Collect)",
+   "womenswear": "Ladies Indulgence<br>Food Hamper<br>(UK Delivery)",
+   "drinks & spirits": "Gents<br>Ales<br>&#038;<br>Nibbles Hamper<br>(Click &#038; Collect)"
+  },
+  "gatedOut": [
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Flowers &amp; Gifts - Click &amp; Collect",
+   "Flowers &amp; Gifts - Local Delivery",
+   "Flowers - Click &amp; Collect",
+   "Flowers - Local Delivery",
+   "Gift Vouchers",
+   "Hampers - Click &amp; Collect",
+   "Hampers - Click &amp; Collect Hampers - UK Delivery",
+   "Hampers - UK Delivery"
+  ],
+  "sample": [
+   "Cheese Lovers<br>Food Hamper<br>(Click &#038; Collect)",
+   "Gluten Free<br>Food Hamper<br>(Click &#038; Collect Only)",
+   "Gluten Free<br>Food Hamper<br>(UK Delivery)",
+   "Ladies Indulgence<br>Food Hamper<br>(UK Delivery)",
+   "Kent Foodie Hamper<br>Food Hamper<br>(UK Delivery)",
+   "Everything Chocolate<br>Food Hamper<br>(UK Delivery)",
+   "Everything Chocolate<br>Food Hamper<br>(Click &#038; Collect Only)",
+   "Luxurious Hamper<br>Food Hamper<br>(Click &#038; Collect Only)"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "perry-court-farm": {
+  "id": "perry-court-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "blean-farm-shop": {
+  "id": "blean-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "white-mill-farm-shop": {
+  "id": "white-mill-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "chart-farm": {
+  "id": "chart-farm",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 92,
+  "tags": [
+   "beef",
+   "drinks & spirits",
+   "eggs",
+   "fruit & veg",
+   "game & venison",
+   "lamb",
+   "pork & bacon",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "drinks & spirits": "weak",
+   "eggs": "strong",
+   "fruit & veg": "weak",
+   "game & venison": "strong",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong"
+  },
+  "tagCounts": {
+   "beef": 33,
+   "poultry": 18,
+   "pork & bacon": 44,
+   "childrenswear": 1,
+   "lamb": 19,
+   "eggs": 6,
+   "game & venison": 30,
+   "fruit & veg": 2,
+   "drinks & spirits": 1,
+   "womenswear": 2
+  },
+  "tagEvidence": {
+   "beef": "Beef Chateaubriand",
+   "poultry": "Poultry",
+   "pork & bacon": "Pork Ribs",
+   "childrenswear": "Baby Back Pork Ribs",
+   "lamb": "Lamb Mince",
+   "eggs": "Quail Eggs &#8211; Local Delivery only",
+   "game & venison": "Sausages Venison",
+   "fruit & veg": "Wild Boar &#038; Apple Sausages",
+   "drinks & spirits": "Pork and Apple Cider Sausages",
+   "womenswear": "Beef Skirt"
+  },
+  "gatedOut": [
+   "childrenswear",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Bacon Pork",
+   "Barnsley Chops Chops Lamb",
+   "Beef Brisket",
+   "Beef Burger",
+   "Beef Calves Liver",
+   "Beef Chateaubriand",
+   "Beef Diced",
+   "Beef Fillet",
+   "Beef Fore-Rib",
+   "Beef Mince",
+   "Beef Ox-Tail",
+   "Beef Ribeye",
+   "Beef Rump",
+   "Beef Shin",
+   "Beef Short Rib",
+   "Beef Sirloin",
+   "Beef Skirt",
+   "Beef T-Bone",
+   "Beef Topside",
+   "Belly Pork",
+   "Breast Lamb",
+   "Breasts Poultry",
+   "Burgers Venison",
+   "Cheek Pork",
+   "Chops Lamb",
+   "Chops Pork",
+   "Chops Venison",
+   "Diced Lamb",
+   "Diced Venison",
+   "Duck Game",
+   "Eggs Other Poultry",
+   "Fillet Pork",
+   "Game Guinea Fowl",
+   "Game Wild Boar",
+   "Haunch Venison",
+   "Lamb Lamb Shanks",
+   "Lamb Mince",
+   "Lamb Neck Fillet",
+   "Lamb Shoulder",
+   "Lamb Steaks"
+  ],
+  "sample": [
+   "Chateaubriand",
+   "Turkey Mince",
+   "Mixed BBQ Box",
+   "Baby Back Pork Ribs",
+   "BBQ Fire Lighters",
+   "Lamb Mince",
+   "Gift Card",
+   "Chart Farm Ground Coffee"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "lower-ladysden-farm": {
+  "id": "lower-ladysden-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "pluckley-farm-shop": {
+  "id": "pluckley-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "lower-hardres-farm-shop": {
+  "id": "lower-hardres-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "coco-barclay": {
+  "id": "coco-barclay",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 70,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "braces & belts": "strong",
+   "womenswear": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 70,
+   "fruit & veg": 6,
+   "womenswear": 30,
+   "jewellery": 2,
+   "braces & belts": 17
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Bobbin Bag in tan vegetable tanned leather",
+   "fruit & veg": "Bobbin Bag in tan vegetable tanned leather",
+   "womenswear": "Mod Pocket Satchel in Cobalt Blue cotton cross body bags England handb",
+   "jewellery": "Little Ships key rings and bag charms",
+   "braces & belts": "Belt"
+  },
+  "gatedOut": [
+   "fruit & veg",
+   "jewellery"
+  ],
+  "observedTypes": [
+   "Accessory",
+   "Belt",
+   "Glasses Case",
+   "Handbag",
+   "Handbag Frame bag",
+   "Purse",
+   "Rucksack",
+   "Wallet",
+   "bi Glasses Case",
+   "office",
+   "purse",
+   "z Leather accessories",
+   "zoffice"
+  ],
+  "sample": [
+   "Bobbin Bag in tan vegetable tanned leather",
+   "LEATHER ACCESSORIES WORKSHOPS",
+   "Mod Pocket Satchel in Cobalt Blue",
+   "Slinger stitchless phone sling",
+   "Flora bag in Black vegetable tanned leather",
+   "Madison bag in vegetable tanned leather",
+   "Madison bag",
+   "Madison bag in vegetable tanned leather"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "les-animaux": {
+  "id": "les-animaux",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 257,
+  "tags": [
+   "childrenswear",
+   "coats & jackets",
+   "dresses",
+   "hats & caps",
+   "jeans & denim",
+   "knitwear",
+   "scarves & accessories",
+   "shirts",
+   "socks",
+   "suits & trousers",
+   "vests & waistcoats",
+   "womenswear",
+   "workwear & aprons"
+  ],
+  "tagConfidence": {
+   "childrenswear": "weak",
+   "coats & jackets": "strong",
+   "dresses": "strong",
+   "hats & caps": "strong",
+   "jeans & denim": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "strong",
+   "shirts": "strong",
+   "socks": "weak",
+   "suits & trousers": "weak",
+   "vests & waistcoats": "strong",
+   "womenswear": "strong",
+   "workwear & aprons": "weak"
+  },
+  "tagCounts": {
+   "coats & jackets": 72,
+   "shirts": 118,
+   "womenswear": 46,
+   "vests & waistcoats": 10,
+   "dresses": 73,
+   "jeans & denim": 39,
+   "hats & caps": 6,
+   "fruit & veg": 4,
+   "scarves & accessories": 5,
+   "suits & trousers": 2,
+   "workwear & aprons": 16,
+   "candles & holders": 1,
+   "knitwear": 1,
+   "socks": 1,
+   "watches": 1,
+   "dairy & cheese": 5,
+   "pottery": 4,
+   "childrenswear": 1
+  },
+  "tagEvidence": {
+   "coats & jackets": "Jacket",
+   "shirts": "Tee Shirt",
+   "womenswear": "Skirt",
+   "vests & waistcoats": "THE FLORIST / Satin Belted Waistcoat floristjacket Jackets Womenswear ",
+   "dresses": "THE POET / Short Sleeve Cotton Poplin Drop Waist Dress Dresses Organic",
+   "jeans & denim": "THE HERBALIST / Elasticated Denim Skirt Long Denim herbalistskirt Skir",
+   "hats & caps": "THE LIDSTER / Indian Cotton Cap Sleeve Top Indian Cotton Shirts Womens",
+   "fruit & veg": "THE FRUIT PICKER / Sleeveless Dress - Short Dresses Drill Womenswear W",
+   "scarves & accessories": "THE GILDER / Tie Waist Long Sleeve Linen Blouse Shirts Womenswear WW S",
+   "suits & trousers": "THE MILLER /  Indian Cotton Blazer Indian Cotton Jackets Jackets & Out",
+   "workwear & aprons": "THE SIGNWRITER / Mens Linen Workwear Jacket Menswear MW Jacket MW Shop",
+   "candles & holders": "THE CANDLE MAKER / Pleat Front Heavy Drill Cropped Pant Drill Pants Wo",
+   "knitwear": "HAPPY KNITS / Chunky Cotton Ribbed Sock accessories MW Acc Socks WW Ac",
+   "socks": "HAPPY KNITS / Chunky Cotton Ribbed Sock accessories MW Acc Socks WW Ac",
+   "watches": "THE WATCH MAKER / Waterproof Raincoat Coats & Jackets Jackets Jackets ",
+   "dairy & cheese": "THE MILK MAID / Short Sleeve Viscose Taffeta Dress Dresses milkmaid Vi",
+   "pottery": "THE CERAMICIST  / Mens Bamboo Relax Pant MW Pants MW Shop All",
+   "childrenswear": "THE POTTER / Drill Romper Drill Jumpsuits potter Womenswear WW Shop Al"
+  },
+  "gatedOut": [
+   "candles & holders",
+   "dairy & cheese",
+   "fruit & veg",
+   "pottery",
+   "watches"
+  ],
+  "observedTypes": [
+   "Coat",
+   "Dress",
+   "Gift Card",
+   "Hat",
+   "Jacket",
+   "Jumpsuit",
+   "Pant",
+   "Scarf",
+   "Shirt",
+   "Shorts",
+   "Skirt",
+   "Sweatshirt",
+   "Tee Shirt",
+   "Waistcoat"
+  ],
+  "sample": [
+   "THE BOOKSELLER / Asymmetrical Heavy Texture Coat",
+   "THE PAPERMAKER / Organic Drill Kimono Sleeve Jacket",
+   "THE CUTLER / Waxed Cotton Raincoat",
+   "THE PAPER MAKER / Kimono Sleeve Premium Cropped Tee",
+   "THE POET / Structured Premium Long Sleeve Tee",
+   "THE PAPER MAKER / Kimono Sleeve Premium Tee",
+   "THE FISHERMAN / Poplin Yoga Knee Length Skirt",
+   "THE FISHERMAN / Chambray Yoga Pant"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "elizabeth-whibley": {
+  "id": "elizabeth-whibley",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 16,
+  "tags": [
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "tweed & woven goods": 3
+  },
+  "tagEvidence": {
+   "tweed & woven goods": "PRE ORDER Lovers Tartan"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Bloomer"
+  ],
+  "sample": [
+   "Custom Nice - Bloomer Shorts",
+   "If Betty was a Bloomer!",
+   "Blue Easter Bonchie",
+   "Lace Bonchie",
+   "Yellow Easter Bonchie",
+   "PRE ORDER Raspberry Torte",
+   "PRE ORDER Lovers Tartan",
+   "PRE ORDER C*nty Lime Tartan"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "handmade-in-bridge": {
+  "id": "handmade-in-bridge",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "mille-fleurs": {
+  "id": "mille-fleurs",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "thomas-von-nordheim": {
+  "id": "thomas-von-nordheim",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "romney-marsh-wools": {
+  "id": "romney-marsh-wools",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 303,
+  "tags": [
+   "bags & leather goods",
+   "cashmere & merino",
+   "childrenswear",
+   "cushions & throws",
+   "hats & caps",
+   "knitwear",
+   "scarves & accessories",
+   "socks",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "cashmere & merino": "weak",
+   "childrenswear": "weak",
+   "cushions & throws": "weak",
+   "hats & caps": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "weak",
+   "socks": "weak",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "childrenswear": 4,
+   "cushions & throws": 3,
+   "tweed & woven goods": 7,
+   "hats & caps": 3,
+   "scarves & accessories": 3,
+   "socks": 1,
+   "tableware": 1,
+   "lamb": 2,
+   "eggs": 2,
+   "cashmere & merino": 9,
+   "knitwear": 2,
+   "bags & leather goods": 3,
+   "mugs": 1
+  },
+  "tagEvidence": {
+   "childrenswear": "22 mum and baby",
+   "cushions & throws": "27 cushion",
+   "tweed & woven goods": "28 throws and snuggles",
+   "hats & caps": "33 hats and scarves",
+   "scarves & accessories": "33 hats and scarves",
+   "socks": "35 socks",
+   "tableware": "62 tableware",
+   "lamb": "hand knitted romney wool christmas lamb",
+   "eggs": "beginner decorative egg needle felting kit",
+   "cashmere & merino": "british merino romney raw fleece",
+   "knitwear": "british romney knit kit honeycomb hat",
+   "bags & leather goods": "british romney lambswool small felted bag kit",
+   "mugs": "cosy ewe sheep mug"
+  },
+  "gatedOut": [
+   "eggs",
+   "lamb",
+   "mugs",
+   "tableware"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "20 for the home",
+   "21 gifts",
+   "22 mum and baby",
+   "23 clothing accessories",
+   "24 craft",
+   "25 toiletries and pampering",
+   "26 seasonal offers",
+   "27 cushion"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "emma-brewin": {
+  "id": "emma-brewin",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "oakside-saddlery": {
+  "id": "oakside-saddlery",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 43,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "pet accessories",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "pet accessories": "weak",
+   "womenswear": "weak"
+  },
+  "tagCounts": {
+   "pet accessories": 11,
+   "bags & leather goods": 14,
+   "braces & belts": 3,
+   "womenswear": 1
+  },
+  "tagEvidence": {
+   "pet accessories": "Leather Dog Lead p48498728",
+   "bags & leather goods": "Marsh Harrier Wallet p717539660",
+   "braces & belts": "Belt pouch and key clip p702509009",
+   "womenswear": "Ladies Cartridge Bag p411502822"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "store",
+   "Plaited Leather Rifle Sling p69110662",
+   "Leather Rifle Sling p49354924",
+   "Leather Dog Slip Lead p48682079",
+   "Leather Dog Lead p48498728",
+   "Traditional Leather Dog Collar p48306496",
+   "Roamer Camera Slipped Wrist Strap p58614136",
+   "Adventurer Leather Camera Wrist Strap p51682889"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "canterbury-pottery": {
+  "id": "canterbury-pottery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "bowls",
+   "candles & holders",
+   "flowerpots",
+   "mugs",
+   "plates",
+   "pottery",
+   "tins & storage",
+   "vases"
+  ],
+  "tagConfidence": {
+   "bowls": "strong",
+   "candles & holders": "strong",
+   "flowerpots": "strong",
+   "mugs": "strong",
+   "plates": "strong",
+   "pottery": "weak",
+   "tins & storage": "strong",
+   "vases": "strong"
+  },
+  "tagCounts": {
+   "candles & holders": 5,
+   "bowls": 37,
+   "tins & storage": 20,
+   "jewellery": 1,
+   "mugs": 3,
+   "plates": 10,
+   "pottery": 1,
+   "flowerpots": 14,
+   "vases": 33,
+   "umbrellas": 1,
+   "cookware": 3,
+   "poultry": 1,
+   "eggs": 1
+  },
+  "tagEvidence": {
+   "candles & holders": "Candlesticks &amp; Lanterns Perfect Presents",
+   "bowls": "Bowls",
+   "tins & storage": "Bread Bins &amp; Storage Jars",
+   "jewellery": "Advent Ring Table Centrepiece",
+   "mugs": "Mugs, Cups &amp; Goblets Perfect Presents",
+   "plates": "Perfect Presents Plates Serving Dishes",
+   "pottery": "Ceramic Gift Token",
+   "flowerpots": "Garden Pots",
+   "vases": "Bread Bins &amp; Storage Jars Vases",
+   "umbrellas": "Umbrella Stand (collect only)",
+   "cookware": "Small Casserole",
+   "poultry": "Chicken Egg Basket",
+   "eggs": "Chicken Egg Basket"
+  },
+  "gatedOut": [
+   "cookware",
+   "eggs",
+   "jewellery",
+   "poultry",
+   "umbrellas"
+  ],
+  "observedTypes": [
+   "Bowls",
+   "Bowls Dinner Services",
+   "Bowls Dinner Services Featured",
+   "Bowls Dinner Services Featured Plates",
+   "Bowls Dinner Services Serving Dishes",
+   "Bowls Perfect Presents Serving Dishes",
+   "Bread Bins &amp; Storage Jars",
+   "Bread Bins &amp; Storage Jars Eco Living",
+   "Bread Bins &amp; Storage Jars Eco Living Perfect Presents",
+   "Bread Bins &amp; Storage Jars Vases",
+   "Candlesticks &amp; Lanterns Ecclesiastical Perfect Presents",
+   "Candlesticks &amp; Lanterns Perfect Presents",
+   "Dinner Services",
+   "Dinner Services Oven Dishes",
+   "Dinner Services Plates",
+   "Eco Living Perfect Presents",
+   "Garden Pots",
+   "Gift Card",
+   "Lamps",
+   "Mugs, Cups &amp; Goblets Perfect Presents",
+   "Oven Dishes",
+   "Perfect Presents",
+   "Perfect Presents Plates Serving Dishes",
+   "Perfect Presents Vases",
+   "Vases",
+   "Wedding Lists"
+  ],
+  "sample": [
+   "Emily &#038; Hayden Cox &#8211; 19th July 2025",
+   "Ghost Lantern",
+   "Large Rice Bowl with chopsticks",
+   "Ramen Bowl with chopsticks",
+   "Default Product (with main glaze option)",
+   "Default (main glaze only)",
+   "Large Bread Bin with wheat decoration",
+   "Advent Ring Table Centrepiece"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "aylesford-pottery": {
+  "id": "aylesford-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "matt-horne-pottery": {
+  "id": "matt-horne-pottery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 19,
+  "tags": [
+   "plates",
+   "vases"
+  ],
+  "tagConfidence": {
+   "plates": "weak",
+   "vases": "weak"
+  },
+  "tagCounts": {
+   "plates": 1,
+   "vases": 8
+  },
+  "tagEvidence": {
+   "plates": "Turquoise Crystalline Platter",
+   "vases": "Turquoise and Copper Red Double-Bellied Crystalline Vase"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Blue & Red Crystalline Miniature",
+   "Light Blue Crystalline Miniature",
+   "Turquoise Crystalline Miniature",
+   "Turquoise Crystalline Miniature",
+   "Dark Green Crystalline Miniature",
+   "Green/Blue Crystalline Miniature",
+   "Green/Blue Crystalline Miniature",
+   "Light Blue Crystalline Miniature"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "janes-pottery": {
+  "id": "janes-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "claire-sporton-ceramics": {
+  "id": "claire-sporton-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "ortwin-thyssen-jewellery": {
+  "id": "ortwin-thyssen-jewellery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "lisa-mckean-jewellery": {
+  "id": "lisa-mckean-jewellery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "insilver-and-gold": {
+  "id": "insilver-and-gold",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 112,
+   "cufflinks & signets": 2,
+   "scarves & accessories": 2
+  },
+  "tagEvidence": {
+   "jewellery": "Earring Studs Sea treasures",
+   "cufflinks & signets": "Contemporary Mens Cufflinks",
+   "scarves & accessories": "Seaweed Wrap Ring &#8211; Size R 1/2"
+  },
+  "gatedOut": [
+   "scarves & accessories"
+  ],
+  "observedTypes": [
+   "Bangles &amp; Bracelets Sea treasures",
+   "Bangles Bangles &amp; Bracelets",
+   "Bangles Bangles &amp; Bracelets Contemporary Mens",
+   "Bangles Bangles &amp; Bracelets Ribbon Twist Collection",
+   "Contemporary Mens Cufflinks",
+   "Contemporary Necklaces",
+   "Contemporary Necklaces Sea treasures",
+   "Contemporary Necklaces necklaces",
+   "Contemporary Necklaces necklaces Ribbon Twist Collection",
+   "Contemporary Necklaces necklaces Sea treasures",
+   "Courses",
+   "Earring Studs",
+   "Earring Studs Sea treasures",
+   "Gift Vouchers",
+   "Gold Vermeil",
+   "Handprints",
+   "Handprints paws",
+   "Uncategorized",
+   "fingerprints",
+   "fingerprints Handprints",
+   "fingerprints paws",
+   "mens necklaces",
+   "mens necklaces Sea treasures",
+   "paws",
+   "ring",
+   "ring Sea treasures"
+  ],
+  "sample": [
+   "Mussel shell drop earrings",
+   "Mussel shell stud earrings",
+   "Cockle shell drop earrings",
+   "Cockle shell studs",
+   "Mussel shell pendant",
+   "Cockle shell pendant",
+   "Ring Making Workshop &#8211; Stacking Rings &#8211; Set of Three | Wed",
+   "Ring Making Workshop &#8211; Traditional D-shape Ring | Sunday 8th Nov"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "kata-jewellery": {
+  "id": "kata-jewellery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "strong",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "silverware": 1,
+   "jewellery": 44,
+   "cufflinks & signets": 3
+  },
+  "tagEvidence": {
+   "silverware": "Sterling Silver",
+   "jewellery": "Strung Bracelets",
+   "cufflinks & signets": "Amethyst Protea Cufflinks"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Art Hannah Buchanan Past Exhibitors",
+   "Art Jude Askey-Brown Past Exhibitors",
+   "Aura Earrings",
+   "Bangles &amp; Bracelets",
+   "Care Card",
+   "Caroline Martin Current Artists",
+   "Current Artists Heidi Langridge",
+   "Earrings",
+   "Hannah Buchanan Past Exhibitors",
+   "Helios Rings",
+   "Jade Taylor Past Exhibitors",
+   "Jude Askey-Brown Past Exhibitors",
+   "Menswear",
+   "Menswear Rings Wedding Bands",
+   "Neckpieces",
+   "Pari Aazami Past Exhibitors",
+   "Rings"
+  ],
+  "sample": [
+   "Diamonds",
+   "Platinum",
+   "Gemstones",
+   "Sterling Silver",
+   "Pearls",
+   "Strung Bracelets",
+   "Gold Plating and Gold Vermeil",
+   "Solid Gold"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "liv-thurlwell-jewellery": {
+  "id": "liv-thurlwell-jewellery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 73,
+  "tags": [
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 116
+  },
+  "tagEvidence": {
+   "jewellery": "Star Set Sapphire Pendant"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Bracelets",
+   "Earrings",
+   "Gift Cards",
+   "Hoops",
+   "Jewelry",
+   "Necklace",
+   "Necklaces",
+   "Rings",
+   "engagement ring"
+  ],
+  "sample": [
+   "Star Set Sapphire Pendant",
+   "Chunky Gold Disc Pendant",
+   "Ember Necklace",
+   "Fitted Organic Wedding Band",
+   "Oval Green Sapphire & Diamond Engagement Ring",
+   "Parti Sapphire Oval Engagement Ring",
+   "Round & Trapezoid Diamond Engagement Ring",
+   "Oval Green Sapphire & Diamond Engagement Ring"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "catherine-hills-jewellery": {
+  "id": "catherine-hills-jewellery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 500,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 811,
+   "eggs": 7,
+   "cushions & throws": 1,
+   "cufflinks & signets": 53
+  },
+  "tagEvidence": {
+   "jewellery": "Rose Gold Plated Twig Ring For V Pemberton",
+   "eggs": "Small Oxidised Silver Oval Egg Cuff with detachable Small Silver Oval ",
+   "cushions & throws": "Square Cushion Signet Ring silver under £200",
+   "cufflinks & signets": "Square Cushion Signet Ring silver under £200"
+  },
+  "gatedOut": [
+   "cushions & throws",
+   "eggs"
+  ],
+  "observedTypes": [
+   "Bracelets",
+   "Cufflinks",
+   "Earrings",
+   "Necklaces",
+   "Rings",
+   "SALE",
+   "bracelet",
+   "brooch",
+   "charms",
+   "cufflinks",
+   "earring",
+   "ring",
+   "voucher"
+  ],
+  "sample": [
+   "Rose Gold Plated Twig Ring For V Pemberton",
+   "Peculiar Pearl Branch Necklace",
+   "Budding Pearl Pendant Necklace",
+   "Airedale Terrier Brooch",
+   "Postage for jewellery",
+   "Tiny Teardrop Studs - Yellow Gold plated Silver",
+   "Tiny Kidney Studs - Yellow Gold Plated Silver",
+   "Tiny Kidney Studs - Silver"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "front-jewellery": {
+  "id": "front-jewellery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 72,
+   "childrenswear": 4
+  },
+  "tagEvidence": {
+   "jewellery": "Flow Ring by Robert Morris",
+   "childrenswear": "Ador Pendant Necklace with Gold Baby by Rob Morris"
+  },
+  "gatedOut": [
+   "childrenswear"
+  ],
+  "observedTypes": [
+   "Ador",
+   "Astro",
+   "Dusk",
+   "Etna",
+   "Flow",
+   "Iced",
+   "Kelp",
+   "Kiss",
+   "Lessons",
+   "Luna",
+   "Magnis",
+   "Manta",
+   "Pyro",
+   "Stack Rings",
+   "Stag",
+   "Starfish",
+   "Swearables"
+  ],
+  "sample": [
+   "Silversmithing Courses &#8211; All Levels",
+   "Flow Ring by Robert Morris",
+   "Flow Small Studs by Rob Morris",
+   "Flow Large Studs by Rob Morris",
+   "Flow Pendant X by Rob Morris",
+   "Flow Pendant Two by Rob Morris",
+   "Gift Vouchers",
+   "Flow Pendant One by Rob Morris"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "silverstones-jewellery": {
+  "id": "silverstones-jewellery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 46,
+  "tags": [
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 74
+  },
+  "tagEvidence": {
+   "jewellery": "Pendant with purple/brown stone"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Bracelet",
+   "Bracelets",
+   "Earrings",
+   "Featured Products",
+   "Featured Products, Rings",
+   "Necklaces",
+   "Necklaces, Chokers, Necklace/chains, Beads",
+   "Necklaces, Necklace/chains, Pendants",
+   "Pendants",
+   "Rings"
+  ],
+  "sample": [
+   "Pendant with purple/brown stone",
+   "Silver and blue lace agate necklace",
+   "Necklace with grey, black and white stones",
+   "Earrings with malachite stone",
+   "Bracelet - squiggly hand made silver",
+   "Earrings, silver flowers",
+   "Silver bracelet",
+   "Blog"
+  ],
+  "checked": "2026-09-29",
+  "rescored": false,
+  "alreadyGated": true
  }
 }
