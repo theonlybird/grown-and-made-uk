@@ -27948,5 +27948,770 @@
   "platform": null,
   "reason": "no-feed-found",
   "checked": "2026-09-28"
+ },
+ "blackwells-farm-shop": {
+  "id": "blackwells-farm-shop",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 26,
+  "tags": [
+   "beef",
+   "lamb",
+   "pork & bacon",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong"
+  },
+  "tagCounts": {
+   "pork & bacon": 27,
+   "beef": 7,
+   "poultry": 10,
+   "lamb": 6
+  },
+  "tagEvidence": {
+   "pork & bacon": "Christmas Shop Pork",
+   "beef": "Beef Christmas Shop",
+   "poultry": "Chicken Christmas Shop Christmas Turkeys, Geese, &amp; Chickens Free R",
+   "lamb": "Christmas Shop Lamb"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Beef Christmas Shop",
+   "Chicken Christmas Shop Christmas Turkeys, Geese, &amp; Chickens Free Range Poultry",
+   "Christmas Shop Christmas Turkeys, Geese, &amp; Chickens",
+   "Christmas Shop Christmas Turkeys, Geese, &amp; Chickens Free Range Poultry",
+   "Christmas Shop Christmas Turkeys, Geese, &amp; Chickens Turkey",
+   "Christmas Shop Lamb",
+   "Christmas Shop Pork"
+  ],
+  "sample": [
+   "Blackwells Farm House Smoked Ham",
+   "Blackwells Farm House Unsmoked Ham",
+   "Blackwells Farm House Honey Roast Ham",
+   "Rolled Sirloin",
+   "Sausage Meat",
+   "Blackwells Chicken",
+   "Free Range Goose",
+   "Bronze Boneless Turkey Breast"
+  ],
+  "checked": "2026-09-29"
+ },
+ "brookelynne-farm-shop": {
+  "id": "brookelynne-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "lathcoats-farm-shop": {
+  "id": "lathcoats-farm-shop",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 11,
+  "tags": [
+   "bread & bakery",
+   "drinks & spirits",
+   "fruit & veg",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "bread & bakery": "weak",
+   "drinks & spirits": "weak",
+   "fruit & veg": "weak",
+   "poultry": "weak"
+  },
+  "tagCounts": {
+   "drinks & spirits": 1,
+   "poultry": 1,
+   "bread & bakery": 2,
+   "fruit & veg": 1
+  },
+  "tagEvidence": {
+   "drinks & spirits": "beer wine and cider",
+   "poultry": "meat poultry and fish",
+   "bread & bakery": "pies and pastries",
+   "fruit & veg": "fruit and vegetables"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "products",
+   "dairy",
+   "soft drinks",
+   "beer wine and cider",
+   "plants",
+   "meat poultry and fish",
+   "pies and pastries",
+   "bread cakes and baking"
+  ],
+  "checked": "2026-09-29"
+ },
+ "whitegates-farm-shop": {
+  "id": "whitegates-farm-shop",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 206,
+  "tags": [
+   "beef",
+   "dairy & cheese",
+   "drinks & spirits",
+   "eggs",
+   "fruit & veg",
+   "game & venison",
+   "lamb",
+   "pork & bacon",
+   "poultry",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "dairy & cheese": "strong",
+   "drinks & spirits": "weak",
+   "eggs": "weak",
+   "fruit & veg": "weak",
+   "game & venison": "strong",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong",
+   "preserves & honey": "weak"
+  },
+  "tagCounts": {
+   "poultry": 58,
+   "pork & bacon": 95,
+   "lamb": 34,
+   "eggs": 3,
+   "bags & leather goods": 3,
+   "beef": 52,
+   "game & venison": 12,
+   "dairy & cheese": 7,
+   "cutlery & knives": 2,
+   "drinks & spirits": 1,
+   "preserves & honey": 4,
+   "fruit & veg": 4,
+   "womenswear": 1
+  },
+  "tagEvidence": {
+   "poultry": "Large mixed chicken kebabs",
+   "pork & bacon": "Pork&chorizo sausages",
+   "lamb": "Gluten free minted lamb kebabs",
+   "eggs": "Tray of Eggs (30)",
+   "bags & leather goods": "Bag of Beef Bones Bones & Stock",
+   "beef": "Bag of Beef Bones Bones & Stock",
+   "game & venison": "Game",
+   "dairy & cheese": "Grilling Cheese",
+   "cutlery & knives": "Pork Blade Bone Gluten Free Pork",
+   "drinks & spirits": "Stokes Cider & horseradish mustard",
+   "preserves & honey": "Stokes Red onion marmalade",
+   "fruit & veg": "Stokes apple sauce",
+   "womenswear": "Beef skirt"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "cutlery & knives",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Base",
+   "Beef",
+   "Bones",
+   "Classic",
+   "Condiments & Extras",
+   "Cooked Meats",
+   "Deli",
+   "Dry Cure Bacon",
+   "Extras",
+   "Game",
+   "Gammon Joints",
+   "Gammon Steaks",
+   "Gluten Free",
+   "Grilling Cheese",
+   "Kebabs",
+   "Lamb",
+   "Offal",
+   "Pies",
+   "Pork",
+   "Poultry",
+   "Puddings",
+   "Ribs",
+   "Sausages",
+   "Speciality",
+   "Streaky Bacon",
+   "Suet Puddings",
+   "Venison"
+  ],
+  "sample": [
+   "Large mixed chicken kebabs",
+   "Thai adventure chicken kebabs",
+   "Pork&chorizo sausages",
+   "Marmite sausages",
+   "Large mixed chicken kebabs",
+   "Gluten free minted lamb kebabs",
+   "Gluten free Chinese chicken kebabs",
+   "Tray of Eggs (30)"
+  ],
+  "checked": "2026-09-29"
+ },
+ "fiveways-fruit-farm": {
+  "id": "fiveways-fruit-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "c-humphreys-and-sons": {
+  "id": "c-humphreys-and-sons",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 44,
+  "tags": [
+   "beef",
+   "bread & bakery",
+   "dairy & cheese",
+   "lamb",
+   "pork & bacon",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "bread & bakery": "strong",
+   "dairy & cheese": "weak",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong"
+  },
+  "tagCounts": {
+   "bread & bakery": 3,
+   "dairy & cheese": 2,
+   "pork & bacon": 36,
+   "poultry": 12,
+   "lamb": 10,
+   "childrenswear": 1,
+   "beef": 18
+  },
+  "tagEvidence": {
+   "bread & bakery": "Bakery",
+   "dairy & cheese": "barbers 1833 vintage reserve barbers cheese",
+   "pork & bacon": "Pork Pie",
+   "poultry": "Poultry",
+   "lamb": "Lamb",
+   "childrenswear": "Baby back ribs",
+   "beef": "Beef"
+  },
+  "gatedOut": [
+   "childrenswear"
+  ],
+  "observedTypes": [
+   "Bakery",
+   "Beef",
+   "Lamb",
+   "Pork",
+   "Poultry"
+  ],
+  "sample": [
+   "barbers 1833 vintage reserve barbers cheese",
+   "Lincolnshire poacher cheese",
+   "Pork Pie",
+   "chicken wings",
+   "chicken thighs",
+   "Medium chicken",
+   "Lamb shanks",
+   "Lamb chump steaks"
+  ],
+  "checked": "2026-09-29"
+ },
+ "green-barn-farm-shop": {
+  "id": "green-barn-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "deersbrook-farm": {
+  "id": "deersbrook-farm",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 51,
+  "tags": [
+   "beef",
+   "pork & bacon"
+  ],
+  "tagConfidence": {
+   "beef": "weak",
+   "pork & bacon": "weak"
+  },
+  "tagCounts": {
+   "beef": 6,
+   "pork & bacon": 3
+  },
+  "tagEvidence": {
+   "beef": "Hand made Beef Burger.html",
+   "pork & bacon": "sausages.html"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "grassfedbeefbox.html",
+   "grassfedrumpsteak.html",
+   "Hand made Beef Burger.html",
+   "Beef Chipolatas.html",
+   "roast beef.html",
+   "grassfedbeefsilverside.html",
+   "Premium Roasting Joint Fore rib of Sussex grass fed beef.html",
+   "grassfedbeefmince.html"
+  ],
+  "checked": "2026-09-29"
+ },
+ "sunnymead-farm": {
+  "id": "sunnymead-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "richard-baxter-ceramics": {
+  "id": "richard-baxter-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "julie-osullivan-ceramics": {
+  "id": "julie-osullivan-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "laura-harvey-ceramics": {
+  "id": "laura-harvey-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "dantes-ceramics": {
+  "id": "dantes-ceramics",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 42,
+  "tags": [
+   "bowls",
+   "candles & holders",
+   "mugs",
+   "plates",
+   "pottery",
+   "tableware",
+   "vases"
+  ],
+  "tagConfidence": {
+   "bowls": "strong",
+   "candles & holders": "strong",
+   "mugs": "strong",
+   "plates": "strong",
+   "pottery": "weak",
+   "tableware": "strong",
+   "vases": "weak"
+  },
+  "tagCounts": {
+   "candles & holders": 8,
+   "tableware": 39,
+   "pottery": 42,
+   "bowls": 14,
+   "mugs": 10,
+   "jewellery": 2,
+   "plates": 7,
+   "bread & bakery": 3,
+   "vases": 6
+  },
+  "tagEvidence": {
+   "candles & holders": "Candle stick",
+   "tableware": "Sanne Hop beeswax arch candle  ~ pale grey candles candlestick ceramic",
+   "pottery": "Sanne Hop beeswax arch candle  ~ pale grey candles candlestick ceramic",
+   "bowls": "bowl",
+   "mugs": "Mug",
+   "jewellery": "Jewellery",
+   "plates": "Candle side plate candles candlestick ceramic ceramics coffee dinnerta",
+   "bread & bakery": "small speckled dish cake ceramic ceramics clay food foodprops foodstyl",
+   "vases": "small textured vase black ceramic ceramics clay coffee food foodprops "
+  },
+  "gatedOut": [
+   "bread & bakery",
+   "jewellery"
+  ],
+  "observedTypes": [
+   "Candle stick",
+   "Jewellery",
+   "Jug",
+   "Mug",
+   "Pourer",
+   "Small Tumbler",
+   "Tumbler",
+   "Utensil pot",
+   "bowl",
+   "egg cup",
+   "flower frog",
+   "plate"
+  ],
+  "sample": [
+   "Sanne Hop beeswax arch candle  ~ pale grey",
+   "berry bowl, white flecked clay - as seen in ENKI magazine",
+   "handmade shiny white tall coffee mug",
+   "matcha tea jug & bamboo chasen whisk",
+   "white flecked coffee tumbler",
+   "Peace Dove Porcelain Brooch",
+   "candle stick holder matt black glaze",
+   "simple white small speckled pouring bowl"
+  ],
+  "checked": "2026-09-29"
+ },
+ "jae-ceramics": {
+  "id": "jae-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "metal-lust-jewellery": {
+  "id": "metal-lust-jewellery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "white-designs-jewellery": {
+  "id": "white-designs-jewellery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "ar-goldsmiths": {
+  "id": "ar-goldsmiths",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 16,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "weak",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 14,
+   "silverware": 1,
+   "cufflinks & signets": 1,
+   "plates": 1
+  },
+  "tagEvidence": {
+   "jewellery": "Platinum 0.33ct Diamond Engagement Ring",
+   "silverware": "18ct Gold Antique ruby and diamond ring, Hallmarked Birmingham 1908",
+   "cufflinks & signets": "9ct Yellow Gold Oval Gents Signet Ring",
+   "plates": "Platinum 0.10ct Brilliant Cut Diamond Solitaire With Illusion Plate Se"
+  },
+  "gatedOut": [
+   "plates"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Platinum 0.25ct Diamond Solitaire",
+   "Platinum 0.33ct Diamond Engagement Ring",
+   "18ct Gold Antique ruby and diamond ring, Hallmarked Birmingham 1908",
+   "Antique Amethyst Gold Pendant",
+   "9ct Yellow Gold Oval Gents Signet Ring",
+   "18ct Yellow Gold &#038; Platinum 5 Old Cut Diamond Half Hoop Ring",
+   "Victorian 9ct Gold Sapphire &#038; Diamond Half Hoop Ring",
+   "Vintage 0.25ct Diamond Art Deco Engagement Ring"
+  ],
+  "checked": "2026-09-29"
+ },
+ "the-jewellery-hut": {
+  "id": "the-jewellery-hut",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "pamela-print": {
+  "id": "pamela-print",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 48,
+  "tags": [
+   "cashmere & merino",
+   "cushions & throws",
+   "scarves & accessories",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "cashmere & merino": "weak",
+   "cushions & throws": "strong",
+   "scarves & accessories": "strong",
+   "tweed & woven goods": "strong"
+  },
+  "tagCounts": {
+   "scarves & accessories": 19,
+   "cushions & throws": 33,
+   "cashmere & merino": 1,
+   "tweed & woven goods": 8
+  },
+  "tagEvidence": {
+   "scarves & accessories": "SAMPLE SALE SCARVES",
+   "cushions & throws": "CUSHIONS",
+   "cashmere & merino": "MERINO LAMBSWOOL WEAVING YARN 2/17",
+   "tweed & woven goods": "THROWS"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "CUSHIONS",
+   "SAMPLE SALE",
+   "SAMPLE SALE SCARVES",
+   "SCARVES",
+   "THROWS",
+   "WEAVING LOOM KITS | YARNS",
+   "WEAVING WORKSHOPS"
+  ],
+  "sample": [
+   "ETTERBEEK ARTWORK",
+   "INTRODUCTION TO TABLE LOOM WEAVING: TASTER WORKSHOP",
+   "HANDWOVEN MINI BLOCK COWL &#8211; VIOLET",
+   "BEGINNERS TABLE LOOM WEAVING WORKSHOP: 2-DAY INTENSIVE",
+   "INTRODUCTION TO FRAME WEAVING",
+   "ONE-TO-ONE PRIVATE WEAVING TUITION",
+   "WEAVING WORKSHOP GIFT CARD",
+   "ALTITUDE 100 STRIPE"
+  ],
+  "checked": "2026-09-29"
+ },
+ "rosanna-clare": {
+  "id": "rosanna-clare",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 2,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {
+   "jewellery": 2
+  },
+  "tagEvidence": {
+   "jewellery": "Leopard Print Laser Engraved Earrings LASER ENGRAVED EARRINGS LEATHER "
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Leopard Print Laser Engraved Earrings",
+   "Leather Bracelet"
+  ],
+  "checked": "2026-09-29"
+ },
+ "aj-leather-work": {
+  "id": "aj-leather-work",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
+ },
+ "liquidbreed": {
+  "id": "liquidbreed",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 400,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "coats & jackets",
+   "dresses",
+   "footwear & boots",
+   "hats & caps",
+   "knitwear",
+   "scarves & accessories",
+   "vests & waistcoats",
+   "womenswear",
+   "workwear & aprons"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "coats & jackets": "weak",
+   "dresses": "weak",
+   "footwear & boots": "weak",
+   "hats & caps": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "weak",
+   "vests & waistcoats": "weak",
+   "womenswear": "weak",
+   "workwear & aprons": "weak"
+  },
+  "tagCounts": {
+   "hats & caps": 57,
+   "jewellery": 38,
+   "scarves & accessories": 14,
+   "bags & leather goods": 45,
+   "dresses": 19,
+   "knitwear": 7,
+   "womenswear": 31,
+   "coats & jackets": 2,
+   "vests & waistcoats": 6,
+   "workwear & aprons": 7,
+   "braces & belts": 2,
+   "footwear & boots": 3,
+   "pottery": 2,
+   "poultry": 1,
+   "cutlery & knives": 1
+  },
+  "tagEvidence": {
+   "hats & caps": "Fairy hats c200158118",
+   "jewellery": "Necklaces c200161128",
+   "scarves & accessories": "Gloves &amp; Arm Warmers c200161132",
+   "bags & leather goods": "Bags &amp; purses c200167893",
+   "dresses": "Dresses c200188271",
+   "knitwear": "Jumpers &amp; cardigans c200188522",
+   "womenswear": "Bustles &amp; over skirts c200188523",
+   "coats & jackets": "Coats &amp; jackets c200217256",
+   "vests & waistcoats": "Waistcoats c202698001",
+   "workwear & aprons": "Aprons c204644252",
+   "braces & belts": "Belts c205944020",
+   "footwear & boots": "Boot Covers &amp; Leg Warmers c205948010",
+   "pottery": "Porcelain doll strap skirt p865283779",
+   "poultry": "Chicken lolita collar p856102933",
+   "cutlery & knives": "Wrapped blade p855708657"
+  },
+  "gatedOut": [
+   "cutlery & knives",
+   "jewellery",
+   "pottery",
+   "poultry"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Clothing c200158110",
+   "Fairy hats c200158118",
+   "Headbands c200158121",
+   "Necklaces c200161128",
+   "Hats c200161130",
+   "Gloves &amp; Arm Warmers c200161132",
+   "Chokers c200161134",
+   "Jewellery c200167885"
+  ],
+  "checked": "2026-09-29"
+ },
+ "georgina-blyth-millinery": {
+  "id": "georgina-blyth-millinery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 117,
+  "tags": [
+   "hats & caps",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "hats & caps": "strong",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "hats & caps": 106,
+   "tweed & woven goods": 6
+  },
+  "tagEvidence": {
+   "hats & caps": "Lily (Ready to Ship) Fascinator Hat Hatinator Headpiece",
+   "tweed & woven goods": "Pink Tweed Padded Headband (Ready to Ship) headband"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Beanies",
+   "Cocktail Hat",
+   "Facemask",
+   "Fascinator",
+   "Fedora",
+   "Gift Cards",
+   "Halo",
+   "Headband",
+   "Headpiece",
+   "Sun Hat",
+   "Trilby",
+   "Wide Brim Hat",
+   "Wide Brimmed Hats"
+  ],
+  "sample": [
+   "Lily (Ready to Ship)",
+   "Polly (Ready to Ship)",
+   "Nina (Ready to Ship)",
+   "Wide Boater Hat - Black Satin (Ready to Ship)",
+   "Matilda (Ready to Ship)",
+   "Polka Dot Feather Disc Hat (Ready to Ship)",
+   "Kitty Halo Crown (Ready to Ship)",
+   "Azure Hat (Ready to Ship)"
+  ],
+  "checked": "2026-09-29"
+ },
+ "alison-amanda-milliner": {
+  "id": "alison-amanda-milliner",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 86,
+  "tags": [
+   "childrenswear",
+   "hats & caps"
+  ],
+  "tagConfidence": {
+   "childrenswear": "weak",
+   "hats & caps": "weak"
+  },
+  "tagCounts": {
+   "hats & caps": 19,
+   "jewellery": 1,
+   "game & venison": 2,
+   "childrenswear": 1
+  },
+  "tagEvidence": {
+   "hats & caps": "vintage style brown felt half hat 1940s 50s inspired",
+   "jewellery": "handmade black felt half hat 1940s style crystal brooch embellishment",
+   "game & venison": "vintage style felt half hat dark green pheasant feather detail",
+   "childrenswear": "baby blue velvet headband fascinator feather halo wedding races headwe"
+  },
+  "gatedOut": [
+   "game & venison",
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "black fascinator crinoline net feathers wedding ascot",
+   "black and pink fascinator weddings races headwear",
+   "black and white fascinator couture millinery headpiece",
+   "black and white fascinator special occasion hatinator",
+   "black and white hatinator wedding races special occasion headwear",
+   "blue cornflower fascinator feathers tulle ruffle hatinator wedding hea",
+   "brown bronze fascinator hatinator feathers wedding races headwear",
+   "cobalt feather fascinator wedding races hatinator"
+  ],
+  "checked": "2026-09-29"
+ },
+ "weald-handmade": {
+  "id": "weald-handmade",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-09-29"
  }
 }
