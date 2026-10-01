@@ -2618,35 +2618,6 @@
     "products_checked": "2026-08-01"
   },
   {
-    "id": "denby-pottery",
-    "name": "Denby Pottery",
-    "subcategory": "Factory pottery",
-    "tier": "gold",
-    "listing_type": "both",
-    "town": "Denby, Derbyshire",
-    "address": "Denby Pottery Village, Derby Road, Denby, Ripley",
-    "lat": 53.02263,
-    "lng": -1.41679,
-    "website": "https://www.denbypottery.com",
-    "description": "Stoneware made on the same Derbyshire site since 1809, using clay from the seam the pottery was founded on.",
-    "tier_confidence": "high",
-    "category": "ceramics",
-    "instagram": "",
-    "logo": "assets/logos/denby-pottery.png",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "pottery",
-      "bowls",
-      "mugs",
-      "plates",
-      "tableware",
-      "vases"
-    ],
-    "nation": "England",
-    "county": "Derbyshire",
-    "products_checked": "2026-08-01"
-  },
-  {
     "id": "burleigh-pottery",
     "name": "Burleigh (Middleport Pottery)",
     "subcategory": "Factory pottery",
