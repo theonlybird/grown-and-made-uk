@@ -1065,7 +1065,7 @@
   },
   {
     "id": "rhug-estate",
-    "name": "Rhug Estate Organic",
+    "name": "Rhug Estate",
     "category": "farm",
     "subcategory": "Meat & Mixed",
     "tier": "silver",
@@ -1079,7 +1079,7 @@
     "description": "Award-winning organic estate in North Wales selling its own organic meat, plus a bistro, drive-thru and skincare.",
     "tier_confidence": "high",
     "logo": "assets/logos/rhug-estate.png",
-    "source": "tier-reviewed-2026-09",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "fresh meat",
       "fruit & veg",
@@ -1592,15 +1592,15 @@
     "tier": "gold",
     "listing_type": "both",
     "town": "Castlemorris, Pembrokeshire",
-    "address": "Castlemorris",
+    "address": "Castlemorris, Haverfordwest, Pembrokeshire SA62 5UX",
     "lat": 51.97239,
     "lng": -5.06926,
     "website": "https://melintregwynt.co.uk",
     "instagram": "https://www.instagram.com/melintregwynt/",
-    "description": "Family woollen mill on the Pembrokeshire coast weaving distinctive double-cloth Welsh blankets and accessories since 1912.",
+    "description": "Established in 1912, Melin Tregwynt is a working woollen mill on the Pembrokeshire coast weaving distinctive double-cloth Welsh blankets, cushions and home accessories.",
     "tier_confidence": "high",
     "logo": "assets/logos/melin-tregwynt.svg",
-    "source": "verified-batch-2026-07",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "tweed & woven goods",
       "pet accessories"
@@ -7473,10 +7473,10 @@
     "lng": -2.2302,
     "website": "https://meccanica.cc",
     "instagram": "",
-    "description": "Motorsport-inspired polos and tees knitted and made in Britain.",
+    "description": "Motorsport-inspired polos and tees knitted and made in Britain together with hand made belts that last and unique aprons.",
     "tier_confidence": "medium",
     "logo": "assets/logos/meccanica-clothing.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "everyday wear"
     ],
@@ -7650,7 +7650,7 @@
     "description": "Slow-fashion womenswear made with named UK manufacturing partners.",
     "tier_confidence": "high",
     "logo": "assets/logos/blue-nude.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "womenswear"
     ],
@@ -7704,10 +7704,10 @@
     "lng": -1.9037,
     "website": "https://www.oxford-blue.com",
     "instagram": "https://www.instagram.com/oxfordblue1968/",
-    "description": "Wax cotton country jackets, part of the range made in Birmingham.",
+    "description": "Tweed and Wax cotton country jackets and hats that are part of the range made in Birmingham.",
     "tier_confidence": "medium",
     "logo": "assets/logos/oxford-blue.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "coats & jackets"
     ],
@@ -10103,21 +10103,21 @@
     "subcategory": "Womenswear",
     "tier": "silver",
     "listing_type": "online_only",
-    "town": "Reading, Berkshire",
-    "address": "Reading",
-    "lat": 51.4517,
-    "lng": -0.9698,
+    "town": "Somerset",
+    "address": "Somerset",
+    "lat": 51.2304,
+    "lng": -2.7466,
     "website": "https://violetsinmay.co.uk",
     "instagram": "https://www.instagram.com/violetsinmay/",
     "description": "Vintage-style womenswear hand-made by its founder.",
     "tier_confidence": "high",
     "logo": "assets/logos/violets-in-may.png",
-    "source": "unrecorded — verify before relying on",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "womenswear"
     ],
     "nation": "England",
-    "county": "Berkshire",
+    "county": "Somerset",
     "audience": [
       "men",
       "women",
