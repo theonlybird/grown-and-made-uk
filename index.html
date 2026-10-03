@@ -228,7 +228,7 @@
   }
 
   .search-input-box { position: relative; display: flex; align-items: center; }
-  #search { width: 100%; padding: 11px 90px 11px 38px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; outline: none; background: #fcfdfe; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: .2s; }
+  #search { width: 100%; padding: 11px 128px 11px 38px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; outline: none; background: #fcfdfe; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: .2s; }
   /* type="search" gives Chrome/Safari their own grey ✕. We already have the
      green Reset button, so suppress the native one on every platform. */
   #search::-webkit-search-cancel-button,
@@ -236,7 +236,12 @@
   #search::-webkit-search-results-button,
   #search::-webkit-search-results-decoration { -webkit-appearance: none; appearance: none; display: none; }
   #search::-ms-clear, #search::-ms-reveal { display: none; width: 0; height: 0; }
-  .btn-reset { position: absolute; right: 12px; background: var(--navy); color: #fff; border: none; padding: 6px 11px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: .15s; z-index: 2; font-family: inherit; }
+  .btn-go { position: absolute; right: 8px; width: 30px; height: 30px; padding: 0; border: none; border-radius: 6px; background: var(--green); color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; z-index: 2; transition: .15s; }
+  .btn-go:hover { background: var(--green-dark); }
+  .btn-go:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  /* .search-input-box svg positions the magnifier absolutely; undo that here. */
+  .search-input-box .btn-go svg { position: static; width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .btn-reset { position: absolute; right: 44px; background: var(--navy); color: #fff; border: none; padding: 6px 11px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: .15s; z-index: 2; font-family: inherit; }
   .btn-reset:hover { background: var(--red); }
   .chip.disabled { opacity: 0.35; pointer-events: none; filter: grayscale(0.85); cursor: not-allowed; }
 
@@ -342,10 +347,13 @@
     .search-input-box svg{left:12px}
     /* Icon-only reset, and only once there is something to reset — the word
        "Reset" was swallowing a third of an already narrow field. */
-    .btn-reset{display:none;right:10px;width:36px;height:36px;padding:0;justify-content:center;font-size:14px}
+    .btn-go{right:6px;width:36px;height:36px}
+    .search-input-box .btn-go svg{width:18px;height:18px}
+    #search{padding-right:48px}
+    .btn-reset{display:none;right:46px;width:36px;height:36px;padding:0;justify-content:center;font-size:14px}
     .btn-reset .rlabel{display:none}
     body.is-filtered .btn-reset{display:inline-flex}
-    body.is-filtered #search{padding-right:54px}
+    body.is-filtered #search{padding-right:88px}
     #filterBtn{display:inline-flex}
     .btn-view-toggle{width:44px;height:44px;padding:0;justify-content:center;font-size:18px;border-radius:11px}
     .btn-view-toggle .label{display:none}
@@ -704,6 +712,7 @@
       <div class="search-input-box">
         <svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         <input id="search" type="search" enterkeyhint="search" placeholder="Search makers, towns or whatever you're after (e.g. 'woollen jumper from Scotland')..." autocomplete="off" autocapitalize="off" autocorrect="off" />
+        <button id="searchGoBtn" type="button" class="btn-go" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <button id="resetBtn" type="button" class="btn-reset" title="Reset search &amp; filters" aria-label="Reset search and filters"><span aria-hidden="true">✕</span><span class="rlabel">Reset</span></button>
       </div>
       <div id="autocompleteDropdown"></div>
@@ -1520,25 +1529,20 @@ gridCards.addEventListener('click', e => {
 });
 
 // --- Autocomplete & Hybrid Search Engine ---
-// The list follows what is typed, at any length from two characters. It used
-// to update only below two, so one letter filtered the map and every letter
-// after it was ignored until Enter. Typing over a finished search starts a new
-// one, so the old results give way to the live filter straight away.
+// Search runs on Enter (or the arrow button) only, on both views (3 Oct 2026).
+// The grid used to filter as you typed, but that was a plain every-word text
+// match, not the real search: "leather wallet london" showed one card while
+// typing and 40 after Enter, which read as a broken search. Typing now only
+// drives the business-name suggestions dropdown. The results on screen stay
+// put until the visitor submits; emptying the box still clears a search.
 let typingTimer = null;
 function applyTyped(val){
+  state.q = '';
   const searching = state.aiActive || state.refining || state.notice;
-  if (state.currentView !== 'grid') {
-    // The map: nothing moves while typing. Enter runs the search and opens
-    // the grid, as it always did. Emptying the box still clears a search.
-    state.q = '';
-    if (val.length < 2 && searching) { cancelSearch(); clearSearchState(); renderMapList(); }
-    return;
+  if (val.length < 2 && searching) {
+    cancelSearch(); clearSearchState();
+    if (state.currentView === 'grid') renderGrid(); else renderMapList();
   }
-  // The grid: typing over a search (finished or still waiting on the AI)
-  // starts afresh, and the cards follow the keyboard.
-  if (searching) { cancelSearch(); clearSearchState(); }
-  state.q = val.length >= 2 ? val : '';
-  renderGrid();
 }
 searchInput.addEventListener('input', e => {
   const val = e.target.value.trim().toLowerCase();
@@ -1591,27 +1595,37 @@ document.addEventListener('click', e => {
   }
 });
 
-searchInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter') {
-    const val = searchInput.value.trim();
-    autocompleteDropdown.style.display = 'none';
+function submitSearch() {
+  const val = searchInput.value.trim();
+  autocompleteDropdown.style.display = 'none';
 
-    // Check if query matches an exact business name directly
-    const exactMatch = BUSINESSES.find(b => b.name.toLowerCase() === val.toLowerCase());
-    if (exactMatch) {
-      gmTrack('search', { search_term: val.toLowerCase(), search_engine: 'exact_name', search_results: 1 });
-      gmTrackBiz('search_suggestion_select', exactMatch, { search_term: val });
-      focus(exactMatch.id, 'search_exact_name');
-      return;
-    }
-
-    // Otherwise, the full search. Two characters is enough ("uk", "ox").
-    if (val.length >= 2) {
-      clearTimeout(typingTimer);
-      executeAiSearch(val);
-    }
+  // Check if query matches an exact business name directly
+  const exactMatch = BUSINESSES.find(b => b.name.toLowerCase() === val.toLowerCase());
+  if (exactMatch) {
+    gmTrack('search', { search_term: val.toLowerCase(), search_engine: 'exact_name', search_results: 1 });
+    gmTrackBiz('search_suggestion_select', exactMatch, { search_term: val });
+    focus(exactMatch.id, 'search_exact_name');
+    return;
   }
+
+  // Otherwise, the full search. Two characters is enough ("uk", "ox").
+  if (val.length >= 2) {
+    clearTimeout(typingTimer);
+    executeAiSearch(val);
+  } else {
+    searchInput.focus();
+  }
+}
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') submitSearch();
 });
+const searchGoBtn = document.getElementById('searchGoBtn');
+if (searchGoBtn) {
+  searchGoBtn.addEventListener('click', () => {
+    submitSearch();
+    if (isMobile()) searchInput.blur();
+  });
+}
 
 function clearAiSearch() {
   state.aiActive = false;
