@@ -228,7 +228,7 @@
   }
 
   .search-input-box { position: relative; display: flex; align-items: center; }
-  #search { width: 100%; padding: 11px 128px 11px 38px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; outline: none; background: #fcfdfe; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: .2s; }
+  #search { width: 100%; padding: 11px 116px 11px 38px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; outline: none; background: #fcfdfe; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: .2s; }
   /* type="search" gives Chrome/Safari their own grey ✕. We already have the
      green Reset button, so suppress the native one on every platform. */
   #search::-webkit-search-cancel-button,
@@ -236,12 +236,15 @@
   #search::-webkit-search-results-button,
   #search::-webkit-search-results-decoration { -webkit-appearance: none; appearance: none; display: none; }
   #search::-ms-clear, #search::-ms-reveal { display: none; width: 0; height: 0; }
-  .btn-go { position: absolute; right: 8px; width: 30px; height: 30px; padding: 0; border: none; border-radius: 6px; background: var(--green); color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; z-index: 2; transition: .15s; }
+  /* The field is a capsule, so everything inside it is too, and concentric
+     with it: both buttons share the Reset height (26px) and sit with the same
+     inset from the field's edge as the gap between them (6px). */
+  .btn-go { position: absolute; right: 6px; width: 26px; height: 26px; padding: 0; border: none; border-radius: 50%; background: var(--green); color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; z-index: 2; transition: .15s; }
   .btn-go:hover { background: var(--green-dark); }
   .btn-go:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
   /* .search-input-box svg positions the magnifier absolutely; undo that here. */
-  .search-input-box .btn-go svg { position: static; width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
-  .btn-reset { position: absolute; right: 44px; background: var(--navy); color: #fff; border: none; padding: 6px 11px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: .15s; z-index: 2; font-family: inherit; }
+  .search-input-box .btn-go svg { position: static; width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; }
+  .btn-reset { position: absolute; right: 38px; background: var(--navy); color: #fff; border: none; padding: 6px 11px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: .15s; z-index: 2; font-family: inherit; }
   .btn-reset:hover { background: var(--red); }
   .chip.disabled { opacity: 0.35; pointer-events: none; filter: grayscale(0.85); cursor: not-allowed; }
 
@@ -347,13 +350,16 @@
     .search-input-box svg{left:12px}
     /* Icon-only reset, and only once there is something to reset — the word
        "Reset" was swallowing a third of an already narrow field. */
-    .btn-go{right:6px;width:36px;height:36px}
-    .search-input-box .btn-go svg{width:18px;height:18px}
-    #search{padding-right:48px}
-    .btn-reset{display:none;right:46px;width:36px;height:36px;padding:0;justify-content:center;font-size:14px}
+    /* 46px capsule: 32px circles, 7px inset, 6px apart. The ::after widens
+       each tap target to 44px without changing what is drawn. */
+    .btn-go{right:7px;width:32px;height:32px}
+    .search-input-box .btn-go svg{width:16px;height:16px}
+    .btn-go::after,.btn-reset::after{content:"";position:absolute;inset:-6px}
+    #search{padding-right:46px}
+    .btn-reset{display:none;right:45px;width:32px;height:32px;padding:0;justify-content:center;font-size:13px;border-radius:50%}
     .btn-reset .rlabel{display:none}
     body.is-filtered .btn-reset{display:inline-flex}
-    body.is-filtered #search{padding-right:88px}
+    body.is-filtered #search{padding-right:84px}
     #filterBtn{display:inline-flex}
     .btn-view-toggle{width:44px;height:44px;padding:0;justify-content:center;font-size:18px;border-radius:11px}
     .btn-view-toggle .label{display:none}
@@ -466,11 +472,12 @@
      context the flag needs — put it on the wordmark itself. */
   .brand-logo{position:relative;z-index:1}
 
-  #search{background:var(--surface);border:1px solid var(--line);border-radius:20px;
+  #search{background:var(--surface);border:1px solid var(--line);border-radius:999px;
     font-family:var(--font-body);color:var(--ink);box-shadow:none}
   #search:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,66,37,.10)}
   .search-input-box svg{stroke:var(--muted-2)}
   .btn-reset,.btn-view-toggle{background:var(--green);border-radius:6px;font-family:var(--font-body)}
+  .search-input-box .btn-reset{border-radius:999px}
   .btn-reset:hover,.btn-view-toggle:hover{background:var(--green-dark);filter:none}
   .btn-sort,#sortBtn{color:var(--green);border-color:var(--line);background:var(--surface);
     font-family:var(--font-body)}
