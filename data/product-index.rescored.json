@@ -14768,16 +14768,6 @@
   "rescored": false,
   "alreadyGated": true
  },
- "alt-berg": {
-  "id": "alt-berg",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-08-01",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
- },
  "dents": {
   "id": "dents",
   "shopify": true,
@@ -31200,5 +31190,1603 @@
   "checked": "2026-09-29",
   "rescored": false,
   "alreadyGated": true
+ },
+ "hainsworth": {
+  "id": "hainsworth",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 90,
+  "tags": [
+   "scarves & accessories"
+  ],
+  "tagConfidence": {
+   "scarves & accessories": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 2,
+   "scarves & accessories": 1
+  },
+  "tagEvidence": {
+   "jewellery": "aw2122 jewelled opulence",
+   "scarves & accessories": "saxony scarf cloth"
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "collections",
+   "broadcloth",
+   "vivid hues",
+   "vivid hues heritage",
+   "true heritage",
+   "true heritage costume",
+   "pilot cloth",
+   "pioneer"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "joshua-ellis": {
+  "id": "joshua-ellis",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 495,
+  "tags": [
+   "cashmere & merino",
+   "childrenswear",
+   "hats & caps",
+   "jeans & denim",
+   "knitwear",
+   "scarves & accessories",
+   "socks",
+   "tweed & woven goods",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "cashmere & merino": "weak",
+   "childrenswear": "weak",
+   "hats & caps": "strong",
+   "jeans & denim": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "strong",
+   "socks": "strong",
+   "tweed & woven goods": "strong",
+   "womenswear": "weak"
+  },
+  "tagCounts": {
+   "scarves & accessories": 516,
+   "cashmere & merino": 492,
+   "tweed & woven goods": 110,
+   "watches": 45,
+   "socks": 45,
+   "womenswear": 35,
+   "knitwear": 91,
+   "hats & caps": 99,
+   "jeans & denim": 2,
+   "childrenswear": 10,
+   "fruit & veg": 1
+  },
+  "tagEvidence": {
+   "scarves & accessories": "Scarf",
+   "cashmere & merino": "Lightweight Cashmere & Silk Check Scarf 100% Cashmere Autumn 2022 Blac",
+   "tweed & woven goods": "Lightweight Cashmere & Silk Check Scarf 100% Cashmere Autumn 2022 Blac",
+   "watches": "Classic Blackwatch Cashmere 100%  Scarf - Yellow x Coablt x Navy AW25 ",
+   "socks": "Women's Cashmere Balaclava & Bed Socks Natural Undyed Gift Set AW25 BF",
+   "womenswear": "Women's Cashmere Balaclava & Bed Socks Natural Undyed Gift Set AW25 BF",
+   "knitwear": "Women's Cashmere Cable Knit Beanie & Bed Socks Natural Undyed Gift Set",
+   "hats & caps": "Women's Cashmere Cable Knit Beanie & Bed Socks Natural Undyed Gift Set",
+   "jeans & denim": "Offset Check 100% Lambswool Scarf - Navy Blue x Green x Denim AW25 Gre",
+   "childrenswear": "The Archive - Classic Plain Alpaca & Lambswool Brushed Scarf Brown 30%",
+   "fruit & veg": "A Light Touch 100% Cashmere Scarf - Passion Fruit 100% Cashmere B1G1F "
+  },
+  "gatedOut": [
+   "fruit & veg",
+   "watches"
+  ],
+  "observedTypes": [
+   "Balaclava",
+   "Beanie",
+   "Beanies",
+   "Gift Set",
+   "Gloves",
+   "Scarf",
+   "Socks",
+   "Stole",
+   "Throw",
+   "Wide Scarf",
+   "Wrist Warmer"
+  ],
+  "sample": [
+   "Lightweight Cashmere & Silk Check Scarf",
+   "Giant Windowpane Cashmere Stole",
+   "Vintage Collection Lambswool Scarf",
+   "Doublefaced Check Brushed 10% Cashmere 90% Lambswool Scarf - Navy Blue",
+   "Classic Check Ripple Cashmere 100%  Wide Scarf - Yellow x Purple x Gre",
+   "Classic Check Ripple Cashmere 100%  Wide Scarf - Green x Blue x Grey",
+   "Classic Check Ripple Cashmere 100%  Wide Scarf - Purple x Yellow x Lob",
+   "Classic Blackwatch Cashmere 100%  Stole - Yellow x Green x Sand"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "marton-mills": {
+  "id": "marton-mills",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 400,
+  "tags": [
+   "dresses",
+   "jeans & denim",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "dresses": "weak",
+   "jeans & denim": "weak",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "jeans & denim": 1,
+   "tweed & woven goods": 8,
+   "watches": 11,
+   "dresses": 8
+  },
+  "tagEvidence": {
+   "jeans & denim": "bardsey denim",
+   "tweed & woven goods": "bb tweed",
+   "watches": "black watch",
+   "dresses": "buchanan dress blue"
+  },
+  "gatedOut": [
+   "watches"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "7648",
+   "abberton",
+   "alwen",
+   "american national",
+   "anderson a",
+   "anderson m",
+   "anderson modern",
+   "arrochar black"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "lawrence-and-foster": {
+  "id": "lawrence-and-foster",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 22,
+  "tags": [
+   "hats & caps",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "hats & caps": "strong",
+   "womenswear": "strong"
+  },
+  "tagCounts": {
+   "hats & caps": 44,
+   "womenswear": 5
+  },
+  "tagEvidence": {
+   "hats & caps": "Mens Hats",
+   "womenswear": "Ladies Hats"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Ladies Hats",
+   "Mens Hats"
+  ],
+  "sample": [
+   "Boston Cap",
+   "Helmsley cap",
+   "The Jasmine hat",
+   "Dalby cap",
+   "The Iris hat",
+   "Linton cap",
+   "Aberford cap",
+   "Towton cap"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "walkley-clogs": {
+  "id": "walkley-clogs",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "simon-brock": {
+  "id": "simon-brock",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 13,
+  "tags": [
+   "footwear & boots",
+   "scarves & accessories"
+  ],
+  "tagConfidence": {
+   "footwear & boots": "weak",
+   "scarves & accessories": "weak"
+  },
+  "tagCounts": {
+   "footwear & boots": 2,
+   "scarves & accessories": 1
+  },
+  "tagEvidence": {
+   "footwear & boots": "Brogue clogs",
+   "scarves & accessories": "Tankard wrap"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Clog spares",
+   "Clogs",
+   "Leatherwork"
+  ],
+  "sample": [
+   "Brogue clogs",
+   "Derby boots",
+   "Clog rubbers: heels",
+   "Morris clogs (one-piece upper)",
+   "Clog rubbers: soles (front)",
+   "Clasp clogs",
+   "Hurdy gurdy strap",
+   "Re-wooding &#038; repair"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "firs-farm": {
+  "id": "firs-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "lane-end-farm-shop": {
+  "id": "lane-end-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "cedarbarn-farm-shop": {
+  "id": "cedarbarn-farm-shop",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 2,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [
+   "Hampers"
+  ],
+  "sample": [
+   "Yorkshire Hamper",
+   "Gift Voucher &#8211; Posted"
+  ],
+  "checked": "2026-10-03",
+  "previousTags": [],
+  "rescored": true
+ },
+ "hinchliffes-farm": {
+  "id": "hinchliffes-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "blacker-hall-farm-shop": {
+  "id": "blacker-hall-farm-shop",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 361,
+  "tags": [
+   "beef",
+   "bread & bakery",
+   "dairy & cheese",
+   "drinks & spirits",
+   "eggs",
+   "flour & grain",
+   "fruit & veg",
+   "game & venison",
+   "lamb",
+   "pet accessories",
+   "pork & bacon",
+   "poultry",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "beef": "weak",
+   "bread & bakery": "weak",
+   "dairy & cheese": "weak",
+   "drinks & spirits": "weak",
+   "eggs": "weak",
+   "flour & grain": "weak",
+   "fruit & veg": "weak",
+   "game & venison": "weak",
+   "lamb": "weak",
+   "pet accessories": "weak",
+   "pork & bacon": "weak",
+   "poultry": "weak",
+   "preserves & honey": "weak"
+  },
+  "tagCounts": {
+   "beef": 23,
+   "plates": 12,
+   "pork & bacon": 44,
+   "scarves & accessories": 1,
+   "bread & bakery": 30,
+   "fruit & veg": 14,
+   "poultry": 15,
+   "game & venison": 1,
+   "lamb": 7,
+   "dairy & cheese": 13,
+   "bags & leather goods": 1,
+   "preserves & honey": 26,
+   "pet accessories": 1,
+   "drinks & spirits": 11,
+   "flour & grain": 5,
+   "eggs": 4,
+   "cookware": 1
+  },
+  "tagEvidence": {
+   "beef": "Hand Carved Picanha Beef Roast buffet buffet2026 buffets & entertainin",
+   "plates": "Patisserie Perfection buffet buffet2026 buffets & entertaining Mother'",
+   "pork & bacon": "Pork pie, Sausage Roll & Quiche Selection buffet buffet2026 buffets & ",
+   "scarves & accessories": "Wraps & Focaccia Platter buffet buffet2026 buffets & entertaining Moth",
+   "bread & bakery": "Devon Cream Co Clotted Cream Bakery core22 Dairy",
+   "fruit & veg": "Bramley Apple & Blackberry Pie No Shipping xmas25 xmaspuddings",
+   "poultry": "Chicken, Pulled Ham & Leek Party Pie BUFFET26 Christmas24 event food n",
+   "game & venison": "Pheasant Royale Christmas24 No Shipping xmas25 xmasfestivebirds xmasma",
+   "lamb": "Supreme Minted Boneless Leg of Lamb Butchers and Fishmongers core22 La",
+   "dairy & cheese": "Cauliflower Cheese Christmas24 core22 newyear NewYear24 NewYear25 No S",
+   "bags & leather goods": "Blacker Hall Thermal Insulated Bag No Shipping Sunday Roast xmas25",
+   "preserves & honey": "Stokes Red Onion Marmalade No Shipping xmas25 xmassides",
+   "pet accessories": "Beef Mince - Trimmings core22 No Shipping PetFood",
+   "drinks & spirits": "Listers Steak, Ale & Caramelised Onion 40g core22 Dry Goods No Shippin",
+   "flour & grain": "Grain Fed Chicken Butchers and Fishmongers Butchery chicken core22 New",
+   "eggs": "Happy Belly Sweet Potato & Feta Scotch Egg BBQ Both 21 core22 Deli Del",
+   "cookware": "Best Beef Casserole Cubes - 300g Beef Butchers and Fishmongers Butcher"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "cookware",
+   "plates",
+   "scarves & accessories"
+  ],
+  "observedTypes": [
+   "Alcohol",
+   "Butchery",
+   "Event",
+   "Farm Retail",
+   "Greengrocery",
+   "Little Farmers"
+  ],
+  "sample": [
+   "Mischievous Monster Hunt",
+   "Luxury Yorkshire Hamper 2027",
+   "Celebration Hamper",
+   "Large Sweet Treat Box",
+   "Treat Hamper",
+   "Taste of Yorkshire",
+   "Case of Six",
+   "Festive Luxury Yorkshire Hamper"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "thorncliffe-farm-shop": {
+  "id": "thorncliffe-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "crag-house-farm": {
+  "id": "crag-house-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "mainsgill-farm-shop": {
+  "id": "mainsgill-farm-shop",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 195,
+  "tags": [
+   "beef",
+   "bread & bakery",
+   "eggs",
+   "fruit & veg",
+   "game & venison",
+   "lamb",
+   "pork & bacon",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "beef": "strong",
+   "bread & bakery": "strong",
+   "eggs": "strong",
+   "fruit & veg": "strong",
+   "game & venison": "weak",
+   "lamb": "strong",
+   "pork & bacon": "strong",
+   "poultry": "strong"
+  },
+  "tagCounts": {
+   "pork & bacon": 70,
+   "eggs": 2,
+   "bread & bakery": 30,
+   "lamb": 21,
+   "beef": 37,
+   "game & venison": 4,
+   "braces & belts": 1,
+   "poultry": 10,
+   "fruit & veg": 5
+  },
+  "tagEvidence": {
+   "pork & bacon": "Christmas - Sausage Roll",
+   "eggs": "Black Porkies Scotch Egg £3.95",
+   "bread & bakery": "Christmas - Family Classic Cakes Christmas Cakes pre-order",
+   "lamb": "Christmas - Grass Fed Boned & Rolled Shoulder of Lamb",
+   "beef": "Christmas - Slow Roast Beef Pack Christmas Meat",
+   "game & venison": "Christmas - Venison Fillet £32.00Kg Christmas Meat",
+   "braces & belts": "Christmas - Brace of Pheasant Christmas Meat",
+   "poultry": "Christmas - Duck £9.95kg Approx. 2.0kg - 2.50kg Christmas Meat",
+   "fruit & veg": "Pork & Apple Sausages"
+  },
+  "gatedOut": [
+   "braces & belts"
+  ],
+  "observedTypes": [
+   "11\" Cheesecake's",
+   "11\" Fresh Cream Gateaux",
+   "8\" Fresh Cream Gateaux",
+   "Afternoon Tea",
+   "Afternoon Tea Gift Voucher",
+   "Artwork",
+   "BBQ Pack",
+   "Back Bacon",
+   "Beef",
+   "Beef Burgers",
+   "Black Porkie Sausages",
+   "Black Porkies Scotch Egg £3.95",
+   "Black Pudding",
+   "Breakfast Pack",
+   "Caramelised Red Onion Beef Burgers",
+   "Chicken Fillets",
+   "Christmas - 8\" Cheesecake's £18.00 to £20.00",
+   "Christmas - Chocolate Log £18.00",
+   "Christmas - Fresh Cream Roulades £15.00 to £20.00",
+   "Christmas - Grass Fed Boned & Rolled Shoulder of Lamb",
+   "Christmas - Grass Fed Sirloin Beef Steak £32.00kg",
+   "Christmas - Rack of Lamb",
+   "Christmas - Sausage Roll",
+   "Christmas - Sirloin £29.00kg",
+   "Cumberland Sausages",
+   "Dry Cured Bacon",
+   "Farmhouse Sausages",
+   "Fillet Steak",
+   "Frass Fed Boned & Rolled Shoulder of Lamb",
+   "Gras Fed Diced Stew Beef",
+   "Grass Fed Beef Mince",
+   "Grass Fed Beef Mince Bundle",
+   "Grass Fed Brisket Joint",
+   "Grass Fed Half a Lamb",
+   "Grass Fed Lamb Leg Steaks",
+   "Grass Fed Lamb Loin Chops",
+   "Grass Fed Leg of Lamb",
+   "Grass Fed Rib Roast",
+   "Grass Fed Topside Beef Joint",
+   "Home-reared Belly Pork"
+  ],
+  "sample": [
+   "Christmas - Sausage Rolls",
+   "Christmas - Individual Pies",
+   "Christmas - Smoked Salmon",
+   "Christmas - Home Roasted Sliced Meats",
+   "Christmas - Honey Mustard Ham Joint £19.00kg",
+   "Christmas - Home Roasted Ham Joint £18.00kg",
+   "Christmas - 6\" to 11\" Homemade Quiches",
+   "Christmas - Family Pies"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "beadlam-grange": {
+  "id": "beadlam-grange",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "roots-farm-shop": {
+  "id": "roots-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "tancred-farm-shop": {
+  "id": "tancred-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "town-end-farm-shop": {
+  "id": "town-end-farm-shop",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "bread & bakery",
+   "dairy & cheese",
+   "drinks & spirits",
+   "fruit & veg",
+   "pork & bacon",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "bread & bakery": "weak",
+   "dairy & cheese": "strong",
+   "drinks & spirits": "strong",
+   "fruit & veg": "weak",
+   "pork & bacon": "strong",
+   "preserves & honey": "strong"
+  },
+  "tagCounts": {
+   "socks": 12,
+   "preserves & honey": 42,
+   "drinks & spirits": 24,
+   "dairy & cheese": 23,
+   "fruit & veg": 6,
+   "bread & bakery": 4,
+   "pork & bacon": 6,
+   "scarves & accessories": 1
+  },
+  "tagEvidence": {
+   "socks": "Yorkshire Wool Socks – Holly Berry",
+   "preserves & honey": "Chutney and Preserves Grocery",
+   "drinks & spirits": "Yorkshire Gin",
+   "dairy & cheese": "Butchery Courses Cheese Wensleydale and more... Christmas Fayre",
+   "fruit & veg": "Ampleforth Beer Fruit Chutney",
+   "bread & bakery": "Sloe Gin Fruit Cake",
+   "pork & bacon": "DALES SPECK Air Dried Yorkshire Ham",
+   "scarves & accessories": "BUMBLE WRAP BEESWAX"
+  },
+  "gatedOut": [
+   "scarves & accessories",
+   "socks"
+  ],
+  "observedTypes": [
+   "Bacon &amp; Sausages Butchery Charcuterie",
+   "Bacon &amp; Sausages Charcuterie Gluten Free",
+   "Books Books Gifts",
+   "Butchery Courses Cheese Wensleydale and more... Christmas Fayre",
+   "Charcuterie",
+   "Charcuterie Cheese Wensleydale and more... Chutney and Preserves Grocery",
+   "Charcuterie Cheese Wensleydale and more... Grocery",
+   "Charcuterie Christmas Fayre Yorkshire Hampers",
+   "Charcuterie Chutney and Preserves Grocery",
+   "Charcuterie Gluten Free Grocery",
+   "Charcuterie Grocery",
+   "Cheese Wensleydale and more...",
+   "Cheese Wensleydale and more... Christmas Fayre",
+   "Cheese Wensleydale and more... Christmas Fayre Yorkshire Hampers",
+   "Cheese Wensleydale and more... Chutney and Preserves Grocery",
+   "Christmas Fayre",
+   "Christmas Fayre Chutney and Preserves Gifts Grocery Yorkshire Hampers",
+   "Christmas Fayre Chutney and Preserves Grocery",
+   "Christmas Fayre Gifts",
+   "Christmas Fayre Gifts Yorkshire Gin",
+   "Christmas Fayre Gifts Yorkshire Hampers",
+   "Christmas Fayre Grocery",
+   "Christmas Fayre Yorkshire Gin",
+   "Christmas Fayre Yorkshire Hampers",
+   "Chutney and Preserves Grocery",
+   "Gifts",
+   "Gifts Grocery",
+   "Grocery",
+   "Yorkshire Gin"
+  ],
+  "sample": [
+   "Yorkshire Wool Socks – Holly Berry",
+   "Hendersons Relish",
+   "Yorkshire Wool Socks – Swallow",
+   "Sticky Date &#038; Prune Chutney",
+   "Cherry &#038; Amaretto Jam",
+   "Rose Petal Jelly",
+   "Smoked Jalepeno Jelly",
+   "Nduja"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "farm-gate-farm-shop": {
+  "id": "farm-gate-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "yolk-farm": {
+  "id": "yolk-farm",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 85,
+  "tags": [
+   "beef",
+   "bread & bakery",
+   "dairy & cheese",
+   "drinks & spirits",
+   "eggs",
+   "fruit & veg",
+   "game & venison",
+   "lamb",
+   "pork & bacon",
+   "poultry",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "beef": "weak",
+   "bread & bakery": "weak",
+   "dairy & cheese": "weak",
+   "drinks & spirits": "weak",
+   "eggs": "weak",
+   "fruit & veg": "weak",
+   "game & venison": "weak",
+   "lamb": "weak",
+   "pork & bacon": "weak",
+   "poultry": "strong",
+   "preserves & honey": "weak"
+  },
+  "tagCounts": {
+   "pork & bacon": 14,
+   "beef": 1,
+   "poultry": 13,
+   "eggs": 3,
+   "tweed & woven goods": 1,
+   "fruit & veg": 5,
+   "dairy & cheese": 4,
+   "plates": 2,
+   "drinks & spirits": 2,
+   "game & venison": 1,
+   "preserves & honey": 1,
+   "bread & bakery": 1,
+   "lamb": 2
+  },
+  "tagEvidence": {
+   "pork & bacon": "Traditional Pork Pie Christmas 2026 Christmas Voakes 2026",
+   "beef": "Prime Beef Cuts (Rib of Beef, Topside, Fillet of Beef) 2026 Christmas ",
+   "poultry": "Turkey",
+   "eggs": "Half Dozen Yolk Farm Eggs 2026 Christmas",
+   "tweed & woven goods": "Pigs in blankets 2026 Christmas Yolk Farm Production Kitchen 2026",
+   "fruit & veg": "Garlic and herb roast potatoes 2026 Christmas Yolk Farm Production Kit",
+   "dairy & cheese": "The Cheese Curious Christmas Selection 2026 Christmas Cheese 2026 Geor",
+   "plates": "Breakfast Platter",
+   "drinks & spirits": "Steak and Ale Pie 2026 Christmas Yolk Farm Production Kitchen 2026",
+   "game & venison": "Game Pie 2026 Christmas Voakes 2026",
+   "preserves & honey": "Pork Pie with Black Pudding and Red Onion Marmalade 2026 Christmas Voa",
+   "bread & bakery": "Bread Sauce (V) 2026 Christmas Yolk Farm Production Kitchen 2026",
+   "lamb": "Shoulder of Lamb (boneless and rolled) 2026 Christmas Sykes"
+  },
+  "gatedOut": [
+   "plates",
+   "tweed & woven goods"
+  ],
+  "observedTypes": [
+   "Breakfast Platter",
+   "Butchers",
+   "Christmas Cheese Boards",
+   "Christmas Desserts",
+   "Christmas Pies",
+   "Christmas Trees",
+   "Gift Vouchers",
+   "Honesty Fridge",
+   "Membership",
+   "Sauces",
+   "Seasonal Birds",
+   "Sides",
+   "Turkey"
+  ],
+  "sample": [
+   "Nordmann Fir Christmas Tree 4ft-5ft",
+   "Nordmann Fir Christmas Tree 10ft-12ft",
+   "Nordmann Fir Christmas Tree 8ft-9ft",
+   "Nordmann Fir Christmas Tree 7ft-8ft",
+   "Nordmann Fir Christmas Tree 9ft-10ft",
+   "Nordmann Fir Christmas Tree 6-7ft",
+   "Nordmann Fir Christmas Tree 5-6ft",
+   "Rich Stock Gravy"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "the-balloon-tree": {
+  "id": "the-balloon-tree",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 134,
+  "tags": [
+   "bread & bakery",
+   "dairy & cheese",
+   "drinks & spirits",
+   "eggs",
+   "flour & grain",
+   "fruit & veg",
+   "game & venison",
+   "pork & bacon",
+   "poultry",
+   "preserves & honey"
+  ],
+  "tagConfidence": {
+   "bread & bakery": "weak",
+   "dairy & cheese": "weak",
+   "drinks & spirits": "weak",
+   "eggs": "weak",
+   "flour & grain": "weak",
+   "fruit & veg": "weak",
+   "game & venison": "weak",
+   "pork & bacon": "weak",
+   "poultry": "weak",
+   "preserves & honey": "weak"
+  },
+  "tagCounts": {
+   "bread & bakery": 7,
+   "fruit & veg": 6,
+   "dairy & cheese": 12,
+   "bags & leather goods": 3,
+   "preserves & honey": 14,
+   "eggs": 1,
+   "drinks & spirits": 11,
+   "footwear & boots": 2,
+   "flour & grain": 2,
+   "poultry": 2,
+   "game & venison": 1,
+   "pork & bacon": 1,
+   "jewellery": 1
+  },
+  "tagEvidence": {
+   "bread & bakery": "peters yard swedish crisp bread",
+   "fruit & veg": "millers three fruit crackers",
+   "dairy & cheese": "williams all butter shortbread",
+   "bags & leather goods": "taylors of harrogate earl grey tea bags",
+   "preserves & honey": "shaws beetroot horseradish chutney",
+   "eggs": "drivers free range pickled eggs",
+   "drinks & spirits": "drivers real ale chutney",
+   "footwear & boots": "muddy boots chardonnay",
+   "flour & grain": "yockenthwaite nutty spelt granola",
+   "poultry": "chicken liver pate with port wine",
+   "game & venison": "pheasant pate with armagnac 180g",
+   "pork & bacon": "farmhouse pork pate 180g",
+   "jewellery": "new berry fruits jewels 8 82oz"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "footwear & boots",
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "hooting owls tour de yorkshire gift pack",
+   "yockenthwaite real nutty granola",
+   "peters yard original sourdough crackers",
+   "peters yard pink peppercorn sourdough crackers",
+   "peters yard swedish crisp bread",
+   "millers three fruit crackers",
+   "millers three nut crackers",
+   "millers three seed crackers"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "bolster-moor-farm-shop": {
+  "id": "bolster-moor-farm-shop",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 5,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [
+   "Gift Card"
+  ],
+  "sample": [
+   "£100 Gift Voucher",
+   "£50 Gift Voucher",
+   "£25 Gift Voucher",
+   "£10 Gift Voucher",
+   "Gift Voucher – Choose your amount"
+  ],
+  "checked": "2026-10-03",
+  "previousTags": [],
+  "rescored": true
+ },
+ "castle-howard-farm-shop": {
+  "id": "castle-howard-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "ferraby-knives": {
+  "id": "ferraby-knives",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 24,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "weak"
+  },
+  "tagCounts": {
+   "cutlery & knives": 5
+  },
+  "tagEvidence": {
+   "cutlery & knives": "8\" Handmade Chef's Knife Back to the Woods.html"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Test.html",
+   "8\" Handmade Chef's Knife Back to the Woods.html",
+   "7\" Santoku Riverlin.html",
+   "Hernest Ferraby5.html",
+   "Long Down Knife 4\" Parer.html",
+   "7\" Santoku Guardian of the Forest.html",
+   "8\" Handmade Chef's Knife Between the trees and sleep.html",
+   "4\" Parer Cut your own path.html"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "stuart-mitchell-knives": {
+  "id": "stuart-mitchell-knives",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "michael-may-knives": {
+  "id": "michael-may-knives",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 90,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "strong"
+  },
+  "tagCounts": {
+   "cutlery & knives": 96,
+   "fruit & veg": 2
+  },
+  "tagEvidence": {
+   "cutlery & knives": "Clip Point Pocket Knife &#8211; Ram&#8217;s Horn",
+   "fruit & veg": "Ettrick Wharncliffe &#8211; Chatsworth Apple"
+  },
+  "gatedOut": [
+   "fruit & veg"
+  ],
+  "observedTypes": [
+   "All Knives Custom",
+   "All Knives Kitchen",
+   "All Knives Made to Order New Pocket Knife",
+   "All Knives Made to Order Pocket Knife",
+   "Kitchen",
+   "New",
+   "Recently Sold"
+  ],
+  "sample": [
+   "Clip Point Pocket Knife &#8211; Ram&#8217;s Horn",
+   "Clip Point Pocket Knife &#8211; Bocote",
+   "Pruning Pocket Knife &#8211; Oak",
+   "Clayton Lambfoot pocket knife",
+   "Clayton spearpoint pocket knife",
+   "Paring Knife &#8211; Cork and Resin",
+   "Ettrick Wharncliffe &#8211; Chatsworth Apple",
+   "Ergonomic Pocket Knife &#8211; Padauk"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "katto": {
+  "id": "katto",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 61,
+  "tags": [
+   "boards & blocks",
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "boards & blocks": "strong",
+   "cutlery & knives": "strong"
+  },
+  "tagCounts": {
+   "cutlery & knives": 44,
+   "dairy & cheese": 5,
+   "eggs": 1,
+   "fruit & veg": 1,
+   "bags & leather goods": 1,
+   "boards & blocks": 3
+  },
+  "tagEvidence": {
+   "cutlery & knives": "Studio Steak Knives _agecheck Physical steak studio studio steak knive",
+   "dairy & cheese": "Katto x Tyler Butt _agecheck breakfast butter Physical",
+   "eggs": "Egg Cups egg egg cup egg cups Physical",
+   "fruit & veg": "Potato Masher Physical",
+   "bags & leather goods": "Katto Tote Bag Physical",
+   "boards & blocks": "Chopping Board Engraving Engraving KL Exclude From Rec klaviyo_hub_rec"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "dairy & cheese",
+   "eggs",
+   "fruit & veg"
+  ],
+  "observedTypes": [
+   "Boning Knife",
+   "Bread Knife",
+   "Carving Knife",
+   "Cheese",
+   "Chef Knives",
+   "Chopping Board",
+   "Gift Cards",
+   "Kitchen Knives",
+   "Kitchen Tools & Utensils",
+   "Nakiri Knives",
+   "Utility Knife",
+   "breakfast",
+   "knife rack",
+   "steak",
+   "tomato"
+  ],
+  "sample": [
+   "Salt & Pepper",
+   "Fine Grater",
+   "Cooks Press",
+   "Studio Steak Knives",
+   "Katto x Tyler Butt",
+   "Breakfast Knife",
+   "Knife Repair & Sharpening",
+   "BBQ Tools"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "ernest-wright": {
+  "id": "ernest-wright",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 29,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [
+   "Dressmaker/Tailor",
+   "Dressmaker/Tailor related products (only add 3)",
+   "Embroidery Scissors",
+   "Embroidery Scissors related products (only add 3)",
+   "Garden Scissors",
+   "Kitchen Scissors",
+   "Kitchen Scissors related products (only add 3)",
+   "Ticket"
+  ],
+  "sample": [
+   "Nurseryman Scissors",
+   "Nurseryman Scissors",
+   "Kutrite Reservation Ticket",
+   "Giant Stork JW Anderson",
+   "Leather pouch RSN / Purple",
+   "Bespoke black leather pouch",
+   "Carpet Scissors Limited run",
+   "11” Bookbinder Scissors"
+  ],
+  "checked": "2026-10-03",
+  "previousTags": [],
+  "rescored": true
+ },
+ "william-whiteley": {
+  "id": "william-whiteley",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "weak"
+  },
+  "tagCounts": {
+   "cutlery & knives": 2,
+   "workwear & aprons": 2
+  },
+  "tagEvidence": {
+   "cutlery & knives": "2&#8221; Stainless Steel Pocket Knife &#8211; ID Provided",
+   "workwear & aprons": "Short Leather Apron"
+  },
+  "gatedOut": [
+   "workwear & aprons"
+  ],
+  "observedTypes": [
+   "Advanced Materials &amp; Composites",
+   "Advanced Materials &amp; Composites Fabric &amp; Upholstery",
+   "Crafting &amp; Paper Household &amp; DIY",
+   "DIY &amp; Maintenance Household &amp; DIY",
+   "Fabric &amp; Upholstery",
+   "Fabric &amp; Upholstery Gifts &amp; Special Editions Luxury &amp; Gift Sets",
+   "Fabric &amp; Upholstery Left-Handed",
+   "Fabric &amp; Upholstery Needlework &amp; Quilting",
+   "Fabric &amp; Upholstery Tailoring &amp; Dressmaking",
+   "Fabric &amp; Upholstery Upholstery &amp; Heavy Duty",
+   "Gifts &amp; Special Editions",
+   "Gifts &amp; Special Editions Household &amp; DIY Luxury &amp; Gift Sets",
+   "Home &amp; Kitchen Household &amp; DIY",
+   "Household &amp; DIY Personal Care &amp; Grooming",
+   "Outdoors &amp; Garden",
+   "Sheaths &amp; Accessories"
+  ],
+  "sample": [
+   "8&#8243; Oxblood Leather Sheath",
+   "Oxblood Leather Embroidery Sheath",
+   "12&#8243; Oxblood Leather Sheath",
+   "10&#8243; Oxblood Leather Sheath",
+   "6&#8243; BBQ Turner",
+   "Oxblood &#8216;EXO&#8217; Leather Sheath",
+   "YWCA 8&#8221; Classic Fabric Shears",
+   "6.5&#8221; PTFE Coated Dressmaking Scissors"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "chimo-holdings": {
+  "id": "chimo-holdings",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 75,
+  "tags": [
+   "cookware",
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cookware": "weak",
+   "cutlery & knives": "strong"
+  },
+  "tagCounts": {
+   "bowls": 4,
+   "cutlery & knives": 51,
+   "bread & bakery": 1,
+   "footwear & boots": 1,
+   "silverware": 1,
+   "cufflinks & signets": 1,
+   "jewellery": 1,
+   "cookware": 1
+  },
+  "tagEvidence": {
+   "bowls": "Prawn or Seafood Cocktail/Sundae bowls",
+   "cutlery & knives": "Bistro/Coffee Shop/Canteen Cutlery Hospitality",
+   "bread & bakery": "Bread, Brides Carvers",
+   "footwear & boots": "Unmounted Narrow French/Slipper Blades",
+   "silverware": "Beautiful Sheffield silverware Handcrafted Bowls",
+   "cufflinks & signets": "Sheffield made Cufflinks",
+   "jewellery": "Napkin Rings",
+   "cookware": "Sauce Serving Pans"
+  },
+  "gatedOut": [
+   "bowls",
+   "bread & bakery",
+   "cufflinks & signets",
+   "footwear & boots",
+   "jewellery",
+   "silverware"
+  ],
+  "observedTypes": [
+   "Bespoke",
+   "Bespoke Corporate Gifts Giftware",
+   "Bespoke Hospitality Restaurant &amp; Barware",
+   "Bespoke Restaurant &amp; Barware",
+   "Bistro/Coffee Shop/Canteen Cream &amp; Black Handled Cutlery Cutlery Hospitality",
+   "Bistro/Coffee Shop/Canteen Cutlery Hospitality",
+   "Corporate Gifts Giftware",
+   "Cream &amp; Black Handled Cutlery Cutlery Stainless Steel",
+   "Cutlery Hospitality Silver Plated",
+   "Cutlery Hospitality Silver Plated Stainless Steel",
+   "Cutlery Silver Plated",
+   "Cutlery Silver Plated Stainless Steel",
+   "Cutlery Stainless Steel",
+   "Giftware",
+   "Giftware Hospitality",
+   "Giftware Hospitality Restaurant &amp; Barware",
+   "Giftware Restaurant &amp; Barware",
+   "Hospitality Restaurant &amp; Barware",
+   "Restaurant &amp; Barware",
+   "Unmounted Blades"
+  ],
+  "sample": [
+   "Prawn or Seafood Cocktail/Sundae bowls",
+   "Bill or Tip Trays",
+   "Armada/Elizabethan Dishes",
+   "Florence stainless steel bistro cutlery",
+   "Stockholm -stainless steel",
+   "Spice Bowls",
+   "Key Tags",
+   "Bread, Brides Carvers"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "brett-payne-silverware": {
+  "id": "brett-payne-silverware",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "jennie-gill-jewellery": {
+  "id": "jennie-gill-jewellery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 141,
+   "cushions & throws": 1,
+   "tweed & woven goods": 2
+  },
+  "tagEvidence": {
+   "jewellery": "Bangles Earrings Necklaces Rings",
+   "cushions & throws": "18ct and Cognac cushion cut diamond ring.sold.",
+   "tweed & woven goods": "Rolled gold and silver thorn throw over necklace 60cm length"
+  },
+  "gatedOut": [
+   "cushions & throws",
+   "tweed & woven goods"
+  ],
+  "observedTypes": [
+   "Bangles",
+   "Bangles Earrings Necklaces Rings",
+   "Earrings",
+   "Necklaces",
+   "Rings"
+  ],
+  "sample": [
+   "Gift Cards",
+   "Oxidised silver, 18ct and black diamond drop studs",
+   "Oxidised silver, 18ct and black diamond studs",
+   "Chunky silver tube necklace.to order.",
+   "Silver tag bracelets.price for each.",
+   "sold. 18ct gold and grey diamond drop studs, to order from",
+   "Silver, 18ct and pink/brown tourmaline slice ring",
+   "Silver,18ct gold and blue tourmaline slice ring.to order."
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "ebor-jetworks": {
+  "id": "ebor-jetworks",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong",
+   "silverware": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 120,
+   "cushions & throws": 1,
+   "silverware": 23,
+   "cufflinks & signets": 2,
+   "childrenswear": 2,
+   "eggs": 1
+  },
+  "tagEvidence": {
+   "jewellery": "The Black and Red Rectangle Bracelet",
+   "cushions & throws": "The Classic Cushion Square Bracelet",
+   "silverware": "Pendants Sterling Silver Whitby Jet",
+   "cufflinks & signets": "cufflinks Sterling Silver Whitby Jet",
+   "childrenswear": "Baby Cantharus Tear-drop Studs",
+   "eggs": "Egg and Dart Studs"
+  },
+  "gatedOut": [
+   "childrenswear",
+   "cushions & throws",
+   "eggs"
+  ],
+  "observedTypes": [
+   "Bangles",
+   "Dangly Earrings Whitby Jet Drop Earrings",
+   "Earrings Sterling Silver Whitby Jet",
+   "Earrings Whitby Jet Stud Earrings",
+   "Pendants Round Pendants",
+   "Pendants Sterling Silver",
+   "Pendants Sterling Silver Whitby Jet",
+   "Pendants Sterling Silver Whitby Jet Pendants",
+   "Pendants Whitby Jet Pendants",
+   "Round Pendants",
+   "Round Pendants Sterling Silver Whitby Jet",
+   "Scrying Mirrors",
+   "Scrying Mirrors Whitby Jet Whitby Jet for witches",
+   "Scrying Mirrors Whitby Jet for witches",
+   "Sterling Silver",
+   "Sterling Silver Whitby Jet",
+   "Sterling Silver Whitby Jet Bracelets",
+   "Sterling Silver Whitby Jet Earrings Whitby Jet Stud Earrings",
+   "Sterling Silver Whitby Jet Whitby Jet Pendants",
+   "Sterling Silver Whitby Jet Whitby Jet Stud Earrings",
+   "Whitby Jet Bracelets",
+   "Whitby Jet Drop Earrings",
+   "Whitby Jet Drop Earrings Whitby Jet Earrings",
+   "Whitby Jet Pendants",
+   "Whitby Jet Stud Earrings",
+   "Whitby Jet Whitby Jet Bracelets",
+   "Whitby Jet Whitby Jet Stud Earrings",
+   "cufflinks Sterling Silver Whitby Jet"
+  ],
+  "sample": [
+   "The Classic Square Stone Cuff",
+   "The Classic Round Stone Cuff",
+   "The Black and Red Rectangle Bracelet",
+   "Did Some One Say Jet &#038; Opal-Square Bracelet",
+   "Did some one say Jet &#038; Turquoise-square bracelet",
+   "The Ornate Single Stone Wrist Cuff Bracelet",
+   "The Original Ornate Panel Cuff Bracelet",
+   "The Big Oval One-Amber Edition"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "simpsons-jet-of-whitby": {
+  "id": "simpsons-jet-of-whitby",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 425,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 321,
+   "cufflinks & signets": 11,
+   "footwear & boots": 1
+  },
+  "tagEvidence": {
+   "jewellery": "Pendants",
+   "cufflinks & signets": "Ammonite Cufflinks",
+   "footwear & boots": "Little boot"
+  },
+  "gatedOut": [
+   "footwear & boots"
+  ],
+  "observedTypes": [
+   "9ct Drops",
+   "9ct Studs",
+   "Amber",
+   "BC",
+   "Bangles",
+   "Bracelets",
+   "Brooch",
+   "Cross",
+   "Cufflinks",
+   "Gift Card",
+   "Jet cross",
+   "Jet drops",
+   "Labradorite",
+   "Pendants",
+   "Rings",
+   "Sets",
+   "Silver earrings",
+   "Studs",
+   "sets"
+  ],
+  "sample": [
+   "Charlie the Spaniel",
+   "Amber sun",
+   "Long Jet Drops",
+   "Skull & Cross Bones",
+   "Lucky Horseshoe",
+   "Pentagram",
+   "Floral Oblong",
+   "Jet heart 16"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "aurora-jet": {
+  "id": "aurora-jet",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "carrs-silver": {
+  "id": "carrs-silver",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 1000,
+  "tags": [
+   "silverware"
+  ],
+  "tagConfidence": {
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "tableware": 16,
+   "silverware": 863,
+   "bowls": 2,
+   "cutlery & knives": 1834,
+   "dairy & cheese": 22,
+   "scarves & accessories": 2
+  },
+  "tagEvidence": {
+   "tableware": "SLIGHT SECOND - 70% off - Silver Plated Thermal Jug 50% Sale The Carrs",
+   "silverware": "SLIGHT SECOND - 70% off - Sterling Silver & Glass Ice Bucket IB6-SS 50",
+   "bowls": "Armada Dish Silver Plated Custom6 Tableware",
+   "cutlery & knives": "Old English Child's Sterling Silver Spoon Child's Cutlery Set Children",
+   "dairy & cheese": "Vision Butter Spreader Cutlery Dining Cutlery Dining Pieces Individual",
+   "scarves & accessories": "Collar Stiffeners Sterling Silver Custom6 For him Gifts Tie & Collar W"
+  },
+  "gatedOut": [
+   "bowls",
+   "cutlery & knives",
+   "dairy & cheese",
+   "scarves & accessories",
+   "tableware"
+  ],
+  "observedTypes": [
+   "Barware",
+   "Children",
+   "Children's",
+   "Cutlery",
+   "Frames",
+   "Gift Cards",
+   "Gifts",
+   "Tableware"
+  ],
+  "sample": [
+   "SLIGHT SECOND - 70% off - Silver Plated Thermal Jug",
+   "SLIGHT SECOND - 70% off - Sterling Silver & Glass Ice Bucket IB6-SS",
+   "SALE - Feature Hallmark Sterling Silver Photo Frame With Black Wood Ba",
+   "Straight Bottle Coaster Sterling Silver",
+   "Floral Edge Sterling Silver Photo Frame With Grey Velvet Back",
+   "SALE - Heart Sterling Silver Photo Frame With Grey Velvet Back",
+   "Plain Oval Sterling Silver Photo Frame With Grey Velvet Back",
+   "Armada Dish Silver Plated"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "bailey-of-sheffield": {
+  "id": "bailey-of-sheffield",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 814,
+  "tags": [
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 818,
+   "scarves & accessories": 2
+  },
+  "tagEvidence": {
+   "jewellery": "Custom CABLE Bracelet related_to_6236200173741",
+   "scarves & accessories": "Gift Wrap not on sale"
+  },
+  "gatedOut": [
+   "scarves & accessories"
+  ],
+  "observedTypes": [
+   "Accessories",
+   "Add-on",
+   "Beads",
+   "Beads with Free Engraving",
+   "Cable Bracelets",
+   "Gift Cards",
+   "Gift Message",
+   "Necklaces",
+   "Returns",
+   "cpb_ordered",
+   "cpb_product",
+   "wrapin"
+  ],
+  "sample": [
+   "Custom CABLE Bracelet",
+   "Custom CABLE Bracelet",
+   "Custom CABLE Bracelet",
+   "Custom CABLE Bracelet",
+   "Custom CABLE Bracelet",
+   "Custom CABLE Bracelet",
+   "Custom CABLE Bracelet",
+   "Graduate CABLE Bracelet"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "bentham-pottery": {
+  "id": "bentham-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "ingleton-pottery": {
+  "id": "ingleton-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "studio-573": {
+  "id": "studio-573",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 3,
+  "tags": [
+   "pottery"
+  ],
+  "tagConfidence": {
+   "pottery": "weak"
+  },
+  "tagCounts": {
+   "pottery": 1
+  },
+  "tagEvidence": {
+   "pottery": "Pottery Class Gift Voucher"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Pottery Class Gift Voucher",
+   "Thursday Evening &#8211; Clay Social Membership",
+   "Appointment"
+  ],
+  "checked": "2026-10-03",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "jim-robison-ceramics": {
+  "id": "jim-robison-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "allison-wiffen-ceramics": {
+  "id": "allison-wiffen-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-03",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
  }
 }

@@ -311,8 +311,8 @@ const QUERY_EXTRA = [
   // it as eyewear — which left the query matching nothing at all. It is a
   // leather good, so say so.
   ['bags & leather goods', /\b(glasses case|spectacle case|phone case|pencil case|wash ?bag|dopp kit|card holder|key ?fob)s?\b/i,                    GROUPS.BAGS],
-  ['footwear & boots',  /\b(wellie|wellington|welly|footwear|cobbler|shoemaker)s?\b/i,                                                              GROUPS.FOOTWEAR],
-  ['cutlery & knives',  /\b(cutler|penknife|pocket ?knife|chef'?s knife|kitchen knife|sharpen)(y|ies|e?s)?\b/i,                                     GROUPS.CUTLERY],
+  ['footwear & boots',  /\b(wellie|wellington|welly|footwear|cobbler|shoemaker|clog|clogmaker)s?\b/i,                                                              GROUPS.FOOTWEAR],
+  ['cutlery & knives',  /\b(cutler|penknife|pocket ?knife|chef'?s knife|kitchen knife|sharpen|scissor|shear)(y|ies|e?s)?\b/i,                                     GROUPS.CUTLERY],
   ['bags & leather goods', /\b(leather ?goods|leatherwork|saddler|tote)s?\b/i,                                                                      GROUPS.BAGS],
   ['jewellery',         /\b(engagement|wedding band|goldsmith|silversmith|jeweller)s?\b/i,                                                          GROUPS.JEWELLERY],
   ['pottery',           /\b(potter|kiln|thrown|wheel ?thrown|studio pottery)s?\b/i,                                                                 GROUPS.CERAMICS],
