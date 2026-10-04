@@ -5628,22 +5628,22 @@
     "category": "clothing",
     "subcategory": "Leather goods",
     "tier": "silver",
-    "listing_type": "both",
-    "town": "Knowsley, Liverpool",
-    "address": "Knowsley, Liverpool",
-    "lat": 53.39941,
-    "lng": -2.99138,
-    "website": "https://www.leathersatchel.co.uk",
+    "listing_type": "online_only",
+    "town": "Knowsley, Merseyside",
+    "address": "Workshop in Knowsley, Merseyside",
+    "lat": 53.404004,
+    "lng": -2.821687,
+    "website": "https://www.leathersatchel.com",
     "instagram": "https://www.instagram.com/leathersatchel/",
     "description": "Family workshop hand-making satchels on Merseyside since 1966.",
     "tier_confidence": "high",
     "logo": "assets/logos/leather-satchel-co.png",
-    "source": "verified-batch-2026-07",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "bags & leather goods"
     ],
     "nation": "England",
-    "county": "Liverpool"
+    "county": "Merseyside"
   },
   {
     "id": "broadland-slippers",
