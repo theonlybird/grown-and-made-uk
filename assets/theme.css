@@ -172,27 +172,22 @@
   margin:0;font-size:13.5px;line-height:1.65;color:var(--muted-2);max-width:34ch;
 }
 
-/* Social buttons. Cream on green: the one solid element in an otherwise flat
-   footer, so the follow points read before the link columns do. Rendered as
-   inert <span class="is-soon"> until the accounts exist — swapping each for an
-   <a href> and dropping the class is the only change needed, and an inline
-   <svg> icon can sit inside the button alongside or instead of the label. */
+/* Social: the platforms' own marks in the G&M green, no pill, no label.
+   24px glyphs on a 40px hit area; the negative margin pulls the first glyph
+   back so it sits flush with the strapline's left edge. */
 .site-footer .foot-social{
-  list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;
+  list-style:none;display:flex;gap:4px;margin:12px 0 0 -8px;padding:0;
 }
-.site-footer .foot-social-btn{
-  display:inline-flex;align-items:center;gap:7px;
-  background:var(--green);color:var(--paper);
-  font-family:var(--font-body);font-size:10.5px;font-weight:600;line-height:1;
-  text-transform:uppercase;letter-spacing:.1em;
-  padding:8px 14px;border-radius:999px;
-  text-decoration:none;border-bottom:none;
-  transition:background-color .15s ease;
+.site-footer .foot-social-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:10px;
+  color:var(--green);text-decoration:none;border-bottom:none;
+  transition:opacity .15s ease,background-color .15s ease;
 }
-.site-footer .foot-social-btn svg{width:13px;height:13px;fill:currentColor;flex:0 0 auto}
-.site-footer a.foot-social-btn:hover{background:var(--green-dark);color:var(--paper);border-bottom:none}
-/* Not yet a link: dimmed and non-interactive so it never looks broken. */
-.site-footer .foot-social-btn.is-soon{opacity:.68;cursor:default}
+.site-footer .foot-social-icon svg{width:24px;height:24px;fill:currentColor;display:block}
+.site-footer .foot-social-icon:hover{opacity:.72;border-bottom:none}
+.site-footer .foot-social-icon:active{opacity:.55}
+.site-footer .foot-social-icon:focus-visible{outline:2px solid var(--green);outline-offset:1px}
 
 .site-footer .foot-col h2{
   font-family:var(--font-body);font-size:11px;font-weight:600;
@@ -236,9 +231,9 @@
   .site-footer .foot-brand{grid-column:1 / -1}
   .site-footer .foot-strap{max-width:none}
   .site-footer .foot-col a{padding:8px 0;font-size:14px}
-  /* Bigger tap targets once these become links. */
-  .site-footer .foot-social{margin-top:14px}
-  .site-footer .foot-social-btn{padding:10px 16px;font-size:11px}
+  /* Full 44px tap targets on touch screens. */
+  .site-footer .foot-social{margin-top:10px;margin-left:-10px}
+  .site-footer .foot-social-icon{width:44px;height:44px}
 }
 
 /* Keep the footer at the foot of the window on short pages (contact, say, on a
