@@ -8129,7 +8129,7 @@
     "name": "The Moleskin Jeans Co",
     "category": "clothing",
     "subcategory": "Denim & Workwear",
-    "tier": "silver",
+    "tier": "gold",
     "listing_type": "online_only",
     "town": "Preston, Lancashire",
     "address": "Preston",
@@ -8140,7 +8140,7 @@
     "description": "Moleskin and denim trousers manufactured in the North of England.",
     "tier_confidence": "high",
     "logo": "assets/logos/the-moleskin-jeans-co.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "business-confirmed-2026-10",
     "product_tags": [
       "jeans & denim",
       "suits & trousers",
