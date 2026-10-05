@@ -58,3 +58,7 @@ data/evidence-notes.json
 
 # drafts from apply-suggestions.py carry evidence notes and unpublished pins
 data/pending-additions.json
+
+# Supplier register: built from internal evidence notes
+data/supplier-register.json
+SUPPLIER-REGISTER.md
