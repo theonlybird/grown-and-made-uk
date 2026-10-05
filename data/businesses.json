@@ -11841,30 +11841,6 @@
     "county": "Lincolnshire"
   },
   {
-    "id": "farer-watches",
-    "name": "Farer Watches",
-    "category": "jewellery",
-    "subcategory": "Watches",
-    "tier": "silver",
-    "listing_type": "online_only",
-    "town": "Thame, Oxfordshire",
-    "address": "Thame",
-    "lat": 51.74727,
-    "lng": -0.97739,
-    "website": "https://farer.com",
-    "instagram": "https://www.instagram.com/FarerUniversal/",
-    "description": "British independent watch company designing colorful mechanical timepieces in Oxfordshire.",
-    "tier_confidence": "high",
-    "logo": "assets/logos/farer-watches.png",
-    "source": "unrecorded — verify before relying on",
-    "product_tags": [
-      "watches",
-      "jewellery"
-    ],
-    "nation": "England",
-    "county": "Oxfordshire"
-  },
-  {
     "id": "duckworth-prestex",
     "name": "Duckworth Prestex",
     "category": "jewellery",

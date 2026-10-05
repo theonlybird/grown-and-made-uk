@@ -24995,57 +24995,6 @@
   "reason": "no-feed-found",
   "checked": "2026-08-01"
  },
- "farer-watches": {
-  "id": "farer-watches",
-  "shopify": true,
-  "platform": "shopify",
-  "vocabVersion": 3,
-  "productCount": 103,
-  "tags": [
-   "jewellery",
-   "watches"
-  ],
-  "tagConfidence": {
-   "jewellery": "weak",
-   "watches": "strong"
-  },
-  "tagCounts": {
-   "watches": 55,
-   "jewellery": 18,
-   "jeans & denim": 1,
-   "fruit & veg": 2,
-   "cushions & throws": 1
-  },
-  "tagEvidence": {
-   "watches": "Watch",
-   "jewellery": "Nevada Pine - 40mm box-travel case-diameters-41mm dial-colour-white en",
-   "jeans & denim": "Denim Suede Leather Strap strap-compatibility-39-5mm strap-material-le",
-   "fruit & veg": "Blue Night Adam & Eve Apple Skin Strap strap-compatibility-39-5mm stra",
-   "cushions & throws": "Cushion Case Steel Bracelet With Butterfly Clasp fitting"
-  },
-  "gatedOut": [
-   "cushions & throws",
-   "fruit & veg",
-   "jeans & denim"
-  ],
-  "observedTypes": [
-   "PPLR_HIDDEN_PRODUCT",
-   "Strap",
-   "Watch",
-   "Watchroll"
-  ],
-  "sample": [
-   "Gara",
-   "Volante",
-   "Libre",
-   "Nevada Pine - 40mm",
-   "Nevada Mocha - 38mm",
-   "Marsden",
-   "Barnwell",
-   "Curtis"
-  ],
-  "checked": "2026-08-01"
- },
  "hockley-mint": {
   "id": "hockley-mint",
   "shopify": false,
