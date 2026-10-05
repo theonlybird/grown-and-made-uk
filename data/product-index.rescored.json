@@ -32788,5 +32788,15 @@
   "tags": [],
   "tagConfidence": {},
   "rescored": true
+ },
+ "blue-tin-produce": {
+  "id": "blue-tin-produce",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-05",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
  }
 }

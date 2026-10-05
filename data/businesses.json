@@ -16480,5 +16480,33 @@
     ],
     "nation": "England",
     "county": "North Yorkshire"
+  },
+  {
+    "id": "blue-tin-produce",
+    "name": "Blue Tin Produce",
+    "category": "farm",
+    "subcategory": "Farm shop & Butchery",
+    "tier": "gold",
+    "listing_type": "shop",
+    "town": "Ipsden, Wallingford",
+    "address": "Keepers Cottage, Garsons Farm, Ipsden OX10 6QU",
+    "lat": 51.5555,
+    "lng": -1.06134,
+    "website": "https://www.bluetinproduce.co.uk",
+    "instagram": "https://www.instagram.com/bluetinproduce/",
+    "logo": "assets/logos/blue-tin-produce.png",
+    "description": "Family farm in the Chilterns at Ipsden rearing free-range Gloucester Old Spot pork and grass-fed Dexter beef, sold with its own charcuterie and goods from small local producers in an award-winning farm shop.",
+    "tier_confidence": "medium",
+    "source": "user-suggestion-verified-2026-10",
+    "product_tags": [
+      "beef",
+      "pork & bacon",
+      "eggs",
+      "dairy & cheese",
+      "fresh meat",
+      "farm shop & deli"
+    ],
+    "nation": "England",
+    "county": "Oxfordshire"
   }
 ]

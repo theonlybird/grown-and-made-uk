@@ -31319,5 +31319,12 @@
   "platform": null,
   "reason": "no-feed-found",
   "checked": "2026-10-03"
+ },
+ "blue-tin-produce": {
+  "id": "blue-tin-produce",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-05"
  }
 }
