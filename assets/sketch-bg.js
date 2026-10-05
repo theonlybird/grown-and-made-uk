@@ -29,7 +29,7 @@
     'trade-ceramics-potters-wheel.webp', 'trade-clothing-t-shirts.webp',
     'trade-ornament-pub-sign.webp',      'trade-jewellery-watch.webp',
     'trade-farm-chickens.webp',          'trade-clothing-loom.webp',
-    'trade-farm-cheese-wheel.webp',      'trade-clothing-shirt-and-tie.webp',
+    'trade-farm-cheese-wheel.webp',      'trade-clothing-cardigan.webp',
     'trade-tools-grinder.webp',          'trade-clothing-spinning-wheel.webp',
     'trade-farm-milk-churn.webp',        'trade-ceramics-dog-bowl.webp'
   ];
