@@ -456,6 +456,24 @@ function byAudience(list, wanted) {
   list.forEach(b => (audienceVerdict(b, wanted) === 'unknown' ? unknown : yes).push(b));
   return yes.concat(unknown);
 }
+// Audience as a tie-break, not a trump card (6 Oct 2026). Confirmed before
+// unclassified only among results that are equally good matches; a better
+// match is never pushed below a worse one because its audit is unfinished.
+// Before this, "mens boots" put ten slipper makers with a recorded audience
+// above William Lennon, Loake and Cheaney, whose audience was not yet known.
+// `bandOf` gives each result its relevance band; equal bands are adjacent.
+function byAudienceWithinBands(list, wanted, bandOf) {
+  if (!wanted || !wanted.length) return list;
+  const out = [];
+  let i = 0;
+  while (i < list.length) {
+    let j = i + 1;
+    while (j < list.length && bandOf(list[j]) === bandOf(list[i])) j++;
+    out.push(...byAudience(list.slice(i, j), wanted));
+    i = j;
+  }
+  return out;
+}
 
 // Spellings people type, mapped to the words the catalogue uses.
 const SYNONYMS = {
@@ -1039,6 +1057,17 @@ function localSearch(query) {
   const coreTerms = core.length ? core : product;
   const boostTerms = (core.length ? qualifiers : []).concat(q.boost || []);
 
+  // What was literally typed, singular and plural, limited to the product
+  // words being scored (so a place or an audience word never counts).
+  const literal = [];
+  [...(q.typed || [])].concat(q.display || []).forEach(w => {
+    [w, w + 's', w.replace(/e?s$/, ''), w.replace(/s$/, '')].forEach(v => {
+      if (v && coreTerms.includes(v) && !literal.includes(v)) literal.push(v);
+    });
+  });
+
+  const widened = literal.length > 0 && coreTerms.some(t => !literal.includes(t));
+
   const scored = catalogue().map(b => {
     const tags = (b.product_tags || []).join(' ');
     const kind = [b.category, b.subcategory].join(' ');
@@ -1052,6 +1081,14 @@ function localSearch(query) {
       if (hasWord(name, t)) productScore += 6;
       if (hasWord(desc, t)) productScore += 4;
     });
+    // The word they typed beats its synonyms. A synonym group admits the
+    // whole trade ("boots" admits shoe and slipper makers), and the shared
+    // tag ("footwear & boots") cannot tell them apart, so only the listing's
+    // own words can: a name or description that says "boots" ranks above one
+    // that only says "slippers". Counted once, however many forms match.
+    // Only when a group actually widened the search: with nothing but the
+    // typed words in play ("dog bowl") there is no synonym to separate from.
+    if (widened && literal.some(t => hasWord(name, t) || hasWord(desc, t))) productScore += 10;
     boostTerms.forEach(t => {
       if (hasWord(tags, t) || hasWord(kind, t)) qualScore += 6;
       else if (hasWord(name, t) || hasWord(desc, t)) qualScore += 4;
@@ -1099,8 +1136,10 @@ function localSearch(query) {
   // For a gift search the audience only rules makers out: ranking confirmed
   // menswear first would turn "present for dad" into forty clothing shops.
   const rankBy = q.gift && !hasProduct ? [] : q.audience;
-  near = byAudience(near, rankBy);
-  const afield = arranged.nearest ? arranged.afield : byAudience(arranged.afield, rankBy);
+  const band = new Map(eligible.map(s => [s.b.id, hasProduct ? rank(s) : 0]));
+  const bandOf = b => band.get(b.id);
+  near = byAudienceWithinBands(near, rankBy, bandOf);
+  const afield = arranged.nearest ? arranged.afield : byAudienceWithinBands(arranged.afield, rankBy, bandOf);
   const matches = near.concat(afield).slice(0, MAX_RESULTS);
 
   return {

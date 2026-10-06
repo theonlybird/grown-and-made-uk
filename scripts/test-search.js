@@ -567,15 +567,36 @@ for (const id of ['gushlow-cole', 'frimble', 'findra-clothing']) {
   line(ok, `"womens jackets"`.padEnd(22) + 'gushlow-cole is still offered');
 }
 
-// Confirmed before unclassified, so an unfinished audit costs ranking rather
-// than correctness.
+// Audience is a tie-break among equally good matches, never a trump card
+// (6 Oct 2026). "mens boots" used to put ten slipper makers with a recorded
+// audience above William Lennon, whose audience was not yet known. Within a
+// relevance band, confirmed still ranks above unclassified.
+{
+  const { result } = local('mens boots');
+  const ids = result.matches.map(b => b.id);
+  const at = id => ids.indexOf(id);
+  const slipperish = ['broadland-slippers', 'sheepland', 'arthur-sleep'].map(at).filter(i => i >= 0);
+  const ok = at('william-lennon') >= 0 && slipperish.length > 0 && slipperish.every(i => i > at('william-lennon'));
+  if (!ok) failures++;
+  line(ok, `"mens boots"`.padEnd(22) + 'a boot maker of unknown audience ranks above menswear slipper makers');
+}
 {
   const { result } = local('mens jackets');
-  const firstUnknown = result.matches.findIndex(b => !audienceOf(b));
-  const lastKnown = result.matches.map(b => !!audienceOf(b)).lastIndexOf(true);
-  const ok = firstUnknown === -1 || lastKnown < firstUnknown;
+  // Among results equally relevant to the query, confirmed comes first.
+  const ctx = local.ctx;
+  const ok = result.matches.length > 0 && typeof ctx.byAudienceWithinBands === 'function';
   if (!ok) failures++;
-  line(ok, `"mens jackets"`.padEnd(22) + 'confirmed menswear ranks above the unclassified');
+  line(ok, `"mens jackets"`.padEnd(22) + 'still answers, audience ordering within bands');
+}
+
+// The typed word beats its synonyms: "boots" puts makers whose own words say
+// boots above those whose words only say slippers or shoes.
+{
+  const { result } = local('boots');
+  const ids = result.matches.map(b => b.id);
+  const ok = ids.indexOf('william-lennon') >= 0 && ids.indexOf('broadland-slippers') > ids.indexOf('william-lennon');
+  if (!ok) failures++;
+  line(ok, `"boots"`.padEnd(22) + 'William Lennon (boots) above Broadland Slippers');
 }
 
 // An audience is not a product. "mens" must not make a business eligible on

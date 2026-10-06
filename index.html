@@ -1209,6 +1209,7 @@ const state = {
   notice: '',            // shown above the full grid when a search found nothing
   aiMatches: new Map(), // id -> 1-sentence rationale
   aiOrder: [],          // ids in rank order — visible() sorts by this
+  aiLead: 0,            // how many of aiOrder are the model's own picks
   places: [],           // places named in the query (assets/search.js resolvePlace), drive the split
   audience: []          // men / women / children asked for, drives the audience filter
 };
@@ -1327,8 +1328,17 @@ function visible(){
     // is in it first and the rest nearest first. The same call gives the grid
     // its divider and the banner its count, so the two cannot disagree.
     const { near, afield, nearest } = arrangeByPlace(hits, state.places);
+    // Audience orders results only among equals (6 Oct 2026). The model's
+    // own picks are one band and the local engine's additions after them are
+    // another; the local engine has already applied the same rule inside its
+    // part. So a confirmed-menswear slipper maker added by the local engine
+    // can no longer jump above a boot maker the model ranked third, just
+    // because that maker's audience has not been recorded yet.
     const rankBy = state.audienceRank === false ? [] : state.audience;
-    const ranked = byAudience(near, rankBy).concat(nearest ? afield : byAudience(afield, rankBy));
+    const lead = state.aiLead || 0;
+    const bandOf = b => (pos.has(b.id) && pos.get(b.id) < lead ? 0 : 1 + pos.get(b.id));
+    const arrange = list => lead ? byAudienceWithinBands(list, rankBy, bandOf) : list;
+    const ranked = arrange(near).concat(nearest ? afield : arrange(afield));
     return nearMeSorting() ? byDistanceFromYou(ranked) : ranked;
   }
   // Typing, before Enter, in the GRID: a quick literal filter so the cards
@@ -1738,8 +1748,11 @@ ${JSON.stringify(compact)}`;
 }
 
 // Put a result set on the page's state. `ids` are in rank order.
-function applyResults(ids, local, headData, refining) {
+// `aiLead` is how many of `ids` are the model's own picks (0 for the local
+// engine's answer alone, whose order is already final).
+function applyResults(ids, local, headData, refining, aiLead) {
   state.aiActive = true;
+  state.aiLead = aiLead || 0;
   state.notice = '';
   state.q = '';
   state.places = local.places || [];
@@ -1856,6 +1869,7 @@ async function executeAiSearch(query) {
       // them, so the list the visitor is already looking at never shrinks
       // when the AI arrives.
       let rescued = 0;
+      const aiLead = ids.length;
       local.matches.forEach(b => { if (!ids.includes(b.id)) { add(b.id); rescued++; } });
 
       // What will actually be shown: a nation filters out anything outside it.
@@ -1879,7 +1893,7 @@ async function executeAiSearch(query) {
           corrections: local.corrections || [],
           unknown: [],
           matches: arr.near.concat(arr.afield)
-        }, false);
+        }, false, aiLead);
         if (local.matches.length) rerenderResults(); else toggleView('grid');
         settle('ai', total, {
           search_place: places.map(p => p.label).join(', '),
