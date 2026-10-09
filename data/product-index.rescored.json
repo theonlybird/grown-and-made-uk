@@ -32745,5 +32745,337 @@
   "tags": [],
   "tagConfidence": {},
   "rescored": true
+ },
+ "the-old-farm-shop": {
+  "id": "the-old-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "bruern-farms": {
+  "id": "bruern-farms",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 2,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [
+   "Event"
+  ],
+  "sample": [
+   "Under The Wychood - a Night of Americana Music",
+   "Susannah Clegg Is Back!!   “The standout voice on the UK scene\" The Ru"
+  ],
+  "checked": "2026-10-09",
+  "previousTags": [],
+  "rescored": true
+ },
+ "coleshill-organics": {
+  "id": "coleshill-organics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "q-gardens-farm-shop": {
+  "id": "q-gardens-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "wykham-park-farm-shop": {
+  "id": "wykham-park-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "rectory-farm": {
+  "id": "rectory-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "sandy-lane-farm": {
+  "id": "sandy-lane-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "millets-farm-centre": {
+  "id": "millets-farm-centre",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 68,
+  "tags": [
+   "beef",
+   "bread & bakery",
+   "dairy & cheese",
+   "fruit & veg",
+   "pork & bacon",
+   "poultry"
+  ],
+  "tagConfidence": {
+   "beef": "weak",
+   "bread & bakery": "strong",
+   "dairy & cheese": "strong",
+   "fruit & veg": "strong",
+   "pork & bacon": "weak",
+   "poultry": "weak"
+  },
+  "tagCounts": {
+   "beef": 5,
+   "pork & bacon": 9,
+   "tweed & woven goods": 2,
+   "poultry": 3,
+   "bread & bakery": 30,
+   "dairy & cheese": 24,
+   "jewellery": 1,
+   "fruit & veg": 7
+  },
+  "tagEvidence": {
+   "beef": "Christmas Beef Wellington",
+   "pork & bacon": "Unsmoked Gammon Joint",
+   "tweed & woven goods": "Giant Pigs in Blankets",
+   "poultry": "Starveall Farm Free Range Bronze Turkey",
+   "bread & bakery": "Bakery Christmas",
+   "dairy & cheese": "Cheese",
+   "jewellery": "Millets Handmade Fresh Cream Choux Ring",
+   "fruit & veg": "Home Produce Salads"
+  },
+  "gatedOut": [
+   "jewellery",
+   "tweed & woven goods"
+  ],
+  "observedTypes": [
+   "Bakery",
+   "Bakery Christmas",
+   "Bakery Desserts",
+   "Birthday Cakes",
+   "Butchery",
+   "Butchery Christmas Christmas Meats",
+   "Cheese",
+   "Christmas",
+   "Christmas Desserts Home Produce",
+   "Desserts Home Produce",
+   "Home Produce Salads",
+   "Quiches",
+   "Salads"
+  ],
+  "sample": [
+   "Christmas Beef Wellington",
+   "Locally Rolled Beef Sirloin",
+   "Unsmoked Gammon Joint",
+   "Smoked Gammon Joint",
+   "Giant Pigs in Blankets",
+   "Handmade Pork Chipolatas",
+   "Handmade Stuffing Balls",
+   "Handmade Cocktail Pigs in Blankets"
+  ],
+  "checked": "2026-10-09",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "the-wild-pig": {
+  "id": "the-wild-pig",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "john-huddleston-silversmith": {
+  "id": "john-huddleston-silversmith",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "thame-jewellery-workshop": {
+  "id": "thame-jewellery-workshop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "lawsons-goldsmiths": {
+  "id": "lawsons-goldsmiths",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "watermans-goldsmiths": {
+  "id": "watermans-goldsmiths",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "hands-of-tym": {
+  "id": "hands-of-tym",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 131,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "footwear & boots",
+   "scarves & accessories"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "braces & belts": "strong",
+   "footwear & boots": "weak",
+   "scarves & accessories": "strong"
+  },
+  "tagCounts": {
+   "bags & leather goods": 42,
+   "cutlery & knives": 5,
+   "fruit & veg": 2,
+   "footwear & boots": 1,
+   "braces & belts": 6,
+   "scarves & accessories": 1,
+   "jewellery": 3
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Medium Bucket Upsize Add-on – Mini Bucket Bag Course Course 2023 Cours",
+   "cutlery & knives": "Swanson Morton Scalpel and Blade Set tools Tools 2023",
+   "fruit & veg": "Vegetable Tanned Leather Short Bag Strap with Clips bag strap british ",
+   "footwear & boots": "Multi Round Leather Hole Punches - Brogue Pattern tools Tools 2023",
+   "braces & belts": "Half Round Cutter Leather Hole Punch for Strap & Belt Ends tools Tools",
+   "scarves & accessories": "Wire & Cable Ties",
+   "jewellery": "Bracelets"
+  },
+  "gatedOut": [
+   "cutlery & knives",
+   "fruit & veg",
+   "jewellery"
+  ],
+  "observedTypes": [
+   "Bag",
+   "Belts",
+   "Bookmarks",
+   "Bracelets",
+   "Course",
+   "Course Add-on",
+   "Customisation",
+   "DIY",
+   "Flasks",
+   "Gift Card",
+   "Handbags",
+   "Keychains",
+   "Luggage & Bags",
+   "Notebooks & Notepads",
+   "Pen & Pencil Cases",
+   "Punches & Awls",
+   "SLG",
+   "Tools and Supplies",
+   "Wallets & Money Clips",
+   "Wire & Cable Ties"
+  ],
+  "sample": [
+   "Medium Bucket Upsize Add-on – Mini Bucket Bag Course",
+   "Repositionable Leather Adhesive Tape - 3mm, 20 meters",
+   "Leather Adhesive Tape, 3mm and 5mm - 20m",
+   "Diamond Black Iron Leather Chisel Leather Craft Hole Punch Tools",
+   "Harness Needles for Hand-Stitching Leather — Pack of 12",
+   "Swanson Morton Scalpel and Blade Set",
+   "Cork Punching Boards",
+   "Leather Knife Sharpener Sharpening Strop Tool"
+  ],
+  "checked": "2026-10-09",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "cassandra-sabo": {
+  "id": "cassandra-sabo",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 24,
+  "tags": [
+   "cashmere & merino",
+   "cushions & throws",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "cashmere & merino": "weak",
+   "cushions & throws": "strong",
+   "tweed & woven goods": "strong"
+  },
+  "tagCounts": {
+   "cashmere & merino": 5,
+   "tweed & woven goods": 10,
+   "cushions & throws": 6
+  },
+  "tagEvidence": {
+   "cashmere & merino": "Atmosphere Collection: 'Rainbow' Lampshade Colour Lampshade Made-to-Or",
+   "tweed & woven goods": "Throw",
+   "cushions & throws": "West Coast Collection: 'Torrent' Cushion Cushion Spring Torrent West C"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Cushion",
+   "Gift Cards",
+   "Lampshade",
+   "Textile Art",
+   "Throw"
+  ],
+  "sample": [
+   "Atmosphere Collection: 'Rainbow' Lampshade",
+   "West Coast Collection: 'West Coast' Artwork",
+   "Brittany Throw | \"Pebbles Mini\" | Mink & Pink",
+   "Brittany Throw | \"Pebbles\" | Evergreen & Natural",
+   "West Coast Collection: 'Torrent' Lampshade",
+   "West Coast Collection: 'Torrent' Cushion",
+   "West Coast Collection: 'Splash' Wall-Hanging",
+   "West Coast Collection: 'Shoreline' Wall-Hanging"
+  ],
+  "checked": "2026-10-09",
+  "rescored": false,
+  "alreadyGated": true
  }
 }
