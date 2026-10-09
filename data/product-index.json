@@ -31566,5 +31566,62 @@
    "West Coast Collection: 'Shoreline' Wall-Hanging"
   ],
   "checked": "2026-10-09"
+ },
+ "aston-pottery": {
+  "id": "aston-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09"
+ },
+ "charlotte-storrs-stoneware": {
+  "id": "charlotte-storrs-stoneware",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09"
+ },
+ "robyn-hardyman-ceramics": {
+  "id": "robyn-hardyman-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09"
+ },
+ "bernwood-pottery": {
+  "id": "bernwood-pottery",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 6,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "air",
+   "all",
+   "leaf",
+   "new",
+   "sale",
+   "sand"
+  ],
+  "checked": "2026-10-09"
+ },
+ "the-potters-wheel-wallingford": {
+  "id": "the-potters-wheel-wallingford",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09"
+ },
+ "jess-sarson-pottery": {
+  "id": "jess-sarson-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09"
  }
 }

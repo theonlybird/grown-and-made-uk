@@ -33077,5 +33077,79 @@
   "checked": "2026-10-09",
   "rescored": false,
   "alreadyGated": true
+ },
+ "aston-pottery": {
+  "id": "aston-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "charlotte-storrs-stoneware": {
+  "id": "charlotte-storrs-stoneware",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "robyn-hardyman-ceramics": {
+  "id": "robyn-hardyman-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "bernwood-pottery": {
+  "id": "bernwood-pottery",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 6,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "air",
+   "all",
+   "leaf",
+   "new",
+   "sale",
+   "sand"
+  ],
+  "checked": "2026-10-09",
+  "previousTags": [],
+  "rescored": true
+ },
+ "the-potters-wheel-wallingford": {
+  "id": "the-potters-wheel-wallingford",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "jess-sarson-pottery": {
+  "id": "jess-sarson-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-10-09",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
  }
 }
