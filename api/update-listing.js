@@ -45,10 +45,20 @@ function tokenFor(id, secret) {
   return crypto.createHmac('sha256', secret).update(id).digest('hex').slice(0, 10);
 }
 
-function tokenOk(id, given, secret) {
+function tokenMatches(id, given, secret) {
   const want = Buffer.from(tokenFor(id, secret));
   const got = Buffer.from(String(given || ''));
   return want.length === got.length && crypto.timingSafeEqual(want, got);
+}
+
+/* Links issued before Oct 2026 are signed with UPDATE_LINK_SECRET. That value is
+   stored as a Sensitive variable in Vercel and cannot be read back, so links for
+   businesses added later are signed with UPDATE_LINK_SECRET_2. Both are accepted;
+   rotating either one kills only the links signed with it. */
+function tokenOk(id, given, secret) {
+  if (tokenMatches(id, given, secret)) return true;
+  const second = process.env.UPDATE_LINK_SECRET_2;
+  return Boolean(second) && tokenMatches(id, given, second);
 }
 
 /* Great Britain and Ireland, generously. Anything outside is a bug or a joke,
