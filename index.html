@@ -1036,6 +1036,26 @@ function clampMinZoom(){
 }
 map.whenReady(clampMinZoom);
 
+/* markercluster 1.5.3 + a fractional minimum zoom loses isolated pins (22 Oct
+   2026). It builds its top cluster level at floor(minZoom) - 1, but when it puts
+   pins on the map it starts the walk at minZoom - 1 WITHOUT the floor -- e.g. 4
+   vs 4.25 on a phone, where the minimum is 5.25. The walk then skips the top
+   level, and any pin sitting directly on it (one with no neighbour to cluster
+   with even at the widest zoom) is never drawn, at any zoom. Jamieson's of
+   Shetland was the visible case; Orraman Leather, Borgh Pottery and Belleek
+   dropped in and out depending on window width. Desktop widths where the
+   minimum is a whole number were unaffected. Flooring the start level matches
+   what the library already does everywhere else. */
+(function(){
+  const MC = L.MarkerCluster && L.MarkerCluster.prototype;
+  if (!MC || typeof MC._recursively !== 'function' || MC._gmFloorPatched) return;
+  const orig = MC._recursively;
+  MC._recursively = function(bounds, start, stop, every, bottom){
+    return orig.call(this, bounds, Math.floor(start), stop, every, bottom);
+  };
+  MC._gmFloorPatched = true;
+})();
+
 const cluster = L.markerClusterGroup({maxClusterRadius:40, spiderfyOnMaxZoom:true, showCoverageOnHover:false, zoomToBoundsOnClick:true});
 map.addLayer(cluster);
 
