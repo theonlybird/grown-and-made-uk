@@ -1570,7 +1570,7 @@
     "lng": -1.14215,
     "website": "https://www.jamiesonsofshetland.co.uk",
     "instagram": "https://www.instagram.com/jamiesonsofshetland/",
-    "description": "The only firm taking Shetland wool from fleece to finished knitwear entirely in the Shetland Isles, with its own spinning mill in Sandness.",
+    "description": "The only firm taking Shetland breed wool from fleece to hand-knitting yarn and finished knitwear entirely in the Shetland Isles, with its own spinning mill in Sandness.",
     "tier_confidence": "high",
     "logo": "assets/logos/jamiesons-shetland.png",
     "source": "verified-batch-2026-07",
@@ -17033,5 +17033,30 @@
     ],
     "nation": "England",
     "county": "Oxfordshire"
+  },
+  {
+    "id": "snoutwood-trotters",
+    "name": "Snoutwood Trotters",
+    "category": "farm",
+    "subcategory": "Farm shop & Butchery",
+    "tier": "gold",
+    "listing_type": "shop",
+    "town": "Great Sankey, Warrington",
+    "address": "Laburnum Farm, Laburnum Lane, Great Sankey, Warrington, WA5 3LE",
+    "lat": 53.3928,
+    "lng": -2.67008,
+    "website": "https://www.snoutwoodtrotters.co.uk/",
+    "instagram": "https://www.instagram.com/SnoutwoodTrotters",
+    "description": "Small family farm at Great Sankey raising free-range, rare-breed Gloucestershire Old Spot pigs, with everything made in its own on-site butchery and sold from the farm shop and a roadside vending machine.",
+    "tier_confidence": "medium",
+    "logo": "assets/logos/snoutwood-trotters.png",
+    "source": "user-suggestion-verified-2026-10",
+    "product_tags": [
+      "pork & bacon",
+      "fresh meat",
+      "eggs"
+    ],
+    "nation": "England",
+    "county": "Cheshire"
   }
 ]
