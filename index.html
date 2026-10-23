@@ -887,7 +887,8 @@
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<!-- Patched copy: rounds zoom down when grouping pins. See the header of the file. -->
+<script src="assets/vendor/leaflet.markercluster-1.5.3-gm.js"></script>
 <!-- Generated from scripts/lib/product-vocab.js. Maps what a person types
      ("sausages", "cider", "spuds") onto the canonical product tags the
      catalogue is indexed by. Same lexicon the search API uses. -->
