@@ -5943,7 +5943,7 @@
     "name": "Draper of Glastonbury",
     "category": "clothing",
     "subcategory": "Footwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Glastonbury, Somerset",
     "address": "Draper of Glastonbury, Glastonbury",
@@ -5952,7 +5952,7 @@
     "website": "https://www.draper-of-glastonbury.com",
     "instagram": "https://www.instagram.com/draperofglastonbury/",
     "description": "Family sheepskin slipper and boot makers, hand-manufacturing in Glastonbury since 1937.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/draper-of-glastonbury.png",
     "source": "unrecorded — verify before relying on",
     "product_tags": [
