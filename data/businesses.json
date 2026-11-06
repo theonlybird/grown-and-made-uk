@@ -4946,7 +4946,7 @@
     "tier": "silver",
     "listing_type": "both",
     "town": "Chilwell, Nottinghamshire",
-    "address": "Lace Street, Chilwell, Nottingham",
+    "address": "65 High Road, Chilwell, Nottingham NG9 4AJ",
     "lat": 52.92113,
     "lng": -1.22285,
     "website": "https://www.ghhurt.com",
@@ -4954,7 +4954,7 @@
     "description": "Knitted lace shawls made in Nottingham since 1912 — the christening shawl of choice for royal babies.",
     "tier_confidence": "high",
     "logo": "assets/logos/ghhurt.png",
-    "source": "verified-batch-2026-07",
+    "source": "business-confirmed-2026-11",
     "product_tags": [
       "knitwear",
       "cashmere & merino"
@@ -17058,5 +17058,57 @@
     ],
     "nation": "England",
     "county": "Cheshire"
+  },
+  {
+    "id": "the-pesky-partridge",
+    "name": "The Pesky Partridge",
+    "category": "clothing",
+    "subcategory": "Tailoring",
+    "tier": "gold",
+    "listing_type": "online_only",
+    "town": "Lowdham, Nottinghamshire",
+    "address": "Oak Tree Farm, Old Epperstone Road, Lowdham NG14 7DL",
+    "lat": 53.01805,
+    "lng": -1.03443,
+    "website": "https://thepeskypartridge.co.uk/",
+    "instagram": "https://www.instagram.com/thepeskypartridge",
+    "description": "Lucy Kay designs and makes country clothing by hand on her family farm at Lowdham: waistcoats, shooting suits and tweed caps in Yorkshire-milled tweed and Harris Tweed, plus repairs and workshops.",
+    "tier_confidence": "medium",
+    "logo": "assets/logos/the-pesky-partridge.png",
+    "source": "verified-2026-10",
+    "product_tags": [
+      "tweed & woven goods",
+      "vests & waistcoats",
+      "suits & trousers",
+      "hats & caps"
+    ],
+    "nation": "England",
+    "county": "Nottinghamshire"
+  },
+  {
+    "id": "urchin-clothing",
+    "name": "Urchin Clothing",
+    "category": "clothing",
+    "subcategory": "Everyday wear",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "East Langton, Leicestershire",
+    "address": "Grange Lane, East Langton, Leicestershire LE16 7TF",
+    "lat": 52.52659,
+    "lng": -0.9313,
+    "website": "https://www.urchinclothing.co.uk/",
+    "instagram": "",
+    "description": "Leicestershire maker since 1998 that knits and dyes its own fabrics for rugby shirts, polos, sweatshirts, gilets and camper coats, all cut and made in Britain.",
+    "tier_confidence": "medium",
+    "logo": "assets/logos/urchin-clothing.png",
+    "source": "verified-2026-10",
+    "product_tags": [
+      "shirts",
+      "everyday wear",
+      "coats & jackets",
+      "scarves & accessories"
+    ],
+    "nation": "England",
+    "county": "Leicestershire"
   }
 ]

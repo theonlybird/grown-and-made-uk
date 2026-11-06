@@ -212,11 +212,11 @@
       <div class="row2">
         <div>
           <label>Website</label>
-          <input type="url" name="website" placeholder="https://…" required>
+          <input type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" name="website" placeholder="e.g. example.co.uk" required>
         </div>
         <div>
           <label>Instagram <span class="opt">(optional)</span></label>
-          <input type="url" name="instagram" placeholder="https://instagram.com/…">
+          <input type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" name="instagram" placeholder="@name or a link">
         </div>
       </div>
 
@@ -369,7 +369,13 @@ form.addEventListener('submit', async (e) => {
      a browser bubble on whichever control it reaches first. */
   if (!form.checkValidity()) {
     const first = form.querySelector(':invalid');
-    showErr('<b>Some answers are missing.</b> Please fill in every field that is not marked optional.');
+    /* Name the box. "Some answers are missing" on a form that looked complete
+       sent at least one owner round in circles (Carol Long, Oct 2026). */
+    const lab = first && first.closest('div, form') && first.previousElementSibling;
+    const what = lab && lab.tagName === 'LABEL' ? lab.childNodes[0].textContent.trim() : '';
+    showErr(what
+      ? '<b>Please check “' + what + '”.</b> It needs an answer before we can send this.'
+      : '<b>Some answers are missing.</b> Please fill in every field that is not marked optional.');
     /* Which field people get stuck on. If one name dominates this report, the
        question is badly worded rather than the visitor being careless. */
     gmTrack('suggestion_invalid', { field_name: first ? (first.name || first.id || 'unknown') : 'unknown' });

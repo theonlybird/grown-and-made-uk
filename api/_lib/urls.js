@@ -12,7 +12,8 @@
  */
 
 function normaliseWebsite(value) {
-  const v = String(value == null ? '' : value).trim();
+  // Spaces are never part of a real address; phones add them after "https://".
+  const v = String(value == null ? '' : value).replace(/\s+/g, '');
   if (!v) return '';
   // A bare "example.co.uk" is how most people type it. Anything that already
   // names a scheme keeps it, so "javascript:..." is parsed as itself and fails.
@@ -32,7 +33,7 @@ const NOT_A_HANDLE = new Set(['p', 'reel', 'reels', 'stories', 'explore', 'tv', 
 const igUrl = (handle) => 'https://www.instagram.com/' + handle + '/';
 
 function normaliseInstagram(value) {
-  const v = String(value == null ? '' : value).trim();
+  const v = String(value == null ? '' : value).replace(/\s+/g, '');
   if (!v) return '';
   const bare = v.replace(/^@/, '');
   if (HANDLE.test(bare)) return igUrl(bare);
