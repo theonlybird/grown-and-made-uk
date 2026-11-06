@@ -16743,31 +16743,6 @@
     "county": "Oxfordshire"
   },
   {
-    "id": "john-huddleston-silversmith",
-    "name": "John Huddleston Silversmith",
-    "category": "jewellery",
-    "subcategory": "Silverware",
-    "tier": "gold",
-    "listing_type": "online_only",
-    "town": "Radley, Abingdon",
-    "address": "Radley, Abingdon, Oxfordshire",
-    "lat": 51.69063,
-    "lng": -1.24693,
-    "website": "https://www.jhsilver.co.uk",
-    "instagram": "",
-    "logo": "assets/logos/john-huddleston-silversmith.png",
-    "description": "Silversmith designing, fabricating and finishing silver spoons, bowls, candlesticks and jewellery in his own workshop at Radley.",
-    "tier_confidence": "medium",
-    "source": "verified-2026-10",
-    "product_tags": [
-      "silverware",
-      "bowls",
-      "jewellery"
-    ],
-    "nation": "England",
-    "county": "Oxfordshire"
-  },
-  {
     "id": "thame-jewellery-workshop",
     "name": "Thame Jewellery Workshop",
     "category": "jewellery",

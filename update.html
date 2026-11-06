@@ -590,11 +590,17 @@ document.addEventListener('click', e => {
        GOOD outcome, not an error. The tick is the affirmative act that makes an
        otherwise empty submission meaningful — and it is what enables the button,
        so the note beside it always says why the button is grey. */
-    $('submit-btn').disabled = !confirmed;
-    note.textContent = !confirmed ? 'Tick the box above to send'
+    /* A removal request needs no "all the information is correct" tick:
+       nobody asking to come off the map would tick it, so the button stayed
+       grey and the request could never be sent (John Huddleston, Nov 2026). */
+    var canSend = confirmed || removing;
+    $('submit-btn').disabled = !canSend;
+    $('submit-btn').textContent = removing ? 'Request removal' : 'Submit';
+    $('confirm-toggle').closest('label').hidden = removing;
+    note.textContent = !canSend ? 'Tick the box above to send'
       : bits.length ? 'Sending ' + bits.join(' and ')
       : 'Confirming your details are correct';
-    note.classList.toggle('live', confirmed);
+    note.classList.toggle('live', canSend);
   }
 
   function render(r) {
@@ -744,8 +750,8 @@ document.addEventListener('click', e => {
     var confirmed = $('confirm-toggle').checked;
     var pin = Pin.value();
 
-    // The button is disabled without it, but Enter in a text field submits too.
-    if (!confirmed) return;
+    // The button is disabled without one of these, but Enter in a text field submits too.
+    if (!confirmed && !removal) return;
     if (appeal && !appeal.answer && !appeal.link) {
       $('form-err').textContent = 'To look at your tier again we need something we can check — a supplier name, or a link.';
       $('form-err').hidden = false;
@@ -793,7 +799,7 @@ document.addEventListener('click', e => {
       show('state-sent');
       window.scrollTo(0, 0);
     }).catch(function (err) {
-      btn.disabled = false; btn.textContent = 'Submit';
+      btn.disabled = false; btn.textContent = removal ? 'Request removal' : 'Submit';
       gmTrack('listing_update_failed', { business_id: ID, error_message: String(err && err.message || err) });
       $('form-err').textContent = err.message
         + ' — if it keeps happening, email hello@grownandmade.uk and we’ll do it by hand.';
