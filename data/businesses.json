@@ -263,7 +263,7 @@
     "name": "John Smedley",
     "category": "clothing",
     "subcategory": "Knitwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Matlock, Derbyshire",
     "address": "Lea Mills, Matlock",
@@ -803,7 +803,7 @@
     "name": "Corgi",
     "category": "clothing",
     "subcategory": "Knitwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Ammanford, Carmarthenshire",
     "address": "Ammanford",
@@ -812,7 +812,7 @@
     "website": "https://www.corgisocks.com",
     "instagram": "https://www.instagram.com/corgisocksofficial/",
     "description": "Hand-finished socks and knitwear made in Ammanford, Wales since 1892.",
-    "tier_confidence": "high",
+    "tier_confidence": "medium",
     "logo": "assets/logos/corgi.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
@@ -827,29 +827,6 @@
       "children"
     ],
     "audience_confidence": "strong"
-  },
-  {
-    "id": "pantherella",
-    "name": "Pantherella",
-    "category": "clothing",
-    "subcategory": "Knitwear",
-    "tier": "gold",
-    "listing_type": "both",
-    "town": "Leicester",
-    "address": "Leicester",
-    "lat": 52.6369,
-    "lng": -1.1398,
-    "website": "https://www.pantherella.com",
-    "instagram": "https://www.instagram.com/pantherella/",
-    "description": "Fine English socks knitted at a family-owned factory in Leicester.",
-    "tier_confidence": "high",
-    "logo": "assets/logos/pantherella.svg",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "knitwear",
-      "socks"
-    ],
-    "nation": "England"
   },
   {
     "id": "peregrine",
@@ -1976,7 +1953,7 @@
     "name": "Hawico",
     "category": "clothing",
     "subcategory": "Knitwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Hawick, Scottish Borders",
     "address": "Duke Street, Hawick",
@@ -1985,7 +1962,7 @@
     "website": "https://www.hawico.com",
     "instagram": "https://www.instagram.com/hawicoscotland/",
     "description": "Luxury cashmere knitwear made in Hawick since 1874.",
-    "tier_confidence": "high",
+    "tier_confidence": "medium",
     "logo": "assets/logos/hawico.png",
     "source": "verified-batch-2026-07",
     "product_tags": [
@@ -2306,7 +2283,7 @@
     "name": "North Sea Clothing",
     "category": "clothing",
     "subcategory": "Knitwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "London",
     "address": "London",

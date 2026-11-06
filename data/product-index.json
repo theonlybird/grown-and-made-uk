@@ -2567,13 +2567,6 @@
   ],
   "checked": "2026-08-01"
  },
- "pantherella": {
-  "id": "pantherella",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31"
- },
  "peregrine": {
   "id": "peregrine",
   "shopify": true,

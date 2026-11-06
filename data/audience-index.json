@@ -991,42 +991,6 @@
    "children": 0
   }
  },
- "pantherella": {
-  "id": "pantherella",
-  "name": "Pantherella",
-  "platform": null,
-  "items": 0,
-  "checked": "2026-09-03",
-  "collections": 0,
-  "evidence": {
-   "men": {
-    "strong": 0,
-    "medium": 0,
-    "weak": 0,
-    "quotes": []
-   },
-   "women": {
-    "strong": 0,
-    "medium": 0,
-    "weak": 0,
-    "quotes": []
-   },
-   "children": {
-    "strong": 0,
-    "medium": 0,
-    "weak": 0,
-    "quotes": []
-   }
-  },
-  "audience": null,
-  "confidence": "none",
-  "basis": "no audience named clearly enough",
-  "scores": {
-   "men": 0,
-   "women": 0,
-   "children": 0
-  }
- },
  "mackintosh": {
   "id": "mackintosh",
   "name": "Mackintosh",

@@ -2652,16 +2652,6 @@
   "rescored": false,
   "alreadyGated": true
  },
- "pantherella": {
-  "id": "pantherella",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
- },
  "peregrine": {
   "id": "peregrine",
   "shopify": true,
