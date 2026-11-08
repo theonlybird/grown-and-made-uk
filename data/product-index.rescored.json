@@ -14503,16 +14503,6 @@
   "rescored": false,
   "alreadyGated": true
  },
- "brora": {
-  "id": "brora",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-08-01",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
- },
  "mamnick": {
   "id": "mamnick",
   "shopify": true,

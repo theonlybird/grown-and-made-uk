@@ -6105,35 +6105,6 @@
     "audience_confidence": "strong"
   },
   {
-    "id": "brora",
-    "name": "Brora",
-    "category": "clothing",
-    "subcategory": "Knitwear",
-    "tier": "gold",
-    "listing_type": "both",
-    "town": "Hawick, Scottish Borders",
-    "address": "Hawick",
-    "lat": 55.4265,
-    "lng": -2.784,
-    "website": "https://www.broraonline.com",
-    "instagram": "",
-    "description": "Scottish cashmere brand whose knitwear is spun and knitted in the Borders.",
-    "tier_confidence": "medium",
-    "logo": "assets/logos/brora.png",
-    "source": "unrecorded — verify before relying on",
-    "product_tags": [
-      "knitwear",
-      "cashmere & merino"
-    ],
-    "nation": "Scotland",
-    "county": "Scottish Borders",
-    "audience": [
-      "men",
-      "women"
-    ],
-    "audience_confidence": "strong"
-  },
-  {
     "id": "kinloch-anderson",
     "name": "Kinloch Anderson",
     "category": "clothing",

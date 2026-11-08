@@ -5627,60 +5627,6 @@
    "children": 0
   }
  },
- "brora": {
-  "id": "brora",
-  "name": "Brora",
-  "platform": "shopify",
-  "items": 750,
-  "checked": "2026-09-03",
-  "collections": 229,
-  "evidence": {
-   "men": {
-    "strong": 18,
-    "medium": 0,
-    "weak": 11,
-    "quotes": [
-     "Clearance Men's Cashmere clearance-mens-cashmere (mens)",
-     "Men men (men)",
-     "Men's Accessories mens-accessories (mens)",
-     "Men's Cashmere mens-cashmere (mens)"
-    ]
-   },
-   "women": {
-    "strong": 64,
-    "medium": 5,
-    "weak": 150,
-    "quotes": [
-     "Clearance Women's Cashmere clearance-womens-cashmere (womens)",
-     "dresses dresses (dresses)",
-     "dresses-skirts dresses-skirts (dresses)",
-     "New In Women new-in-women (women)"
-    ]
-   },
-   "children": {
-    "strong": 16,
-    "medium": 0,
-    "weak": 14,
-    "quotes": [
-     "Babies' Cashmere babies-cashmere (babies)",
-     "Baby baby (baby)",
-     "Baby Accessories & Blankets baby-accessories-blankets (baby)",
-     "Baby Hand-Knitted Cashmere baby-hand-knitted-cashmere (baby)"
-    ]
-   }
-  },
-  "audience": [
-   "men",
-   "women"
-  ],
-  "confidence": "strong",
-  "basis": "shop navigation or listing text",
-  "scores": {
-   "men": 119,
-   "women": 549,
-   "children": 110
-  }
- },
  "gordon-nicolson-kiltmakers": {
   "id": "gordon-nicolson-kiltmakers",
   "name": "Gordon Nicolson Kiltmakers",
