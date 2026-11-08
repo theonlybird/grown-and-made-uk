@@ -17033,5 +17033,55 @@
     ],
     "nation": "England",
     "county": "Leicestershire"
+  },
+  {
+    "id": "oneills",
+    "name": "O'Neills",
+    "category": "clothing",
+    "subcategory": "Sportswear",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Strabane, Co. Tyrone",
+    "address": "Unit 1, Dublin Road Industrial Estate, Strabane BT82 9EA",
+    "lat": 54.82026,
+    "lng": -7.4716,
+    "website": "https://www.oneills.com/uk_en/",
+    "instagram": "",
+    "logo": "assets/logos/oneills.png",
+    "description": "Sportswear maker whose Strabane factory has knitted fabric and made team kit since the 1970s, from Gaelic and rugby jerseys to shorts and socks, with a factory shop on site.",
+    "tier_confidence": "medium",
+    "source": "user-suggestion-verified-2026-11",
+    "product_tags": [
+      "activewear",
+      "socks",
+      "everyday wear"
+    ],
+    "nation": "Northern Ireland",
+    "county": "Co. Tyrone"
+  },
+  {
+    "id": "red-earth-designs",
+    "name": "Red Earth Designs",
+    "category": "ceramics",
+    "subcategory": "Studio pottery",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Belfast",
+    "address": "Unit 15, Townsend Enterprise Park, 28 Townsend Street, Belfast BT13 2ES",
+    "lat": 54.60127,
+    "lng": -5.93999,
+    "website": "https://www.redearthdesigns.co.uk",
+    "instagram": "https://www.instagram.com/redearthdesignsstudio/",
+    "logo": "assets/logos/red-earth-designs.png",
+    "description": "Hand-built ceramics, mostly porcelain, made by twin sisters Claire and Karen Gibson at their studio close to Belfast city centre, where visitors are welcome to call in.",
+    "tier_confidence": "medium",
+    "source": "user-suggestion-verified-2026-11",
+    "product_tags": [
+      "pottery",
+      "vases",
+      "bowls"
+    ],
+    "nation": "Northern Ireland",
+    "county": "Belfast"
   }
 ]

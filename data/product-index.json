@@ -31602,5 +31602,36 @@
   "platform": null,
   "reason": "no-feed-found",
   "checked": "2026-10-09"
+ },
+ "oneills": {
+  "id": "oneills",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 400,
+  "tags": [],
+  "tagConfidence": {},
+  "tagCounts": {},
+  "tagEvidence": {},
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "50384",
+   "50440",
+   "50800",
+   "52184",
+   "56707",
+   "56708",
+   "56709",
+   "61689"
+  ],
+  "checked": "2026-11-08"
+ },
+ "red-earth-designs": {
+  "id": "red-earth-designs",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-08"
  }
 }
