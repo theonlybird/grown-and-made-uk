@@ -17083,5 +17083,34 @@
     ],
     "nation": "Northern Ireland",
     "county": "Belfast"
+  },
+  {
+    "id": "greendale-farm-shop",
+    "name": "Greendale Farm Shop",
+    "category": "farm",
+    "subcategory": "Farm shop",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Farringdon, Exeter",
+    "address": "Sidmouth Road, Farringdon, Exeter EX5 2JU",
+    "lat": 50.70404,
+    "lng": -3.39867,
+    "website": "https://greendale.com",
+    "instagram": "https://www.instagram.com/greendalefarmshop/",
+    "logo": "assets/logos/greendale-farm-shop.png",
+    "description": "East Devon farm shop with its own fishing fleet of more than twenty boats working out of Devon and Cornwall, selling fish from its own wet-fish counter alongside beef from the family farm and West Country cheese, bread and cider.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "fresh meat",
+      "beef",
+      "dairy & cheese",
+      "fruit & veg",
+      "bread & bakery",
+      "farm shop & deli",
+      "drinks & spirits"
+    ],
+    "nation": "England",
+    "county": "Devon"
   }
 ]
