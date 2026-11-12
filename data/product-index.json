@@ -24382,13 +24382,6 @@
   "reason": "no-feed-found",
   "checked": "2026-08-01"
  },
- "dartington-pottery": {
-  "id": "dartington-pottery",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-08-01"
- },
  "priory-farm-estate": {
   "id": "priory-farm-estate",
   "shopify": false,
@@ -25194,13 +25187,6 @@
    "SE Blue leather strap (20mm)",
    "Blue leather strap (20mm)"
   ],
-  "checked": "2026-08-01"
- },
- "pobjoy-mint": {
-  "id": "pobjoy-mint",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
   "checked": "2026-08-01"
  },
  "netherton-foundry": {

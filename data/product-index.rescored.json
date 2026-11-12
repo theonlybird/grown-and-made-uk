@@ -25349,16 +25349,6 @@
   "tagConfidence": {},
   "rescored": true
  },
- "dartington-pottery": {
-  "id": "dartington-pottery",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-08-01",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
- },
  "priory-farm-estate": {
   "id": "priory-farm-estate",
   "shopify": false,
@@ -26216,16 +26206,6 @@
   "checked": "2026-08-01",
   "rescored": false,
   "alreadyGated": true
- },
- "pobjoy-mint": {
-  "id": "pobjoy-mint",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-08-01",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
  },
  "netherton-foundry": {
   "id": "netherton-foundry",
