@@ -62,3 +62,9 @@ data/pending-additions.json
 # Supplier register: built from internal evidence notes
 data/supplier-register.json
 SUPPLIER-REGISTER.md
+
+# business pages project: plan and unpublished drafts about named businesses — internal
+BUSINESS-PAGES-PLAN.md
+data/page-drafts/
+.page-review/
+approved-page-submissions*.json
