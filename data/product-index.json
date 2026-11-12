@@ -31741,5 +31741,220 @@
    "Greendale Pork & Cranberry Sausage Roll Wreath"
   ],
   "checked": "2026-11-08"
+ },
+ "caroline-brook": {
+  "id": "caroline-brook",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 213,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 412,
+   "silverware": 36,
+   "dresses": 1,
+   "cufflinks & signets": 8,
+   "scarves & accessories": 1,
+   "womenswear": 2
+  },
+  "tagEvidence": {
+   "jewellery": "The Polished Birthstone Bangle in Sterling Silver 18th birthday gift 2",
+   "silverware": "The Polished Birthstone Bangle in Sterling Silver 18th birthday gift 2",
+   "dresses": "Tulip Ring, Amethyst Silver Cocktail Ring Amethyst amethyst cocktail r",
+   "cufflinks & signets": "Cufflinks",
+   "scarves & accessories": "Silver Bee Pin Bee Brooch Bee Lapel Pin Bee Pendant Bee Scarf Pin Natu",
+   "womenswear": "Silver Four Petal Flower Ring big flower ring botanical_ring floral ri"
+  },
+  "gatedOut": [
+   "dresses",
+   "scarves & accessories",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Bracelet",
+   "Brooch's and Pins",
+   "Cufflinks",
+   "Earrings",
+   "Necklace",
+   "Rings",
+   "bangle"
+  ],
+  "sample": [
+   "The Polished Birthstone Bangle in Sterling Silver",
+   "Personalised Birthstone Bangle, Hammered Sterling Silver",
+   "Personalised Hand Stamped Sterling Silver Bangle, Live Love Laugh",
+   "Groove Bangle, Unisex Sterling Silver D-Shaped Cuff Bangle, Personalis",
+   "Ruby Organic Bangle, Handforged Sterling Silver Open Bangle",
+   "Serpent Snake Bangle in Sterling Silver",
+   "Daisy Dangle Earrings, Silver and Rose Gold Drop Earrings",
+   "Tulip Ring, Amethyst Silver Cocktail Ring"
+  ],
+  "checked": "2026-11-12"
+ },
+ "brightleigh-farm": {
+  "id": "brightleigh-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-12"
+ },
+ "flower-farm": {
+  "id": "flower-farm",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 24,
+  "tags": [
+   "drinks & spirits"
+  ],
+  "tagConfidence": {
+   "drinks & spirits": "weak"
+  },
+  "tagCounts": {
+   "drinks & spirits": 1
+  },
+  "tagEvidence": {
+   "drinks & spirits": "may beer"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "51",
+   "online",
+   "xmas",
+   "sept20",
+   "sept27",
+   "oct4",
+   "oct11",
+   "oct18"
+  ],
+  "checked": "2026-11-12"
+ },
+ "simon-pure": {
+  "id": "simon-pure",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 200,
+  "tags": [
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "jewellery": "weak",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 177,
+   "silverware": 8,
+   "scarves & accessories": 2,
+   "childrenswear": 2,
+   "cushions & throws": 1
+  },
+  "tagEvidence": {
+   "jewellery": "V Collection Morganite Drop Earrings earrings 9ct white gold v collect",
+   "silverware": "Large Limitless Pendant limitless sterling silver 9ct yellow gold",
+   "scarves & accessories": "Wide Bow Tie Diamond Set Wedding Ring diamond",
+   "childrenswear": "Unique Orange Sapphire Baby Pear Bubble Ring christmas sapphire",
+   "cushions & throws": "Aquamarine Cushion Cut Ring platinum aquamarine cushion cut 18ct white"
+  },
+  "gatedOut": [
+   "childrenswear",
+   "cushions & throws",
+   "scarves & accessories"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "V Collection Morganite Drop Earrings",
+   "Small Spirit Silver Pendant",
+   "Unique Blue Sapphire Princess Cut Ring",
+   "Aurora Pendant",
+   "Pure Solitaire Diamond Ring",
+   "Unique Orange Sapphire Pure Delight Ring",
+   "Unique Pear Aquamarine Ring",
+   "Unique Green Tourmaline Triangle Pendant"
+  ],
+  "checked": "2026-11-12"
+ },
+ "susan-holton": {
+  "id": "susan-holton",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 37,
+  "tags": [
+   "cashmere & merino",
+   "coats & jackets",
+   "dresses",
+   "hats & caps",
+   "jeans & denim",
+   "knitwear",
+   "scarves & accessories",
+   "tweed & woven goods",
+   "vests & waistcoats",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "cashmere & merino": "weak",
+   "coats & jackets": "weak",
+   "dresses": "weak",
+   "hats & caps": "weak",
+   "jeans & denim": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "weak",
+   "tweed & woven goods": "weak",
+   "vests & waistcoats": "weak",
+   "womenswear": "weak"
+  },
+  "tagCounts": {
+   "knitwear": 20,
+   "womenswear": 13,
+   "coats & jackets": 9,
+   "scarves & accessories": 18,
+   "jeans & denim": 2,
+   "vests & waistcoats": 2,
+   "dresses": 4,
+   "tweed & woven goods": 1,
+   "cashmere & merino": 1,
+   "hats & caps": 3,
+   "jewellery": 3
+  },
+  "tagEvidence": {
+   "knitwear": "Monochrome maze knit jumper organic cotton and silk - no wool gifts fo",
+   "womenswear": "Monochrome maze knit jumper organic cotton and silk - no wool gifts fo",
+   "coats & jackets": "Women's cropped cream cardigan - wool free gifts for her Christmas gif",
+   "scarves & accessories": "Women's cropped cream cardigan - wool free gifts for her Christmas gif",
+   "jeans & denim": "Women's soft cotton knitted denim jacket - no wool handmade gifts for ",
+   "vests & waistcoats": "Big square wrap - wool free sleeveless layering wrap coat cotton linen",
+   "dresses": "Loose fitting cocoon dress or tunic - no wool handmade gifts for her g",
+   "tweed & woven goods": "Oversized blanket scarf in a soft cotton-silk blend knitted handmade g",
+   "cashmere & merino": "Slouchy beanie hat for women in soft merino wool washable hat women's ",
+   "hats & caps": "Slouchy beanie hat for women in soft merino wool washable hat women's ",
+   "jewellery": "Stripy knitted hat with rolled edge & brooch washable hat women's hat "
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Monochrome maze knit jumper organic cotton and silk - no wool",
+   "Women's cropped cream cardigan - wool free",
+   "Women's oversized wrap cardigan in cosy wool and silk",
+   "Women's oversized knit jumper - no wool",
+   "Women's soft cotton knitted denim jacket - no wool",
+   "Women's cotton silk cardigan-jacket - no wool",
+   "Oversized soft knit layering sweater-jumper - no wool",
+   "Wrap and tie cardigan jacket in wool and silk with stripy front"
+  ],
+  "checked": "2026-11-12"
  }
 }
