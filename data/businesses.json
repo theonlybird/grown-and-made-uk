@@ -217,7 +217,7 @@
     "name": "Carradice of Nelson",
     "category": "clothing",
     "subcategory": "Bags & Luggage",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Nelson, Lancashire",
     "address": "Nelson",
@@ -228,7 +228,7 @@
     "description": "Lancashire cycling-luggage maker since 1932, hand-stitching waxed cotton duck bags using UK-sourced materials wherever possible.",
     "tier_confidence": "medium",
     "logo": "assets/logos/carradice.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "coats & jackets",
       "bags & leather goods"
@@ -833,7 +833,7 @@
     "name": "Peregrine",
     "category": "clothing",
     "subcategory": "Knitwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Cockermouth, Cumbria",
     "address": "Cockermouth",
@@ -842,9 +842,9 @@
     "website": "https://www.peregrineclothing.co.uk",
     "instagram": "https://www.instagram.com/peregrineuk/",
     "description": "Knitwear and outerwear made in England since 1796, from a family business in Cumbria.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/peregrine.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "knitwear",
       "coats & jackets"
@@ -6656,7 +6656,7 @@
     "name": "John Partridge",
     "category": "clothing",
     "subcategory": "Outerwear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Wolverhampton, West Midlands",
     "address": "Wolverhampton",
@@ -6665,9 +6665,9 @@
     "website": "https://www.johnpartridge.com",
     "instagram": "https://www.instagram.com/johnpartridgeco/",
     "description": "Wax jackets and country clothing cut and sewn at their own West Midlands factory.",
-    "tier_confidence": "high",
+    "tier_confidence": "medium",
     "logo": "assets/logos/john-partridge.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "coats & jackets",
       "pet accessories"
@@ -8204,7 +8204,7 @@
     "name": "Reflekt Clothing",
     "category": "clothing",
     "subcategory": "Menswear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "online_only",
     "town": "Leicester, Leicestershire",
     "address": "Leicester",
@@ -8215,7 +8215,7 @@
     "description": "Menswear in 100% English wool from a Saddleworth mill.",
     "tier_confidence": "medium",
     "logo": "assets/logos/reflekt-clothing.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "suits & trousers",
       "everyday wear"
@@ -8731,7 +8731,7 @@
     "name": "Talou",
     "category": "clothing",
     "subcategory": "Childrenswear",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "online_only",
     "town": "London",
     "address": "London Fields Knitwear Studio, London",
@@ -8742,7 +8742,7 @@
     "description": "Children's knitwear knitted and hand-linked in a London studio.",
     "tier_confidence": "medium",
     "logo": "assets/logos/talou.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "knitwear"
     ],
