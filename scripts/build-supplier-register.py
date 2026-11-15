@@ -39,6 +39,7 @@ out.append('')
 for k in ranked:
     if not links[k]: continue
     s = S[k]; out += ['## %s (%s, %s)' % (s['name'], s['kind'], s['place']), '']
+    if s.get('note'): out += ['> ' + s['note'], '']
     for bid, src in sorted(links[k].items(), key=lambda kv: (not kv[1].startswith('confirmed'), biz[kv[0]]['name'])):
         b = biz[bid]; out.append('- **%s** (%s, %s, %s): %s' % (b['name'], b['tier'].title(), b['category'], b.get('town', ''), src))
     out.append('')
