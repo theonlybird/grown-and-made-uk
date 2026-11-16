@@ -3529,13 +3529,6 @@
   ],
   "checked": "2026-08-01"
  },
- "barbour": {
-  "id": "barbour",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31"
- },
  "new-balance-uk": {
   "id": "new-balance-uk",
   "shopify": false,

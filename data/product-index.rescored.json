@@ -3647,16 +3647,6 @@
   "rescored": false,
   "alreadyGated": true
  },
- "barbour": {
-  "id": "barbour",
-  "shopify": false,
-  "platform": null,
-  "reason": "no-feed-found",
-  "checked": "2026-07-31",
-  "tags": [],
-  "tagConfidence": {},
-  "rescored": true
- },
  "new-balance-uk": {
   "id": "new-balance-uk",
   "shopify": false,

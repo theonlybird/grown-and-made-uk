@@ -1233,28 +1233,6 @@
     "audience_confidence": "strong"
   },
   {
-    "id": "barbour",
-    "name": "Barbour",
-    "category": "clothing",
-    "subcategory": "Outerwear",
-    "tier": "silver",
-    "listing_type": "both",
-    "town": "South Shields",
-    "address": "Simonside, South Shields",
-    "lat": 54.97334,
-    "lng": -1.46485,
-    "website": "https://www.barbour.com",
-    "instagram": "https://www.instagram.com/barbour/",
-    "description": "Iconic waxed-cotton jackets still made (and re-waxed) at Simonside, South Shields, though much of the wider range is made overseas.",
-    "tier_confidence": "high",
-    "logo": "assets/logos/barbour.png",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "coats & jackets"
-    ],
-    "nation": "England"
-  },
-  {
     "id": "new-balance-uk",
     "name": "New Balance (Made in UK)",
     "category": "clothing",
