@@ -33555,5 +33555,383 @@
   "checked": "2026-11-25",
   "rescored": false,
   "alreadyGated": true
+ },
+ "duchess-china": {
+  "id": "duchess-china",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "good-life-meat-co": {
+  "id": "good-life-meat-co",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "cote-hill-cheese": {
+  "id": "cote-hill-cheese",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "charlie-borrow": {
+  "id": "charlie-borrow",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 27,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "workwear & aprons"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "workwear & aprons": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 12,
+   "braces & belts": 1,
+   "workwear & aprons": 1
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Coal Bag",
+   "braces & belts": "Belt",
+   "workwear & aprons": "Apron"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Coal Bag",
+   "Pilot Bag",
+   "Overnight Bag",
+   "Weekend Bag",
+   "Belt",
+   "Overnight Bag",
+   "Helmet Bag",
+   "Wholecut"
+  ],
+  "checked": "2026-11-25",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "edge-o-beyond": {
+  "id": "edge-o-beyond",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 1000,
+  "tags": [
+   "activewear",
+   "braces & belts",
+   "childrenswear",
+   "dresses",
+   "scarves & accessories",
+   "suits & trousers",
+   "underwear & nightwear",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "activewear": "weak",
+   "braces & belts": "strong",
+   "childrenswear": "strong",
+   "dresses": "strong",
+   "scarves & accessories": "strong",
+   "suits & trousers": "strong",
+   "underwear & nightwear": "strong",
+   "womenswear": "strong"
+  },
+  "tagCounts": {
+   "childrenswear": 56,
+   "underwear & nightwear": 447,
+   "braces & belts": 196,
+   "dresses": 27,
+   "suits & trousers": 16,
+   "womenswear": 29,
+   "scarves & accessories": 20,
+   "activewear": 1,
+   "jewellery": 2
+  },
+  "tagEvidence": {
+   "childrenswear": "babydoll",
+   "underwear & nightwear": "Jayne Babydoll babydoll colour-metallic colour-purple jayne luxury new",
+   "braces & belts": "suspender",
+   "dresses": "dress",
+   "suits & trousers": "trousers",
+   "womenswear": "skirt",
+   "scarves & accessories": "gloves",
+   "activewear": "Giovanna Leggings colour-black Giovanna Lace matches-personalise-embro",
+   "jewellery": "jewellery"
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [
+   "Decoration",
+   "advent calendar",
+   "babydoll",
+   "basque",
+   "bikini bottoms",
+   "bikini top",
+   "body",
+   "bodysuit",
+   "bra",
+   "bra - bralette",
+   "bra - cupless",
+   "bra - longline",
+   "bra - peephole",
+   "bra - quarter-cup",
+   "brief",
+   "brief - high cut",
+   "brief - high waist",
+   "brief - low rise",
+   "brief - ouvert",
+   "brief - tanga",
+   "catsuit",
+   "choker",
+   "corset",
+   "cuffs",
+   "dress",
+   "eye mask",
+   "garter",
+   "gift wrap",
+   "gifting calendar",
+   "gloves",
+   "jewellery",
+   "lingerie gift set",
+   "pasties",
+   "personalisation",
+   "playsuit",
+   "robe",
+   "scrunchies",
+   "skirt",
+   "sleeves",
+   "slip"
+  ],
+  "sample": [
+   "Jayne Sleeves",
+   "Jayne Babydoll",
+   "Jayne Suspender",
+   "Jayne Brief",
+   "Jayne Thong",
+   "Jayne Longline Bra",
+   "Harriette Bra",
+   "Harriette Thong"
+  ],
+  "checked": "2026-11-25",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "church-of-sanctus": {
+  "id": "church-of-sanctus",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "activewear",
+   "bags & leather goods",
+   "childrenswear",
+   "coats & jackets",
+   "dresses",
+   "scarves & accessories",
+   "shirts",
+   "tweed & woven goods",
+   "womenswear"
+  ],
+  "tagConfidence": {
+   "activewear": "weak",
+   "bags & leather goods": "weak",
+   "childrenswear": "weak",
+   "coats & jackets": "strong",
+   "dresses": "strong",
+   "scarves & accessories": "weak",
+   "shirts": "weak",
+   "tweed & woven goods": "weak",
+   "womenswear": "strong"
+  },
+  "tagCounts": {
+   "womenswear": 13,
+   "shirts": 8,
+   "coats & jackets": 16,
+   "dresses": 40,
+   "childrenswear": 1,
+   "tweed & woven goods": 3,
+   "activewear": 1,
+   "scarves & accessories": 1,
+   "bags & leather goods": 7
+  },
+  "tagEvidence": {
+   "womenswear": "For All Eternity Skirts",
+   "shirts": "Clergy Collar Shirt &#8211; Black",
+   "coats & jackets": "For All Eternity Jackets",
+   "dresses": "Dresses For All Eternity",
+   "childrenswear": "Silk Babydoll Cami &#8211; S",
+   "tweed & woven goods": "Tartan Boleyn Dress Mini",
+   "activewear": "Tudor Hose Leggings",
+   "scarves & accessories": "Vermillion Opera Gloves Sample",
+   "bags & leather goods": "Spiritus Bag"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Accessories",
+   "Accessories Corsets Ready To Ship",
+   "Accessories For All Eternity Ready To Ship",
+   "Accessories Ready To Ship",
+   "Corsets For All Eternity",
+   "Corsets Ready To Ship",
+   "Dresses",
+   "Dresses For All Eternity",
+   "Dresses New",
+   "Dresses Ready To Ship",
+   "Dresses Ready To Ship Sanctus Vaults",
+   "Dresses Ready To Ship Sanctus Vaults Tops",
+   "Dresses Ready To Ship The Sempstress",
+   "For All Eternity Hoods Ready To Ship Tops",
+   "For All Eternity Jackets",
+   "For All Eternity Skirts",
+   "For All Eternity Tops",
+   "Hoods Tops",
+   "Jackets",
+   "Jackets Ready To Ship",
+   "Jackets Ready To Ship The Sempstress",
+   "Ready To Ship Sanctus Vaults Skirts",
+   "Ready To Ship Sanctus Vaults Tops",
+   "Ready To Ship Skirts",
+   "Ready To Ship The Sempstress Tops",
+   "Ready To Ship Tops",
+   "Skirts",
+   "The Sempstress",
+   "Tops"
+  ],
+  "sample": [
+   "Fleur De Lys Skirt",
+   "Breastplate Hoody Red",
+   "Clergy Collar Shirt &#8211; Black",
+   "Breastplate Hoody Black",
+   "Fleur De Lys Bolero &#8211; Black",
+   "Fleur De Lys Doublet",
+   "Shelley Blouse &#8211; Black",
+   "Shelley Blouse &#8211; Ivory"
+  ],
+  "checked": "2026-11-25",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "belfast-bow-company": {
+  "id": "belfast-bow-company",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 463,
+  "tags": [
+   "scarves & accessories",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "scarves & accessories": "strong",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "cufflinks & signets": 192,
+   "scarves & accessories": 654,
+   "tweed & woven goods": 74
+  },
+  "tagEvidence": {
+   "cufflinks & signets": "Cufflinks",
+   "scarves & accessories": "Pocket Squares",
+   "tweed & woven goods": "Tweed & Tartan - Fermanagh Set"
+  },
+  "gatedOut": [
+   "cufflinks & signets"
+  ],
+  "observedTypes": [
+   "Bow Ties",
+   "Cufflinks",
+   "Gift Set",
+   "Pocket Squares",
+   "Self-Tie Bow Ties",
+   "Ties"
+  ],
+  "sample": [
+   "Liberty Silk Cufflinks in Midnight Floral - Limited Edition",
+   "Liberty Silk Pocket Square in Midnight Floral - Limited Edition",
+   "Liberty Silk Self-Tie in Midnight Floral - Limited Edition",
+   "Liberty Silk Bow Tie in Midnight Floral - Limited Edition",
+   "Liberty Silk Tie in Midnight Floral - Limited Edition",
+   "Tweed & Tartan - Fermanagh Set",
+   "Liberty & Linen - Burgundy Paisley Set",
+   "Liberty & Linen - Emerald Green Set"
+  ],
+  "checked": "2026-11-25",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "lucy-welton": {
+  "id": "lucy-welton",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 9,
+  "tags": [
+   "bags & leather goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 3
+  },
+  "tagEvidence": {
+   "bags & leather goods": "NIKA 02 LEATHER SHOULDER BAG"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "LUNA",
+   "LUNA",
+   "LUNA",
+   "NIKA 02",
+   "NIKA 02",
+   "NIKA 02",
+   "MARGOT",
+   "MARGOT"
+  ],
+  "checked": "2026-11-25",
+  "rescored": false,
+  "alreadyGated": true
+ },
+ "mk-cookware": {
+  "id": "mk-cookware",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "phd-designs": {
+  "id": "phd-designs",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
  }
 }
