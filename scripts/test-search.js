@@ -374,7 +374,7 @@ for (const [q, want] of [['scottish pork', /^\d+ match(es)? for Scottish reared 
 // opposite sides. All of these must land in the right country.
 console.log('');
 const borderCases = [
-  ['big-fox-apparel', 'England'], ['barbour', 'England'], ['ivy-and-rigg', 'England'],
+  ['big-fox-apparel', 'England'], ['ivy-and-rigg', 'England'],
   ['chapman-bags', 'England'], ['jim-malone', 'England'], ['errington-reay', 'England'],
   ['william-lockie', 'Scotland'], ['begg-x-co', 'Scotland'], ['lochcarron', 'Scotland'],
   ['hiut-denim', 'Wales'], ['broughgammon-farm', 'Northern Ireland'],

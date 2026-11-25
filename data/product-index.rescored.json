@@ -33477,5 +33477,83 @@
   "checked": "2026-11-12",
   "rescored": false,
   "alreadyGated": true
+ },
+ "washingpool-farm-shop": {
+  "id": "washingpool-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25",
+  "tags": [],
+  "tagConfidence": {},
+  "rescored": true
+ },
+ "corinna-pyman-ceramics": {
+  "id": "corinna-pyman-ceramics",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 30,
+  "tags": [
+   "bowls",
+   "candles & holders",
+   "mugs",
+   "plates",
+   "tableware",
+   "vases"
+  ],
+  "tagConfidence": {
+   "bowls": "strong",
+   "candles & holders": "strong",
+   "mugs": "strong",
+   "plates": "strong",
+   "tableware": "strong",
+   "vases": "strong"
+  },
+  "tagCounts": {
+   "bowls": 18,
+   "tableware": 12,
+   "mugs": 17,
+   "plates": 4,
+   "vases": 3,
+   "jewellery": 1,
+   "candles & holders": 2
+  },
+  "tagEvidence": {
+   "bowls": "Bowls",
+   "tableware": "Jugs",
+   "mugs": "Cups and mugs",
+   "plates": "plates",
+   "vases": "Tableware vase",
+   "jewellery": "Posy Ring",
+   "candles & holders": "candles"
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [
+   "Bowls",
+   "Cups and mugs",
+   "Jugs",
+   "Tableware",
+   "Tableware vase",
+   "candles",
+   "plates",
+   "soap dish and toothmugs",
+   "teapots"
+  ],
+  "sample": [
+   "Breakfast Bowls",
+   "Pasta Bowl",
+   "white jug with green decoration",
+   "Pink and White Striped French Cup and Saucer",
+   "Straight Mug Natural",
+   "White Glossy Toothmug",
+   "Glossy White Soap Dish",
+   "Straight Espresso Mug Natural"
+  ],
+  "checked": "2026-11-25",
+  "rescored": false,
+  "alreadyGated": true
  }
 }
