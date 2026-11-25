@@ -68,3 +68,6 @@ BUSINESS-PAGES-PLAN.md
 data/page-drafts/
 .page-review/
 approved-page-submissions*.json
+
+# Claude briefing notes and working drafts — internal
+Claude outputs/
