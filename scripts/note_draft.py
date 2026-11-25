@@ -34,6 +34,10 @@ ASK = [
      'clothing', 'Which mill weaves or knits your main cloth?'),
     (r'leather.*(import|not|un)|tann',
      'clothing', 'Which tannery supplies your leather?'),
+    (r'leather.*(import|not|un)|tann|bridle',
+     'bags', 'Which tannery supplies your leather?'),
+    (r'fabric|canvas|cotton|waxed|nylon|cordura|x-pac|ecopak|shell|mill',
+     'bags', 'Which mill weaves your main fabric or canvas?'),
     (r'clay[- ]body|clay origin|clay.*(not|un)\s*(stated|evidenc|public)',
      'ceramics', 'Which clay body do you use, and who supplies or digs it?'),
     (r'casting|mount|chain.*(import|not)|principal component',
@@ -49,6 +53,7 @@ ASK = [
 # Keyed by the question that matched, so leather doesn't get told about weaving.
 RULE_BY_ASK = {
  'Which tannery supplies your leather?': 'Gold needs the leather tanned in the UK.',
+ 'Which mill weaves your main fabric or canvas?': 'Gold needs the main cloth woven or knitted in the UK.',
  'Where is your steel made?': 'Gold needs the steel made in the UK.',
 }
 
@@ -56,6 +61,7 @@ RULE_BY_ASK = {
 # back to the category's general one rather than leaving it blank for Theo.
 FALLBACK_ASK = {
  'clothing':  'Where is your main fabric or material made?',
+ 'bags':      'Where is your main leather or fabric made?',
  'ceramics':  'Where does your clay body come from?',
  'jewellery': 'Where are your principal components made?',
  'farm':      'What proportion of what you sell is your own or British produce?',
@@ -64,6 +70,7 @@ FALLBACK_ASK = {
 
 GOLD_RULE = {
  'clothing': 'Gold needs the main fabric milled, spun, woven or knitted in the UK.',
+ 'bags':     'Gold needs the main leather tanned in the UK or the main cloth woven or knitted in the UK.',
  'ceramics': 'Gold needs the clay body dug or prepared in the UK.',
  'jewellery': 'Gold needs the piece fabricated in the UK from bullion or grain.',
  'farm':     'Gold needs the shop to be effectively all British produce.',

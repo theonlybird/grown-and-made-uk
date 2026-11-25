@@ -163,9 +163,9 @@
   {
     "id": "chapman-bags",
     "name": "Chapman Bags",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Carlisle",
     "address": "Tannery Road, Carlisle",
@@ -176,7 +176,7 @@
     "description": "Carlisle bag maker since 1984, handcrafting luggage from Lancashire canvas, Borders tweed and English leather.",
     "tier_confidence": "high",
     "logo": "assets/logos/chapman-bags.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "tweed & woven goods",
       "bags & leather goods",
@@ -191,7 +191,7 @@
   {
     "id": "trakke",
     "name": "Trakke",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -215,7 +215,7 @@
   {
     "id": "carradice",
     "name": "Carradice of Nelson",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -239,9 +239,9 @@
   {
     "id": "barnes-and-moore",
     "name": "Barnes & Moore",
-    "category": "clothing",
-    "subcategory": "Leather Goods & Accessories",
-    "tier": "gold",
+    "category": "bags",
+    "subcategory": "Leather goods",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Birmingham",
     "address": "Birmingham",
@@ -250,9 +250,9 @@
     "website": "https://www.barnesandmoore.co.uk",
     "instagram": "https://www.instagram.com/barnesandmoore/",
     "description": "Birmingham leatherworker making belts and small goods from English oak-bark-tanned leather (England's last oak bark tannery) with British-cast brass.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/barnes-and-moore.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods"
     ],
@@ -313,7 +313,7 @@
   {
     "id": "billingham",
     "name": "Billingham",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -335,8 +335,8 @@
   {
     "id": "campbell-cole",
     "name": "Campbell Cole",
-    "category": "clothing",
-    "subcategory": "Leather Goods & Accessories",
+    "category": "bags",
+    "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
     "town": "London",
@@ -1206,9 +1206,9 @@
   {
     "id": "ettinger",
     "name": "Ettinger",
-    "category": "clothing",
-    "subcategory": "Leather Goods & Accessories",
-    "tier": "gold",
+    "category": "bags",
+    "subcategory": "Leather goods",
+    "tier": "silver",
     "listing_type": "both",
     "town": "London",
     "address": "London",
@@ -1217,9 +1217,9 @@
     "website": "https://www.ettinger.co.uk",
     "instagram": "https://www.instagram.com/ettinger.london/",
     "description": "Royal Warrant leather goods maker working in English bridle hide — 'the most English of all our leathers' — hand-stitched in the UK.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/ettinger.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods",
       "pet accessories"
@@ -1258,7 +1258,7 @@
   {
     "id": "globe-trotter",
     "name": "Globe-Trotter",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -1269,7 +1269,7 @@
     "website": "https://globe-trotter.com",
     "instagram": "https://www.instagram.com/globe_trotter1897/",
     "description": "Suitcases handcrafted in Hertfordshire on Victorian machinery, with bodies of in-house vulcanised fibreboard.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/globe-trotter.svg",
     "source": "verified-batch-2026-07",
     "product_tags": [
@@ -1281,7 +1281,7 @@
   {
     "id": "tusting",
     "name": "Tusting",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -1958,9 +1958,9 @@
   {
     "id": "tanner-bates",
     "name": "Tanner Bates",
-    "category": "clothing",
-    "subcategory": "Leather Goods & Accessories",
-    "tier": "gold",
+    "category": "bags",
+    "subcategory": "Leather goods",
+    "tier": "silver",
     "listing_type": "both",
     "town": "Dartington, Devon",
     "address": "Dartington",
@@ -1969,9 +1969,9 @@
     "website": "https://www.tannerbates.co.uk",
     "instagram": "https://www.instagram.com/tannerbatesuk/",
     "description": "Handmade leather goods - made right here in our South Devon workshop. Artisan leather bags, belts and small leather goods/accessories handmade by Matt & Matthew. Full grain vegetable tanned leather.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/tanner-bates.png",
-    "source": "business-confirmed-2026-09",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods"
     ],
@@ -4790,7 +4790,7 @@
   {
     "id": "billy-tannery",
     "name": "Billy Tannery",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "online_only",
@@ -4817,7 +4817,7 @@
   {
     "id": "cherchbi",
     "name": "Cherchbi",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "online_only",
@@ -4841,7 +4841,7 @@
   {
     "id": "mcrostie",
     "name": "McRostie of Glasgow",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "both",
@@ -5353,7 +5353,7 @@
   {
     "id": "thorndale",
     "name": "Thorndale",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -5524,7 +5524,7 @@
   {
     "id": "owen-barry",
     "name": "Owen Barry",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -5552,7 +5552,7 @@
   {
     "id": "cambridge-satchel",
     "name": "Cambridge Satchel Company",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -5580,7 +5580,7 @@
   {
     "id": "leather-satchel-co",
     "name": "The Leather Satchel Co.",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "online_only",
@@ -5654,9 +5654,9 @@
   {
     "id": "zatchels",
     "name": "Zatchels",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
-    "tier": "silver",
+    "tier": "gold",
     "listing_type": "online_only",
     "town": "Leicester",
     "address": "Leicester",
@@ -5667,7 +5667,7 @@
     "description": "Hand-made leather satchels and bags, made to order in Leicester.",
     "tier_confidence": "medium",
     "logo": "assets/logos/zatchels.png",
-    "source": "verified-batch-2026-07",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods"
     ],
@@ -5708,7 +5708,7 @@
   {
     "id": "swaine",
     "name": "Swaine (Swaine Adeney Brigg)",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -5845,7 +5845,7 @@
   {
     "id": "everbound-goods",
     "name": "Everbound Goods",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -5925,7 +5925,7 @@
     "id": "herd",
     "name": "HERD",
     "category": "clothing",
-    "subcategory": "Leather goods",
+    "subcategory": "Knitwear",
     "tier": "gold",
     "listing_type": "online_only",
     "town": "Stow-on-the-Wold, Gloucestershire",
@@ -5934,11 +5934,12 @@
     "lng": -1.8447,
     "website": "https://herdwear.co",
     "instagram": "https://www.instagram.com/herdwear/",
-    "description": "Leather bags and belts made from traceable British pasture-raised hides.",
+    "description": "British knitwear made from traceable Bluefaced Leicester wool spun and knitted in England, alongside bags and belts in British Pasture Leather.",
     "tier_confidence": "high",
     "logo": "assets/logos/herd.png",
     "source": "britishmadeclothing.co.uk queue",
     "product_tags": [
+      "knitwear",
       "bags & leather goods"
     ],
     "nation": "England",
@@ -5952,9 +5953,9 @@
   {
     "id": "beorma-leather-company",
     "name": "Beorma Leather Company",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "online_only",
     "town": "Walsall, West Midlands",
     "address": "Walsall",
@@ -5963,9 +5964,9 @@
     "website": "https://beorma.co.uk",
     "instagram": "",
     "description": "Walsall leather goods house built by ex-Whitehouse Cox artisans, working in English bridle leather.",
-    "tier_confidence": "medium",
+    "tier_confidence": "high",
     "logo": "assets/logos/beorma-leather-company.png",
-    "source": "unrecorded — verify before relying on",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods"
     ],
@@ -6212,7 +6213,7 @@
   {
     "id": "bennett-winch",
     "name": "Bennett Winch",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -6342,7 +6343,7 @@
   {
     "id": "the-british-belt-company",
     "name": "The British Belt Company",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -6471,7 +6472,7 @@
   {
     "id": "mamnick",
     "name": "Mamnick",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -6902,7 +6903,7 @@
   {
     "id": "pickett-london",
     "name": "Pickett London",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -7229,7 +7230,7 @@
   {
     "id": "garstin-1871",
     "name": "Garstin 1871",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -7285,7 +7286,7 @@
   {
     "id": "kate-sheridan",
     "name": "Kate Sheridan",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -7336,9 +7337,9 @@
   {
     "id": "sam-brown-london",
     "name": "Sam Brown London",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "online_only",
     "town": "Brixham, Devon",
     "address": "Brixham",
@@ -7349,7 +7350,7 @@
     "description": "Belts and small leather goods handmade in a Devon workshop.",
     "tier_confidence": "high",
     "logo": "assets/logos/sam-brown-london.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods"
     ],
@@ -7488,7 +7489,7 @@
   {
     "id": "tim-hardy",
     "name": "Tim Hardy",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "online_only",
@@ -7884,7 +7885,7 @@
   {
     "id": "umpie-handbags",
     "name": "Umpie Handbags",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -7907,7 +7908,7 @@
   {
     "id": "hurdwick-handmade-bag-company",
     "name": "Hurdwick Handmade Bag Company",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -8078,7 +8079,7 @@
   {
     "id": "awling",
     "name": "Awling",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -8101,7 +8102,7 @@
   {
     "id": "charles-laurie",
     "name": "Charles Laurie",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -8413,9 +8414,9 @@
   {
     "id": "mackenzie-and-george",
     "name": "Mackenzie & George",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
-    "tier": "gold",
+    "tier": "silver",
     "listing_type": "online_only",
     "town": "Whitchurch, Shropshire",
     "address": "Unit 1, Broad Oak Farm, Whitchurch",
@@ -8426,7 +8427,7 @@
     "description": "Leather goods handmade in Shropshire in oak bark bridle leather.",
     "tier_confidence": "high",
     "logo": "assets/logos/mackenzie-and-george.png",
-    "source": "britishmadeclothing.co.uk queue",
+    "source": "tier-reviewed-2026-11",
     "product_tags": [
       "bags & leather goods",
       "pet accessories"
@@ -9014,7 +9015,7 @@
   {
     "id": "been-london",
     "name": "BEEN London",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -9436,7 +9437,7 @@
   {
     "id": "orraman-leather",
     "name": "Orraman Leather",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -9614,7 +9615,7 @@
   {
     "id": "hyde-and-hare",
     "name": "Hyde And Hare",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -9766,7 +9767,7 @@
   {
     "id": "daltons-england",
     "name": "Dalton's England",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -9850,7 +9851,7 @@
   {
     "id": "wildish",
     "name": "Wildish",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -10165,7 +10166,7 @@
   {
     "id": "mhulot",
     "name": "M.Hulot",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -10188,7 +10189,7 @@
   {
     "id": "jane-hopkinson",
     "name": "Jane Hopkinson",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -10211,7 +10212,7 @@
   {
     "id": "lpol",
     "name": "Lpol",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "both",
@@ -10234,7 +10235,7 @@
   {
     "id": "heather-borg",
     "name": "Heather Borg",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -12579,7 +12580,7 @@
   {
     "id": "pilvig-leather",
     "name": "Pilvig Leather",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -13025,7 +13026,7 @@
     "id": "skyeskyns",
     "name": "Skyeskyns",
     "category": "clothing",
-    "subcategory": "Leather goods",
+    "subcategory": "Outerwear",
     "tier": "gold",
     "listing_type": "both",
     "town": "Waternish, Isle of Skye",
@@ -13173,7 +13174,7 @@
   {
     "id": "isle-of-skye-leather",
     "name": "Isle of Skye Leather Co",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -13333,7 +13334,7 @@
   {
     "id": "loch-ness-leather",
     "name": "Loch Ness Leather",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -13543,7 +13544,7 @@
   {
     "id": "rawhide-custom",
     "name": "Rawhide Custom",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "online_only",
@@ -14241,7 +14242,7 @@
   {
     "id": "rosanna-clare",
     "name": "Rosanna Clare",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -14264,7 +14265,7 @@
   {
     "id": "aj-leather-work",
     "name": "AJ Leather Work",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -14359,7 +14360,7 @@
   {
     "id": "weald-handmade",
     "name": "Weald",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -14721,7 +14722,7 @@
   {
     "id": "coco-barclay",
     "name": "Coco Barclay",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "both",
@@ -14916,7 +14917,7 @@
   {
     "id": "oakside-saddlery",
     "name": "Oakside Saddlery",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "gold",
     "listing_type": "online_only",
@@ -16694,7 +16695,7 @@
   {
     "id": "hands-of-tym",
     "name": "Hands of Tym",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -17726,7 +17727,7 @@
   {
     "id": "charlie-borrow",
     "name": "Charlie Borrow",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Leather goods",
     "tier": "silver",
     "listing_type": "online_only",
@@ -17827,7 +17828,7 @@
   {
     "id": "lucy-welton",
     "name": "Lucy Welton",
-    "category": "clothing",
+    "category": "bags",
     "subcategory": "Bags & Luggage",
     "tier": "silver",
     "listing_type": "online_only",
@@ -17889,9 +17890,246 @@
     "source": "user-suggestion-verified-2026-11",
     "product_tags": [
       "coats & jackets",
-      "vests & waistcoats"
+      "vests & waistcoats",
+      "bags & leather goods"
     ],
     "nation": "England",
     "county": "Greater Manchester"
+  },
+  {
+    "id": "croots-england",
+    "name": "Croots England",
+    "category": "bags",
+    "subcategory": "Bags & Luggage",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Malton, North Yorkshire",
+    "address": "Norton Grove Estate, Malton, North Yorkshire YO17 9ND",
+    "lat": 54.1414,
+    "lng": -0.7486,
+    "website": "https://crootsengland.co.uk",
+    "instagram": "https://www.instagram.com/crootsengland/",
+    "logo": "assets/logos/croots-england.svg",
+    "description": "Second-generation family maker handcrafting field-sports bags, travel luggage and bridle leather goods in its Malton workshop for over 50 years.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods",
+      "braces & belts"
+    ],
+    "nation": "England",
+    "county": "North Yorkshire"
+  },
+  {
+    "id": "atom-packs",
+    "name": "Atom Packs",
+    "category": "bags",
+    "subcategory": "Outdoor & camping",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Keswick, Cumbria",
+    "address": "The Shed, Braithwaite New Farm, Braithwaite, Keswick CA12 5RY",
+    "lat": 54.6064,
+    "lng": -3.1902,
+    "website": "https://atompacks.co.uk",
+    "instagram": "https://www.instagram.com/atompacks/",
+    "logo": "assets/logos/atom-packs.png",
+    "description": "Ultralight backpacking rucksacks and custom packs hand-built to order in the Lake District.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "Cumbria"
+  },
+  {
+    "id": "restrap",
+    "name": "Restrap",
+    "category": "bags",
+    "subcategory": "Outdoor & camping",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Leeds, West Yorkshire",
+    "address": "Unit G1, 102 Kirkstall Road, Leeds LS3 1JA",
+    "lat": 53.8022,
+    "lng": -1.5689,
+    "website": "https://restrap.com",
+    "instagram": "https://www.instagram.com/restrap/",
+    "logo": "assets/logos/restrap.svg",
+    "description": "Bikepacking bags, panniers, frame bags and cycling luggage handmade by machinists in its Leeds workshop.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "West Yorkshire"
+  },
+  {
+    "id": "aiguille-alpine",
+    "name": "Aiguille Alpine",
+    "category": "bags",
+    "subcategory": "Outdoor & camping",
+    "tier": "silver",
+    "listing_type": "both",
+    "town": "Staveley, Kendal, Cumbria",
+    "address": "Staveley Mill Yard, Back Lane, Staveley, Kendal LA8 9LR",
+    "lat": 54.3775,
+    "lng": -2.8152,
+    "website": "https://www.aiguillealpine.co.uk",
+    "instagram": "",
+    "logo": "assets/logos/aiguille-alpine.png",
+    "description": "Climbing, mountaineering, expedition and mountain-rescue rucksacks handmade in its Lake District workshop and factory shop.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "Cumbria",
+    "logo_bg": "dark"
+  },
+  {
+    "id": "launer-london",
+    "name": "Launer London",
+    "category": "bags",
+    "subcategory": "Bags & Luggage",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Walsall, West Midlands",
+    "address": "14 Holtshill Lane, Walsall WS1 2JA",
+    "lat": 52.5858,
+    "lng": -1.9754,
+    "website": "https://launer.com",
+    "instagram": "https://www.instagram.com/launerlondonofficial/",
+    "logo": "assets/logos/launer-london.png",
+    "description": "Royal Warrant luxury leather handbags and small leather goods handcrafted at its Walsall factory since 1940.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "West Midlands"
+  },
+  {
+    "id": "aquapac",
+    "name": "Aquapac",
+    "category": "bags",
+    "subcategory": "Outdoor & camping",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Nelson, Lancashire",
+    "address": "Westmoreland Works, St Mary's Street, Nelson, Lancashire BB9 7BA",
+    "lat": 53.8356,
+    "lng": -2.2225,
+    "website": "https://aquapac.net",
+    "instagram": "",
+    "logo": "assets/logos/aquapac.png",
+    "description": "Waterproof cases, dry bags and outdoor packs, with over 80% of its range manufactured in its own Lancashire factory since the 1980s.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "Lancashire",
+    "logo_bg": "dark"
+  },
+  {
+    "id": "steph-rubbo-saddlery",
+    "name": "Steph Rubbo Saddlery",
+    "category": "bags",
+    "subcategory": "Leather goods",
+    "tier": "gold",
+    "listing_type": "online_only",
+    "town": "Wood Green, London",
+    "address": "Studio 12, 40 Cumberland Road, Wood Green, London N22 7BU",
+    "lat": 51.5989,
+    "lng": -0.116,
+    "website": "https://www.stephrubbosaddlery.co.uk",
+    "instagram": "",
+    "logo": "assets/logos/steph-rubbo-saddlery.png",
+    "description": "Bespoke hand-stitched bags, belts, watch straps and equestrian goods made in a North London studio from English bridle leather.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods",
+      "braces & belts"
+    ],
+    "nation": "England",
+    "county": "London"
+  },
+  {
+    "id": "rutherfords-of-england",
+    "name": "Rutherfords of England",
+    "category": "bags",
+    "subcategory": "Bags & Luggage",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Cholmondeley, Cheshire",
+    "address": "Unit 12A Castle Farm, Cholmondeley, Malpas, Cheshire SY14 8AQ",
+    "lat": 53.0571,
+    "lng": -2.7013,
+    "website": "https://rutherfordsengland.com",
+    "instagram": "",
+    "logo": "assets/logos/rutherfords-of-england.png",
+    "description": "Traditional English bridle leather briefcases, music cases, satchels and luggage handcrafted on the Cholmondeley Castle Estate in Cheshire.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "Cheshire"
+  },
+  {
+    "id": "brady-bags",
+    "name": "Brady",
+    "category": "bags",
+    "subcategory": "Bags & Luggage",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Walsall, West Midlands",
+    "address": "Unit 2, 75 Midland Road, Walsall, West Midlands",
+    "lat": 52.5818,
+    "lng": -1.9864,
+    "website": "https://brady1887.com",
+    "instagram": "",
+    "logo": "assets/logos/brady-bags.png",
+    "description": "Heritage British maker of waterproof canvas and bridle-leather fishing, game and everyday bags since 1887, handmade in the West Midlands.",
+    "tier_confidence": "high",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "bags & leather goods"
+    ],
+    "nation": "England",
+    "county": "West Midlands"
+  },
+  {
+    "id": "hardy-and-parsons",
+    "name": "Hardy & Parsons",
+    "category": "bags",
+    "subcategory": "Leather goods",
+    "tier": "silver",
+    "listing_type": "online_only",
+    "town": "Chelsea, London",
+    "address": "Studio 3, Lots Road, Chelsea, London SW10 0QD",
+    "lat": 51.4789,
+    "lng": -0.1807,
+    "website": "https://hardyandparsons.co.uk",
+    "instagram": "",
+    "logo": "assets/logos/hardy-and-parsons.png",
+    "description": "Traditional English bridle leather belts, dog collars and equestrian-inspired leather goods handmade by master saddlers in England.",
+    "tier_confidence": "medium",
+    "source": "verified-2026-11",
+    "product_tags": [
+      "braces & belts",
+      "bags & leather goods",
+      "pet accessories"
+    ],
+    "nation": "England",
+    "county": "London"
   }
 ]

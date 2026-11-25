@@ -130,6 +130,7 @@
   .tag.silver{background:#eceff2;color:#566069}
   .tag.cat{background:#e7f0e8;color:#27632a;margin-left:5px}
   .tag.cat.clothing{background:#e4edf5;color:#234e74}
+  .tag.cat.bags{background:#f5e6e7;color:#622b2e}
   .tag.cat.ceramics{background:#f5e9e1;color:#8a4a24}
   .tag.cat.jewellery{background:#efe7f5;color:#5a3d73}
   .tag.cat.cutlery{background:#e5e7eb;color:#1f2937}
@@ -513,6 +514,7 @@
   .tag.silver{background:var(--silver-bg);color:var(--silver-mark)}
   .tag.cat{background:var(--paper-2);color:var(--muted);margin-left:5px}
   .tag.cat.clothing{background:#EAEEF2;color:#31475A}
+  .tag.cat.bags{background:#F3E9EA;color:#622B2E}
   .tag.cat.ceramics{background:#F4EAE3;color:#6E4227}
   .tag.cat.jewellery{background:#F0EAF0;color:#523A4C}
   .tag.cat.cutlery{background:#ECECEA;color:#3A3A37}
@@ -693,7 +695,7 @@
     <h1 class="wordmark">Grown and<br>Made UK</h1>
     <p class="standfirst">Every listing verified as genuinely made or grown in the United Kingdom, and graded against a published standard.</p>
     <div class="l-rule"></div>
-    <p class="l-count" id="landingCount">472 makers and growers</p>
+    <p class="l-count" id="landingCount">700 makers and growers</p>
     <button class="cta" id="enterMap">Go to the map</button>
   </div>
 </div>
@@ -756,6 +758,7 @@
           <div class="chips cat-chips" id="catChips">
             <span class="chip active" data-cat="farm"><span class="dot" style="background:var(--farm)"></span>Farm shops</span>
             <span class="chip active" data-cat="clothing"><span class="dot" style="background:var(--clothing)"></span>Clothing</span>
+            <span class="chip active" data-cat="bags"><span class="dot" style="background:var(--bags)"></span>Bags &amp; Leather</span>
             <span class="chip active" data-cat="ceramics"><span class="dot" style="background:var(--ceramics)"></span>Ceramics</span>
             <span class="chip active" data-cat="jewellery"><span class="dot" style="background:var(--jewellery)"></span>Jewellery &amp; Watches</span>
             <span class="chip active" data-cat="cutlery"><span class="dot" style="background:var(--cutlery)"></span>Cutlery &amp; Cookware</span>
@@ -795,6 +798,7 @@
             <div class="chips cat-chips" id="gridCatChips">
               <span class="chip active" data-cat="farm"><span class="dot" style="background:var(--farm)"></span>Farm shops</span>
               <span class="chip active" data-cat="clothing"><span class="dot" style="background:var(--clothing)"></span>Clothing</span>
+              <span class="chip active" data-cat="bags"><span class="dot" style="background:var(--bags)"></span>Bags &amp; Leather</span>
               <span class="chip active" data-cat="ceramics"><span class="dot" style="background:var(--ceramics)"></span>Ceramics</span>
               <span class="chip active" data-cat="jewellery"><span class="dot" style="background:var(--jewellery)"></span>Jewellery &amp; Watches</span>
               <span class="chip active" data-cat="cutlery"><span class="dot" style="background:var(--cutlery)"></span>Cutlery &amp; Cookware</span>
@@ -848,6 +852,7 @@
         <div class="chips cat-chips" id="drawerCatChips">
           <span class="chip active" data-cat="farm"><span class="dot" style="background:var(--farm)"></span>Farm shops</span>
           <span class="chip active" data-cat="clothing"><span class="dot" style="background:var(--clothing)"></span>Clothing</span>
+          <span class="chip active" data-cat="bags"><span class="dot" style="background:var(--bags)"></span>Bags &amp; Leather</span>
           <span class="chip active" data-cat="ceramics"><span class="dot" style="background:var(--ceramics)"></span>Ceramics</span>
           <span class="chip active" data-cat="jewellery"><span class="dot" style="background:var(--jewellery)"></span>Jewellery &amp; Watches</span>
           <span class="chip active" data-cat="cutlery"><span class="dot" style="background:var(--cutlery)"></span>Cutlery &amp; Cookware</span>
@@ -974,6 +979,7 @@ let BUSINESSES = [];
 const CAT = {
   farm: { label: 'Farm shop', color: getCss('--farm') },
   clothing: { label: 'Clothing', color: getCss('--clothing') },
+  bags: { label: 'Bags & Leather', color: getCss('--bags') },
   ceramics: { label: 'Ceramics', color: getCss('--ceramics') },
   jewellery: { label: 'Jewellery & Watches', color: getCss('--jewellery') },
   cutlery: { label: 'Cutlery & Cookware', color: getCss('--cutlery') }
@@ -1151,6 +1157,7 @@ function keyRowsHtml(){
     <p class="ttl">Ring — the trade</p>
     ${catRow('farm','Farm shop')}
     ${catRow('clothing','Clothing')}
+    ${catRow('bags','Bags &amp; leather')}
     ${catRow('ceramics','Ceramics')}
     ${catRow('jewellery','Jewellery &amp; watches')}
     ${catRow('cutlery','Cutlery &amp; cookware')}
@@ -1218,7 +1225,7 @@ function popupHtml(b){
 // --- State & View Control ---
 const state = {
   q: '',
-  cats: new Set(['farm','clothing','ceramics','jewellery','cutlery']),
+  cats: new Set(['farm','clothing','bags','ceramics','jewellery','cutlery']),
   tiers: new Set(['gold','silver']),
   avail: new Set(['shop','online']),
   sortAsc: true,
@@ -1739,7 +1746,7 @@ Analyze the user's natural language request and find the best matching British m
 
 CRITICAL INSTRUCTIONS:
 1. Understand regional synonyms (e.g. Yorkshire = Sheffield/Hathersage/Leeds; Scotland = Hawick/Edinburgh/Glasgow/Highlands; Wales = Gwynedd/Monmouthshire; Cotswolds = Chipping Campden).
-2. Match materials, craft techniques, and product synonyms (e.g. kitchen knife = forged cutlery/blades; jumper = knitwear/cashmere/wool; cookware = cast iron/spun iron/copper pans).
+2. Match materials, craft techniques, and product synonyms (e.g. kitchen knife = forged cutlery/blades; jumper = knitwear/cashmere/wool; cookware = cast iron/spun iron/copper pans; rucksack/satchel/wallet = bags & leather goods).
 3. Return ONLY a valid JSON object matching this exact structure:
 {
   "query": ${JSON.stringify(query)},
@@ -2055,7 +2062,7 @@ if (nearBtn) nearBtn.addEventListener('click', () => {
 
 // Controls listeners
 
-const ALL_CATS = ['farm','clothing','ceramics','jewellery','cutlery'];
+const ALL_CATS = ['farm','clothing','bags','ceramics','jewellery','cutlery'];
 const ALL_TIERS = ['gold','silver'];
 const ALL_AVAIL = ['shop','online'];
 

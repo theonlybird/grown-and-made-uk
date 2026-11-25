@@ -40,7 +40,7 @@ const REQUIRED = [
 
 /* The form's own option lists. Kept server-side so the stored value is always
    one of a known set and the queue can filter on it. */
-const CATEGORIES = ['Farm shop', 'Clothing & accessories', 'Pottery & crockery', 'Jewellery', 'Other UK maker'];
+const CATEGORIES = ['Farm shop', 'Clothing & accessories', 'Bags & Leather', 'Pottery & crockery', 'Jewellery', 'Cutlery & Cookware', 'Other UK maker'];
 const LISTING_TYPES = ['Physical shop', 'Online only', 'Both'];
 const RELATIONSHIPS = ['I own or run it', 'I work there', "I'm a customer / fan", 'Other'];
 

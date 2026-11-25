@@ -32375,5 +32375,433 @@
   "platform": null,
   "reason": "no-feed-found",
   "checked": "2026-11-25"
+ },
+ "croots-england": {
+  "id": "croots-england",
+  "shopify": false,
+  "platform": "sitemap",
+  "vocabVersion": 7,
+  "productCount": 122,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 69,
+   "braces & belts": 7,
+   "suits & trousers": 1,
+   "tweed & woven goods": 3,
+   "jeans & denim": 3
+  },
+  "tagEvidence": {
+   "bags & leather goods": "leather roller luggage strap",
+   "braces & belts": "cartridge belt",
+   "suits & trousers": "suit carrier",
+   "tweed & woven goods": "tweed cartridge bag 100 capacity khaki",
+   "jeans & denim": "denim laptop bag limited edition only pieces ever made"
+  },
+  "gatedOut": [
+   "jeans & denim",
+   "suits & trousers"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "shop",
+   "saphir universal leather balm",
+   "croots waxed leather feed",
+   "gun slip shoulder pad 2",
+   "leather roller luggage strap",
+   "shoulder sling and pad",
+   "e gift card",
+   "shotgun slip with flap zip"
+  ],
+  "checked": "2026-11-25"
+ },
+ "atom-packs": {
+  "id": "atom-packs",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 50,
+  "tags": [
+   "bags & leather goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong"
+  },
+  "tagCounts": {
+   "shirts": 3,
+   "bags & leather goods": 4
+  },
+  "tagEvidence": {
+   "shirts": "t-shirt",
+   "bags & leather goods": "Bum bag"
+  },
+  "gatedOut": [
+   "shirts"
+  ],
+  "observedTypes": [
+   "Accessories",
+   "Buckle",
+   "Bum bag",
+   "Cordlocks",
+   "Elastics",
+   "Frame",
+   "Gift Card",
+   "Hipbelt",
+   "Hipbelt Pocket",
+   "Hipbelt webbing",
+   "Pack Liner",
+   "Removable shoulder pocket",
+   "Repair Service",
+   "Sleeping Mat",
+   "Standard Atom",
+   "Standard Nanu",
+   "Standard Notch",
+   "Standard Prospector",
+   "Standard Pulse",
+   "Standard Transition",
+   "Sternum strap",
+   "Sticker",
+   "Surplus",
+   "The Mo",
+   "Top Strap",
+   "cpb_product",
+   "t-shirt"
+  ],
+  "sample": [
+   "Atom Packs Curiositee",
+   "Workshop Second: Pulse EP40 - Medium Torso",
+   "End of Line: The Transition UL35",
+   "The Transition UL35 (Black)",
+   "The Roo (Two-Tone)",
+   "End of Line: The Notch EP40",
+   "End of Line: The Prospector EP60",
+   "Workshop Second: The Notch EP50 - Tall Torso"
+  ],
+  "checked": "2026-11-25"
+ },
+ "restrap": {
+  "id": "restrap",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 131,
+  "tags": [
+   "bags & leather goods",
+   "hats & caps",
+   "scarves & accessories"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "hats & caps": "weak",
+   "scarves & accessories": "weak"
+  },
+  "tagCounts": {
+   "workwear & aprons": 1,
+   "cutlery & knives": 8,
+   "bags & leather goods": 107,
+   "vests & waistcoats": 3,
+   "shirts": 3,
+   "hats & caps": 4,
+   "tins & storage": 3,
+   "footwear & boots": 2,
+   "jewellery": 1,
+   "scarves & accessories": 1
+  },
+  "tagEvidence": {
+   "workwear & aprons": "Workshop Apron Accessories new protection protective vegan",
+   "cutlery & knives": "Gravel Fork Mudguard new vegan waterproof",
+   "bags & leather goods": "Cockpit Bags",
+   "vests & waistcoats": "Lightweight Race Hydration Vest (4 Litres) 4L hydration new vest",
+   "shirts": "Bikepacking T-Shirt cap caps Clothing new restrap clothing restrap t-s",
+   "hats & caps": "Bikepacking T-Shirt cap caps Clothing new restrap clothing restrap t-s",
+   "tins & storage": "Rolltop Canister Shoulder Strap Spares",
+   "footwear & boots": "Quoc x Restrap Sandal hide-bis vegan",
+   "jewellery": "Frame Bag Rubber O-Rings spare Spares",
+   "scarves & accessories": "Bicycle Protection Kit abrasion Accessories bag bike cable protection "
+  },
+  "gatedOut": [
+   "cutlery & knives",
+   "footwear & boots",
+   "jewellery",
+   "shirts",
+   "tins & storage",
+   "vests & waistcoats",
+   "workwear & aprons"
+  ],
+  "observedTypes": [
+   "Accessories",
+   "All",
+   "All Products",
+   "Bar Bags",
+   "Clothing",
+   "Cockpit Bags",
+   "Dry Bag",
+   "Folding Bike Bags",
+   "Frame Bags",
+   "Gift Cards",
+   "On Body Bags",
+   "Pannier",
+   "Rack and Basket Bags",
+   "Saddle Bags",
+   "Saleable",
+   "Spares",
+   "Straps",
+   "spares"
+  ],
+  "sample": [
+   "Workshop Apron",
+   "Gravel Fork Mudguard",
+   "MTB Fork Mudguard",
+   "Switch Rear Mudguard",
+   "Soft Flask (0.5 Litres)",
+   "Aero Race Top Tube Bag (0.6 Litres)",
+   "Lightweight Race Hydration Vest (4 Litres)",
+   "Switch Direct Mount Adaptor"
+  ],
+  "checked": "2026-11-25"
+ },
+ "aiguille-alpine": {
+  "id": "aiguille-alpine",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "braces & belts": "weak",
+   "tweed & woven goods": "strong"
+  },
+  "tagCounts": {
+   "bags & leather goods": 55,
+   "shirts": 11,
+   "tweed & woven goods": 3,
+   "braces & belts": 1
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Heavy Duty Shoulder Bag",
+   "shirts": "T-Shirts &amp; Hoodies Valley Lifestyle",
+   "tweed & woven goods": "Watersport Throw Bags &amp; Swimline Bags",
+   "braces & belts": "Throw-line Belt"
+  },
+  "gatedOut": [
+   "shirts"
+  ],
+  "observedTypes": [
+   "Accessories",
+   "Accessories Adventure Training",
+   "Accessories Big Wall Gear Climbing Accessories Rescue &amp; Industrial Industrial",
+   "Big Wall Gear",
+   "Bike Bags",
+   "Canyoning and Caving Watersport Throw Bags &amp; Swimline Bags",
+   "Casualty Bags and Stretcher Systems",
+   "Climbing Accessories",
+   "Climbing Accessories Accessories Feet",
+   "Climbing Accessories Rescue &amp; Industrial Accessories Industrial",
+   "Climbing Accessories Rescue &amp; Industrial Accessories Industrial Safety &amp; Rescue Accessories",
+   "Climbing Climbing Accessories",
+   "Climbing/Alpine Rucksacks",
+   "Climbing/Alpine Rucksacks Big Wall Gear",
+   "Expedition Pulk System",
+   "Expedition Pulk System Hauling Systems",
+   "Expedition Pulk System Hauling Systems Spares",
+   "Expedition Pulk System Spares",
+   "Hauling Systems",
+   "Industrial",
+   "Maps",
+   "Rescue &amp; Industrial Accessories Group Shelters and Survival Units",
+   "Rescue &amp; Industrial Casualty Bags and Stretcher Systems",
+   "Rescue &amp; Industrial Casualty Bags and Stretcher Systems Equipment Rucksacks",
+   "Rescue &amp; Industrial Equipment Rucksacks",
+   "Rescue &amp; Industrial Industrial",
+   "Rescue &amp; Industrial Safety &amp; Rescue Accessories",
+   "Rucksack Accessories Accessories Climbing Accessories Watersport Watersport Accessories",
+   "Rucksack Accessories Valley Lifestyle",
+   "Rucksacks &amp; Bags Bike Bags Bum Bags",
+   "Rucksacks &amp; Bags Climbing/Alpine Rucksacks",
+   "Rucksacks &amp; Bags Travel Bags Storage Systems Rescue &amp; Industrial Industrial",
+   "Rucksacks &amp; Bags Travel Bags Valley Lifestyle",
+   "Rucksacks &amp; Bags Walking/Trekking Rucksacks",
+   "Rucksacks &amp; Bags Walking/Trekking Rucksacks Valley Lifestyle",
+   "Safety &amp; Rescue Accessories",
+   "Snowsled Polar Hauling Systems Accessories",
+   "Spares",
+   "T-Shirts &amp; Hoodies",
+   "T-Shirts &amp; Hoodies Valley Lifestyle"
+  ],
+  "sample": [
+   "Heavy Duty Shoulder Bag",
+   "Children&#8217;s T shirts",
+   "Ibex &#8211; 46 Ltrs",
+   "Marmot &#8211; 27 Ltrs",
+   "Triolet &#8211; 46 ltrs",
+   "Geant &#8211; 35 ltrs",
+   "Couloir &#8211; 27 ltrs",
+   "Rescue stretcher carrying system"
+  ],
+  "checked": "2026-11-25"
+ },
+ "launer-london": {
+  "id": "launer-london",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25"
+ },
+ "aquapac": {
+  "id": "aquapac",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 90,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 8,
+   "jewellery": 1,
+   "braces & belts": 4
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Heavy Duty Backpack & Pack Dividers Bundle",
+   "jewellery": "Floating Key Ring 992 Boating Paddle Travel Watersports",
+   "braces & belts": "Wave Belt Case Boating Hiking IPX8 Paddle sale Travel Watersports"
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "The Watersport Pack",
+   "Beach & Boat Pack",
+   "Watersports Adventure Pack",
+   "Hike Pack",
+   "Duffel & Pack Divider Bundle",
+   "Heavy Duty Backpack & Pack Dividers Bundle",
+   "Dry Bag & Pack Divider Bundle",
+   "Waterproof Phone Case - Mini (Black)"
+  ],
+  "checked": "2026-11-25"
+ },
+ "steph-rubbo-saddlery": {
+  "id": "steph-rubbo-saddlery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25"
+ },
+ "rutherfords-of-england": {
+  "id": "rutherfords-of-england",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 14,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "braces & belts": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 14,
+   "braces & belts": 1
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Briefcase",
+   "braces & belts": "Rutherfords Braces for Comfort: Elevate Your Style and Support comfort"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Briefcase",
+   "Folio",
+   "Music Case",
+   "Portfolio",
+   "Satchel"
+  ],
+  "sample": [
+   "Lid-Over Attaché Case: Elevate Your Professional Style",
+   "Envelope Music Case – Your Ultimate Music Companion",
+   "Mini Envelope Music Case: Organize Your Melodies with Style",
+   "Rutherfords Braces for Comfort: Elevate Your Style and Support",
+   "806 Lock Satchel – Stylish Security Meets Everyday Functionality",
+   "Transform Your Music Journey with the Ultimate Music Case Briefcase",
+   "Tongue Folio - Elevate Your Language Learning Experience",
+   "Elevate Your Style with the Stanwyck Satchel: The Perfect Blend of Ele"
+  ],
+  "checked": "2026-11-25"
+ },
+ "brady-bags": {
+  "id": "brady-bags",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 77,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "braces & belts": "weak",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 21,
+   "dresses": 2,
+   "braces & belts": 2,
+   "tweed & woven goods": 8
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Monmouth Briefcase DRILL DROP hand_bags jp shoulder_bags",
+   "dresses": "Colne Mini Dress Gordon 26ss DRESS GORDON jp New color SHOULDER should",
+   "braces & belts": "Stirrup Belt belts jp",
+   "tweed & woven goods": "Small Carryall Harris Tweed HARRIS TWEED jp tote_bags"
+  },
+  "gatedOut": [
+   "dresses"
+  ],
+  "observedTypes": [
+   "ARIEL TROUT",
+   "Handbag",
+   "Shoulder Bag"
+  ],
+  "sample": [
+   "Keer Lochcarron Wool Check",
+   "Beck Lochcarron Wool Check",
+   "Monmouth Briefcase",
+   "Colne Mini Dress Gordon",
+   "Colne Dress Gordon",
+   "Colne",
+   "Colne Mini",
+   "Ashdown Medium"
+  ],
+  "checked": "2026-11-25"
+ },
+ "hardy-and-parsons": {
+  "id": "hardy-and-parsons",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-25"
  }
 }

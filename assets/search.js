@@ -485,6 +485,9 @@ const SYNONYMS = {
   mug:'mugs', bowl:'bowls', plate:'plates',
   knife:'knives', cutler:'cutlery', silverware:'cutlery',
   boot:'boots', shoe:'shoes', trainer:'trainers',
+  bag:'bags', rucksack:'rucksacks', backpack:'backpacks', handbag:'handbags',
+  briefcase:'briefcases', wallet:'wallets', belt:'belts', pannier:'panniers',
+  bivvy:'bivvies',
   coat:'coats', jacket:'jackets', shirt:'shirts', trouser:'trousers',
   ring:'rings', necklace:'necklaces', earring:'earrings', watches:'watch',
   cheeses:'cheese', veg:'vegetables', vegetable:'vegetables', meats:'meat',
@@ -506,7 +509,12 @@ const TERM_GROUPS = [
   ['wool','woollen','woolen','wooly','woolly','lambswool','merino','fleece'],
   ['coat','coats','jacket','jackets','outerwear','anorak','parka'],
   ['shoe','shoes','boot','boots','footwear','brogue','brogues'],
-  ['bag','bags','satchel','satchels','holdall','rucksack','backpack'],
+  ['bag','bags','satchel','satchels','holdall','holdalls','rucksack','rucksacks',
+   'backpack','backpacks','daypack','daypacks','handbag','handbags','tote','totes',
+   'briefcase','briefcases','pannier','panniers','luggage','suitcase','suitcases',
+   'weekender','weekenders','bivvy','bivvies'],
+  ['wallet','wallets','purse','purses','cardholder','billfold'],
+  ['belt','belts','braces','suspenders'],
   ['pot','pots','pottery','ceramic','ceramics','stoneware','earthenware','porcelain'],
   ['mug','mugs','cup','cups','teacup','teacups'],
   ['knife','knives','cutlery','blade','blades'],
@@ -1113,7 +1121,7 @@ function localSearch(query) {
       if (!byCat.has(s.b.category)) byCat.set(s.b.category, []);
       byCat.get(s.b.category).push(s);
     });
-    const cats = ['clothing', 'ceramics', 'jewellery', 'cutlery', 'farm'].filter(c => byCat.has(c));
+    const cats = ['clothing', 'bags', 'ceramics', 'jewellery', 'cutlery', 'farm'].filter(c => byCat.has(c));
     const spread = [];
     for (let i = 0; spread.length < eligible.length; i++) {
       let any = false;

@@ -42,8 +42,10 @@ PENDING = os.path.join(ROOT, 'data', 'pending-additions.json')
 CATEGORY = {
     'Farm shop': 'farm',
     'Clothing & accessories': 'clothing',
+    'Bags & Leather': 'bags',
     'Pottery & crockery': 'ceramics',
     'Jewellery': 'jewellery',
+    'Cutlery & Cookware': 'cutlery',
     'Other UK maker': '',          # no safe mapping -- you choose
 }
 LISTING_TYPE = {

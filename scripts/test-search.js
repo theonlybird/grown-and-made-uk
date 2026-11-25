@@ -76,6 +76,10 @@ const cases = [
   { q: 'spoons',          expectTags: ['cutlery & knives'], expectCategory: 'cutlery', minInCategory: 2 },
   { q: 'pet food bowls',  expectTags: ['bowls'], expectCategory: 'ceramics', minInCategory: 3 },
   { q: 'wellies',         expectTags: ['footwear & boots'], expectCategory: 'clothing', minInCategory: 2 },
+  { q: 'rucksack',        expectTags: ['bags & leather goods'], expectCategory: 'bags', minInCategory: 5 },
+  { q: 'bikepacking',     expectTags: ['bags & leather goods'], expectCategory: 'bags', minInCategory: 2 },
+  { q: 'satchel',         expectTags: ['bags & leather goods'], expectCategory: 'bags', minInCategory: 3 },
+  { q: 'bridle leather belt', expectTags: ['braces & belts'], expectCategory: 'bags', minInCategory: 5 },
 
   // --- precision: the word-boundary bug and the head-noun rule ---
   { q: 'ale',             mustNotExpandTo: ['bread & bakery'] },

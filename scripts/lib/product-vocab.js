@@ -54,6 +54,7 @@ const CATEGORY_ALLOWS = {
   // PET: a tweed maker's dog collar, a potter's dog bowl, a farm's dog food.
   // All three trades really do make them; a jeweller's "dog tag" is a pendant.
   clothing: [GROUPS.CLOTHING, GROUPS.TEXTILES, GROUPS.ACCESSORIES, GROUPS.FOOTWEAR, GROUPS.BAGS, GROUPS.PET],
+  bags: [GROUPS.BAGS, GROUPS.ACCESSORIES, GROUPS.TEXTILES, GROUPS.PET],
   ceramics: [GROUPS.CERAMICS, GROUPS.HOMEWARE, GROUPS.GARDEN, GROUPS.PET],
   jewellery: [GROUPS.JEWELLERY, GROUPS.WATCHES, GROUPS.SILVERWARE],
   cutlery: [GROUPS.CUTLERY, GROUPS.COOKWARE, GROUPS.HOMEWARE],
@@ -100,7 +101,7 @@ const VOCAB = [
   // are what shops write. Drinking glassware is stripped as noise before this
   // runs, so the bare word is safe.
   ['glasses',               /\b(glasses|sunglasses|eyeglasses|spectacles|eyewear|optical frames?|reading glasses)\b/i, GROUPS.ACCESSORIES],
-  ['bags & leather goods',  /\b(bag|satchel|rucksack|backpack|holdall|wallet|purse|luggage)s?\b/i, GROUPS.BAGS],
+  ['bags & leather goods',  /\b(bag|handbag|satchel|rucksack|backpack|daypack|holdall|weekender|briefcase|attach[eé]|tote|pannier|sleeping ?bag|bivvy|bivvies|dry ?bag|wallet|purse|luggage|suitcase|trunk)s?\b/i, GROUPS.BAGS],
   ['footwear & boots',      /\b(shoe|boot|slipper|sandal|trainer|sneaker|loafer|brogue)s?\b/i, GROUPS.FOOTWEAR],
 
   // --- jewellery & metal ---
@@ -310,10 +311,10 @@ const QUERY_EXTRA = [
   // A glasses case is a case, and the head-noun rule correctly refuses to read
   // it as eyewear — which left the query matching nothing at all. It is a
   // leather good, so say so.
-  ['bags & leather goods', /\b(glasses case|spectacle case|phone case|pencil case|wash ?bag|dopp kit|card holder|key ?fob)s?\b/i,                    GROUPS.BAGS],
+  ['bags & leather goods', /\b(glasses case|spectacle case|phone case|pencil case|wash ?bag|dopp kit|card holder|card case|key ?fob|passport ?(holder|cover|case)|watch ?(strap|roll)|music ?case|cartridge ?bag|game ?bag|camera ?bag|messenger ?bag)s?\b/i, GROUPS.BAGS],
   ['footwear & boots',  /\b(wellie|wellington|welly|footwear|cobbler|shoemaker|clog|clogmaker)s?\b/i,                                                              GROUPS.FOOTWEAR],
   ['cutlery & knives',  /\b(cutler|penknife|pocket ?knife|chef'?s knife|kitchen knife|sharpen|scissor|shear)(y|ies|e?s)?\b/i,                                     GROUPS.CUTLERY],
-  ['bags & leather goods', /\b(leather ?goods|leatherwork|saddler|tote)s?\b/i,                                                                      GROUPS.BAGS],
+  ['bags & leather goods', /\b(leather ?goods|leatherwork|saddler|saddlery|bikepacking|backpacking|expedition ?pack|climbing ?pack|waterproof ?case|bridle ?leather|folio)s?\b/i, GROUPS.BAGS],
   ['jewellery',         /\b(engagement|wedding band|goldsmith|silversmith|jeweller)s?\b/i,                                                          GROUPS.JEWELLERY],
   ['pottery',           /\b(potter|kiln|thrown|wheel ?thrown|studio pottery)s?\b/i,                                                                 GROUPS.CERAMICS],
   // "dog bowl" used to read as an unknown word plus bowls. The bare pet word
