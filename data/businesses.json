@@ -18375,7 +18375,7 @@
     "name": "Cornovii Silver",
     "category": "jewellery",
     "subcategory": "Studio Jewellery",
-    "tier": "silver",
+    "tier": "gold",
     "listing_type": "both",
     "town": "Charlestown, St Austell, Cornwall",
     "address": "Working studio in Charlestown, St Austell, Cornwall",
@@ -18384,8 +18384,8 @@
     "website": "https://cornoviisilver.co.uk",
     "instagram": "",
     "logo": "assets/logos/cornovii-silver.png",
-    "description": "Working studio on the south Cornish coast handmaking silver jewellery, heirloom redesigns and bespoke pieces.",
-    "tier_confidence": "medium",
+    "description": "Working studio on the south Cornish coast handmaking silver and gold jewellery from scratch at the bench, including heirloom redesigns and bespoke commissions.",
+    "tier_confidence": "high",
     "source": "verified-2026-11",
     "product_tags": [
       "jewellery"
