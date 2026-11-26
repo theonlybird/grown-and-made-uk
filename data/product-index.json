@@ -32803,5 +32803,1086 @@
   "platform": null,
   "reason": "no-feed-found",
   "checked": "2026-11-25"
+ },
+ "osborne-and-osborne-pottery": {
+  "id": "osborne-and-osborne-pottery",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 49,
+  "tags": [
+   "bowls",
+   "candles & holders",
+   "mugs",
+   "plates",
+   "pottery",
+   "tableware"
+  ],
+  "tagConfidence": {
+   "bowls": "weak",
+   "candles & holders": "weak",
+   "mugs": "weak",
+   "plates": "weak",
+   "pottery": "weak",
+   "tableware": "weak"
+  },
+  "tagCounts": {
+   "tableware": 9,
+   "pottery": 1,
+   "bowls": 16,
+   "mugs": 12,
+   "plates": 6,
+   "candles & holders": 4
+  },
+  "tagEvidence": {
+   "tableware": "Tall Seaweed Jug",
+   "pottery": "Osborne Pottery Gift card Gift card",
+   "bowls": "Cornish Tin White Speckle Dish Large",
+   "mugs": "Pip Mug",
+   "plates": "Large Duck Egg  Platter",
+   "candles & holders": "Large Seaweed Candle"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Tall Seaweed Jug",
+   "Osborne Pottery Gift card",
+   "Seagrass Small  Jug",
+   "Cornish Tin White Speckle Dish Large",
+   "Pip Mug",
+   "Seaweed Mug",
+   "Duck Egg Mug",
+   "Small Duck Egg Speckled Jug"
+  ],
+  "checked": "2026-11-26"
+ },
+ "lucy-symons-jewellery": {
+  "id": "lucy-symons-jewellery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 159,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 265,
+   "silverware": 46,
+   "cufflinks & signets": 23,
+   "shirts": 6,
+   "scarves & accessories": 19,
+   "game & venison": 7
+  },
+  "tagEvidence": {
+   "jewellery": "Necklace",
+   "silverware": "You, me and the Sea - Blue Sapphire Double Entwined Hoop Necklace assa",
+   "cufflinks & signets": "cufflink",
+   "shirts": "Custom single Ebb and Flow Wave Cufflink for TA anxiety jewellery atla",
+   "scarves & accessories": "Custom single Ebb and Flow Wave Cufflink for TA anxiety jewellery atla",
+   "game & venison": "Gold Floating Feather Necklace 9ct gold angel feather angels_are_near "
+  },
+  "gatedOut": [
+   "game & venison",
+   "scarves & accessories",
+   "shirts"
+  ],
+  "observedTypes": [
+   "Bangle",
+   "Bracelet",
+   "Cufflinks",
+   "Custom Products",
+   "Earrings",
+   "Gift Cards",
+   "Jewellery Polishing Cloth",
+   "Necklace",
+   "Necklaces",
+   "Pin",
+   "Ring",
+   "Tie Clip",
+   "cufflink",
+   "custom products",
+   "earrings"
+  ],
+  "sample": [
+   "Statement long pendant - Custom Order for MK",
+   "You, me and the Sea - Blue Sapphire Double Entwined Hoop Necklace",
+   "You, me and the Sea - Blue Sapphire Double Entwined Hoop Necklace",
+   "Custom Vizsla lapel pin for TH",
+   "Custom Personalised Labrador Lapel Pin for SD",
+   "Custom Stormy Seas Lapel Pin for SH",
+   "Custom order for RH",
+   "Rockpool trio charm Bracelet"
+  ],
+  "checked": "2026-11-26"
+ },
+ "trevilley-farm-shop": {
+  "id": "trevilley-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "padstow-farm-shop": {
+  "id": "padstow-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "cusgarne-organic-farm": {
+  "id": "cusgarne-organic-farm",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "momad": {
+  "id": "momad",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "penzance-leather-crafts": {
+  "id": "penzance-leather-crafts",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "the-smock-shop": {
+  "id": "the-smock-shop",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 39,
+  "tags": [
+   "bags & leather goods",
+   "coats & jackets",
+   "hats & caps",
+   "jeans & denim",
+   "scarves & accessories",
+   "shirts"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "coats & jackets": "strong",
+   "hats & caps": "weak",
+   "jeans & denim": "weak",
+   "scarves & accessories": "weak",
+   "shirts": "weak"
+  },
+  "tagCounts": {
+   "coats & jackets": 44,
+   "jeans & denim": 6,
+   "shirts": 3,
+   "hats & caps": 2,
+   "scarves & accessories": 1,
+   "bags & leather goods": 3
+  },
+  "tagEvidence": {
+   "coats & jackets": "Adults smocks Crew",
+   "jeans & denim": "Bull denim crew neck (Copy)",
+   "shirts": "Children&#8217;s pirate T shirt 2 colour.",
+   "hats & caps": "Adult pirate cap.",
+   "scarves & accessories": "Scarves",
+   "bags & leather goods": "Matelot bag"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Accessories",
+   "Accessories Children's smocks Pirate",
+   "Accessories Pirate",
+   "Adults smocks Crew",
+   "Adults smocks Crew Misc",
+   "Adults smocks Inset",
+   "Adults smocks Laced",
+   "Adults smocks Misc V neck",
+   "Adults smocks V neck",
+   "Children's smocks Crew",
+   "Children's smocks Inset",
+   "Children's smocks Misc",
+   "Children's smocks V neck"
+  ],
+  "sample": [
+   "Bull denim crew neck (Copy)",
+   "Children&#8217;s Breton tshirt (long-sleeved)",
+   "Bull denim V neck",
+   "Tricorn",
+   "Pirate flag",
+   "Children&#8217;s pirate tshirt (traditional)",
+   "Children&#8217;s pirate T shirt 2 colour.",
+   "Adult pirate cap."
+  ],
+  "checked": "2026-11-26"
+ },
+ "studio-agni": {
+  "id": "studio-agni",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "cornovii-silver": {
+  "id": "cornovii-silver",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "charles-hall": {
+  "id": "charles-hall",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "atkinson-art": {
+  "id": "atkinson-art",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "candles & holders",
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "candles & holders": "strong",
+   "cutlery & knives": "strong"
+  },
+  "tagCounts": {
+   "cutlery & knives": 120,
+   "jewellery": 53,
+   "silverware": 5,
+   "candles & holders": 2
+  },
+  "tagEvidence": {
+   "cutlery & knives": "Metal Art Wolf &amp; Dingo - Knives For Valhalla",
+   "jewellery": "Jewellery Metal Art Ti-Man Titanium ViXen",
+   "silverware": "Sapphire Skull Earrings &#8211; Sterling Silver Forged by Hand &#8211;",
+   "candles & holders": "Candle Holders Metal Art Sculpture Silver"
+  },
+  "gatedOut": [
+   "jewellery",
+   "silverware"
+  ],
+  "observedTypes": [
+   "Bronze Jewellery Metal Art ViXen",
+   "Bronze Jewellery ViXen",
+   "Candle Holders Metal Art Sculpture Silver",
+   "Damascus Jewellery Metal Art Sculpture Ti-Man ViXen",
+   "Damascus Jewellery Metal Art Ti-Man ViXen",
+   "Gold Metal Art Sculpture Silver",
+   "Jewellery Metal Art Sculpture Silver ViXen",
+   "Jewellery Metal Art Silver Ti-Man ViXen",
+   "Jewellery Metal Art Silver ViXen",
+   "Jewellery Metal Art Ti-Man Titanium ViXen",
+   "Jewellery Sculpture Ti-Man Titanium ViXen",
+   "Jewellery Silver Ti-Man ViXen",
+   "Jewellery Silver ViXen",
+   "Jewellery Ti-Man Titanium",
+   "Jewellery Ti-Man Titanium ViXen",
+   "Jewellery Titanium ViXen",
+   "Metal Art Sculpture",
+   "Metal Art Sculpture Wolf &amp; Dingo - Knives For Valhalla",
+   "Metal Art W&amp;D Custom",
+   "Metal Art Wolf &amp; Dingo - Knives For Valhalla"
+  ],
+  "sample": [
+   "Kollell 249 &#8211; Not Dead Yet &#8211; Recycled High Carbon Steel Co",
+   "Chefs Knife &#8211; Kollell 229 &#8211; Hand Forged, Recycled High Car",
+   "Chefs Knives &#8211; Kollell 99 &#8211; Recycled High Carbon Steel by ",
+   "Kollell 109 &#8211; Not Dead Yet &#8211; Recycled High Carbon Steel Co",
+   "Kollell 329 &#8211; Not Dead Yet &#8211; Recycled High Carbon Steel Co",
+   "Kollell 119 &#8211; Not Dead Yet &#8211; Recycled High Carbon Steel Co",
+   "Diamond Titanium Skull Ring &#8211; unique handmade &#8211; bespoke by",
+   "Kollell 199 &#8211; Not Dead Yet &#8211; Recycled High Carbon Steel Co"
+  ],
+  "checked": "2026-11-26"
+ },
+ "black-house-cornwall": {
+  "id": "black-house-cornwall",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 9,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "weak"
+  },
+  "tagCounts": {
+   "vases": 1,
+   "cutlery & knives": 4
+  },
+  "tagEvidence": {
+   "vases": "Vase Arrangement",
+   "cutlery & knives": "7.5\" Chef's Knife"
+  },
+  "gatedOut": [
+   "vases"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Hand-Tied Bouquet",
+   "Vase Arrangement",
+   "Long-Stemmed Bouquet",
+   "Planted Arrangement",
+   "7.5\" Chef's Knife",
+   "The Blacklore 'Black Edition'",
+   "3.5 Inch Paring Knife",
+   "Flame Maple File Knife"
+  ],
+  "checked": "2026-11-26"
+ },
+ "warriner-leather": {
+  "id": "warriner-leather",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 24,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "pet accessories"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "pet accessories": "weak"
+  },
+  "tagCounts": {
+   "braces & belts": 10,
+   "bags & leather goods": 4,
+   "pet accessories": 4
+  },
+  "tagEvidence": {
+   "braces & belts": "The Rigger Belt Belts",
+   "bags & leather goods": "Large Forager’s Trug Trugs & Bags",
+   "pet accessories": "Traditional Leather Dog Lead Dog"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "The Rigger Belt",
+   "The Boconnoc Belt",
+   "The Bovey Belt",
+   "The Hobble Belt",
+   "The Brentor Belt",
+   "The Botallack Belt",
+   "The Artists Case",
+   "Oak Bark Tanned Leather Pencil Case"
+  ],
+  "checked": "2026-11-26"
+ },
+ "coldharbour-mill": {
+  "id": "coldharbour-mill",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 120,
+  "tags": [
+   "bags & leather goods",
+   "cushions & throws",
+   "hats & caps",
+   "knitwear",
+   "scarves & accessories",
+   "tweed & woven goods",
+   "vests & waistcoats"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "cushions & throws": "weak",
+   "hats & caps": "weak",
+   "knitwear": "weak",
+   "scarves & accessories": "weak",
+   "tweed & woven goods": "weak",
+   "vests & waistcoats": "weak"
+  },
+  "tagCounts": {
+   "tweed & woven goods": 20,
+   "bags & leather goods": 6,
+   "jewellery": 3,
+   "knitwear": 16,
+   "fruit & veg": 3,
+   "cushions & throws": 2,
+   "vests & waistcoats": 1,
+   "scarves & accessories": 8,
+   "hats & caps": 1,
+   "mugs": 1
+  },
+  "tagEvidence": {
+   "tweed & woven goods": "Devon Blue Tartan",
+   "bags & leather goods": "Blackdown Hills Tartan Tote Bag",
+   "jewellery": "Cotton Twist: Make Your Own Daisy Chain Bracelet",
+   "knitwear": "Woodland Collection Spring- Double Knit | Wild Foxglove Double Knit Ya",
+   "fruit & veg": "Woodland Collection Spring- 4 Ply | Apple Blossom 4 ply woodland colle",
+   "cushions & throws": "Natural Collection Fringed Cushion Cover",
+   "vests & waistcoats": "Ribbed Knit Tunic/Vest Coldharbour Mill Knitting Pattern Aran",
+   "scarves & accessories": "Devon Green Tartan Scarf",
+   "hats & caps": "Ribbed Knitted Hat Coldharbour Mill Knitting Pattern",
+   "mugs": "Coldharbour Mill Mug"
+  },
+  "gatedOut": [
+   "fruit & veg",
+   "jewellery",
+   "mugs"
+  ],
+  "observedTypes": [
+   "yarn"
+  ],
+  "sample": [
+   "Devon Blue Tartan",
+   "Blackdown Hills Tartan Tote Bag",
+   "Woodland Collection - 4Ply | Forest Night",
+   "Woodland Collection- 4Ply | Evergreen Pine",
+   "Woodland Collection- 4Ply | Morning Dew",
+   "Woodland Collection- 4Ply | Berry Harvest",
+   "Woodland Collection- 4Ply | Golden Leaves",
+   "Cotton Twist: Make Your Own Matchbox Car"
+  ],
+  "checked": "2026-11-26"
+ },
+ "besshill-farm-shop": {
+  "id": "besshill-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "blackberry-farm-shop": {
+  "id": "blackberry-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "hallwood-farm-shop": {
+  "id": "hallwood-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "ermestone-leather": {
+  "id": "ermestone-leather",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 11,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "pet accessories",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "weak",
+   "braces & belts": "weak",
+   "pet accessories": "strong",
+   "tweed & woven goods": "weak"
+  },
+  "tagCounts": {
+   "pet accessories": 2,
+   "braces & belts": 3,
+   "jewellery": 1,
+   "tweed & woven goods": 1,
+   "bags & leather goods": 1
+  },
+  "tagEvidence": {
+   "pet accessories": "Dog Collars &amp; Leads",
+   "braces & belts": "The Erme Belt",
+   "jewellery": "Leather Key Loop with harness ring",
+   "tweed & woven goods": "Leather Blanket Carrier with Recycled Wool Blanket",
+   "bags & leather goods": "Leather Bag Straps"
+  },
+  "gatedOut": [
+   "jewellery"
+  ],
+  "observedTypes": [
+   "Accessories &amp; Gifts",
+   "Dog Collars &amp; Leads"
+  ],
+  "sample": [
+   "Leather Dog Collar",
+   "The Erme Belt",
+   "The Tavy Belt",
+   "String of Coloured Leather Hearts",
+   "Leather Key Loop with harness ring",
+   "Leather Key Loop with clip hook",
+   "Leather Key Loop with lobster clasp",
+   "Leather Blanket Carrier with Recycled Wool Blanket"
+  ],
+  "checked": "2026-11-26"
+ },
+ "max-james-goods": {
+  "id": "max-james-goods",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 36,
+  "tags": [
+   "bags & leather goods",
+   "braces & belts",
+   "hats & caps",
+   "pet accessories"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "braces & belts": "strong",
+   "hats & caps": "weak",
+   "pet accessories": "weak"
+  },
+  "tagCounts": {
+   "bags & leather goods": 23,
+   "braces & belts": 4,
+   "womenswear": 1,
+   "pet accessories": 2,
+   "hats & caps": 1,
+   "shirts": 1,
+   "knitwear": 1
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Leather Weekender Bag",
+   "braces & belts": "Braided Leather Belt",
+   "womenswear": "The Hairy Clutch clutch hair on hide hair on hide clutch hairy clutch ",
+   "pet accessories": "Dog Lead",
+   "hats & caps": "Snapback Baseball cap Beanie Black hat Black snapback Hat Snapback Tru",
+   "shirts": "Classic Short-Sleeve T-Shirt Short sleeve T-shirt Tee Top Tshirt White",
+   "knitwear": "The MJ Original Sweatshirt black sweatshirt Embroidered Embroidery Hoo"
+  },
+  "gatedOut": [
+   "knitwear",
+   "shirts",
+   "womenswear"
+  ],
+  "observedTypes": [
+   "Accessory",
+   "Bag",
+   "Braided Leather Belt",
+   "Clutch",
+   "Leather Backpack",
+   "Leather Belt",
+   "Leather Bifold Wallet",
+   "Leather Card Sleeve",
+   "Leather Card Wallet",
+   "Leather Care",
+   "Leather Glasses Case",
+   "Leather Key Fob",
+   "Leather Laptop Case",
+   "Leather Long Wallet",
+   "Leather Notebook Cover",
+   "Leather Passport Cover",
+   "Leather Tote Bag",
+   "Leather Weekender Bag",
+   "Personalised Hip Flask"
+  ],
+  "sample": [
+   "The Short Weekender",
+   "Braided Belt",
+   "The Long Wallet",
+   "Classic Bifold Wallet",
+   "Belt",
+   "The Hairy Tote",
+   "The Mini Backpack",
+   "The Hairy Clutch"
+  ],
+  "checked": "2026-11-26"
+ },
+ "lynmouth-pottery": {
+  "id": "lynmouth-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "bethan-jones-ceramics": {
+  "id": "bethan-jones-ceramics",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "emma-mogridge-jewellery": {
+  "id": "emma-mogridge-jewellery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 100,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "strong",
+   "jewellery": "strong"
+  },
+  "tagCounts": {
+   "jewellery": 164,
+   "cufflinks & signets": 4
+  },
+  "tagEvidence": {
+   "jewellery": "Gold Ocean Treasure Pendants",
+   "cufflinks & signets": "Cufflinks Personalised jewellery gifts"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Anniversary &amp; Special Occasions Commission Gallery",
+   "Bangles Ocean Treasure Silver Sea &amp; Coast",
+   "Commission Gallery",
+   "Commission Gallery Anniversary &amp; Special Occasions",
+   "Commission Gallery Engagement",
+   "Commission Gallery Engagement Heirloom Creation &amp; Re-modelling",
+   "Commission Gallery Heirloom Creation &amp; Re-modelling",
+   "Cufflinks Personalised jewellery gifts",
+   "Earrings Gifts Under £200 Ocean Treasure Silver Sea &amp; Coast",
+   "Earrings Gifts Under £200 Pebble Sea &amp; Coast",
+   "Earrings Gold Sparkling Seas Ruby Wedding Anniversary Gifts",
+   "Earrings Gold Sparkling Seas Sentimental Gift Edit",
+   "Earrings Ocean Facets",
+   "Earrings Ocean Treasure Silver Sea &amp; Coast",
+   "Earrings Ocean Treasure Silver Sea &amp; Coast Sentimental Gift Edit",
+   "Engagement and Wedding Rings Gold Eternal Wave Rings",
+   "Engagement and Wedding Rings Gold Ocean Treasure Rings",
+   "Engagement and Wedding Rings Gold Sparkling Seas Rings",
+   "Engagement and Wedding Rings Gold Sparkling Seas Rings Sentimental Gift Edit",
+   "Gifts Under £200 Pendants Personalised jewellery gifts",
+   "Gold Eternal Wave Pendants Sentimental Gift Edit",
+   "Gold Ocean Treasure Pendants",
+   "Gold Ocean Treasure Rings",
+   "Gold Ocean Treasure Rings Ruby Wedding Anniversary Gifts",
+   "Gold Ocean Treasure Ruby Wedding Anniversary Gifts",
+   "Gold Sparkling Seas Pendants",
+   "Ocean Treasure Silver Pendants Sea &amp; Coast",
+   "Pendants Gold Sparkling Seas",
+   "Pendants Personalised jewellery gifts",
+   "Personalised jewellery gifts Gifts Under £200",
+   "Rings Engagement and Wedding Rings Gold Eternal Wave",
+   "Rings Engagement and Wedding Rings Gold Sparkling Seas",
+   "Sea &amp; Coast Ocean Treasure Silver Rings"
+  ],
+  "sample": [
+   "Sea Spray boulder opal and diamond earrings (Sold)",
+   "Ocean Wave Boulder Opal and Diamond ring (Sold)",
+   "Seascape boulder opal, diamond, aquamarine and emerald pendant &#8211;",
+   "Sea Breeze ruby and diamond triple wave ring &#8211; £3,495",
+   "Seaweed gemstone and diamond earrings &#8211; From £259",
+   "Mermaid peridot, aquamarine and diamond ring &#8211; £795",
+   "Mermaid blue topaz, peridot and diamond ring &#8211; £695",
+   "Mermaid green tourmaline and diamond ring &#8211; £2,295"
+  ],
+  "checked": "2026-11-26"
+ },
+ "arashi-forge": {
+  "id": "arashi-forge",
+  "shopify": false,
+  "platform": "squarespace",
+  "vocabVersion": 7,
+  "productCount": 99,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "weak"
+  },
+  "tagCounts": {
+   "cutlery & knives": 12,
+   "jewellery": 35,
+   "silverware": 5,
+   "pet accessories": 1,
+   "braces & belts": 2,
+   "bowls": 1,
+   "dairy & cheese": 1,
+   "game & venison": 1,
+   "coats & jackets": 2,
+   "bags & leather goods": 3
+  },
+  "tagEvidence": {
+   "cutlery & knives": "Leaf blade petty, 120mm, 52100 carbon steel. Satinwood",
+   "jewellery": "925 sterling silver ring, 3mm Garnet",
+   "silverware": "925 sterling silver ring, 3mm Garnet",
+   "pet accessories": "Leather dog collar - 19mm",
+   "braces & belts": "Leather belt - The Subtle",
+   "bowls": "Copper bowls - various designs",
+   "dairy & cheese": "Handforged cheese wire",
+   "game & venison": "Leather dice rolling cup, D&D, games.",
+   "coats & jackets": "Coat rack blacksmith forged",
+   "bags & leather goods": "Leather wallet, Handmade Leather wallet handmade purse north devon sad"
+  },
+  "gatedOut": [
+   "bags & leather goods",
+   "bowls",
+   "braces & belts",
+   "coats & jackets",
+   "dairy & cheese",
+   "game & venison",
+   "jewellery",
+   "pet accessories",
+   "silverware"
+  ],
+  "observedTypes": [],
+  "sample": [
+   "Handbound Sketchbook - Japanese Black Fuji",
+   "Burger/patty press. Meat weight. Handforged steel.",
+   "Brass cuff",
+   "Leaf blade petty, 120mm, 52100 carbon steel. Satinwood",
+   "Handbound sketchbooks - Jemma Lewis, small A5 #4-5",
+   "Handbound Sketchbook - Jemma Lewis Marbled",
+   "Handforged J hooks - Twist.",
+   "Santoku, 168mm, 52100 carbon steel. Cherry"
+  ],
+  "checked": "2026-11-26"
+ },
+ "rawston-farm-butchery": {
+  "id": "rawston-farm-butchery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "lucy-campbell-jewellery": {
+  "id": "lucy-campbell-jewellery",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 123,
+  "tags": [
+   "cufflinks & signets",
+   "jewellery"
+  ],
+  "tagConfidence": {
+   "cufflinks & signets": "weak",
+   "jewellery": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 92,
+   "cufflinks & signets": 3
+  },
+  "tagEvidence": {
+   "jewellery": "Gold chains Chains gold pendants Pre-made jewellery",
+   "cufflinks & signets": "Tidal Traces Cufflinks cufflink silver Tidal Traces"
+  },
+  "gatedOut": [],
+  "observedTypes": [],
+  "sample": [
+   "Gold chains",
+   "Tidal Traces ring",
+   "Tidal Traces Square Studs",
+   "Tidal Traces Cufflinks",
+   "Tidal Traces Long Dangly Earrings with gemstones",
+   "Tidal Traces Long Dangly Earrings",
+   "Tidal Traces Short Dangly Earrings",
+   "Tidal Traces Pendant"
+  ],
+  "checked": "2026-11-26"
+ },
+ "dorset-hill-jewellery": {
+  "id": "dorset-hill-jewellery",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 33,
+  "tags": [
+   "jewellery",
+   "silverware"
+  ],
+  "tagConfidence": {
+   "jewellery": "strong",
+   "silverware": "weak"
+  },
+  "tagCounts": {
+   "jewellery": 63,
+   "silverware": 1
+  },
+  "tagEvidence": {
+   "jewellery": "Necklaces",
+   "silverware": "Sterling silver and pear shaped Prehnite pendant"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Necklaces",
+   "Other items",
+   "Rings",
+   "Stud Earrings",
+   "Upcycled Jewellery Workshop"
+  ],
+  "sample": [
+   "Larimar and amethyst necklace",
+   "Pure silver blossom stud earrings",
+   "Silver Maple Tree spirit pendant",
+   "Tiny pure silver ammonite pendant",
+   "Spiny Silver stacking ring",
+   "Star Silver Stacking ring",
+   "Emerge silver stud earrings",
+   "Wide band hammered recycled Silver ring"
+  ],
+  "checked": "2026-11-26"
+ },
+ "wallace-sewell": {
+  "id": "wallace-sewell",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 310,
+  "tags": [
+   "bags & leather goods",
+   "cashmere & merino",
+   "cushions & throws",
+   "jeans & denim",
+   "scarves & accessories",
+   "tweed & woven goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong",
+   "cashmere & merino": "strong",
+   "cushions & throws": "strong",
+   "jeans & denim": "weak",
+   "scarves & accessories": "strong",
+   "tweed & woven goods": "strong"
+  },
+  "tagCounts": {
+   "tweed & woven goods": 126,
+   "cashmere & merino": 159,
+   "scarves & accessories": 122,
+   "jeans & denim": 1,
+   "cushions & throws": 96,
+   "game & venison": 17,
+   "poultry": 1,
+   "bags & leather goods": 10,
+   "fruit & veg": 1
+  },
+  "tagEvidence": {
+   "tweed & woven goods": "Pinstripe Throw",
+   "cashmere & merino": "Maud Throw ALT Autumn/Winter Green Merino Lambswool Stripe",
+   "scarves & accessories": "Doublecloth Wrap",
+   "jeans & denim": "Campanula - Denim 1 left! Autumn/Winter Block Blue Fine Wool Grey",
+   "cushions & throws": "FT Cushion",
+   "game & venison": "Phyllis - Pheasant All Seasons AW26 Blue Silk & Lambswool Stripe",
+   "poultry": "Mabel - Goose Autumn/Winter AW26 Chenille Cream Mohair Texture Wool Cr",
+   "bags & leather goods": "Medium Cosmetic Bag All Seasons Multi Polyurethane Stripe Wool",
+   "fruit & veg": "Dafne - Apple 1 left! All Seasons Cashmere Fine Wool Green Pink Stripe"
+  },
+  "gatedOut": [
+   "fruit & veg",
+   "game & venison",
+   "poultry"
+  ],
+  "observedTypes": [
+   "Art Prints",
+   "Avenida Home Dining Collection",
+   "Basket Weave Cushions",
+   "Basket Weave Throws",
+   "Basket Weave Wrap",
+   "Block Cushions",
+   "Block Rug",
+   "Block Throws",
+   "Chevron Wool Wrap",
+   "Craft",
+   "Crepe & Chenille Wrap",
+   "Cushion Insert",
+   "Dining Collection",
+   "Donna Wilson Creature",
+   "Doublecloth Wrap",
+   "Ettore Throw",
+   "FT Cushion",
+   "FT Throw",
+   "Gift Cards",
+   "Honeycomb Throws",
+   "Hot Water Bottle",
+   "Little Blanket",
+   "Luisa Cevese Accessory",
+   "Mohair Wrap",
+   "Notebooks",
+   "Offcut Cushions",
+   "Pattern Scarf",
+   "Pinstripe Cushion",
+   "Pinstripe Rug",
+   "Pinstripe Throw",
+   "Pinstripe Wrap",
+   "Printed Silk Scarf",
+   "ReWeave Cushions",
+   "Ripple Cushions",
+   "Ripple Throw",
+   "Silk & Lambswool Scarf",
+   "Silk & Linen Scarf",
+   "Silk & Wool Crepe Scarf",
+   "Silk Scarf",
+   "Stella Cushion"
+  ],
+  "sample": [
+   "Maud Throw ALT",
+   "Campanula - Denim",
+   "Cairngorm Throw ALT",
+   "Texture - Whitley",
+   "Texture - Jarrow",
+   "Stripe - Wroxham",
+   "Stripe - Hickling",
+   "Stripe - Cromer"
+  ],
+  "checked": "2026-11-26"
+ },
+ "modbury-farm-shop": {
+  "id": "modbury-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "the-udder-farm-shop": {
+  "id": "the-udder-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "candys-farm-shop": {
+  "id": "candys-farm-shop",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "alex-pole-ironwork": {
+  "id": "alex-pole-ironwork",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 69,
+  "tags": [
+   "cookware",
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cookware": "strong",
+   "cutlery & knives": "strong"
+  },
+  "tagCounts": {
+   "cutlery & knives": 15,
+   "cookware": 36,
+   "game & venison": 1,
+   "beef": 1,
+   "bowls": 4
+  },
+  "tagEvidence": {
+   "cutlery & knives": "cutlery",
+   "cookware": "11\" PAN LID carbon steel cookware forged heritage kitchenware outdoors",
+   "game & venison": "MEAT CLUB 05 - VENISON & WINE bbq forged meat club spice",
+   "beef": "MEAT CLUB 01 - BEEF",
+   "bowls": "6\" CASSEROLE DISH & LID - SECOND bbq blacksmith carbon steel CASSEROLE"
+  },
+  "gatedOut": [
+   "beef",
+   "bowls",
+   "game & venison"
+  ],
+  "observedTypes": [
+   "GIFT CARD",
+   "axe",
+   "book",
+   "cutlery",
+   "event",
+   "merch",
+   "pan",
+   "trowel"
+  ],
+  "sample": [
+   "CHEFS KNIFE - LIMITED EDITION 02",
+   "POSTERS - SINGLE",
+   "POSTERS - SET OF 4",
+   "11\" PAN LID",
+   "MEAT CLUB 05 - VENISON & WINE",
+   "FORGING BBQ TOOLS - JULY 24TH 2027",
+   "FORGING AN AXE - NOVEMBER 27TH-28TH 2027",
+   "FORGING AN AXE - NOVEMBER 6TH-7TH 2027"
+  ],
+  "checked": "2026-11-26"
+ },
+ "kd-knives": {
+  "id": "kd-knives",
+  "shopify": true,
+  "platform": "shopify",
+  "vocabVersion": 7,
+  "productCount": 17,
+  "tags": [
+   "cutlery & knives"
+  ],
+  "tagConfidence": {
+   "cutlery & knives": "strong"
+  },
+  "tagCounts": {
+   "cutlery & knives": 30
+  },
+  "tagEvidence": {
+   "cutlery & knives": "Hunting & Survival Knives"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Hunting & Survival Knives",
+   "camping",
+   "kitchen knife"
+  ],
+  "sample": [
+   "Drop point hunter with leather sheath",
+   "Drop point Hunter",
+   "Western style chefs kitchen knife",
+   "Puukko knife.",
+   "Drop point hunter with leather sheath",
+   "Large Brute de Forge Hunter with Hamon",
+   "Santoku Kitchen knife",
+   "Kiritsuke Kitchen Knife"
+  ],
+  "checked": "2026-11-26"
+ },
+ "ashford-ridge": {
+  "id": "ashford-ridge",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
+ },
+ "seagalier": {
+  "id": "seagalier",
+  "shopify": false,
+  "platform": "woocommerce",
+  "vocabVersion": 7,
+  "productCount": 2,
+  "tags": [
+   "bags & leather goods"
+  ],
+  "tagConfidence": {
+   "bags & leather goods": "strong"
+  },
+  "tagCounts": {
+   "bags & leather goods": 2
+  },
+  "tagEvidence": {
+   "bags & leather goods": "Men's Wallet"
+  },
+  "gatedOut": [],
+  "observedTypes": [
+   "Laptop Sleeve",
+   "Men's Wallet"
+  ],
+  "sample": [
+   "Seagalier 15&#8243; Handmade Leather Laptop Sleeve",
+   "Handmade Men&#8217;s Leather Wallet"
+  ],
+  "checked": "2026-11-26"
+ },
+ "woodside-pottery": {
+  "id": "woodside-pottery",
+  "shopify": false,
+  "platform": null,
+  "reason": "no-feed-found",
+  "checked": "2026-11-26"
  }
 }
