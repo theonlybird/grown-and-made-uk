@@ -2537,55 +2537,6 @@
    "children": 0
   }
  },
- "hegarty-london": {
-  "id": "hegarty-london",
-  "name": "Hegarty",
-  "platform": "shopify",
-  "items": 28,
-  "checked": "2026-09-03",
-  "collections": 8,
-  "evidence": {
-   "men": {
-    "strong": 3,
-    "medium": 0,
-    "weak": 7,
-    "quotes": [
-     "MENS mens (mens)",
-     "MENS - Denim mens-denim (mens)",
-     "MENS - Ready to wear mens-ready-to-wear (mens)",
-     "mens (mens)"
-    ]
-   },
-   "women": {
-    "strong": 3,
-    "medium": 0,
-    "weak": 9,
-    "quotes": [
-     "WOMENS womens (womens)",
-     "WOMENS - Denim womens-denim (womens)",
-     "WOMENS - Ready to wear womens-ready-to-wear (womens)",
-     "womens (womens)"
-    ]
-   },
-   "children": {
-    "strong": 0,
-    "medium": 0,
-    "weak": 0,
-    "quotes": []
-   }
-  },
-  "audience": [
-   "men",
-   "women"
-  ],
-  "confidence": "strong",
-  "basis": "shop navigation or listing text",
-  "scores": {
-   "men": 25,
-   "women": 27,
-   "children": 0
-  }
- },
  "gaziano-girling": {
   "id": "gaziano-girling",
   "name": "Gaziano & Girling",

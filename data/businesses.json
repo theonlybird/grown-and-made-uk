@@ -4329,35 +4329,6 @@
     "county": "Somerset"
   },
   {
-    "id": "hegarty-london",
-    "name": "Hegarty",
-    "category": "clothing",
-    "subcategory": "Outerwear",
-    "tier": "gold",
-    "listing_type": "online_only",
-    "town": "London",
-    "address": "London",
-    "lat": 51.515,
-    "lng": -0.14,
-    "website": "https://www.hegartylondon.com",
-    "instagram": "https://www.instagram.com/hegartylondon/",
-    "description": "Sustainable tailored outerwear made in London in English cloth.",
-    "tier_confidence": "medium",
-    "logo": "assets/logos/hegarty-london.png",
-    "source": "verified-batch-2026-07",
-    "product_tags": [
-      "tweed & woven goods",
-      "coats & jackets"
-    ],
-    "nation": "England",
-    "county": "London",
-    "audience": [
-      "men",
-      "women"
-    ],
-    "audience_confidence": "strong"
-  },
-  {
     "id": "lochcarron",
     "name": "Lochcarron of Scotland",
     "category": "clothing",
